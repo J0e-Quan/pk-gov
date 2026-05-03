@@ -33,7 +33,7 @@
   --ministry-of-finance-colour: rgb(0, 176, 0);
   --ministry-of-immigration-colour: rgb(195, 140, 0);
   --ministry-of-technology-colour: rgb(74, 255, 209);
-  --ministry-of-defense-colour: rgb(165, 165, 165);
+  --ministry-of-defence-colour: rgb(165, 165, 165);
 }
 
 * {
@@ -59,4 +59,88 @@ button {
   border: none;
   background-color: none;
   outline: none;
+}
+
+.header {
+  background-color: var(--central-ministry-colour);
+  padding: 1rem 5rem;
+}
+
+h3.logo-text {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.logo-text.bottom {
+  margin-top: -0.2rem;
+  font-weight: 400;
+}
+
+.hero {
+  background-color: var(--central-ministry-colour);
+  color: white;
+  padding: 1rem 5rem;
+}
+
+.hero-title {
+  font-size: 5rem;
+  line-height: 1.2;
+}
+
+.hero-text {
+  margin-top: 2rem;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.ministries {
+  display: grid;
+  grid-template-columns: 20vw 20vw 20vw 20vw;
+  grid-template-rows: 20vw 20vw;
+  justify-content: center;
+  padding: 1rem 5rem;
+}
+
+.ministries button {
+  background-color: white;
+  place-self: center;
+  height: 20vw;
+  width: 20vw;
+}
+
+button svg {
+  height: 15vw;
+  width: 15vw;
+}
+
+.ministries button:hover.central-ministry {
+  border: 20px solid var(--central-ministry-colour);
+}
+
+.ministries button:hover.ministry-of-food {
+  border: 20px solid var(--ministry-of-food-colour);
+}
+
+.ministries button:hover.ministry-of-foreign-affairs {
+  border: 20px solid var(--ministry-of-foreign-affairs-colour);
+}
+
+.ministries button:hover.ministry-of-health {
+  border: 20px solid var(--ministry-of-health-colour);
+}
+
+.ministries button:hover.ministry-of-finance {
+  border: 20px solid var(--ministry-of-finance-colour);
+}
+
+.ministries button:hover.ministry-of-immigration {
+  border: 20px solid var(--ministry-of-immigration-colour);
+}
+
+.ministries button:hover.ministry-of-technology {
+  border: 20px solid var(--ministry-of-technology-colour);
+}
+
+.ministries button:hover.ministry-of-defence {
+  border: 20px solid var(--ministry-of-defence-colour);
 }
