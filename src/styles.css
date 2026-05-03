@@ -1,41 +1,46 @@
 @font-face {
-  font-family: 'Inter';
-  src: url(./assets/fonts/InterVariable.woff2), format('woff2-variations');
+  font-family: 'IBM Plex Sans';
+  src: url(./assets/fonts/IBMPlexSans_Var-Roman.woff2), format('woff2-variations');
   font-weight: 100 900;
   font-style: normal;
   font-display: block;
 }
 
 @font-face {
-  font-family: 'Inter';
-  src: url(./assets/fonts/InterVariable-Italic.woff2), format('woff2-variations');
+  font-family: 'IBM Plex Sans';
+  src: url(./assets/fonts/IBMPlexSans_Var-Italic.woff2), format('woff2-variations');
   font-weight: 100 900;
   font-style: italic;
   font-display: block;
 }
 
 @font-face {
-  font-family: 'Urbanist';
-  src: url(./assets/fonts/Urbanist-VariableFont_wght.woff2), format('woff2-variations');
-  font-weight: 100 900;
-  font-style: normal;
+  font-family: 'Mona Sans';
+  src: url(./assets/fonts/MonaSansVF[wdth\,wght\,opsz\,ital].woff2), format('woff2-variations');
+  font-weight: 200 900;
+  font-stretch: 75% 125%;
+  font-style: oblique 0deg 10deg;
   font-display: block;
 }
 
-@font-face {
-  font-family: 'Urbanist';
-  src: url(./assets/fonts/Urbanist-Italic-VariableFont_wght.woff2), format('woff2-variations');
-  font-weight: 100 900;
-  font-style: italic;
-  font-display: block;
+:root {
+  --plex-sans: 'IBM Plex Sans', sans-serif;
+  --mona-sans: 'Mona Sans', serif;
+  --central-ministry-colour: rgb(104, 160, 255);
+  --ministry-of-food-colour: rgb(255, 220, 0);
+  --ministry-of-foreign-affairs-colour: rgb(54, 83, 255);
+  --ministry-of-health-colour: rgb(255, 0, 0);
+  --ministry-of-finance-colour: rgb(0, 176, 0);
+  --ministry-of-immigration-colour: rgb(195, 140, 0);
+  --ministry-of-technology-colour: rgb(74, 255, 209);
+  --ministry-of-defense-colour: rgb(165, 165, 165);
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Urbanist', serif;
-  font-weight: 550;
+  font-family: var(--mona-sans);
 }
 
 h1,
@@ -44,8 +49,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Inter', sans-serif;
-  font-weight: 200;
+  font-family: var(--plex-sans);
+  font-weight: 700;
 }
 
 input,
