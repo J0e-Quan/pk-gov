@@ -15,7 +15,7 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: './src/ministries/central.html',
-      filename: 'ministries/central/index.html/'
+      filename: 'ministries/central/index.html'
     }),
     new HtmlWebpackPlugin({
       template: './src/ministries/defence.html',
