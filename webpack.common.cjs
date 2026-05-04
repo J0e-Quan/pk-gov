@@ -10,7 +10,48 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html'
+      template: './src/index.html',
+      filename: 'index.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/ministries/central.html',
+      filename: 'ministries/central/index.html/'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/ministries/defence.html',
+      filename: 'ministries/defence/index.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/ministries/finance.html',
+      filename: 'ministries/finance/index.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/ministries/food.html',
+      filename: 'ministries/food/index.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/ministries/foreign-affairs.html',
+      filename: 'ministries/foreign-affairs/index.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/ministries/health.html',
+      filename: 'ministries/health/index.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/ministries/immigration.html',
+      filename: 'ministries/immigration/index.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/ministries/technology.html',
+      filename: 'ministries/technology/index.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/info/index.html',
+      filename: 'info/index.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/news/index.html',
+      filename: 'news/index.html'
     })
   ],
   module: {
