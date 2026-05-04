@@ -1,4 +1,4 @@
 import './styles.css'
-import { initMinistries } from './input.js'
+import { initHomeButtons } from './input.js'
 
-initMinistries()
+initHomeButtons()
