@@ -1,3 +1,2 @@
-import './styles.css'
-import { initHomeButtons } from './input.js'
-
+import './assets/styles/global.css'
+import './assets/styles/home.css'
