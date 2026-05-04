@@ -64,11 +64,14 @@ button {
 .header {
   background-color: var(--central-ministry-colour);
   padding: 1rem 5rem;
+  display: flex;
+  justify-content: flex-start;
 }
 
-h3.logo-text {
+.logo-text {
   color: white;
   font-size: 1.5rem;
+  text-decoration: none;
 }
 
 .logo-text.bottom {
@@ -114,47 +117,73 @@ button svg {
   width: 15vw;
 }
 
-.ministries h6 {
-  font-size: 1rem;
-  color: white;
-}
-
 .ministries button:hover.central-ministry {
   border: 20px solid var(--central-ministry-colour);
-  color: black;
 }
 
 .ministries button:hover.ministry-of-food {
   border: 20px solid var(--ministry-of-food-colour);
-  color: black;
 }
 
 .ministries button:hover.ministry-of-foreign-affairs {
   border: 20px solid var(--ministry-of-foreign-affairs-colour);
-  color: black;
 }
 
 .ministries button:hover.ministry-of-health {
   border: 20px solid var(--ministry-of-health-colour);
-  color: black;
 }
 
 .ministries button:hover.ministry-of-finance {
   border: 20px solid var(--ministry-of-finance-colour);
-  color: black;
 }
 
 .ministries button:hover.ministry-of-immigration {
   border: 20px solid var(--ministry-of-immigration-colour);
-  color: black;
 }
 
 .ministries button:hover.ministry-of-technology {
   border: 20px solid var(--ministry-of-technology-colour);
-  color: black;
 }
 
 .ministries button:hover.ministry-of-defence {
   border: 20px solid var(--ministry-of-defence-colour);
-  color: black;
+}
+
+.info-and-news {
+  padding: 0rem 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.info-and-news div {
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: white;
+  background-color: red;
+  background-image: ;
+}
+
+.info-and-news .title {
+  font-size: 3rem;
+}
+
+.info-and-news .text {
+  font-size: 1.5rem;
+}
+
+.info-and-news .cta {
+  width: fit-content;
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  font-family: var(--mona-sans);
+  background-color: transparent;
+  color: white;
+  border: 12px solid var(--central-ministry-colour);
+}
+
+.info-and-news .cta:hover {
+  background-color: var(--central-ministry-colour);
 }
