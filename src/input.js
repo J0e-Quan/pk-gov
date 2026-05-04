@@ -2,6 +2,7 @@ import { showInfoPage, showMinistry, showNewsPage } from "./display.js"
 
 const ministries = document.querySelector('.ministries')
 const information = document.querySelector('.info-and-news')
+initHomeButtons()
 
 export function initHomeButtons() {
   // {once: true} deletes the eventlistener once fired, no need to removeEventListener separately
