@@ -11,7 +11,7 @@ module.exports = {
     finance: './src/ministries/finance.js',
     immigration: './src/ministries/immigration.js',
     technology: './src/ministries/technology.js',
-    defence: './src/ministries/defence.cs'
+    defence: './src/ministries/defence.js'
   },
   output: {
     filename: '[name].[contenthash].js',

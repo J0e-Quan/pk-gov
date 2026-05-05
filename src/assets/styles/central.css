@@ -76,6 +76,12 @@ section:not(.content) {
   background-image: url("../pictures/ministers/apb.webp");
 }
 
+.minister.info-box {
+  border: 10px solid var(--central-ministry-colour);
+  border-top: none;
+  padding: 0 1rem;
+}
+
 .minister.name {
   font-size: 3rem;
 }
@@ -83,6 +89,7 @@ section:not(.content) {
 .minister.job-title {
   font-size: 2rem;
   font-weight: 400;
+  margin-bottom: 0.5rem;
 }
 
 .title {

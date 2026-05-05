@@ -1,0 +1,120 @@
+.header {
+  background-color: var(--ministry-of-food-colour);
+  padding: 1rem 5rem;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.logo-text {
+  color: black;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.logo-text.bottom {
+  margin-top: -0.2rem;
+  font-weight: 400;
+}
+
+.logo-frame {
+  padding: 0 5rem;
+}
+
+.hero {
+  background-color: var(--ministry-of-food-colour);
+  color: black;
+}
+
+.hero-title {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text {
+  font-size: 2rem;
+}
+
+section:not(.content) {
+  padding: 2rem 5rem;
+}
+
+.heading {
+  font-size: 4rem;
+}
+
+.section-divider {
+  width: 100%;
+  height: 10px;
+  background-color: var(--ministry-of-food-colour);
+  margin-bottom: 3rem;
+}
+
+.ministers.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.minister {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  height: auto;
+}
+
+.minister.picture {
+  background-size: contain;
+  width: 600px;
+  height: 800px;
+}
+
+#capybara {
+  background-image: url("../pictures/ministers/capybara.webp");
+}
+
+.minister.info-box {
+  border: 10px solid var(--ministry-of-food-colour);
+  border-top: none;
+  padding: 0 1rem;
+}
+
+.minister.name {
+  font-size: 3rem;
+}
+
+.minister.job-title {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  font-size: 2.5rem;
+}
+
+.text {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.return {
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  font-family: var(--mona-sans);
+  color: black;
+  background-color: transparent;
+  border: 16px solid var(--ministry-of-food-colour);
+  display: flex;
+  max-width: fit-content;
+  margin: 1rem auto 4rem auto;
+}
+
+.return:hover {
+  background-color: var(--ministry-of-food-colour);
+  color: black;
+}
+
+/* UNIQUE STYLES BELOW */
+.small-text {
+  font-size: 1rem;
+}
