@@ -4,7 +4,14 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
   entry: {
     home: './src/home.js',
-    cm: './src/ministries/central.js'
+    central: './src/ministries/central.js',
+    food: './src/ministries/food.js',
+    foreignAffairs: './src/ministries/foreign-affairs.js',
+    health: './src/ministries/health.js',
+    finance: './src/ministries/finance.js',
+    immigration: './src/ministries/immigration.js',
+    technology: './src/ministries/technology.js',
+    defence: './src/ministries/defence.cs'
   },
   output: {
     filename: '[name].[contenthash].js',
@@ -21,35 +28,42 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/ministries/central.html',
       filename: 'ministries/central/index.html',
-      chunks: ['cm'],
+      chunks: ['central'],
     }),
     new HtmlWebpackPlugin({
       template: './src/ministries/defence.html',
-      filename: 'ministries/defence/index.html'
+      filename: 'ministries/defence/index.html',
+      chunks: ['defence'],
     }),
     new HtmlWebpackPlugin({
       template: './src/ministries/finance.html',
-      filename: 'ministries/finance/index.html'
+      filename: 'ministries/finance/index.html',
+      chunks: ['finance'],
     }),
     new HtmlWebpackPlugin({
       template: './src/ministries/food.html',
-      filename: 'ministries/food/index.html'
+      filename: 'ministries/food/index.html',
+      chunks: ['food'],
     }),
     new HtmlWebpackPlugin({
       template: './src/ministries/foreign-affairs.html',
-      filename: 'ministries/foreign-affairs/index.html'
+      filename: 'ministries/foreign-affairs/index.html',
+      chunks: ['foreignAffairs'],
     }),
     new HtmlWebpackPlugin({
       template: './src/ministries/health.html',
-      filename: 'ministries/health/index.html'
+      filename: 'ministries/health/index.html',
+      chunks: ['health'],
     }),
     new HtmlWebpackPlugin({
       template: './src/ministries/immigration.html',
-      filename: 'ministries/immigration/index.html'
+      filename: 'ministries/immigration/index.html',
+      chunks: ['immigration'],
     }),
     new HtmlWebpackPlugin({
       template: './src/ministries/technology.html',
-      filename: 'ministries/technology/index.html'
+      filename: 'ministries/technology/index.html',
+      chunks: ['technology'],
     }),
     new HtmlWebpackPlugin({
       template: './src/info/index.html',
@@ -65,9 +79,6 @@ module.exports = {
       {
         test: /\.(png|svg|jpg|jpeg|gif|webp)$/i,
         type: 'asset/resource',
-        generator: {
-    filename: 'assets/images/[name][ext]' // Files go to dist/assets/images/
-  }
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
