@@ -63,16 +63,31 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: 'asset/resource'
-      },
-      {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: 'asset/resource'
+        test: /\.(png|svg|jpg|jpeg|gif|webp)$/i,
+        type: 'asset/resource',
+        generator: {
+    filename: 'assets/images/[name][ext]' // Files go to dist/assets/images/
+  }
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource'
+      },
+      {
+        test: /\.html$/i,
+        loader: "html-loader",
+        options: {
+            sources: {
+              list: [
+                "...",
+                {
+                  tag: "img",
+                  attribute: "src",
+                  type: "src",
+                },
+              ],
+            },
+          }
       }
     ]
   }
