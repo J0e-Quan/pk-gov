@@ -133,3 +133,13 @@ a svg {
   background-color: var(--central-ministry-colour);
   color: white;
 }
+
+.logo-frame {
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+
+.logo-lottie {
+  transform: translateY(-25%);
+}
