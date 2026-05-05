@@ -61,6 +61,6 @@ button {
   outline: none;
 }
 
-a {
+a:not(.yt-link) {
   text-decoration: none;
 }
