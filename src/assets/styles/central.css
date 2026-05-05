@@ -17,11 +17,16 @@
 }
 
 .logo-frame {
-  height: 300px;
-  overflow: hidden;
-  position: relative;
+  padding: 0 5rem;
 }
 
-.logo-lottie {
-  transform: translateY(-25%);
+.hero {
+  padding: 2rem 5rem;
+  background-color: var(--central-ministry-colour);
+  color: white;
+}
+
+.hero-title {
+  font-size: 4rem;
+  text-align: center;
 }

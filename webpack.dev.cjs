@@ -6,15 +6,16 @@ module.exports = merge(common, {
   mode: 'development',
   devtool: 'eval-source-map',
   devServer: {
+    hot: true,
     historyApiFallback: true,
-    watchFiles: ['./src/index.html'],
+    watchFiles: ['./src/**/*.html'],
     port: 3000,
   },
   module: {
     rules: [
       {
         test: /\.s?css$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader']
+        use: ['style-loader', 'css-loader']
       }
     ]
   },
