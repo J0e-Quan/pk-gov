@@ -15,7 +15,7 @@ module.exports = {
     info: './src/info/info.js',
     pkGov: './src/about/pk-gov.js',
     plushieKingdom: './src/about/plushie-kingdom.js',
-    leadersAndGov: './src/about/leaders-and-gov.js'
+    govIdentity: './src/about/gov-identity.js'
   },
   output: {
     filename: '[name].[contenthash].js',
@@ -89,9 +89,9 @@ module.exports = {
       chunks:  ['plushieKingdom']
     }),
     new HtmlWebpackPlugin({
-      template: './src/about/leaders-and-gov.html',
-      filename: 'about/leaders-and-gov/index.html',
-      chunks: ['leadersAndGov']
+      template: './src/about/gov-identity.html',
+      filename: 'about/gov-identity/index.html',
+      chunks: ['govIdentity']
     })
   ],
   module: {
