@@ -72,6 +72,18 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/news/index.html',
       filename: 'news/index.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/about/pk-gov.html',
+      filename: 'about/pk-gov/index.html',
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/about/plushie-kingdom.html',
+      filename: 'about/plushie-kingdom/index.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/about/leaders-and-gov.html',
+      filename: 'about/leaders-and-gov/index.html'
     })
   ],
   module: {
