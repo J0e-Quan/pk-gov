@@ -1,14 +1,14 @@
 import '../assets/styles/global.css'
 import '../assets/styles/food.css'
 import Lottie from 'lottie-web'
-import food from '../assets/lottie/food.json'
+import logo from '../assets/lottie/food.json'
 
-const foodContainer = document.querySelector('.ministry-of-food.logo-lottie')
+const logoContainer = document.querySelector('.ministry-of-food.logo-lottie')
 
 Lottie.loadAnimation({
-  container: foodContainer,    
+  container: logoContainer,    
   renderer: 'svg',         
   loop: false,             
   autoplay: true,        
-  animationData: food
+  animationData: logo
 });

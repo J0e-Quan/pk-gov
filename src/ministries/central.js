@@ -1,14 +1,14 @@
 import '../assets/styles/global.css'
 import '../assets/styles/central.css'
 import Lottie from 'lottie-web'
-import central from '../assets/lottie/central.json'
+import logo from '../assets/lottie/central.json'
 
-const centralContainer = document.querySelector('.central-ministry.logo-lottie')
+const logoContainer = document.querySelector('.central-ministry.logo-lottie')
 
 Lottie.loadAnimation({
-  container: centralContainer,    
+  container: logoContainer,    
   renderer: 'svg',         
   loop: false,             
   autoplay: true,        
-  animationData: central
+  animationData: logo
 });
