@@ -11,7 +11,11 @@ module.exports = {
     finance: './src/ministries/finance.js',
     immigration: './src/ministries/immigration.js',
     technology: './src/ministries/technology.js',
-    defence: './src/ministries/defence.js'
+    defence: './src/ministries/defence.js',
+    info: './src/info/info.js',
+    pkGov: './src/about/pk-gov.js',
+    plushieKingdom: './src/about/plushie-kingdom.js',
+    leadersAndGov: './src/about/leaders-and-gov.js'
   },
   output: {
     filename: '[name].[contenthash].js',
@@ -67,7 +71,8 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: './src/info/index.html',
-      filename: 'info/index.html'
+      filename: 'info/index.html',
+      chunks: ['info']
     }),
     new HtmlWebpackPlugin({
       template: './src/news/index.html',
@@ -76,14 +81,17 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/about/pk-gov.html',
       filename: 'about/pk-gov/index.html',
+      chunks: ['pkGov'],
     }),
     new HtmlWebpackPlugin({
       template: './src/about/plushie-kingdom.html',
-      filename: 'about/plushie-kingdom/index.html'
+      filename: 'about/plushie-kingdom/index.html',
+      chunks:  ['plushieKingdom']
     }),
     new HtmlWebpackPlugin({
       template: './src/about/leaders-and-gov.html',
-      filename: 'about/leaders-and-gov/index.html'
+      filename: 'about/leaders-and-gov/index.html',
+      chunks: ['leadersAndGov']
     })
   ],
   module: {
