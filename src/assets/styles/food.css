@@ -34,7 +34,7 @@
   font-size: 2rem;
 }
 
-section:not(.content) {
+section:not(.content, footer section) {
   padding: 2rem 5rem;
 }
 
@@ -113,6 +113,52 @@ section:not(.content) {
 .return:hover {
   background-color: var(--ministry-of-food-colour);
   color: black;
+}
+
+footer {
+  margin-top: 2rem;
+  padding: 2rem 5rem 3rem 5rem;
+  background-color: var(--ministry-of-food-colour);
+  color: black;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.footer-title {
+  font-size: 2.5rem;
+}
+
+.footer-divider {
+  width: 100%;
+  height: 10px;
+  background-color: black;
+  margin-bottom: 1rem;
+}
+
+.footer-ministries.links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: fit-content;
+  row-gap: 0.5rem;
+  column-gap: 1rem;
+}
+
+.footer-resources.links, .footer-about.links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+footer .link {
+  color: black;
+  font-size: 1.2rem;
+}
+
+footer .link:hover {
+  background-color: black;
+  color: white;
 }
 
 /* UNIQUE STYLES BELOW */
