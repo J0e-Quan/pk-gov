@@ -63,10 +63,11 @@ section:not(.content, footer section) {
   flex-wrap: wrap;
   justify-content: center;
   margin-bottom: 2rem;
+  gap: 2rem;
 }
 
 .directory-item {
-  flex-grow: 1;
+  flex-grow: 0;
   flex-basis: 40vw;
   padding: 1rem 0rem;
   display: flex;
