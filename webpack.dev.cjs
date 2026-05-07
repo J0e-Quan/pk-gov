@@ -12,20 +12,20 @@ module.exports = merge(common, {
       },
     hot: true,
     historyApiFallback: true,
-    watchFiles: ['./src/**/*.html'],
+    watchFiles: ['./src/**/*.html', './src/**/*.njk', './src/**/*.md', './src/**/*.css', './src/**/*.js'],
     port: 3000,
   },
   module: {
     rules: [
       {
         test: /\.s?css$/,
-        use: ['style-loader', 'css-loader']
+        use: [MiniCssExtractPlugin.loader, 'css-loader']
       }
     ]
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: '[name].[contenthash].css'
+      filename: 'assets/styles/[name].css'
     })
   ]
 })

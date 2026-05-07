@@ -13,6 +13,8 @@ module.exports = {
     technology: './src/ministries/technology.js',
     defence: './src/ministries/defence.js',
     info: './src/info/info.js',
+    news: './src/news/news.js',
+    'news-article': './src/news/news-article.js',
     pkGov: './src/about/pk-gov.js',
     plushieKingdom: './src/about/plushie-kingdom.js',
     govIdentity: './src/about/gov-identity.js',
@@ -21,59 +23,59 @@ module.exports = {
     foodHealthAndWealth: './src/info/food-health-and-wealth/food-health-and-wealth.js',
     safetyAndResidency: './src/info/safety-and-residency/safety-and-residency.js',
     businessAndCommerce: './src/info/business-and-commerce/business-and-commerce.js',
-    gettingInvolved: './src/info/getting-involved/getting-involved.js',
+    gettingInvolved: './src/info/getting-involved/getting-involved.js'
   },
   output: {
-    filename: '[name].[contenthash].js',
+    filename: '[name].js',
     path: path.resolve(__dirname, 'dist'),
-    clean: true,
-    publicPath: '/',
+    clean: false,
+    publicPath: '/'
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
       filename: 'index.html',
-      chunks: ['home'],
+      chunks: ['home']
     }),
     new HtmlWebpackPlugin({
       template: './src/ministries/central.html',
       filename: 'ministries/central/index.html',
-      chunks: ['central'],
+      chunks: ['central']
     }),
     new HtmlWebpackPlugin({
       template: './src/ministries/defence.html',
       filename: 'ministries/defence/index.html',
-      chunks: ['defence'],
+      chunks: ['defence']
     }),
     new HtmlWebpackPlugin({
       template: './src/ministries/finance.html',
       filename: 'ministries/finance/index.html',
-      chunks: ['finance'],
+      chunks: ['finance']
     }),
     new HtmlWebpackPlugin({
       template: './src/ministries/food.html',
       filename: 'ministries/food/index.html',
-      chunks: ['food'],
+      chunks: ['food']
     }),
     new HtmlWebpackPlugin({
       template: './src/ministries/foreign-affairs.html',
       filename: 'ministries/foreign-affairs/index.html',
-      chunks: ['foreignAffairs'],
+      chunks: ['foreignAffairs']
     }),
     new HtmlWebpackPlugin({
       template: './src/ministries/health.html',
       filename: 'ministries/health/index.html',
-      chunks: ['health'],
+      chunks: ['health']
     }),
     new HtmlWebpackPlugin({
       template: './src/ministries/immigration.html',
       filename: 'ministries/immigration/index.html',
-      chunks: ['immigration'],
+      chunks: ['immigration']
     }),
     new HtmlWebpackPlugin({
       template: './src/ministries/technology.html',
       filename: 'ministries/technology/index.html',
-      chunks: ['technology'],
+      chunks: ['technology']
     }),
     new HtmlWebpackPlugin({
       template: './src/info/index.html',
@@ -81,18 +83,14 @@ module.exports = {
       chunks: ['info']
     }),
     new HtmlWebpackPlugin({
-      template: './src/news/index.html',
-      filename: 'news/index.html'
-    }),
-    new HtmlWebpackPlugin({
       template: './src/about/pk-gov.html',
       filename: 'about/pk-gov/index.html',
-      chunks: ['pkGov'],
+      chunks: ['pkGov']
     }),
     new HtmlWebpackPlugin({
       template: './src/about/plushie-kingdom.html',
       filename: 'about/plushie-kingdom/index.html',
-      chunks:  ['plushieKingdom']
+      chunks: ['plushieKingdom']
     }),
     new HtmlWebpackPlugin({
       template: './src/about/gov-identity.html',
@@ -134,7 +132,7 @@ module.exports = {
     rules: [
       {
         test: /\.(png|svg|jpg|jpeg|gif|webp)$/i,
-        type: 'asset/resource',
+        type: 'asset/resource'
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
@@ -142,19 +140,19 @@ module.exports = {
       },
       {
         test: /\.html$/i,
-        loader: "html-loader",
+        loader: 'html-loader',
         options: {
-            sources: {
-              list: [
-                "...",
-                {
-                  tag: "img",
-                  attribute: "src",
-                  type: "src",
-                },
-              ],
-            },
+          sources: {
+            list: [
+              '...',
+              {
+                tag: 'img',
+                attribute: 'src',
+                type: 'src'
+              }
+            ]
           }
+        }
       }
     ]
   }
