@@ -15,7 +15,13 @@ module.exports = {
     info: './src/info/info.js',
     pkGov: './src/about/pk-gov.js',
     plushieKingdom: './src/about/plushie-kingdom.js',
-    govIdentity: './src/about/gov-identity.js'
+    govIdentity: './src/about/gov-identity.js',
+    whoWeAre: './src/info/who-we-are/who-we-are.js',
+    travellingInAndOut: './src/info/travelling-in-and-out/travelling-in-and-out.js',
+    foodHealthAndWealth: './src/info/food-health-and-wealth/food-health-and-wealth.js',
+    safetyAndResidency: './src/info/safety-and-residency/safety-and-residency.js',
+    businessAndCommerce: './src/info/business-and-commerce/business-and-commerce.js',
+    gettingInvolved: './src/info/getting-involved/getting-involved.js',
   },
   output: {
     filename: '[name].[contenthash].js',
@@ -92,6 +98,36 @@ module.exports = {
       template: './src/about/gov-identity.html',
       filename: 'about/gov-identity/index.html',
       chunks: ['govIdentity']
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/info/who-we-are/index.html',
+      filename: 'info/who-we-are/index.html',
+      chunks: ['whoWeAre']
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/info/travelling-in-and-out/index.html',
+      filename: 'info/travelling-in-and-out/index.html',
+      chunks: ['travellingInAndOut']
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/info/food-health-and-wealth/index.html',
+      filename: 'info/food-health-and-wealth/index.html',
+      chunks: ['foodHealthAndWealth']
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/info/safety-and-residency/index.html',
+      filename: 'info/safety-and-residency/index.html',
+      chunks: ['safetyAndResidency']
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/info/business-and-commerce/index.html',
+      filename: 'info/business-and-commerce/index.html',
+      chunks: ['businessAndCommerce']
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/info/getting-involved/index.html',
+      filename: 'info/getting-involved/index.html',
+      chunks: ['gettingInvolved']
     })
   ],
   module: {
