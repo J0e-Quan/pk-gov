@@ -19,7 +19,7 @@ module.exports = merge(common, {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: '[name].css'
+      filename: 'assets/styles/[name].css'
     })
   ]
 })
