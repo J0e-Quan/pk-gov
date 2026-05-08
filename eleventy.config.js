@@ -12,6 +12,7 @@ export default async function(eleventyConfig) {
 
   // tells eleventy to ignore everything except news and _includes
   eleventyConfig.ignores.add("src/!(news|_includes)/**");
+  eleventyConfig.ignores.add("src/news/_ARTICLE-TEMPLATE.md");
   eleventyConfig.ignores.delete("dist/**");
 
   eleventyConfig.addFilter("postDate", (dateObj) => {
