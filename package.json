@@ -10,7 +10,7 @@
     "dev:eleventy": "eleventy --serve",
     "dev:webpack": "webpack --watch --config webpack.dev.cjs --watch-options-poll=300",
     "dev": "webpack serve --config webpack.dev.cjs",
-    "build": "webpack --config webpack.prod.cjs",
+    "build": "npx @11ty/eleventy && webpack --config webpack.prod.cjs",
     "deploy": "npm run cleanup && npm run test && npm run build && gh-pages -d dist",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
