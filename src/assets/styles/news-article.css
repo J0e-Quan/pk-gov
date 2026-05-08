@@ -43,14 +43,14 @@ section:not(.content, footer section) {
   font-size: 4rem;
 }
 
-.section-divider {
+.section-divider, hr {
   width: 100%;
   height: 10px;
   background-color: var(--central-ministry-colour);
   margin-bottom: 3rem;
 }
 
-.title {
+.article h2 {
   font-size: 2.5rem;
 }
 
