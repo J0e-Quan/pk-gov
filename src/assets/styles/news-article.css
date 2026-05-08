@@ -64,6 +64,12 @@ section:not(.content, footer section) {
   text-decoration: underline;
 }
 
+.article img {
+  max-width: 100%;
+  height: auto;
+  margin: 1rem 0;
+}
+
 section.article {
   padding: 2rem 10rem;
 }

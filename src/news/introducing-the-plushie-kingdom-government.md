@@ -15,7 +15,9 @@ That future has finally come to fruition today, with the creation of a Plushie K
 
 At the heart of all this, is our website, [pk-gov](/). This website will be the hub where anyone can access all Government information and services. We've made it in collaboration with all the ministries, but especially the Ministry of Technology to make sure the website is intuitive, informative and effective at giving you what you need from us.
 
-The Government will be made up of a Central Ministry and 7 other ministries. The Central Ministry has the final say in Government, and will work with the other ministries in their respective fields. Each minister was put through a rigorous selection process to ensure they were the right fit for the job, and I'm confident in their ability to carry out their tasks well. More information about each ministry, including who works in them and what they're for will be available in our website and this <a class="link" href="https://youtu.be/EOIrbiDBkyk" target="_blank" rel="noreferrer">video</a>.
+The Government will be made up of a Central Ministry and 7 other ministries. The Central Ministry has the final say in Government, and will work with the other ministries in their respective fields. Each minister was put through a rigorous selection process to ensure they were the right fit for the job, and I'm confident in their ability to carry out their tasks well.
+![Picture showing all Government ministers](./news-media/group-photo.webp)
+ More information about each ministry, including who works in them and what they're for will be available in our website and this <a class="link" href="https://youtu.be/EOIrbiDBkyk" target="_blank" rel="noreferrer">video</a>.
 
 All of this makes for an exciting time in the Plushie Kingdom. We can't wait to show you more of what we have planned for the future, so stay tuned to the <a class="link" href="/news/">Government news</a> page in our website for the latest updates and information. Video versions may also be available for major announcements on our <a class="link" href="https://www.youtube.com/channel/UCL4Px1LLyD6WxcaDTm71ViQ" target="_blank" rel="noreferrer">YouTube channel</a>. 
 
