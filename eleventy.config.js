@@ -1,12 +1,12 @@
 export default async function(eleventyConfig) {
   eleventyConfig.setServerOptions({
       port: 3000,
+      watch: ["dist/**/*.js", "dist/**/*.css"],
     });
 
     eleventyConfig.setUseGitIgnore(false);
 
 
-  eleventyConfig.setWatchThrottleWaitTime(100)
   eleventyConfig.addWatchTarget("./dist/*.js");
   eleventyConfig.addWatchTarget("./dist/*.css");
 
