@@ -54,8 +54,18 @@ section:not(.content, footer section) {
   font-size: 2.5rem;
 }
 
-p {
+.article p {
   font-size: 1.5rem;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.article a {
+  text-decoration: underline;
+}
+
+section.article {
+  padding: 2rem 10rem;
 }
 
 .hero-date {
@@ -72,7 +82,7 @@ p {
 }
 
 .hero-thumbnail {
-  margin-top: 2rem;
+  margin-top: 1rem;
   max-width: 100%;
   height: auto;
 }
