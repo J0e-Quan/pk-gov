@@ -5,7 +5,7 @@ date: YYYY-MM-DD
 author: JOB-TITLE NAME
 title: 
 excerpt: 
-thumbnail: ./news-thumbnails/
+thumbnail: ./news-media/INSERT-TITLE-HERE/thumbnail.webp
 ---
 
-start writing here... (DO NOT EDIT THIS DIRECTLY, COPY PASTE IT AS A NEW ARTICLE)
+start writing here... (DO NOT EDIT THIS DIRECTLY, COPY PASTE THIS AS A NEW ARTICLE)
