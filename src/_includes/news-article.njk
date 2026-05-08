@@ -18,6 +18,9 @@
         <p class="hero-date">{{ date | postDate }}, by {{ author }}</p>
         <h1 class="hero-title">{{ title }}</h1>
         <h3 class="hero-excerpt">{{ excerpt }}</p>
+        {% if thumbnail %}
+          <img class="hero-thumbnail" src="{{ thumbnail }}", alt="{{ thumbnail-alt }}">
+        {% endif %}
       </section>
       <section class="article">
         {{ content | safe }}

@@ -1,3 +1,6 @@
+import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
+
+
 export default async function(eleventyConfig) {
   eleventyConfig.setServerOptions({
       port: 3000,
@@ -5,6 +8,10 @@ export default async function(eleventyConfig) {
     });
 
     eleventyConfig.setUseGitIgnore(false);
+	eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+    formats: ['webp'],
+    widths: ["auto"],
+  });
 
 
   eleventyConfig.addWatchTarget("./dist/*.js");

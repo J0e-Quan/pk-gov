@@ -71,6 +71,12 @@ p {
   font-weight: 400;
 }
 
+.hero-thumbnail {
+  margin-top: 2rem;
+  max-width: 100%;
+  height: auto;
+}
+
 .return {
   padding: 1rem 2rem;
   font-size: 2rem;
