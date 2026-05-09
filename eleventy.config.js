@@ -17,9 +17,10 @@ export default async function(eleventyConfig) {
   eleventyConfig.addWatchTarget("./dist/*.js");
   eleventyConfig.addWatchTarget("./dist/*.css");
 
-  // tells eleventy to ignore everything except news and _includes
+  // tells eleventy to ignore everything except news, _includes and info
   eleventyConfig.ignores.add("src/!(news|_includes|info)/**");
-  eleventyConfig.ignores.add("src/news/_ARTICLE-TEMPLATE.md");
+  // tells eleventy to ignore all .md files beginning with _
+  eleventyConfig.ignores.add("src/**/_*.md");
   eleventyConfig.ignores.delete("dist/**");
 
   eleventyConfig.addFilter("postDate", (dateObj) => {
