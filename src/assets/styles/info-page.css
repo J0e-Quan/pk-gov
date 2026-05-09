@@ -88,6 +88,20 @@ section:not(.content, footer section) {
   margin-bottom: 2rem;
 }
 
+.side-by-side {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.side-by-side p {
+  flex-shrink: 2;
+}
+
+.side-by-side img {
+  flex-grow: 1;
+}
+
 .hero-date {
   font-size: 2rem;
 }
