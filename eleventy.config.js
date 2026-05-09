@@ -18,7 +18,7 @@ export default async function(eleventyConfig) {
   eleventyConfig.addWatchTarget("./dist/*.css");
 
   // tells eleventy to ignore everything except news and _includes
-  eleventyConfig.ignores.add("src/!(news|_includes)/**");
+  eleventyConfig.ignores.add("src/!(news|_includes|info)/**");
   eleventyConfig.ignores.add("src/news/_ARTICLE-TEMPLATE.md");
   eleventyConfig.ignores.delete("dist/**");
 
