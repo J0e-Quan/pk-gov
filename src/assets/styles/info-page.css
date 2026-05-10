@@ -92,30 +92,19 @@ ol {
 
 .side-by-side {
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
   margin-bottom: 2rem;
 }
 
 .side-by-side p {
-  flex-shrink: 2;
+  flex-grow: 2;
+  flex-basis: 600px;
 }
 
 .side-by-side img {
   flex-grow: 1;
-}
-
-.side-by-side.three {
-  flex-wrap: wrap;
-}
-
-.side-by-side.three p {
-  flex-grow: 3;
-  flex-basis: 800px;
-}
-
-.side-by-side.three img {
-  flex-grow: 1;
-  flex-basis: 200px;
+  flex-basis: 300px;
   min-width: 0;
 }
 
