@@ -22,7 +22,7 @@ The greater Plushie Kingdom region is a large area composed of several locations
 
 ### What happened to the Plushie Village?
 
-The Plushie Village was combined with the Plushie Kingdom in The Great Reunification, an event which occured in November 2022. All previous Plushie Village residents now reside in the Plushie Kingdom. More information about this can be found in the <a href="#history-of-the-plushie-kingdom">History of the Plushie Kingdom section</a> below.
+The Plushie Village was combined with the Plushie Kingdom in The Great Reunification, an event which occured in November 2022. All previous Plushie Village residents now reside in the Plushie Kingdom. More information about this can be found in the <a class='link' href="#history-of-the-plushie-kingdom">History of the Plushie Kingdom section</a> below.
 
 ### How old is the Plushie Kingdom?
 

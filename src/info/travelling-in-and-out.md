@@ -27,7 +27,8 @@ Here's what you need to do before entering the Plushie Kingdom IF you are an exi
 2. Go through our biosecurity measures (In certain conditions, you are exempted from our biosecurity measures)
 3. Welcome home!
 
-## Biosecurity measures
+<h2 id='biosecurity-measures'>Biosecurity measures</h2>
+
 ---
 We take biosecurity very seriously here in the Kingdom, as it is crucial to protect all plushies from contamination. All plushies entering the Plushie Kingdom, except existing citizens who fufill certain conditions, MUST go through our biosecurity measures to ensure the health and safety of everyone in the Kingdom remains protected:
 1. You'll be put into our Biosecurity Chamber (washing machine) for a Quick Wash and Spin
