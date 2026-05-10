@@ -20,7 +20,7 @@ The Plushie Kingdom is home to plushies from various cultures and countries. We'
 
 ### What is the greater Plushie Kingdom region?
 
-The greater Plushie Kingdom region is a large area composed of several locations which are inhabited by plushies, but are typically not considered to be in the main Plushie Kingdom area, being the Big Tent. However, the entire region is subjected to the same Government laws and policies. More information about each location can be found in the <a class='link' href="/about/safety-and-residency">Safety and Residency</a> page.
+The greater Plushie Kingdom region is a large area composed of several locations which are inhabited by plushies, but are typically not considered to be in the main Plushie Kingdom area, being the Big Tent. However, the entire region is subjected to the same Government laws and policies. More information about each location can be found in the <a class='link' href="/info/safety-and-residency">Safety and Residency</a> page.
 
 ### What happened to the Plushie Village?
 
