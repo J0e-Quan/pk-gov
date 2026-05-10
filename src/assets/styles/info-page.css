@@ -104,6 +104,21 @@ ol {
   flex-grow: 1;
 }
 
+.side-by-side.three {
+  flex-wrap: wrap;
+}
+
+.side-by-side.three p {
+  flex-grow: 3;
+  flex-basis: 800px;
+}
+
+.side-by-side.three img {
+  flex-grow: 1;
+  flex-basis: 200px;
+  min-width: 0;
+}
+
 .hero-date {
   font-size: 2rem;
 }
