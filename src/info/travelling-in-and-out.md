@@ -12,7 +12,7 @@ To be eligible to stay in the Plushie Kingdom as a citizen, you must first fufil
 - Be a plushie (obviously)
 - Have good intentions for staying
 - Have no serious/current criminal record
-- Be able to be identified uniquely (no repeated names or appearance, note that this only applies for new plushies who are applying for Plushie Kingdom citizenship from 2026 onwards)
+- Be able to be uniquely identified (no repeated names or appearance, note that this only applies for new plushies who are applying for Plushie Kingdom citizenship from 2026 onwards)
 
 If you do fufill those conditions, here's what you need to do:
 1. Arrive outside the Plushie Kingdom
@@ -29,9 +29,9 @@ Here's what you need to do before entering the Plushie Kingdom IF you are an exi
 
 ## Biosecurity measures
 ---
-We take biosecurity very seriously here in the Kingdom, as it is crucial to protect all plushies from contamination. All plushies entering the Plushie Kingdom, except those fufilling certain conditions, MUST go through our biosecurity measures to ensure the health and safety of everyone in the Kingdom remains protected:
+We take biosecurity very seriously here in the Kingdom, as it is crucial to protect all plushies from contamination. All plushies entering the Plushie Kingdom, except existing citizens who fufill certain conditions, MUST go through our biosecurity measures to ensure the health and safety of everyone in the Kingdom remains protected:
 1. You'll be put into our Biosecurity Chamber (washing machine) for a Quick Wash and Spin
-2. After that, you'll be put into quarantine. Duration of quarantine varies case by case, but generally ranges from several hours to an overnight stay. (Depending on availability, you may be able to fast-track the process with a hair dryer)
+2. After that, you'll be put into quarantine. Duration of quarantine varies case by case, but generally ranges from several hours to an overnight stay. (Depending on availability, you may be able to fast-track the quarantine process with a hair dryer or fan)
 4. And that's it, welcome to the Kingdom!
 
 ## Conditions for being exempted from biosecurity measures
@@ -44,7 +44,7 @@ Existing citizens fufilling any of the following conditions are exempted from bi
 
 ## Leaving the Plushie Kingdom
 ---
-We know its exciting to be leaving on a trip, but before doing so, make sure you have the following prepared:
+We know it's exciting to be leaving on a trip, but before doing so, make sure you have the following prepared:
 - A return trip
 - A container for carrying you
 - An individual responsible for your safety and enjoyment of the trip
