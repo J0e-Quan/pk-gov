@@ -13,7 +13,7 @@ The Plushie Kingdom is located in the peaceful state of Penang, Malaysia. This m
 ### Current known threats
 While the Kingdom is extremely safe to live in, it helps to be aware of any potential sources of danger. Currently, we consider such sources to include:
 - Damage to the structural integrity of the Big Tent or other residential areas in the greater Plushie Kingdom region
-- Kidnapping or harrassment from the Bad Guy 
+- Kidnapping or harassment from the Bad Guy 
 - Being crushed by other plushies in the Big Tent
 
 ### What to do in case of danger
