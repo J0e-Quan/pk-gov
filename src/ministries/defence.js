@@ -6,9 +6,9 @@ import logo from '../assets/lottie/defence.json'
 const logoContainer = document.querySelector('.ministry-of-defence.logo-lottie')
 
 Lottie.loadAnimation({
-  container: logoContainer,    
-  renderer: 'svg',         
-  loop: false,             
-  autoplay: true,        
+  container: logoContainer,
+  renderer: 'svg',
+  loop: false,
+  autoplay: true,
   animationData: logo
-});
+})

@@ -7,21 +7,27 @@ module.exports = merge(common, {
   mode: 'development',
   devtool: 'eval-source-map',
   watchOptions: {
-    ignored: /node_modules/,
+    ignored: /node_modules/
   },
   cache: false,
   devServer: {
     static: {
-        directory: path.join(__dirname, 'dist'),
-      },
-      stats: {
-    orphanModules: true, // This will list them in the terminal
-    modules: true,       // Shows all modules for better debugging
-  },
+      directory: path.join(__dirname, 'dist')
+    },
+    stats: {
+      orphanModules: true, // This will list them in the terminal
+      modules: true // Shows all modules for better debugging
+    },
     hot: true,
     historyApiFallback: true,
-    watchFiles: ['./src/**/*.html', './src/**/*.njk', './src/**/*.md', './src/**/*.css', './src/**/*.js'],
-    port: 3000,
+    watchFiles: [
+      './src/**/*.html',
+      './src/**/*.njk',
+      './src/**/*.md',
+      './src/**/*.css',
+      './src/**/*.js'
+    ],
+    port: 3000
   },
   module: {
     rules: [

@@ -1,8 +1,8 @@
 ---
 tags: info
 layout: info-page.njk
-title: 
-excerpt: 
+title:
+excerpt:
 thumbnail:
 ---
 

@@ -70,11 +70,11 @@ section:not(.content, footer section) {
 }
 
 #pbb {
-  background-image: url("../pictures/ministers/pbb.webp");
+  background-image: url('../pictures/ministers/pbb.webp');
 }
 
 #apb {
-  background-image: url("../pictures/ministers/apb.webp");
+  background-image: url('../pictures/ministers/apb.webp');
 }
 
 .minister.info-box {
@@ -149,7 +149,8 @@ footer {
   column-gap: 1rem;
 }
 
-.footer-resources.links, .footer-about.links {
+.footer-resources.links,
+.footer-about.links {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;

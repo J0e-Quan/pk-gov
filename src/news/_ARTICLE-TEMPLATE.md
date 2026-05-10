@@ -3,8 +3,8 @@ tags: news
 layout: news-article.njk
 date: YYYY-MM-DD
 author: JOB-TITLE NAME
-title: 
-excerpt: 
+title:
+excerpt:
 thumbnail: ./news-media/INSERT-TITLE-HERE/thumbnail.webp
 ---
 

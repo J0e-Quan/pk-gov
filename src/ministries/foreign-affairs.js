@@ -6,9 +6,9 @@ import logo from '../assets/lottie/foreign-affairs.json'
 const logoContainer = document.querySelector('.ministry-of-foreign-affairs.logo-lottie')
 
 Lottie.loadAnimation({
-  container: logoContainer,    
-  renderer: 'svg',         
-  loop: false,             
-  autoplay: true,        
+  container: logoContainer,
+  renderer: 'svg',
+  loop: false,
+  autoplay: true,
   animationData: logo
-});
+})

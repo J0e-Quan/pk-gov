@@ -7,7 +7,9 @@ thumbnail:
 ---
 
 ## Some quick questions and answers:
+
 ---
+
 ### Where is the Plushie Kingdom located?
 
 The Plushie Kingdom is currently located within Penang, Malaysia. All plushies from the previous settlements now reside in this central location. The majority of plushies live under the Big Tent, but other inhabited areas also exist within the greater Plushie Kingdom region.
@@ -35,14 +37,17 @@ Compared to the Plushie Kingdom itself, the Government is much younger, being fo
 <h2 id='history-of-the-plushie-kingdom'>History of the Plushie Kingdom</h2>
 
 ---
+
 ### 2013: The small beginnings of something big
-In 2013, a humble house in the small town of Bagan Serai, Perak became the home for several plushies. These plushies didn't know each other before staying here, but quickly formed close bonds, starting the foundation for what would become the Plushie Village. 
+
+In 2013, a humble house in the small town of Bagan Serai, Perak became the home for several plushies. These plushies didn't know each other before staying here, but quickly formed close bonds, starting the foundation for what would become the Plushie Village.
 
 ### 2013-2015: Expansion of the Plushie Village
+
 Within 3 years, the house with the red walls and yellow windows would come to inhabit many more plushies, all with different origins and stories, but united in their deep care and love for each other. Soon, the eldest plushie living in the Plushie Village, Ah Bob would be chosen as the Plushie Village's very first Village Chief, responsible for managing the wellbeing of all plushies living in the Plushie Village.
 
-
 ### 2015-2016: Expedition to Taiwan
+
 <div class='side-by-side one'>
   <p>In June 2015, two prominent residents of the Plushie Kingdom, the then-Village Chief Ah Bob and Pink Bear Bear would be heading on a 1-year expedition to Taiwan. Due to Ah Bob's 1 year absence, another plushie living in the Plushie Village, Stitch would be chosen to replace Ah Bob as the Plushie Village's second Village Chief. He would go on to retain this role until The Great Reunification in November 2022. The two adventurers would bring home an additional resident to the Plushie Village upon their return in June 2016.</p>
   <img src='./info-media/plushie-village.webp' alt='Picture of Stitch in the Plushie Village'>
@@ -54,6 +59,7 @@ Within 3 years, the house with the red walls and yellow windows would come to in
 In early 2017, Pink Bear Bear along with 8 other residents of the Plushie Village would migrate from their Perak home to Alor Setar, Kedah. In this new land, a Plushie Kingdom would be formed, with Ah Bob inheriting the role of King from his previous services as the Plushie Village's first Village Chief. From that point on, the Plushie Kingdom would continue to expand and gain new members, soon matching the size of the Plushie Village. Despite that, the two settlements remained in close ties with each other. Residents of the Plushie Kingdom would regularly visit the Plushie Village, and some would even end up staying there, falling in love with the quiet peace of village life.
 
 ### 2020-2022: Pandemic and Penang
+
 <div class='side-by-side two'>
   <p>Expansion of the Plushie Kingdom would be paused during the COVID-19 pandemic, as the settlements entered a lockdown. During a brief period of relaxed lockdown regulations in late 2020, the Plushie Kingdom would be relocated to Penang. Gone was their vast but unsheltered land, now replaced with a shiny new castle, where they would spend the rest of the pandemic in. Their new location in Penang shortened the distance for travel between the two settlements, allowing for even closer ties and more frequent visits than ever before. However, there was still a need to travel between the two settlements, leading the Plushie Kingdom and Plushie Village to wonder if they could ever truly be together as one cohesive entity. Fortunately, there would soon be an opportunity to do just that...</p>
   <img src='./info-media/plushie-kingdom-pg1.webp' alt='Picture of the Plushie Kingdom castle in Penang'>
@@ -74,4 +80,5 @@ By now, the Plushie Kingdom had grown significantly since its founding in 2017. 
 In 2026, Pink Bear Bear, who had played a major role in leading the Kingdom alongside King Ah Bob as Prince would step up to take the Kingdom's next step forward. Over several months, he would gather a group of plushies to form what would be the Plushie Kingdom's very first Government. On (INSERT DATE HERE!!!!) 2026, this Government would be unveiled to the Plushie Kingdom, promising to deliver real, meaningful change. Pink Bear Bear would take on the role of being the Kingdom's first Prime Minister. Together with his wife as the Deputy Prime Minister, they would lead the Government's 7 other ministries in improving life in the Kingdom.
 
 ### Present Day
+
 Today, the Plushie Kingdom has gone a long way from that house with the red walls and yellow windows in Bagan Serai. There's been relocations, a global pandemic and countless new plushies joining the Kingdom. But no matter what, all the Kingdom's plushies will never abandon, and will always strive to achieve that founding purpose that started it all: Enable all plushies to live life to the fullest.

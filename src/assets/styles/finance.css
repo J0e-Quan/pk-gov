@@ -70,7 +70,7 @@ section:not(.content, footer section) {
 }
 
 #cimb-octo {
-  background-image: url("../pictures/ministers/cimb-octo.webp");
+  background-image: url('../pictures/ministers/cimb-octo.webp');
 }
 
 .minister.info-box {
@@ -145,7 +145,8 @@ footer {
   column-gap: 1rem;
 }
 
-.footer-resources.links, .footer-about.links {
+.footer-resources.links,
+.footer-about.links {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
