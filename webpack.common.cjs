@@ -17,7 +17,6 @@ module.exports = {
     news: './src/news/news.js',
     'news-article': './src/news/news-article.js',
     pkGov: './src/about/pk-gov.js',
-    plushieKingdom: './src/about/plushie-kingdom.js',
     govIdentity: './src/about/gov-identity.js',
   },
   output: {
@@ -76,11 +75,6 @@ module.exports = {
       template: './src/about/pk-gov.html',
       filename: 'about/pk-gov/index.html',
       chunks: ['pkGov']
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/about/plushie-kingdom.html',
-      filename: 'about/plushie-kingdom/index.html',
-      chunks: ['plushieKingdom']
     }),
     new HtmlWebpackPlugin({
       template: './src/about/gov-identity.html',
