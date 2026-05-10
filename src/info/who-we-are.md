@@ -22,7 +22,7 @@ The greater Plushie Kingdom region is a large area composed of several locations
 
 ### What happened to the Plushie Village?
 
-The Plushie Village was combined with the Plushie Kingdom in The Great Reunification, an event which occured in November 2022. All previous Plushie Village residents now reside in the Plushie Kingdom. More information about this can be found in the History of the Plushie Kingdom section below.
+The Plushie Village was combined with the Plushie Kingdom in The Great Reunification, an event which occured in November 2022. All previous Plushie Village residents now reside in the Plushie Kingdom. More information about this can be found in the <a href="#history-of-the-plushie-kingdom">History of the Plushie Kingdom section</a> below.
 
 ### How old is the Plushie Kingdom?
 
@@ -32,7 +32,8 @@ While the Kingdom, which had a King only began in 2017, the general concept of a
 
 Compared to the Plushie Kingdom itself, the Government is much younger, being formed in May 2026! The Government was formed to provide a more stable leadership for the Kingdom after the King's departure in 2024, and was first led by Prime Minister Pink Bear Bear, who remains the Prime Minister today.
 
-## History of the Plushie Kingdom
+<h2 id='history-of-the-plushie-kingdom'>History of the Plushie Kingdom</h2>
+
 ---
 ### 2013: The small beginnings of something big
 In 2013, a humble house in the small town of Bagan Serai, Perak became the home for several plushies. These plushies didn't know each other before staying here, but quickly formed close bonds, starting the foundation for what would become the Plushie Village. 
