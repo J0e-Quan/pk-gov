@@ -23,4 +23,5 @@ The Plushie Kingdom offers quality healthcare from sickness to recovery and beyo
 
 ## Financial services
 ---
-The Plushie Kingdom is home to world-class banking expertise, ensuring the financial health of all plushies remains secure. All financial activity, including investments, loans and bank accounts are handled and regulated by the Ministry of Finance. This centralised control allows for swift action and smoother processing
+The Plushie Kingdom is home to world-class banking expertise, ensuring the financial health of all plushies remains secure. All financial activity, including investments, loans and bank accounts are handled and regulated by the Ministry of Finance. To access or learn more about these services, contact your nearest Ministry of Finance staff member.
+![Picture of all Ministry of Finance staff members](./info-media/business-and-commerce/mofinance-staff-members.webp)
