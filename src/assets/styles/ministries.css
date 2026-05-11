@@ -121,7 +121,6 @@ section:not(.content, footer section) {
 }
 
 /* MINISTER PHOTOS BEGIN */
-
 #pbb {
   background-image: url('../pictures/ministers/pbb.webp');
 }
@@ -169,8 +168,6 @@ section:not(.content, footer section) {
 #stitch {
   background-image: url('../pictures/ministers/stitch.webp');
 }
-
-
 /* MINISTER PHOTOS END */
 
 .minister.info-box {
