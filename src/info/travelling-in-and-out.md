@@ -44,9 +44,7 @@ We take biosecurity very seriously here in the Kingdom, as it is crucial to prot
 2. After that, you'll be put into quarantine. Duration of quarantine varies case by case, but generally ranges from several hours to an overnight stay. (Depending on availability, you may be able to fast-track the quarantine process with a hair dryer or fan)
 3. And that's it, welcome to the Kingdom!
 
-## Conditions for being exempted from biosecurity measures
-
----
+### Conditions for being exempted from biosecurity measures
 
 Existing citizens fufilling any of the following conditions are exempted from biosecurity measures when entering the Plushie Kingdom, for that single trip ONLY:
 
