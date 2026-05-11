@@ -1,9 +1,8 @@
 # NPM SCRIPT INSTRUCTIONS
 
-- npm run dev to open webpack dev server
+- npm run start to open 11ty and webpack dev server
 - npm run cleanup to check for lint and prettier errors
-- npm run deploy to publish project when done
-- check that github pages is set to gh-pages branch in repo settings
+- git push to publish project when done (Render will update website automatically)
 
 # GIT BRANCH WORKFLOW
 

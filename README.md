@@ -6,7 +6,9 @@ Live demo link:
 
 ## Technologies used:
 
--
+- HTML for basic page layout 
+- CSS for styling page elements
+- JavaScript for loading lottie animations and handling imports
 - npm and webpack for managing and bundling code modules
 - Git for version control
 
@@ -16,7 +18,7 @@ Live demo link:
 
 ## Credits:
 
--
+- Credits for any external pictures/resources used are included where that particular content is located in the website
 
 ## Gallery:
 
