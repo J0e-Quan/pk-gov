@@ -120,9 +120,58 @@ section:not(.content, footer section) {
   height: 800px;
 }
 
+/* MINISTER PHOTOS BEGIN */
+
+#pbb {
+  background-image: url('../pictures/ministers/pbb.webp');
+}
+
+#apb {
+  background-image: url('../pictures/ministers/apb.webp');
+}
+
 #capybara {
   background-image: url('../pictures/ministers/capybara.webp');
 }
+
+#paddington {
+  background-image: url('../pictures/ministers/paddington.webp');
+}
+
+#som-ting-wong {
+  background-image: url('../pictures/ministers/som-ting-wong.webp');
+}
+
+#ho-lee-fook {
+  background-image: url('../pictures/ministers/ho-lee-fook.webp');
+}
+
+#cimb-octo {
+  background-image: url('../pictures/ministers/cimb-octo.webp');
+}
+
+#pikachu {
+  background-image: url('../pictures/ministers/pikachu.webp');
+}
+
+#blinky {
+  background-image: url('../pictures/ministers/blinky.webp');
+}
+
+#android {
+  background-image: url('../pictures/ministers/android.webp');
+}
+
+#kodee {
+  background-image: url('../pictures/ministers/kodee.webp');
+}
+
+#stitch {
+  background-image: url('../pictures/ministers/stitch.webp');
+}
+
+
+/* MINISTER PHOTOS END */
 
 .minister.info-box {
   border: 10px solid var(--theme);
