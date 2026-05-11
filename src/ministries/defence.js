@@ -1,9 +1,9 @@
 import '../assets/styles/global.css'
-import '../assets/styles/defence.css'
+import '../assets/styles/ministries.css'
 import Lottie from 'lottie-web'
 import logo from '../assets/lottie/defence.json'
 
-const logoContainer = document.querySelector('.ministry-of-defence.logo-lottie')
+const logoContainer = document.querySelector('.logo-lottie')
 
 Lottie.loadAnimation({
   container: logoContainer,

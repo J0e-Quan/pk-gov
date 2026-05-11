@@ -68,6 +68,7 @@
 
 .logo-frame {
   padding: 0 5rem;
+  aspect-ratio: 3.6 / 1;
 }
 
 .hero {

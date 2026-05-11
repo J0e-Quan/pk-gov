@@ -1,9 +1,9 @@
 import '../assets/styles/global.css'
-import '../assets/styles/finance.css'
+import '../assets/styles/ministries.css'
 import Lottie from 'lottie-web'
 import logo from '../assets/lottie/finance.json'
 
-const logoContainer = document.querySelector('.ministry-of-finance.logo-lottie')
+const logoContainer = document.querySelector('.logo-lottie')
 
 Lottie.loadAnimation({
   container: logoContainer,
