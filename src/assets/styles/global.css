@@ -57,7 +57,7 @@ input,
 button {
   appearance: none;
   border: none;
-  background-color: none;
+  background-color: transparent;
   outline: none;
 }
 
