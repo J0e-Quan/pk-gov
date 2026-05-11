@@ -131,6 +131,7 @@ a svg {
   box-shadow: inset 0 0 0 0px var(--central-ministry-colour);
   border: 16px solid var(--central-ministry-colour);
   transition: box-shadow 0.4s ease-in-out, color 0.4s ease-in-out;
+  will-change: box-shadow, color;
 }
 
 .info-and-news .cta:hover {
