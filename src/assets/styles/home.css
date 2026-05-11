@@ -57,6 +57,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 1px solid white;
+  transition: border 0.2s;
+  will-change: border;
 }
 
 a svg {
@@ -126,11 +129,13 @@ a svg {
   font-family: var(--mona-sans);
   color: black;
   background-color: transparent;
+  box-shadow: inset 0 0 0 0px var(--central-ministry-colour);
   border: 16px solid var(--central-ministry-colour);
+  transition: box-shadow 0.4s ease-in-out, color 0.4s ease-in-out;
 }
 
 .info-and-news .cta:hover {
-  background-color: var(--central-ministry-colour);
+  box-shadow: inset 0 0 0 400px var(--central-ministry-colour);
   color: white;
 }
 
