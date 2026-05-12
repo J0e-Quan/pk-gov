@@ -81,6 +81,9 @@ section:not(.content, footer section) {
 }
 
 @keyframes wipe-right {
+  0% {
+    transform: scaleX(0);
+  }
   100% {
     transform: scaleX(1);
   }
@@ -187,6 +190,22 @@ footer {
 
 .footer-title {
   font-size: 2.5rem;
+  position: relative;
+  overflow: clip;
+  display: inline-block;
+}
+
+.footer-title::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--central-ministry-colour);
+  animation: wipe-up ease-out both;
+  animation-timeline: view();
+  animation-range-start: cover 5%;
+  animation-range-end: cover 35%;
 }
 
 .footer-divider {
@@ -194,6 +213,11 @@ footer {
   height: 10px;
   background-color: white;
   margin-bottom: 1rem;
+  transform-origin: left;
+  animation: wipe-right ease-in forwards;
+  animation-timeline: view();
+  animation-range-start: cover 0%;
+  animation-range-end: cover 15%;
 }
 
 .footer-ministries.links {
@@ -214,9 +238,28 @@ footer {
 footer .link {
   color: white;
   font-size: 1.2rem;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+footer .link::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  transform-origin: left;
+  z-index: -1;
+  transform: translateX(-100%);
+  transition: transform 0.2s ease-out;
+}
+
+footer .link:hover::before {
+  transform: translateX(0%);
 }
 
 footer .link:hover {
-  background-color: white;
   color: black;
 }
