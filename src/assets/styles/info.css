@@ -47,6 +47,18 @@ section:not(.content, footer section) {
   height: 10px;
   background-color: var(--central-ministry-colour);
   margin-bottom: 3rem;
+  transform-origin: left;
+  transform: scaleX(0);
+  animation: wipe-right 0.8s ease-in forwards;
+  animation-timeline: view();
+  animation-range-start: cover 0%;
+  animation-range-end: cover 30%;
+}
+
+@keyframes wipe-right {
+  100% {
+    transform: scaleX(1);
+  }
 }
 
 .title {
