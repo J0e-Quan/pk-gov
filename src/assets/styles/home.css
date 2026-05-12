@@ -42,14 +42,6 @@
   padding: 0rem 5rem;
 }
 
-.ministries-title {
-  grid-column: 1 / -1;
-  grid-row: 1;
-  font-size: 4rem;
-  padding: 1rem;
-  place-self: center;
-}
-
 .ministries a {
   background-color: white;
   place-self: center;
@@ -243,7 +235,7 @@ footer .link::before {
   height: 100%;
   transform-origin: left;
   z-index: -1;
-  transform: translateX(-100%);
+  transform: translateX(-110%);
   transition: transform 0.2s ease-out;
 }
 
@@ -254,3 +246,54 @@ footer .link:hover::before {
 footer .link:hover {
   color: black;
 }
+
+/* MEDIA QUERIES BELOW */
+@media (max-width: 500px) {
+  .header, .hero {
+    padding: 1rem 2rem;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-text {
+    font-size: 1.5rem;
+  }
+
+  .ministries {
+    grid-template-columns: 40vw 40vw;
+    grid-auto-rows: 40vw;
+  }
+
+  .ministries a {
+    height: 40vw;
+    width: 40vw;
+  }
+
+  a svg {
+    height: 35vw;
+    width: 35vw;
+  }
+  .info-and-news {
+    padding: 1rem;
+  }
+  .info-and-news .title {
+    font-size: 2rem;
+  }
+  .info-and-news .text {
+    font-size: 1.5rem;
+  }
+  .info-and-news .cta {
+    font-size: 1.5rem;
+  }
+  footer {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 2rem 4rem 3rem 4rem;
+  }
+  footer .link {
+    font-size: 1rem;
+  }
+}
+/* MEDIA QUERIES ABOVE */
