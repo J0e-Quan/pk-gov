@@ -100,10 +100,10 @@ section:not(.content, footer section) {
   margin-bottom: 3rem;
   transform-origin: left;
   transform: scaleX(0);
-  animation: wipe-right 0.8s ease-in forwards;
+  animation: wipe-right ease-in forwards;
   animation-timeline: view();
-  animation-range-start: cover 0%;
-  animation-range-end: cover 30%;
+  animation-range-start: cover 5%;
+  animation-range-end: cover 35%;
 }
 
 @keyframes wipe-right {
