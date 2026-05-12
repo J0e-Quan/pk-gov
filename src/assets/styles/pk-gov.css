@@ -63,7 +63,6 @@ section:not(.content, footer section) {
   font-size: 2rem;
   font-family: var(--mona-sans);
   color: black;
-  border: 16px solid var(--central-ministry-colour);
   display: flex;
   max-width: fit-content;
   margin: 1rem auto 4rem auto;
