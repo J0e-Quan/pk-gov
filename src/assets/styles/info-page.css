@@ -60,6 +60,11 @@ section:not(.content, footer section) {
   animation-range-end: cover 50%;
 }
 
+.info h2:nth-of-type(2)::before {
+  animation-range-start: cover 0%;
+  animation-range-end: cover 35%;
+}
+
 @keyframes wipe-up {
   0% {
     transform: translateX(0%);
@@ -80,6 +85,11 @@ section:not(.content, footer section) {
   animation-timeline: view();
   animation-range-start: cover 5%;
   animation-range-end: cover 35%;
+}
+
+.info hr:nth-of-type(2) {
+  animation-range-start: cover 0%;
+  animation-range-end: cover 15%;
 }
 
 @keyframes wipe-right {
@@ -300,7 +310,7 @@ footer .link:hover {
   .section-divider, .info hr {
     margin-bottom: 1rem;
     animation-range-start: cover 0%;
-    animation-range-end: cover 20%;
+    animation-range-end: cover 15%;
   }
   .info h3 {
     font-size: 1.5rem;
