@@ -75,7 +75,7 @@ section:not(.content, footer section) {
   margin-bottom: 3rem;
   transform-origin: left;
   transform: scaleX(0);
-  animation: wipe-right ease-in forwards;
+  animation: wipe-right ease-in both;
   animation-timeline: view();
   animation-range-start: cover 5%;
   animation-range-end: cover 35%;
@@ -215,7 +215,7 @@ footer {
   background-color: white;
   margin-bottom: 1rem;
   transform-origin: left;
-  animation: wipe-right ease-in forwards;
+  animation: wipe-right ease-in both;
   animation-timeline: view();
   animation-range-start: cover 0%;
   animation-range-end: cover 15%;
