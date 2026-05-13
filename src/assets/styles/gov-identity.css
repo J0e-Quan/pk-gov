@@ -285,6 +285,9 @@ footer .link:hover {
     animation-range-start: cover 0%;
     animation-range-end: cover 20%;
   }
+  .section-divider:nth-of-type(1), .info hr:nth-of-type(1), .heading:nth-of-type(1)::before {
+    animation-range-end: cover 0%;
+  }
   .title {
     font-size: 1.5rem;
   }
@@ -302,6 +305,10 @@ footer .link:hover {
     flex-direction: column;
     flex-wrap: nowrap;
     padding: 2rem 3rem 3rem 3rem;
+  }
+  .footer-divider {
+    animation-range-start: cover 0%;
+    animation-range-end: cover 10%;
   }
   footer .link {
     font-size: 1rem;
