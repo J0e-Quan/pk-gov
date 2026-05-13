@@ -102,7 +102,7 @@ section:not(.content, footer section) {
 }
 
 .info ul,
-ol {
+.info ol {
   font-size: 1.5rem;
   margin: -1rem 0 2rem 0;
   line-height: 1.5;
@@ -281,3 +281,36 @@ footer .link:hover::before {
 footer .link:hover {
   color: black;
 }
+
+/* MEDIA QUERIES BELOW */
+@media (max-width: 500px) {
+  .header, section:not(.content, footer section) {
+    padding: 1rem 2rem;
+  }
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  .hero-text {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .info h2 {
+    font-size: 2rem;
+  }
+  .section-divider, .info hr {
+    margin-bottom: 1rem;
+    animation-range-start: cover 0%;
+    animation-range-end: cover 20%;
+  }
+  .info h3 {
+    font-size: 1.5rem;
+  }
+  .info p, .info ul, .info ol {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  .return {
+    font-size: 1.5rem;
+  }
+}
+/* MEDIA QUERIES ABOVE */
