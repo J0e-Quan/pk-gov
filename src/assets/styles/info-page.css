@@ -166,6 +166,7 @@ ol {
 .hero-excerpt {
   font-size: 2rem;
   font-weight: 400;
+  font-family: var(--mona-sans);
 }
 
 .hero-thumbnail {
