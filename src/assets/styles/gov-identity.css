@@ -285,7 +285,7 @@ footer .link:hover {
     animation-range-start: cover 0%;
     animation-range-end: cover 20%;
   }
-  .section-divider:nth-of-type(1), .info hr:nth-of-type(1), .heading:nth-of-type(1)::before {
+  .colours .section-divider, .colours hr, .colours .heading::before {
     animation-range-end: cover 0%;
   }
   .title {
