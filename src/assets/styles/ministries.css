@@ -401,6 +401,14 @@ footer .link:hover {
   .heading {
     font-size: 2rem;
   }
+  .ministers.heading::before {
+    animation-range-start: cover 35%;
+    animation-range-end: cover 65%;
+  }
+  .ministers .section-divider {
+    animation-range-start: cover 25%;
+    animation-range-end: cover 45%;
+  }
   .section-divider {
     margin-bottom: 1rem;
     animation-range-start: cover 0%;
