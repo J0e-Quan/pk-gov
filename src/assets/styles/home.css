@@ -252,25 +252,20 @@ footer .link:hover {
   .header, .hero {
     padding: 1rem 2rem;
   }
-
   .hero-title {
     font-size: 2.5rem;
   }
-
   .hero-text {
     font-size: 1.5rem;
   }
-
   .ministries {
     grid-template-columns: 40vw 40vw;
     grid-auto-rows: 40vw;
   }
-
   .ministries a {
     height: 40vw;
     width: 40vw;
   }
-
   a svg {
     height: 35vw;
     width: 35vw;
@@ -282,7 +277,7 @@ footer .link:hover {
     font-size: 2rem;
   }
   .info-and-news .text {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
   .info-and-news .cta {
     font-size: 1.5rem;
@@ -290,7 +285,7 @@ footer .link:hover {
   footer {
     flex-direction: column;
     flex-wrap: nowrap;
-    padding: 2rem 4rem 3rem 4rem;
+    padding: 2rem 3rem 3rem 3rem;
   }
   footer .link {
     font-size: 1rem;
