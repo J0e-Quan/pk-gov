@@ -264,3 +264,39 @@ footer .link:hover::before {
 footer .link:hover {
   color: black;
 }
+
+/* MEDIA QUERIES BELOW */
+@media (max-width: 500px) {
+  .header, section:not(.content, footer section) {
+    padding: 1rem 2rem;
+  }
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  .hero-text {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .heading {
+    font-size: 2rem;
+  }
+  .section-divider, .info hr {
+    margin-bottom: 1rem;
+    animation-range-start: cover 0%;
+    animation-range-end: cover 20%;
+  }
+  .title {
+    font-size: 1.5rem;
+  }
+  .text {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  .colour {
+    font-size: 1.5rem;
+  }
+  .return {
+    font-size: 1.5rem;
+  }
+}
+/* MEDIA QUERIES ABOVE */
