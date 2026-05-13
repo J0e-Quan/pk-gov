@@ -248,7 +248,7 @@ footer .link:hover {
 }
 
 /* MEDIA QUERIES BELOW */
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .header, .hero {
     padding: 1rem 2rem;
   }
