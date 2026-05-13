@@ -235,5 +235,13 @@ footer .link:hover {
   .return {
     font-size: 1.5rem;
   }
+  footer {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 2rem 3rem 3rem 3rem;
+  }
+  footer .link {
+    font-size: 1rem;
+  }
 }
 /* MEDIA QUERIES ABOVE */
