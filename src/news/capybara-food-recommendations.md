@@ -4,7 +4,7 @@ layout: news-article.njk
 date: 2026-05-09
 author: Food Minister Capybara
 title: Capybara's Food Recommendations
-excerpt: Get the latest scoop on the best food in the Kingdom, straight from the Food Minister himself!
+excerpt: Get the latest scoop on the best food in the Kingdom, straight from the Food Minister himself! (Opinions here are the Food Minister's, not the Kingdom as a whole)
 thumbnail: ./news-media/capybara-food-recommendations/thumbnail.webp
 ---
 
