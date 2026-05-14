@@ -134,7 +134,9 @@ section:not(.content, footer section) {
   background-color: transparent;
   box-shadow: inset 0 0 0 0px var(--central-ministry-colour);
   border: 16px solid var(--central-ministry-colour);
-  transition: box-shadow 0.4s ease-in-out, color 0.4s ease-in-out;
+  transition:
+    box-shadow 0.4s ease-in-out,
+    color 0.4s ease-in-out;
   will-change: box-shadow, color;
 }
 
@@ -154,7 +156,9 @@ section:not(.content, footer section) {
   margin: 1rem auto 4rem auto;
   box-shadow: inset 0 0 0 0px var(--central-ministry-colour);
   border: 16px solid var(--central-ministry-colour);
-  transition: box-shadow 0.4s ease-in-out, color 0.4s ease-in-out;
+  transition:
+    box-shadow 0.4s ease-in-out,
+    color 0.4s ease-in-out;
   will-change: box-shadow, color;
 }
 
@@ -252,7 +256,8 @@ footer .link:hover {
 
 /* MEDIA QUERIES BELOW */
 @media (max-width: 600px) {
-  .header, section:not(.content, footer section) {
+  .header,
+  section:not(.content, footer section) {
     padding: 1rem 2rem;
   }
   .hero-title {
@@ -268,19 +273,21 @@ footer .link:hover {
   .directory.title {
     font-size: 2rem;
   }
-  .section-divider, .info hr {
+  .section-divider,
+  .info hr {
     margin-bottom: 1rem;
     animation-range-start: cover 0%;
     animation-range-end: cover 20%;
   }
-  .directory.text{
+  .directory.text {
     font-size: 1rem;
     line-height: 1.5;
   }
   .directory {
     margin-bottom: 0;
   }
-  .return, .directory.cta {
+  .return,
+  .directory.cta {
     font-size: 1.5rem;
   }
   footer {

@@ -6,7 +6,7 @@ Live demo link: https://pk-gov.onrender.com/
 
 ## Technologies used:
 
-- HTML for basic page layout 
+- HTML for basic page layout
 - CSS for styling page elements and responsive design
 - JavaScript for loading lottie animations and handling imports
 - npm and webpack for managing and bundling code modules
