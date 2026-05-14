@@ -440,6 +440,9 @@ footer .link:hover {
     font-size: 1rem;
     line-height: 1.5;
   }
+  .small-text {
+    font-size: 0.5rem
+  }
   .return {
     font-size: 1.5rem;
   }
