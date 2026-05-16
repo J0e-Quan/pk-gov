@@ -15,6 +15,8 @@ export default async function (eleventyConfig) {
   eleventyConfig.addWatchTarget('./dist/*.js')
   eleventyConfig.addWatchTarget('./dist/*.css')
 
+  eleventyConfig.addPassthroughCopy("./src/assets/favicons/generic.svg");
+
   // tells eleventy to ignore everything except news, _includes and info
   eleventyConfig.ignores.add('src/!(news|_includes|info)/**')
   // tells eleventy to ignore all .md files beginning with _
