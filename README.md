@@ -9,6 +9,7 @@ Live demo link: https://pk-gov.onrender.com/
 - HTML for basic page layout
 - CSS for styling page elements and responsive design
 - JavaScript for loading lottie animations and handling imports
+- 11ty for static page generation from templates
 - npm and webpack for managing and bundling code modules
 - Git for version control
 
@@ -24,7 +25,8 @@ Live demo link: https://pk-gov.onrender.com/
 
 ## Gallery:
 
-![alt-text](img-path)
+![picture showing desktop version of the website's homepage](./readme-assets/homepage-desktop.webp)
+![picture showing mobile version of the website's homepage](./readme-assets/homepage-mobile.webp)
 
 ## Getting started:
 
