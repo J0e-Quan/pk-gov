@@ -159,14 +159,13 @@ section:not(.content, footer section) {
   color: black;
 }
 
-.return {
+.return, .download {
   padding: 1rem 2rem;
   font-size: 2rem;
   font-family: var(--mona-sans);
   color: black;
   display: flex;
   max-width: fit-content;
-  margin: 1rem auto 4rem auto;
   box-shadow: inset 0 0 0 0px var(--central-ministry-colour);
   border: 16px solid var(--central-ministry-colour);
   transition:
@@ -175,7 +174,20 @@ section:not(.content, footer section) {
   will-change: box-shadow, color;
 }
 
-.return:hover {
+.download-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.return {
+  margin: 1rem auto 4rem auto;
+
+}
+
+.return:hover, .download:hover {
   box-shadow: inset 0 0 0 400px var(--central-ministry-colour);
   color: white;
 }
@@ -304,7 +316,7 @@ footer .link:hover {
   .colour {
     font-size: 1.5rem;
   }
-  .return {
+  .return, .download {
     font-size: 1.5rem;
   }
   footer {

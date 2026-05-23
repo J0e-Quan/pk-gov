@@ -16,6 +16,7 @@ export default async function (eleventyConfig) {
   eleventyConfig.addWatchTarget('./dist/*.css')
 
   eleventyConfig.addPassthroughCopy("./src/assets/favicons/generic.svg");
+  eleventyConfig.addPassthroughCopy("./src/assets/downloadable")
 
   // tells eleventy to ignore everything except news, _includes and info
   eleventyConfig.ignores.add('src/!(news|_includes|info)/**')
