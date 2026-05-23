@@ -123,6 +123,8 @@ section:not(.content, footer section) {
 }
 
 .article-title {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
   font-size: 2.5rem;
   line-height: 1.2;
 }
