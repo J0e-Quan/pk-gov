@@ -102,6 +102,19 @@ section:not(.content, footer section) {
   line-height: 1.5;
 }
 
+.article ul,
+.article ol {
+  font-size: 1.5rem;
+  margin: -1rem 0 2rem 0;
+  line-height: 1.5;
+  padding: 0 2rem;
+}
+
+.article ul ul,
+.article ol ol {
+  margin: 0;
+}
+
 .article a {
   text-decoration: underline;
 }
