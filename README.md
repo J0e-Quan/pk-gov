@@ -2,6 +2,8 @@
 
 Fictional government website project for the Plushie Kingdom.
 
+Read [CONTRIBUTING.md](CONTRIBUTING.md) to know how to contribute to pk-gov, and [CODEBASE.md](CODEBASE.md) for learning more about the codebase of pk-gov.
+
 Live demo link: https://pk-gov.onrender.com/
 
 ## Technologies used:

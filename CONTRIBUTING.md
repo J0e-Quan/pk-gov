@@ -1,4 +1,4 @@
-This is where to find information on contributing to pk-gov. For information about the pk-gov codebase itself, refer to CODEBASE.md.
+This is where to find information on contributing to pk-gov. For information about the pk-gov codebase itself, refer to [CODEBASE.md](CODEBASE.md).
 
 ## npm scripts
 

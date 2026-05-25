@@ -1,4 +1,4 @@
-This contains information about the pk-gov codebase, such as what technologies we use and how files are organise.
+This contains information about the pk-gov codebase, such as what technologies we use and how files are organised. For information on how to contribute to pk-gov, refer to [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## pk-gov Tech Stack 
 
