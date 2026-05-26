@@ -108,10 +108,11 @@ section:not(.content, footer section) {
   flex-basis: 15vw;
   min-width: 0;
   max-width: 15vw;
+  margin: 0;
 }
 
 .current-weather.text {
-  flex-basis: 60vw;
+  flex-basis: max-content;
 }
 
 .current-weather.temp {
@@ -144,10 +145,6 @@ section:not(.content, footer section) {
 
 .temp {
   font-size: 2.5rem;
-}
-
-.disclaimer-text {
-  font-size: 1.5rem;
 }
 
 .return {
