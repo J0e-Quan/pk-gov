@@ -17,7 +17,8 @@ module.exports = {
     news: './src/news/news.js',
     'news-article': './src/news/news-article.js',
     pkGov: './src/about/pk-gov.js',
-    govIdentity: './src/about/gov-identity.js'
+    govIdentity: './src/about/gov-identity.js',
+    weather: './src/weather/weather.js'
   },
   output: {
     filename: '[name].js',
@@ -80,6 +81,11 @@ module.exports = {
       template: './src/about/gov-identity.html',
       filename: 'about/gov-identity/index.html',
       chunks: ['govIdentity']
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/weather/weather.html',
+      filename: 'weather/index.html',
+      chunks: ['weather']
     })
   ],
   module: {
