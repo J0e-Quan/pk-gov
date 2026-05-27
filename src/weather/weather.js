@@ -134,7 +134,7 @@ function showForecastToday() {
     item.appendChild(temp)
     const condition = document.createElement('p')
     condition.classList.add('forecast-today', 'condition')
-    condition.textContent = weather.condition
+    condition.textContent = weather.condition + '\n(' + data.hourly.precipitation_probability[i] + '% chance of rain)'
     item.appendChild(condition)
     forecastToday.appendChild(item)
   }
@@ -168,7 +168,7 @@ function showForecastWeek() {
     item.appendChild(temp)
     const condition = document.createElement('p')
     condition.classList.add('forecast-week', 'condition')
-    condition.textContent = weather.condition
+    condition.textContent = weather.condition + '\n(' + data.daily.precipitation_probability_max[i] + '% chance of rain)'
     item.appendChild(condition)
     forecastWeek.appendChild(item)
   }
