@@ -100,15 +100,21 @@ section:not(.content, footer section) {
 }
 
 .current-weather.content {
-  display: flex;
-  flex-wrap: wrap;
+  /* display: flex;
+  flex-wrap: wrap; */
+  display: grid;
+  grid-template-columns: 15vw 100%;
+  grid-template-rows: 2fr 1fr;
 }
 
 .current-weather.icon {
-  flex-basis: 15vw;
+  /* flex-basis: 15vw; */
   min-width: 0;
-  max-width: 15vw;
-  margin: 0;
+  /* max-width: 15vw; */
+  /* margin: 0; */
+  place-self: center;
+  grid-column: 1;
+  grid-row: 1 / -1;
 }
 
 .current-weather.text {
@@ -117,10 +123,15 @@ section:not(.content, footer section) {
 
 .current-weather.temp {
   font-size: 5rem;
+  grid-column: 2;
+  grid-row: 1;
 }
 
 .current-weather.condition {
+  text-align: left;
   font-size: 2.5rem;
+  grid-column: 2;
+  grid-row: 2;
 }
 
 .forecast-today.content, .forecast-week.content {
@@ -293,11 +304,20 @@ footer .link:hover {
     font-size: 1rem;
     line-height: 1.5;
   }
+  .current-weather.content {
+    grid-template-columns: 1fr 3fr;
+  }
+  .current-weather.icon {
+    height: 100%;
+    width: auto;
+    grid-row: 1;
+  }
   .current-weather.temp {
     font-size: 3.5rem;
   }
   .current-weather.condition {
     font-size: 1.5rem;
+    grid-column: 1 / -1;
   }
   .return {
     font-size: 1.5rem;
