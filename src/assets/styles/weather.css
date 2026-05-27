@@ -117,10 +117,6 @@ section:not(.content, footer section) {
   grid-row: 1 / -1;
 }
 
-.current-weather.text {
-  flex-basis: max-content;
-}
-
 .current-weather.temp {
   font-size: 5rem;
   grid-column: 2;

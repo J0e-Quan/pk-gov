@@ -83,8 +83,6 @@ function showCurrentWeather() {
   currentWeatherIcon.classList.add('current-weather', 'icon')
   currentWeatherIcon.src = weather.icon
   currentWeather.appendChild(currentWeatherIcon)
-  const currentWeatherText = document.createElement('div')
-  currentWeatherText.classList.add('current-weather', 'text')
   const currentWeatherTemp = document.createElement('h3')
   currentWeatherTemp.classList.add('current-weather', 'temp')
   currentWeatherTemp.textContent = data.current.apparent_temperature + '°C'
@@ -94,7 +92,6 @@ function showCurrentWeather() {
   currentWeatherCondition.textContent = weather.condition
   currentWeatherCondition.textContent += ', with ' + (data.current.precipitation * 100) + '% chance of rain'
   currentWeather.appendChild(currentWeatherCondition)
-  // currentWeather.appendChild(currentWeatherText)
 }
 
 function showForecastToday() {
