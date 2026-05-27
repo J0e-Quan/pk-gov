@@ -7,10 +7,7 @@ import sunnyCloudy from '../assets/weather-icons/sunny-cloudy.svg'
 import nightCloudy from '../assets/weather-icons/night-cloudy.svg'
 import rain from '../assets/weather-icons/rain.svg'
 import thunderstorm from '../assets/weather-icons/thunderstorm.svg'
-import warning from '../assets/weather-icons/warning.svg'
 import generic from '../assets/weather-icons/generic.svg'
-
-const forecastWeek = document.querySelector('.forecast-week.content')
 
 async function getData() {
   try {
@@ -35,6 +32,7 @@ function checkData(data) {
   } 
   showCurrentWeather()
   showForecastToday()
+  showForecastWeek()
 }
 
 function determineWeather(weatherCode, isDay){
@@ -139,6 +137,40 @@ function showForecastToday() {
     condition.textContent = weather.condition
     item.appendChild(condition)
     forecastToday.appendChild(item)
+  }
+}
+
+function showForecastWeek() {
+  const forecastWeekLoader = document.querySelector('.forecast-week.loader')
+  forecastWeekLoader.remove()
+  const forecastWeek = document.querySelector('.forecast-week.content')
+  for (let i = 0; i < 7; i++) {
+    const item = document.createElement('div')
+    item.classList.add('forecast-week', 'item')
+    const weather = determineWeather(data.daily.weather_code[i], undefined)
+    const day = document.createElement('h2')
+    day.classList.add('forecast-week', 'day')
+    // logic for setting day name
+    const dateString = data.daily.time[i]
+    const dateObject = new Date(dateString)
+    day.textContent = dateObject.toLocaleDateString('en-GB', { weekday: 'short' })
+    if (i === 0) {
+      day.textContent = 'Today'
+    }
+    item.appendChild(day)
+    const icon = document.createElement('img')
+    icon.classList.add('forecast-week', 'icon')
+    icon.src = weather.icon
+    item.appendChild(icon)
+    const temp = document.createElement('h3')
+    temp.classList.add('forecast-week', 'temp')
+    temp.textContent = data.hourly.apparent_temperature[i] + '°C'
+    item.appendChild(temp)
+    const condition = document.createElement('p')
+    condition.classList.add('forecast-week', 'condition')
+    condition.textContent = weather.condition
+    item.appendChild(condition)
+    forecastWeek.appendChild(item)
   }
 }
 

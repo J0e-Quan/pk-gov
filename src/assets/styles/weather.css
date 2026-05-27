@@ -120,12 +120,16 @@ section:not(.content, footer section) {
 }
 
 .current-weather.condition {
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 .forecast-today.content, .forecast-week.content {
   display: flex;
   overflow: auto;
+}
+
+.forecast-week.content {
+  justify-content: space-evenly;
 }
 
 .item {
