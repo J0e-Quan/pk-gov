@@ -103,7 +103,43 @@ function showForecastToday() {
   const forecastTodayLoader = document.querySelector('.forecast-today.loader')
   forecastTodayLoader.remove()
   const forecastToday = document.querySelector('.forecast-today.content')
-
+  const currentIndex = data.hourly.time.findIndex((time) => {
+    const currentTime = data.current.time.slice(0, -2) + '00'
+    return time === currentTime
+  })
+  console.log(currentIndex)
+  for (let i = currentIndex; i <= (currentIndex + 24) && i < data.hourly.time.length; i++) {
+    const item = document.createElement('div')
+    item.classList.add('forecast-today', 'item')
+    const weather = determineWeather(data.hourly.weather_code[i], data.hourly.is_day[i])
+    const time = document.createElement('h2')
+    time.classList.add('forecast-today', 'time')
+    if (i > 23) {
+      if (i - 24 === 0) {
+        time.textContent = '00:00'
+      } else if (i - 24 > 9) {
+        time.textContent = (i - 24) + ':00'
+      } else {
+        time.textContent = '0' + (i - 24) + ":00"
+      }
+    } else {
+      time.textContent = i + ':00'
+    }
+    item.appendChild(time)
+    const icon = document.createElement('img')
+    icon.classList.add('forecast-today', 'icon')
+    icon.src = weather.icon
+    item.appendChild(icon)
+    const temp = document.createElement('h3')
+    temp.classList.add('forecast-today', 'temp')
+    temp.textContent = data.hourly.apparent_temperature[i] + '°C'
+    item.appendChild(temp)
+    const condition = document.createElement('p')
+    condition.classList.add('forecast-today', 'condition')
+    condition.textContent = weather.condition
+    item.appendChild(condition)
+    forecastToday.appendChild(item)
+  }
 }
 
 const data = await getData()
