@@ -147,7 +147,7 @@ function showForecastWeek() {
   for (let i = 0; i < 7; i++) {
     const item = document.createElement('div')
     item.classList.add('forecast-week', 'item')
-    const weather = determineWeather(data.daily.weather_code[i], undefined)
+    const weather = determineWeather(data.daily.weather_code[i], data.current.is_day)
     const day = document.createElement('h2')
     day.classList.add('forecast-week', 'day')
     // logic for setting day name
