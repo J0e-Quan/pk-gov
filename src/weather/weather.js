@@ -37,47 +37,66 @@ function checkData(data) {
   showCurrentWeather()
 }
 
-function displayIcon(weatherCode, isDay){
+function determineWeather(weatherCode, isDay){
+  const weather = {
+    icon: generic,
+    condition: 'Unable to get weather information',
+  }
   // clear sky
   if ((weatherCode === 0 || weatherCode === 1) && isDay) {
-    return sunny
+    weather.icon = sunny
+    weather.condition = 'Clear sky'
   } else if ((weatherCode === 0 || weatherCode === 1) && !isDay) {
-    return night
-  } else
+    weather.icon = night
+    weather.condition = 'Clear sky'
+  } 
   // partly cloudy
   if (weatherCode === 2 && isDay) {
-    return sunnyCloudy
+    weather.icon = sunnyCloudy
+    weather.condition = 'Partly cloudy'
   } else if (weatherCode === 2 && !isDay) {
-    return nightCloudy
-  } else
+    weather.icon = nightCloudy
+    weather.condition = 'Partly cloudy'
+  } 
   // cloudy 
   if (weatherCode === 3 || weatherCode === 45 || weatherCode === 48) {
-    return cloudy
-  } else 
+    weather.icon = cloudy
+    weather.condition = 'Cloudy'
+  }  
   // rain
   if (weatherCode === 51 || weatherCode === 53 || weatherCode === 55 || weatherCode === 61 || weatherCode === 63 || weatherCode === 65 || weatherCode === 80 || weatherCode === 81) {
-    return rain
-  } else
+    weather.icon = rain
+    weather.condition = 'Raining'
+  } 
   // thunderstorm
   if (weatherCode === 82 || weatherCode === 95 || weatherCode === 96 || weatherCode === 99) {
-    return thunderstorm
-  } else {
-    return generic
-  }
+    weather.icon = thunderstorm
+    weather.condition = 'Thunderstorms'
+  } 
+  return weather
 }
 
 function showCurrentWeather() {
   const currentWeatherLoader = document.querySelector('.current-weather.loader')
   currentWeatherLoader.remove()
+  const weather = determineWeather(data.current.weather_code, data.current.is_day)
   const currentWeather = document.querySelector('.current-weather.content')
   const currentWeatherIcon = document.createElement('img')
   currentWeatherIcon.classList.add('current-weather', 'icon')
-  currentWeatherIcon.src = displayIcon(data.current.weather_code, data.current.is_day)
+  currentWeatherIcon.src = weather.icon
   currentWeather.appendChild(currentWeatherIcon)
+  const currentWeatherText = document.createElement('div')
+  currentWeatherText.classList.add('current-weather', 'text')
   const currentWeatherTemp = document.createElement('h3')
   currentWeatherTemp.classList.add('current-weather', 'temp')
   currentWeatherTemp.textContent = data.current.apparent_temperature + '°C'
-  currentWeather.appendChild(currentWeatherTemp)
+  currentWeatherText.appendChild(currentWeatherTemp)
+  const currentWeatherCondition = document.createElement('p')
+  currentWeatherCondition.classList.add('current-weather', 'condition')
+  currentWeatherCondition.textContent = weather.condition
+  currentWeatherCondition.textContent += ', with ' + (data.current.precipitation * 100) + '% chance of rain'
+  currentWeatherText.appendChild(currentWeatherCondition)
+  currentWeather.appendChild(currentWeatherText)
 }
 
 const data = await getData()
