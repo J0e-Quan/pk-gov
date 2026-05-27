@@ -10,7 +10,6 @@ import thunderstorm from '../assets/weather-icons/thunderstorm.svg'
 import warning from '../assets/weather-icons/warning.svg'
 import generic from '../assets/weather-icons/generic.svg'
 
-const forecastToday = document.querySelector('.forecast-today.content')
 const forecastWeek = document.querySelector('.forecast-week.content')
 
 async function getData() {
@@ -35,6 +34,7 @@ function checkData(data) {
     return alert("There was an error in fetching weather data! Please make sure you're online and refresh the page to try again.")
   } 
   showCurrentWeather()
+  showForecastToday()
 }
 
 function determineWeather(weatherCode, isDay){
@@ -97,6 +97,13 @@ function showCurrentWeather() {
   currentWeatherCondition.textContent += ', with ' + (data.current.precipitation * 100) + '% chance of rain'
   currentWeatherText.appendChild(currentWeatherCondition)
   currentWeather.appendChild(currentWeatherText)
+}
+
+function showForecastToday() {
+  const forecastTodayLoader = document.querySelector('.forecast-today.loader')
+  forecastTodayLoader.remove()
+  const forecastToday = document.querySelector('.forecast-today.content')
+
 }
 
 const data = await getData()
