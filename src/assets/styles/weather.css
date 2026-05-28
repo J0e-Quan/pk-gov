@@ -99,6 +99,15 @@ section:not(.content, footer section) {
   margin-bottom: 2rem;
 }
 
+.loader {
+  max-width: 80vw;
+}
+
+.current-weather.loader {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+}
+
 .current-weather.content {
   /* display: flex;
   flex-wrap: wrap; */
