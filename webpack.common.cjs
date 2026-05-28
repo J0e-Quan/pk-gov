@@ -6,7 +6,7 @@ module.exports = {
     home: './src/home.js',
     central: './src/ministries/central.js',
     food: './src/ministries/food.js',
-    foreignAffairs: './src/ministries/foreign-affairs.js',
+    'foreign-affairs': './src/ministries/foreign-affairs.js',
     health: './src/ministries/health.js',
     finance: './src/ministries/finance.js',
     immigration: './src/ministries/immigration.js',
