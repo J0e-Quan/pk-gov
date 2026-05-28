@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class={{ page.fileSlug}}>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href={{ "/assets/styles/info-page.css" | url }}>
-    <link rel="icon" href="/assets/favicons/generic.svg"/>
+    <link rel="stylesheet" href={{ "/assets/styles/ministries.css" | url }}>
+    <link rel="icon" href="/assets/favicons/{{ page.fileSlug }}.svg"/>
     <title>{{ title }}</title>
   </head>
   <body>
@@ -51,6 +51,6 @@
         </div>
       </section>
     </footer>
-    <script src="/info-page.js"></script>
+    <script src="/{{ page.fileSlug }}.js"></script>
   </body>
 </html>
