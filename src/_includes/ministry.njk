@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href={{ "/assets/styles/ministries.css" | url }}>
+    <link rel="stylesheet" href="/assets/styles/{{ page.fileSlug}}.css">
     <link rel="icon" href="/assets/favicons/{{ page.fileSlug }}.svg"/>
     <title>{{ title }}</title>
   </head>
@@ -51,6 +51,6 @@
         </div>
       </section>
     </footer>
-    <script src="/{{ page.fileSlug }}.js"></script>
+    <script src="/{{ page.fileSlug}}.js" ></script>
   </body>
 </html>
