@@ -18,8 +18,8 @@ export default async function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/assets/favicons/generic.svg");
   eleventyConfig.addPassthroughCopy("./src/assets/downloadable")
 
-  // tells eleventy to ignore everything except news, _includes and info
-  eleventyConfig.ignores.add('src/!(news|_includes|info)/**')
+  // tells eleventy to ignore everything except news, _includes, info and ministries
+  eleventyConfig.ignores.add('src/!(news|_includes|info|ministries)/**')
   // tells eleventy to ignore all .md files beginning with _
   eleventyConfig.ignores.add('src/**/_*.md')
   eleventyConfig.ignores.delete('dist/**')
