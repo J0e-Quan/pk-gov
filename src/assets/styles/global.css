@@ -80,7 +80,11 @@ a {
   text-decoration-thickness: 4px;
 }
 
-pagefind-searchbox {
+.search-mobile {
+  display: none;
+}
+
+pagefind-searchbox, pagefind-modal-trigger, pagefind-modal {
   --pf-input-height: 3rem;   
   --pf-border-radius: 0; 
   --pf-font: var(--mona-sans);
@@ -91,10 +95,30 @@ pagefind-searchbox {
   --pf-icon-search: none
 }
 
-:is(*, #\#):is(*, #\#):is(*, #\#) .pf-input-wrapper::before, :is(*, #\#):is(*, #\#):is(*, #\#) .pf-searchbox-input-wrapper::before {
+:is(*, #\#):is(*, #\#):is(*, #\#) .pf-input-wrapper::before, :is(*, #\#):is(*, #\#):is(*, #\#) .pf-searchbox-input-wrapper::before, :is(*, #\#):is(*, #\#):is(*, #\#) .pf-trigger-icon {
   background-color: transparent;
 }
 
 :is(*, #\#):is(*, #\#):is(*, #\#) .pf-searchbox-input {
   padding-inline-start: 12px;
+}
+
+.search-icon {
+  height: 3rem;
+  width: auto;
+  cursor: pointer;
+  filter: invert();
+}
+
+.search-icon:hover {
+  border: 4px solid black;
+}
+
+@media (max-width: 600px) {
+  .search-mobile {
+    display: flex;
+  }
+  .search-desktop {
+    display: none;
+  }
 }
