@@ -97,7 +97,7 @@ a svg {
 }
 
 .other-resources {
-  padding: 0rem 5rem;
+  padding: 0rem 5rem 4rem 5rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
