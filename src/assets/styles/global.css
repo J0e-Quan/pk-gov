@@ -92,15 +92,13 @@ pagefind-searchbox, pagefind-modal-trigger, pagefind-modal {
   --pf-border: white;
   --pf-border-focus: black;
   --pf-outline-focus: black;
-  --pf-icon-search: none
+  --pf-icon-search: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'/>");
 }
 
-:is(*, #\#):is(*, #\#):is(*, #\#) .pf-input-wrapper::before, :is(*, #\#):is(*, #\#):is(*, #\#) .pf-searchbox-input-wrapper::before, :is(*, #\#):is(*, #\#):is(*, #\#) .pf-trigger-icon {
-  background-color: transparent;
-}
-
-:is(*, #\#):is(*, #\#):is(*, #\#) .pf-searchbox-input {
-  padding-inline-start: 12px;
+/* Slide the text over */
+pagefind-input::part(input),
+pagefind-searchbox::part(input) {
+  padding-inline-start: 0px;
 }
 
 .search-icon {
