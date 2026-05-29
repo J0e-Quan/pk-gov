@@ -10,30 +10,32 @@
     <title data-pagefind-meta="title">{{ title }}</title>
   </head>
   <body>
-   <header class="header">
-      <a class="logo-text" href="/">
-        <h3 class="logo-text top">Plushie Kingdom</h3>
-        <h3 class="logo-text bottom">Government</h3>
-      </a>
-      <pagefind-searchbox class="search-desktop" id='searchbox' shortcut="none" hide-shortcut placeholder="Search pk-gov..." show-sub-results=true></pagefind-searchbox>
-      <div class="search-mobile">
-        <img class="search-icon" src="../assets/search.svg" alt="search icon">
-        <pagefind-modal class="mobile-modal">
-          <pagefind-modal-header>
-            <pagefind-input placeholder="Search pk-gov..."></pagefind-input>
-          </pagefind-modal-header>
-          
-          <pagefind-modal-body>
-            <pagefind-summary></pagefind-summary>
-            <pagefind-results></pagefind-results>
-          </pagefind-modal-body> 
-        </pagefind-modal>
-      </div>
-    </header>
-    <section class="content" data-pagefind-body>
-      {{ content | safe }}
-    </section>
-    <a class="return" href="/">Return to homepage</a>
+   <div class='header-scrollable-area'>
+     <header class="header">
+        <a class="logo-text" href="/">
+          <h3 class="logo-text top">Plushie Kingdom</h3>
+          <h3 class="logo-text bottom">Government</h3>
+        </a>
+        <pagefind-searchbox class="search-desktop" id='searchbox' shortcut="none" hide-shortcut placeholder="Search pk-gov..." show-sub-results=true></pagefind-searchbox>
+        <div class="search-mobile">
+          <img class="search-icon" src="../assets/search.svg" alt="search icon">
+          <pagefind-modal class="mobile-modal">
+            <pagefind-modal-header>
+              <pagefind-input placeholder="Search pk-gov..."></pagefind-input>
+            </pagefind-modal-header>
+     
+            <pagefind-modal-body>
+              <pagefind-summary></pagefind-summary>
+              <pagefind-results></pagefind-results>
+            </pagefind-modal-body>
+          </pagefind-modal>
+        </div>
+      </header>
+      <section class="content" data-pagefind-body>
+        {{ content | safe }}
+      </section>
+      <a class="return" href="/">Return to homepage</a>
+   </div>
     <footer class="footer">
       <section class="footer-ministries">
         <h3 class="footer-title">Ministries</h3>

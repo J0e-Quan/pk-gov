@@ -54,6 +54,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 99999;
 }
 
 .logo-text {
@@ -297,8 +300,11 @@ section:not(.content, footer section) {
   color: var(--theme-accent);
 }
 
+.header-scrollable-area {
+  padding-bottom: 1px;
+}
+
 footer {
-  margin-top: 2rem;
   padding: 2rem 5rem 3rem 5rem;
   background-color: var(--theme);
   color: var(--theme-accent);

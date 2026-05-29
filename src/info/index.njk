@@ -10,78 +10,80 @@
     <title>Life in the Plushie Kingdom</title>
   </head>
   <body>
-    <header class="header">
-      <a class="logo-text" href="/">
-        <h3 class="logo-text top">Plushie Kingdom</h3>
-        <h3 class="logo-text bottom">Government</h3>
-      </a>
-      <pagefind-searchbox class="search-desktop" shortcut="none" hide-shortcut placeholder="Search pk-gov..." show-sub-results=true></pagefind-searchbox>
-      <div class="search-mobile">
-        <img class="search-icon" src="../assets/search.svg" alt="search icon">
-        <pagefind-modal class="mobile-modal">
-          <pagefind-modal-header>
-            <pagefind-input placeholder="Search pk-gov..."></pagefind-input>
-          </pagefind-modal-header>
-          
-          <pagefind-modal-body>
-            <pagefind-summary></pagefind-summary>
-            <pagefind-results></pagefind-results>
-          </pagefind-modal-body> 
-        </pagefind-modal>
-      </div>
-    </header>
-    <section class="content" data-pagefind-body>
-      <section class="hero">
-        <h1 class="hero-title">Life in the Plushie Kingdom</h1>
-        <p class="hero-text">Whether you're looking for information about entering the Kingdom, settling in as a citizen, or just curious about life under the Big Tent, there's something here for you.</p>
+    <div class='header-scrollable-area'>
+      <header class="header">
+        <a class="logo-text" href="/">
+          <h3 class="logo-text top">Plushie Kingdom</h3>
+          <h3 class="logo-text bottom">Government</h3>
+        </a>
+        <pagefind-searchbox class="search-desktop" shortcut="none" hide-shortcut placeholder="Search pk-gov..." show-sub-results=true></pagefind-searchbox>
+        <div class="search-mobile">
+          <img class="search-icon" src="../assets/search.svg" alt="search icon">
+          <pagefind-modal class="mobile-modal">
+            <pagefind-modal-header>
+              <pagefind-input placeholder="Search pk-gov..."></pagefind-input>
+            </pagefind-modal-header>
+      
+            <pagefind-modal-body>
+              <pagefind-summary></pagefind-summary>
+              <pagefind-results></pagefind-results>
+            </pagefind-modal-body>
+          </pagefind-modal>
+        </div>
+      </header>
+      <section class="content" data-pagefind-body>
+        <section class="hero">
+          <h1 class="hero-title">Life in the Plushie Kingdom</h1>
+          <p class="hero-text">Whether you're looking for information about entering the Kingdom, settling in as a citizen, or just curious about life under the Big Tent, there's something here for you.</p>
+        </section>
+        <section class="directory">
+          <div class="directory-row">
+            <div class="directory-item">
+              <h2 class="directory title">Who we are</h2>
+              <p class="directory text">Learn about the Kingdom's storied history, current location and inhabitants.</p>
+              <a class="directory cta" href="/info/who-we-are/">View information</a>
+            </div>
+            <div class="directory-item">
+              <h2 class="directory title">Travelling in and out</h2>
+              <p class="directory text">Here's what you need to know before entering the Kingdom, or leaving on a trip.</p>
+              <a class="directory cta" href="/info/travelling-in-and-out/">View information</a>
+            </div>
+          </div>
+          <div class="directory-row">
+            <div class="directory-item">
+              <h2 class="directory title">Food, Health and Wealth</h2>
+              <p class="directory text">Get to know all the basic amenities and services offered in the Kingdom.</p>
+              <a class="directory cta" href="/info/food-health-and-wealth/">View information</a>
+            </div>
+            <div class="directory-item">
+              <h2 class="directory title">Safety and Residency</h2>
+              <p class="directory text">Know more about the Kingdom's safety measures and places to stay.</p>
+              <a class="directory cta" href="/info/safety-and-residency/">View information</a>
+            </div>
+          </div>
+          <div class="directory-row">
+            <div class="directory-item">
+              <h2 class="directory title">Business and Commerce</h2>
+              <p class="directory text">Thinking about doing business here? Here's all you need to know in one place.</p>
+              <a class="directory cta" href="/info/business-and-commerce/">View information</a>
+            </div>
+            <div class="directory-item">
+              {# PIBSS ITEM SHOULD BE PLACED AS THE FIRST ITEM (WHERE WHO-WE-ARE IS NOW), SWAP FOOD-HEALTH-AND-WEALTH WITH SAFETY-AND-RESIDENCY TOO! #}
+              {# UNCOMMENT THIS PLACEHOLDER WHEN STARTING WORK ON PIBSS
+              <h2 class='directory title'>Coming Soon...</h2>
+              <p class='directory text'>Real, meaningful change is coming. We're working behind the scenes to revolutionise citizen management, ensuring no plushie is left out.</p>
+              #}
+              {# UNCOMMENT THIS WHEN PIBSS IS READY, DELETE THE PLACEHOLDER ABOVE TOO!
+              <h2 class="directory title">PIBSS</h2>
+              <p class="directory text">View information stored in the Plushie Immigration and Biodata Storage Service here.</p>
+              <a class="directory cta" href="/info/getting-involved/">Access PIBSS</a>
+              #}
+            </div>
+          </div>
+        </section>
       </section>
-      <section class="directory">
-        <div class="directory-row">
-          <div class="directory-item">
-            <h2 class="directory title">Who we are</h2>
-            <p class="directory text">Learn about the Kingdom's storied history, current location and inhabitants.</p>
-            <a class="directory cta" href="/info/who-we-are/">View information</a>
-          </div>
-          <div class="directory-item">
-            <h2 class="directory title">Travelling in and out</h2>
-            <p class="directory text">Here's what you need to know before entering the Kingdom, or leaving on a trip.</p>
-            <a class="directory cta" href="/info/travelling-in-and-out/">View information</a>
-          </div>
-        </div>
-        <div class="directory-row">
-          <div class="directory-item">
-            <h2 class="directory title">Food, Health and Wealth</h2>
-            <p class="directory text">Get to know all the basic amenities and services offered in the Kingdom.</p>
-            <a class="directory cta" href="/info/food-health-and-wealth/">View information</a>
-          </div>
-          <div class="directory-item">
-            <h2 class="directory title">Safety and Residency</h2>
-            <p class="directory text">Know more about the Kingdom's safety measures and places to stay.</p>
-            <a class="directory cta" href="/info/safety-and-residency/">View information</a>
-          </div>
-        </div>
-        <div class="directory-row">
-          <div class="directory-item">
-            <h2 class="directory title">Business and Commerce</h2>
-            <p class="directory text">Thinking about doing business here? Here's all you need to know in one place.</p>
-            <a class="directory cta" href="/info/business-and-commerce/">View information</a>
-          </div>
-          <div class="directory-item">
-            {# PIBSS ITEM SHOULD BE PLACED AS THE FIRST ITEM (WHERE WHO-WE-ARE IS NOW), SWAP FOOD-HEALTH-AND-WEALTH WITH SAFETY-AND-RESIDENCY TOO! #}
-            {# UNCOMMENT THIS PLACEHOLDER WHEN STARTING WORK ON PIBSS
-            <h2 class='directory title'>Coming Soon...</h2>
-            <p class='directory text'>Real, meaningful change is coming. We're working behind the scenes to revolutionise citizen management, ensuring no plushie is left out.</p>
-            #}
-            {# UNCOMMENT THIS WHEN PIBSS IS READY, DELETE THE PLACEHOLDER ABOVE TOO!     
-            <h2 class="directory title">PIBSS</h2>
-            <p class="directory text">View information stored in the Plushie Immigration and Biodata Storage Service here.</p>
-            <a class="directory cta" href="/info/getting-involved/">Access PIBSS</a> 
-            #}
-          </div>
-        </div>
-      </section>
-    </section>
-    <a class="return" href="/">Return to homepage</a>
+      <a class="return" href="/">Return to homepage</a>
+    </div>
     <footer class="footer">
       <section class="footer-ministries">
         <h3 class="footer-title">Ministries</h3>
