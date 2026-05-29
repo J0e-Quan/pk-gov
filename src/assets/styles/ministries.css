@@ -72,6 +72,10 @@
   aspect-ratio: 3.6 / 1;
 }
 
+.food .search-icon, .technology .search-icon, .defence .search-icon {
+  filter: invert(0)
+}
+
 .hero {
   background-color: var(--theme);
   color: var(--theme-accent);
