@@ -92,14 +92,14 @@ a svg {
   border: 16px solid var(--ministry-of-defence-colour);
 }
 
-.info-and-news {
+.other-resources {
   padding: 0rem 5rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.info-and-news div {
+.other-resources div {
   flex-grow: 1;
   padding: 1rem 2rem;
   display: flex;
@@ -107,15 +107,15 @@ a svg {
   gap: 1rem;
 }
 
-.info-and-news .title {
+.other-resources .title {
   font-size: 3rem;
 }
 
-.info-and-news .text {
+.other-resources .text {
   font-size: 1.5rem;
 }
 
-.info-and-news .cta {
+.other-resources .cta {
   width: fit-content;
   padding: 1rem 2rem;
   font-size: 2rem;
@@ -129,7 +129,7 @@ a svg {
   will-change: box-shadow, color;
 }
 
-.info-and-news .cta:hover {
+.other-resources .cta:hover {
   box-shadow: inset 0 0 0 400px var(--central-ministry-colour);
   color: white;
 }
@@ -273,16 +273,16 @@ footer .link:hover {
     height: 35vw;
     width: 35vw;
   }
-  .info-and-news {
+  .other-resources {
     padding: 1rem;
   }
-  .info-and-news .title {
+  .other-resources .title {
     font-size: 2rem;
   }
-  .info-and-news .text {
+  .other-resources .text {
     font-size: 1rem;
   }
-  .info-and-news .cta {
+  .other-resources .cta {
     font-size: 1.5rem;
   }
   footer {
