@@ -229,7 +229,7 @@ section:not(.content, footer section) {
 /* MINISTER PHOTOS END */
 
 .minister.info-box {
-  padding: 0 1rem;
+  padding: 0rem 1rem 0.5rem 1rem;
   background-color: transparent;
   position: relative;
 }
@@ -428,6 +428,9 @@ footer .link:hover {
     width: 100%;
     height: auto;
     aspect-ratio: 3 / 4;
+  }
+  .minister.info-box {
+    padding: 0 1rem;
   }
   .minister.info-box::before {
     animation-range-start: cover 0%;
