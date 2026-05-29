@@ -9,6 +9,24 @@ import rain from '../assets/weather-icons/rain.svg'
 import thunderstorm from '../assets/weather-icons/thunderstorm.svg'
 import generic from '../assets/weather-icons/generic.svg'
 
+// code for opening pagefind modal for search-mobile
+document.addEventListener('DOMContentLoaded', () => {
+  const searchIcon = document.querySelector('.search-icon');
+  const modalElement = document.querySelector('.mobile-modal');
+
+  if (searchIcon && modalElement) {
+    searchIcon.addEventListener('click', () => {
+      // This fires the exact open routine Pagefind calls internally
+      if (typeof modalElement.open === 'function') {
+        modalElement.open();
+      } else {
+        // Fallback if the component wrapper hasn't fully registered its method yet
+        modalElement.setAttribute('open', '');
+      }
+    });
+  }
+});
+
 async function getData() {
   try {
     const response = await fetch('https://api.open-meteo.com/v1/forecast?latitude=5.4112&longitude=100.3354&daily=weather_code,apparent_temperature_max,precipitation_probability_max&hourly=apparent_temperature,precipitation_probability,weather_code,is_day&current=apparent_temperature,weather_code,is_day&timezone=Asia%2FSingapore')
