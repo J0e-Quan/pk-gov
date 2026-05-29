@@ -25,6 +25,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="../assets/favicons/generic.svg" />
+    <link href="/pagefind/pagefind-component-ui.css" rel="stylesheet">
+    <script src="/pagefind/pagefind-component-ui.js" type="module"></script>
     <title>Plushie Kingdom weather</title>
   </head>
   <body>
@@ -33,8 +35,13 @@
         <h3 class="logo-text top">Plushie Kingdom</h3>
         <h3 class="logo-text bottom">Government</h3>
       </a>
+      <pagefind-searchbox class="search-desktop" shortcut="none" hide-shortcut placeholder="Search pk-gov..." show-sub-results=true></pagefind-searchbox>
+      <div class="search-mobile">
+        <img class="search-icon" src="../assets/search.svg" alt="search icon">
+        <pagefind-modal class="mobile-modal"></pagefind-modal>
+      </div>
     </header>
-    <section class="content">
+    <section class="content" data-pagefind-body>
       <section class="hero">
         <h1 class="hero-title">Plushie Kingdom weather</h1>
         <p class="hero-text">
