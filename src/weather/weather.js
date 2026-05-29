@@ -11,7 +11,7 @@ import generic from '../assets/weather-icons/generic.svg'
 
 async function getData() {
   try {
-    const response = await fetch('https://api.open-meteo.com/v1/forecast?latitude=5.4112&longitude=100.3354&daily=weather_code,apparent_temperature_max,precipitation_probability_max&hourly=apparent_temperature,precipitation_probability,weather_code,is_day&current=apparent_temperature,weather_code,precipitation,is_day&timezone=Asia%2FSingapore')
+    const response = await fetch('https://api.open-meteo.com/v1/forecast?latitude=5.4112&longitude=100.3354&daily=weather_code,apparent_temperature_max,precipitation_probability_max&hourly=apparent_temperature,precipitation_probability,weather_code,is_day&current=apparent_temperature,weather_code,is_day&timezone=Asia%2FSingapore')
     const data = response.json()
     // data cannot be checked with .ok because it has been parsed into json, must check response instead
     if (!response.ok) {
@@ -35,7 +35,7 @@ function checkData(data) {
   showForecastWeek()
 }
 
-function determineWeather(weatherCode, isDay){
+function determineWeather(weatherCode, isDay, precipitation){
   const weather = {
     icon: generic,
     condition: 'Unable to get weather information',
@@ -61,23 +61,45 @@ function determineWeather(weatherCode, isDay){
     weather.icon = cloudy
     weather.condition = 'Cloudy'
   }  
-  // rain
-  if (weatherCode === 51 || weatherCode === 53 || weatherCode === 55 || weatherCode === 61 || weatherCode === 63 || weatherCode === 65 || weatherCode === 80 || weatherCode === 81) {
-    weather.icon = rain
-    weather.condition = 'Raining'
-  } 
-  // thunderstorm
-  if (weatherCode === 82 || weatherCode === 95 || weatherCode === 96 || weatherCode === 99) {
-    weather.icon = thunderstorm
-    weather.condition = 'Thunderstorms'
-  } 
+  // check if precipitation is high enough for rain / thunderstorm (if not, show partly cloudy instead)
+  if (weatherCode === 51 || weatherCode === 53 || weatherCode === 55 || weatherCode === 61 || weatherCode === 63 || weatherCode === 65 || weatherCode === 80 || weatherCode === 81 || weatherCode === 82 || weatherCode === 95 || weatherCode === 96 || weatherCode === 99) {
+    if (precipitation <= 30) {
+      if (isDay) {
+        weather.icon = sunnyCloudy
+        weather.condition = 'Partly cloudy'
+      } else if (!isDay) {
+        weather.icon = nightCloudy
+        weather.condition = 'Partly cloudy'
+      }
+    } else if (precipitation > 30) {
+      // rain
+      if (weatherCode === 51 || weatherCode === 53 || weatherCode === 55 || weatherCode === 61 || weatherCode === 63 || weatherCode === 65 || weatherCode === 80 || weatherCode === 81) {
+        weather.icon = rain
+        weather.condition = 'Raining'
+      } 
+      // thunderstorm
+      if (weatherCode === 82 || weatherCode === 95 || weatherCode === 96 || weatherCode === 99) {
+        weather.icon = thunderstorm
+        weather.condition = 'Thunderstorms'
+      } 
+    }
+  }
   return weather
+}
+
+function getCurrentPrecipitation() {
+  const currentIndex = data.hourly.time.findIndex((time) => {
+    const currentTime = data.current.time.slice(0, -2) + '00'
+    return time === currentTime
+  })
+  return data.hourly.precipitation_probability[currentIndex]
 }
 
 function showCurrentWeather() {
   const currentWeatherLoader = document.querySelector('.current-weather.loader')
   currentWeatherLoader.remove()
-  const weather = determineWeather(data.current.weather_code, data.current.is_day)
+  const currentPrecipitation = getCurrentPrecipitation()
+  const weather = determineWeather(data.current.weather_code, data.current.is_day, currentPrecipitation)
   const currentWeather = document.querySelector('.current-weather.content')
   const currentWeatherIcon = document.createElement('img')
   currentWeatherIcon.classList.add('current-weather', 'icon')
@@ -90,7 +112,7 @@ function showCurrentWeather() {
   const currentWeatherCondition = document.createElement('p')
   currentWeatherCondition.classList.add('current-weather', 'condition')
   currentWeatherCondition.textContent = weather.condition
-  currentWeatherCondition.textContent += ', with ' + (data.current.precipitation * 100) + '% chance of rain'
+  currentWeatherCondition.textContent += ', with ' + currentPrecipitation + '% chance of rain'
   currentWeather.appendChild(currentWeatherCondition)
 }
 
@@ -106,7 +128,7 @@ function showForecastToday() {
   for (let i = currentIndex; i <= (currentIndex + 24) && i < data.hourly.time.length; i++) {
     const item = document.createElement('div')
     item.classList.add('forecast-today', 'item')
-    const weather = determineWeather(data.hourly.weather_code[i], data.hourly.is_day[i])
+    const weather = determineWeather(data.hourly.weather_code[i], data.hourly.is_day[i], data.hourly.precipitation_probability[i])
     const time = document.createElement('h2')
     time.classList.add('forecast-today', 'time')
     if (i > 23) {
@@ -144,7 +166,7 @@ function showForecastWeek() {
   for (let i = 0; i < 7; i++) {
     const item = document.createElement('div')
     item.classList.add('forecast-week', 'item')
-    const weather = determineWeather(data.daily.weather_code[i], data.current.is_day)
+    const weather = determineWeather(data.daily.weather_code[i], data.current.is_day, data.daily.precipitation_probability_max[i])
     const day = document.createElement('h2')
     day.classList.add('forecast-week', 'day')
     // logic for setting day name
