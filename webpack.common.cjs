@@ -20,6 +20,10 @@ module.exports = {
     govIdentity: './src/about/gov-identity.js',
     weather: './src/weather/weather.js'
   },
+  externals: {
+    '/pagefind/pagefind-component-ui.js': 'module /pagefind/pagefind-component-ui.js',
+    '/pagefind/pagefind-component-ui.css': 'module /pagefind/pagefind-component-ui.css',
+  },
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, 'dist'),
@@ -70,7 +74,14 @@ module.exports = {
                 attribute: 'src',
                 type: 'src'
               }
-            ]
+            ],
+            urlFilter: (attribute, value, resourcePath) => {
+              // Tell Webpack NOT to try and process or resolve anything in /pagefind/
+              if (value.startsWith('/pagefind/')) {
+                return false;
+              }
+              return true;
+            },
           }
         }
       }
