@@ -1,10 +1,12 @@
 import { eleventyImageTransformPlugin } from '@11ty/eleventy-img'
+import { IdAttributePlugin } from "@11ty/eleventy";
 
 export default async function (eleventyConfig) {
   eleventyConfig.setServerOptions({
     port: 3000,
     watch: ['dist/**/*.js', 'dist/**/*.css']
   })
+  eleventyConfig.addPlugin(IdAttributePlugin);
 
   eleventyConfig.setUseGitIgnore(false)
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
