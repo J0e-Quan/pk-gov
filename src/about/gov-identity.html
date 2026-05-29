@@ -38,7 +38,16 @@
       <pagefind-searchbox class="search-desktop" shortcut="none" hide-shortcut placeholder="Search pk-gov..." show-sub-results=true></pagefind-searchbox>
       <div class="search-mobile">
         <img class="search-icon" src="../assets/search.svg" alt="search icon">
-        <pagefind-modal class="mobile-modal"></pagefind-modal>
+        <pagefind-modal class="mobile-modal">
+          <pagefind-modal-header>
+            <pagefind-input placeholder="Search pk-gov..."></pagefind-input>
+          </pagefind-modal-header>
+          
+          <pagefind-modal-body>
+            <pagefind-summary></pagefind-summary>
+            <pagefind-results></pagefind-results>
+          </pagefind-modal-body> 
+        </pagefind-modal>
       </div>
     </header>
     <section class="content" data-pagefind-body>
