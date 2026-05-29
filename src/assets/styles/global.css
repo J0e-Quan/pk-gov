@@ -79,3 +79,22 @@ a {
   text-decoration-skip-ink: none;
   text-decoration-thickness: 4px;
 }
+
+pagefind-searchbox {
+  --pf-input-height: 3rem;   
+  --pf-border-radius: 0; 
+  --pf-font: var(--mona-sans);
+  --pf-input-font-size: 2rem;
+  --pf-border: white;
+  --pf-border-focus: black;
+  --pf-outline-focus: black;
+  --pf-icon-search: none
+}
+
+:is(*, #\#):is(*, #\#):is(*, #\#) .pf-input-wrapper::before, :is(*, #\#):is(*, #\#):is(*, #\#) .pf-searchbox-input-wrapper::before {
+  background-color: transparent;
+}
+
+:is(*, #\#):is(*, #\#):is(*, #\#) .pf-searchbox-input {
+  padding-inline-start: 12px;
+}
