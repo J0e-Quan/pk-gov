@@ -13,7 +13,7 @@ async function getData() {
   try {
     const response = await fetch('https://api.open-meteo.com/v1/forecast?latitude=5.4112&longitude=100.3354&daily=weather_code,apparent_temperature_max,precipitation_probability_max&hourly=apparent_temperature,precipitation_probability,weather_code,is_day&current=apparent_temperature,weather_code,precipitation,is_day&timezone=Asia%2FSingapore')
     const data = response.json()
-    // data cannot be checked with .ok because it has been parsed into json
+    // data cannot be checked with .ok because it has been parsed into json, must check response instead
     if (!response.ok) {
       console.error(data.reason)
       return null
