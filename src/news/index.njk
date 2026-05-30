@@ -5,31 +5,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href={{ "/assets/styles/news.css" | url }}>
   <link rel="icon" href="/assets/favicons/generic.svg"/>
+  <link href="/pagefind/pagefind-component-ui.css" rel="stylesheet">
+  <script src="/pagefind/pagefind-component-ui.js" type="module"></script>
   <title>Government news</title>
 </head>
 <body>
-    <header class="header">
-      <a class="logo-text" href="/">
-        <h3 class="logo-text top">Plushie Kingdom</h3>
-        <h3 class="logo-text bottom">Government</h3>
-      </a>
-    </header>
-    <section class="content">
-      <section class="hero">
-        <h1 class="hero-title">Government news</h1>
-        <p class="hero-text">Stay informed with the latest news from the Government. Video versions for major announcements are also available on our <a class="link" href="https://www.youtube.com/channel/UCL4Px1LLyD6WxcaDTm71ViQ" target="_blank" rel="noreferrer">YouTube channel</a>.</p>
+    <div class='header-scrollable-area'>
+      <header class="header">
+        <a class="logo-text" href="/">
+          <h3 class="logo-text top">Plushie Kingdom</h3>
+          <h3 class="logo-text bottom">Government</h3>
+        </a>
+        <pagefind-searchbox class="search-desktop" shortcut="none" hide-shortcut placeholder="Search pk-gov..." show-sub-results=true></pagefind-searchbox>
+        <div class="search-mobile">
+          <img class="search-icon" src="../assets/search.svg" alt="search icon">
+          <pagefind-modal class="mobile-modal">
+            <pagefind-modal-header>
+              <pagefind-input placeholder="Search pk-gov..."></pagefind-input>
+            </pagefind-modal-header>
+      
+            <pagefind-modal-body>
+              <pagefind-summary></pagefind-summary>
+              <pagefind-results></pagefind-results>
+            </pagefind-modal-body>
+          </pagefind-modal>
+        </div>
+      </header>
+      <section class="content" data-pagefind-body>
+        <section class="hero">
+          <h1 class="hero-title">Government news</h1>
+          <p class="hero-text">Stay informed with the latest news from the Government. Video versions for major announcements are also available on our <a class="link" href="https://www.youtube.com/channel/UCL4Px1LLyD6WxcaDTm71ViQ" target="_blank" rel="noreferrer">YouTube channel</a>.</p>
+        </section>
+        <section class="articles">
+          {% for post in collections.news | reverse %}
+            <a class="article" href="{{ post.url }}">
+              <p class="article-date">{{ post.data.date | postDate}}, by {{ post.data.author }}</p>
+              <h2 class="article-title">{{ post.data.title }}</h2>
+              <h3 class="article-excerpt">{{ post.data.excerpt }}</h3>
+            </a>
+          {% endfor %}
+        </section>
       </section>
-      <section class="articles">
-        {% for post in collections.news | reverse %}
-          <a class="article" href="{{ post.url }}">
-            <p class="article-date">{{ post.data.date | postDate}}, by {{ post.data.author }}</p>
-            <h2 class="article-title">{{ post.data.title }}</h2>
-            <h3 class="article-excerpt">{{ post.data.excerpt }}</h3>
-          </a>
-        {% endfor %}
-      </section>
-    </section>
-    <a class="return" href="/">Return to homepage</a>
+      <a class="return" href="/">Return to homepage</a>
+    </div>
     <footer class="footer">
       <section class="footer-ministries">
         <h3 class="footer-title">Ministries</h3>

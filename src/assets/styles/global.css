@@ -79,3 +79,44 @@ a {
   text-decoration-skip-ink: none;
   text-decoration-thickness: 4px;
 }
+
+.search-mobile {
+  display: none;
+}
+
+pagefind-searchbox, pagefind-modal-trigger, pagefind-modal {
+  --pf-input-height: 3rem;   
+  --pf-border-radius: 0; 
+  --pf-font: var(--mona-sans);
+  --pf-input-font-size: 2rem;
+  --pf-border: white;
+  --pf-border-focus: black;
+  --pf-outline-focus: black;
+  --pf-icon-search: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'/>");
+}
+
+/* Slide the text over */
+pagefind-input::part(input),
+pagefind-searchbox::part(input) {
+  padding-inline-start: 0px;
+}
+
+.search-icon {
+  height: 3rem;
+  width: auto;
+  cursor: pointer;
+  filter: invert();
+}
+
+.search-icon:hover {
+  border: 4px solid black;
+}
+
+@media (max-width: 600px) {
+  .search-mobile {
+    display: flex;
+  }
+  .search-desktop {
+    display: none;
+  }
+}

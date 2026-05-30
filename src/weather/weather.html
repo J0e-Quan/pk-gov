@@ -25,46 +25,63 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="../assets/favicons/generic.svg" />
+    <link href="/pagefind/pagefind-component-ui.css" rel="stylesheet">
+    <script src="/pagefind/pagefind-component-ui.js" type="module"></script>
     <title>Plushie Kingdom weather</title>
   </head>
   <body>
-    <header class="header">
-      <a class="logo-text" href="/">
-        <h3 class="logo-text top">Plushie Kingdom</h3>
-        <h3 class="logo-text bottom">Government</h3>
-      </a>
-    </header>
-    <section class="content">
-      <section class="hero">
-        <h1 class="hero-title">Plushie Kingdom weather</h1>
-        <p class="hero-text">
-          Get the latest updates on weather information in the Kingdom and the surrounding George Town area here. Powered by <a class="link" href="https://open-meteo.com/" target="_blank" rel="noreferrer">Open-Meteo</a>.
-        </p>
-      </section>
-      <section class="current-weather">
-        <h2 class="current-weather heading">Current weather</h2>
-        <div class="section-divider"></div>
-        <div class="current-weather content">
-          <img class="current-weather loader" src="../assets/loading.svg">
+    <div class="header-scrollable-area">
+      <header class="header">
+        <a class="logo-text" href="/">
+          <h3 class="logo-text top">Plushie Kingdom</h3>
+          <h3 class="logo-text bottom">Government</h3>
+        </a>
+        <pagefind-searchbox class="search-desktop" shortcut="none" hide-shortcut placeholder="Search pk-gov..." show-sub-results=true></pagefind-searchbox>
+        <div class="search-mobile">
+          <img class="search-icon" src="../assets/search.svg" alt="search icon">
+          <pagefind-modal class="mobile-modal">
+            <pagefind-modal-header>
+              <pagefind-input placeholder="Search pk-gov..."></pagefind-input>
+            </pagefind-modal-header>
+      
+            <pagefind-modal-body>
+              <pagefind-summary></pagefind-summary>
+              <pagefind-results></pagefind-results>
+            </pagefind-modal-body>
+          </pagefind-modal>
         </div>
+      </header>
+      <section class="content" data-pagefind-body>
+        <section class="hero">
+          <h1 class="hero-title">Plushie Kingdom weather</h1>
+          <p class="hero-text">
+            Get the latest updates on weather information in the Kingdom and the surrounding George Town area here. Powered by <a class="link" href="https://open-meteo.com/" target="_blank" rel="noreferrer">Open-Meteo</a>.
+          </p>
+        </section>
+        <section class="current-weather">
+          <h2 class="current-weather heading">Current weather</h2>
+          <div class="section-divider"></div>
+          <div class="current-weather content">
+            <img class="current-weather loader" src="../assets/loading.svg">
+          </div>
+        </section>
+        <section class="forecast-today">
+          <h2 class="forecast-today heading">24-hour Forecast</h2>
+          <div class="section-divider"></div>
+          <div class="forecast-today content">
+            <img class="forecast-today loader" src="../assets/loading.svg">
+          </div>
+        </section>
+        <section class="forecast-week">
+          <h2 class="forecast-week heading">7-day Forecast</h2>
+          <div class="section-divider"></div>
+          <div class="forecast-week content">
+            <img class="forecast-week loader" src="../assets/loading.svg">
+          </div>
+        </section>
       </section>
-      <section class="forecast-today">
-        <h2 class="forecast-today heading">24-hour Forecast</h2>
-        <div class="section-divider"></div>
-        <div class="forecast-today content">
-          <img class="forecast-today loader" src="../assets/loading.svg">
-        </div>
-      </section>
-      <section class="forecast-week">
-        <h2 class="forecast-week heading">7-day Forecast</h2>
-        <div class="section-divider"></div>
-        <div class="forecast-week content">
-          <img class="forecast-week loader" src="../assets/loading.svg">
-        </div>
-        </div>
-      </section>
-    </section>
-    <a class="return" href="/">Return to homepage</a>
+      <a class="return" href="/">Return to homepage</a>
+    </div>
     <footer class="footer">
       <section class="footer-ministries">
         <h3 class="footer-title">Ministries</h3>

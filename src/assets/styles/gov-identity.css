@@ -2,8 +2,12 @@
   background-color: var(--central-ministry-colour);
   padding: 1rem 5rem;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: -1px;
+  position: sticky;
+  top: 0;
+  z-index: 99999;
 }
 
 .logo-text {
@@ -192,8 +196,11 @@ section:not(.content, footer section) {
   color: white;
 }
 
+.header-scrollable-area {
+  padding-bottom: 1px;
+}
+
 footer {
-  margin-top: 2rem;
   padding: 2rem 5rem 3rem 5rem;
   background-color: var(--central-ministry-colour);
   color: white;

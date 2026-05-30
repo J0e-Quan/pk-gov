@@ -52,7 +52,11 @@
   background-color: var(--theme);
   padding: 1rem 5rem;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 99999;
 }
 
 .logo-text {
@@ -69,6 +73,10 @@
 .logo-frame {
   padding: 0 5rem;
   aspect-ratio: 3.6 / 1;
+}
+
+.food .search-icon, .technology .search-icon, .defence .search-icon {
+  filter: invert(0)
 }
 
 .hero {
@@ -224,7 +232,7 @@ section:not(.content, footer section) {
 /* MINISTER PHOTOS END */
 
 .minister.info-box {
-  padding: 0 1rem;
+  padding: 0rem 1rem 0.5rem 1rem;
   background-color: transparent;
   position: relative;
 }
@@ -292,8 +300,11 @@ section:not(.content, footer section) {
   color: var(--theme-accent);
 }
 
+.header-scrollable-area {
+  padding-bottom: 1px;
+}
+
 footer {
-  margin-top: 2rem;
   padding: 2rem 5rem 3rem 5rem;
   background-color: var(--theme);
   color: var(--theme-accent);
@@ -423,6 +434,9 @@ footer .link:hover {
     width: 100%;
     height: auto;
     aspect-ratio: 3 / 4;
+  }
+  .minister.info-box {
+    padding: 0 1rem;
   }
   .minister.info-box::before {
     animation-range-start: cover 0%;

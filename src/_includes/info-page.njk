@@ -5,28 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href={{ "/assets/styles/info-page.css" | url }}>
     <link rel="icon" href="/assets/favicons/generic.svg"/>
+    <link href="/pagefind/pagefind-component-ui.css" rel="stylesheet">
+    <script src="/pagefind/pagefind-component-ui.js" type="module"></script>
     <title>{{ title }}</title>
   </head>
   <body>
-   <header class="header">
-      <a class="logo-text" href="/">
-        <h3 class="logo-text top">Plushie Kingdom</h3>
-        <h3 class="logo-text bottom">Government</h3>
-      </a>
-    </header>
-    <section class="content">
-      <section class="hero">
-        <h1 class="hero-title">{{ title }}</h1>
-        <h3 class="hero-excerpt">{{ excerpt }}</p>
-        {% if thumbnail %}
-          <img class="hero-thumbnail" src="{{ thumbnail }}", alt="{{ thumbnail-alt }}">
-        {% endif %}
+   <div class='header-scrollable-area'>
+     <header class="header">
+        <a class="logo-text" href="/">
+          <h3 class="logo-text top">Plushie Kingdom</h3>
+          <h3 class="logo-text bottom">Government</h3>
+        </a>
+        <pagefind-searchbox class="search-desktop" shortcut="none" hide-shortcut placeholder="Search pk-gov..." show-sub-results=true></pagefind-searchbox>
+        <div class="search-mobile">
+          <img class="search-icon" src="../assets/search.svg" alt="search icon">
+          <pagefind-modal class="mobile-modal">
+            <pagefind-modal-header>
+              <pagefind-input placeholder="Search pk-gov..."></pagefind-input>
+            </pagefind-modal-header>
+     
+            <pagefind-modal-body>
+              <pagefind-summary></pagefind-summary>
+              <pagefind-results></pagefind-results>
+            </pagefind-modal-body>
+          </pagefind-modal>
+        </div>
+      </header>
+      <section class="content" data-pagefind-body>
+        <section class="hero">
+          <h1 class="hero-title">{{ title }}</h1>
+          <h3 class="hero-excerpt">{{ excerpt }}</p>
+          {% if thumbnail %}
+            <img class="hero-thumbnail" src="{{ thumbnail }}", alt="{{ thumbnail-alt }}">
+          {% endif %}
+        </section>
+        <section class="info">
+          {{ content | safe }}
+        </section>
       </section>
-      <section class="info">
-        {{ content | safe }}
-      </section>
-    </section>
-    <a class="return" href="/info/">Return to information list</a>
+      <a class="return" href="/info/">Return to information list</a>
+   </div>
     <footer class="footer">
       <section class="footer-ministries">
         <h3 class="footer-title">Ministries</h3>
