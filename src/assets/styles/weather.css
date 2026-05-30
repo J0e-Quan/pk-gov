@@ -305,6 +305,10 @@ footer .link:hover {
     animation-range-start: cover 0%;
     animation-range-end: cover 20%;
   }
+  .forecast-today .section-divider, .forecast-today .heading::before {
+    animation-range-start: cover 0%;
+    animation-range-end: cover 0%;
+  }
   .title {
     font-size: 1.5rem;
   }
