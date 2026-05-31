@@ -1,7 +1,7 @@
 ---
 tags: news
 layout: news-article.njk
-date: 2026-06-01
+date: 2026-06-02
 author: Technology Minister Android
 title: New updates to pk-gov are here
 excerpt: A new weather page and search makes pk-gov even more intuitive, informative and effective at giving you what you need from the Government.
