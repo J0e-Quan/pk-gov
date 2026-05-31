@@ -8,7 +8,9 @@ excerpt: A new weather page and search makes pk-gov even more intuitive, informa
 thumbnail: ./news-media/new-updates-to-pk-gov-are-here/thumbnail.webp
 ---
 
-Today, we're introducing two new features to pk-gov that make it an even better place to access all Government information and services. (NOTE: Video version of this announcement is available <a class='link' href='' target='_blank' rel='noreferrer'>here</a>)
+(NOTE: Video version of this announcement is available <a class='link' href='https://www.youtube.com/watch?v=3nKP7c9rNBo' target='_blank' rel='noreferrer'>here</a>)
+
+Today, we're introducing two new features to pk-gov that make it an even better place to access all Government information and services.
 
 ## Get local weather information
 
