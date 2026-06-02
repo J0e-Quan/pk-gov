@@ -1,16 +1,36 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href={{ "/assets/styles/news.css" | url }}>
-  <link rel="icon" href="/assets/favicons/generic.svg"/>
-  <link href="/pagefind/pagefind-component-ui.css" rel="stylesheet">
-  <script src="/pagefind/pagefind-component-ui.js" type="module"></script>
-  <title>Government news</title>
-</head>
-<body>
-    <div class='header-scrollable-area'>
+  <head>
+    <link
+      rel="preload"
+      href="/src/assets/fonts/IBMPlexSans_Var-Roman.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/src/assets/fonts/IBMPlexSans_Var-Italic.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/src/assets/fonts/MonaSansVF[wdth,wght,opsz,ital].woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../assets/favicons/generic.svg" />
+    <link href="/pagefind/pagefind-component-ui.css" rel="stylesheet">
+    <script src="/pagefind/pagefind-component-ui.js" type="module"></script>
+    <title>Plushie Kingdom weather</title>
+  </head>
+  <body>
+    <div class="header-scrollable-area">
       <header class="header">
         <a class="logo-text" href="/">
           <h3 class="logo-text top">Plushie Kingdom</h3>
@@ -33,17 +53,31 @@
       </header>
       <section class="content" data-pagefind-body>
         <section class="hero">
-          <h1 class="hero-title">Government news</h1>
-          <p class="hero-text">Stay informed with the latest news from the Government. Video versions for major announcements are also available on our <a class="link" href="https://www.youtube.com/channel/UCL4Px1LLyD6WxcaDTm71ViQ" target="_blank" rel="noreferrer">YouTube channel</a>.</p>
+          <h1 class="hero-title">Plushie Kingdom weather</h1>
+          <p class="hero-text">
+            Get the latest updates on weather information in the Kingdom and the surrounding George Town area here. Powered by <a class="link" href="https://open-meteo.com/" target="_blank" rel="noreferrer">Open-Meteo</a>.
+          </p>
         </section>
-        <section class="articles">
-          {% for post in collections.news | reverse %}
-            <a class="article" href="{{ post.url }}">
-              <p class="article-date">{{ post.data.date | postDate}}, by {{ post.data.author }}</p>
-              <h2 class="article-title">{{ post.data.title }}</h2>
-              <h3 class="article-excerpt">{{ post.data.excerpt }}</h3>
-            </a>
-          {% endfor %}
+        <section class="current-weather">
+          <h2 class="current-weather heading">Current weather</h2>
+          <div class="section-divider"></div>
+          <div class="current-weather content">
+            <img class="current-weather loader" src="../assets/loading.svg">
+          </div>
+        </section>
+        <section class="forecast-today">
+          <h2 class="forecast-today heading">24-hour Forecast</h2>
+          <div class="section-divider"></div>
+          <div class="forecast-today content">
+            <img class="forecast-today loader" src="../assets/loading.svg">
+          </div>
+        </section>
+        <section class="forecast-week">
+          <h2 class="forecast-week heading">7-day Forecast</h2>
+          <div class="section-divider"></div>
+          <div class="forecast-week content">
+            <img class="forecast-week loader" src="../assets/loading.svg">
+          </div>
         </section>
       </section>
       <a class="return" href="/">Return to homepage</a>
@@ -68,8 +102,8 @@
         <div class="footer-divider"></div>
         <div class="footer-resources links">
           <a class="footer link" href="/info/">Life in the Plushie Kingdom</a>
-          <a class="footer link" href="/news/">Government news</a>    
-          <a class="footer link" href="/weather/">Plushie Kingdom weather</a>      
+          <a class="footer link" href="/news/">Government news</a>
+          <a class="footer link" href="/weather/">Plushie Kingdom weather</a>
         </div>
       </section>
       <section class="footer-about">
@@ -77,11 +111,12 @@
         <div class="footer-divider"></div>
         <div class="footer-resources links">
           <a class="footer link" href="/about/pk-gov/">About the pk-gov website</a>
-          <a class="footer link" href="/info/who-we-are/#history-of-the-plushie-kingdom">History of the Plushie Kingdom</a>
-          <a class="footer link" href="/about/gov-identity/">Government identity guidelines</a>          
+          <a class="footer link" href="/info/who-we-are/#history-of-the-plushie-kingdom"
+            >History of the Plushie Kingdom</a
+          >
+          <a class="footer link" href="/about/gov-identity/">Government identity guidelines</a>
         </div>
       </section>
     </footer>
-  <script src="/news.js"></script>
-</body>
+  </body>
 </html>

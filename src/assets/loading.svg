@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg fill="none" viewBox="0 4 100 32" xmlns="http://www.w3.org/2000/svg">
+  <defs />
+  
+  <g transform="matrix(1,0,0,1,43.578,19.266)" id="Dot 1">
+    <g id="Ellipse 1" transform="matrix(1,0,0,1,-24.078,0.734)">
+      <ellipse ry="0" rx="0" cy="0" cx="0" fill="#000000" fill-opacity="1">
+        <animate repeatCount="indefinite" attributeName="rx" dur="1.4666666666666666s" begin="0s" calcMode="spline" values="0; 11; 0" keyTimes="0; 0.5; 1" keySplines="0.333 0 0.667 1; 0.333 0 0.667 1" fill="freeze" />
+        <animate repeatCount="indefinite" attributeName="ry" dur="1.4666666666666666s" begin="0s" calcMode="spline" values="0; 11; 0" keyTimes="0; 0.5; 1" keySplines="0.333 0 0.667 1; 0.333 0 0.667 1" fill="freeze" />
+      </ellipse>
+    </g>
+  </g>
+  
+  <g transform="matrix(1,0,0,1,74.078,19.266)" id="Dot 2">
+    <g id="Ellipse 1" transform="matrix(1,0,0,1,-24.078,0.734)">
+      <ellipse ry="0" rx="0" cy="0" cx="0" fill="#000000" fill-opacity="1">
+        <animate repeatCount="indefinite" attributeName="rx" dur="1.4666666666666666s" begin="0.26666666666666666s" calcMode="spline" values="0; 12; 0" keyTimes="0; 0.5; 1" keySplines="0.333 0 0.667 1; 0.333 0 0.667 1" fill="freeze" />
+        <animate repeatCount="indefinite" attributeName="ry" dur="1.4666666666666666s" begin="0.26666666666666666s" calcMode="spline" values="0; 12; 0" keyTimes="0; 0.5; 1" keySplines="0.333 0 0.667 1; 0.333 0 0.667 1" fill="freeze" />
+      </ellipse>
+    </g>
+  </g>
+  
+  <g transform="matrix(1,0,0,1,104,19.266)" id="Dot 3">
+    <g id="Ellipse 1" transform="matrix(1,0,0,1,-24.078,0.734)">
+      <ellipse ry="0" rx="0" cy="0" cx="0" fill="#000000" fill-opacity="1">
+        <animate repeatCount="indefinite" attributeName="rx" dur="1.4632161458333332s" begin="0.5333333333333333s" calcMode="spline" values="0; 11; 0" keyTimes="0; 0.501; 1" keySplines="0.333 0 0.667 1; 0.333 0 0.667 1" fill="freeze" />
+        <animate repeatCount="indefinite" attributeName="ry" dur="1.4632161458333332s" begin="0.5333333333333333s" calcMode="spline" values="0; 11; 0" keyTimes="0; 0.501; 1" keySplines="0.333 0 0.667 1; 0.333 0 0.667 1" fill="freeze" />
+      </ellipse>
+    </g>
+  </g>
+</svg>

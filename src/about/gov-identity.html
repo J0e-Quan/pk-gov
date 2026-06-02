@@ -25,150 +25,167 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="../assets/favicons/generic.svg" />
+    <link href="/pagefind/pagefind-component-ui.css" rel="stylesheet">
+    <script src="/pagefind/pagefind-component-ui.js" type="module"></script>
     <title>Government identity guidelines</title>
   </head>
   <body>
-    <header class="header">
-      <a class="logo-text" href="/">
-        <h3 class="logo-text top">Plushie Kingdom</h3>
-        <h3 class="logo-text bottom">Government</h3>
-      </a>
-    </header>
-    <section class="content">
-      <section class="hero">
-        <h1 class="hero-title">Government identity guidelines</h1>
-        <p class="hero-text">
-          Here's where to look for guidance on using the bold and modern, yet warm and welcoming
-          identity of the Plushie Kingdom Government.
-        </p>
-      </section>
-      <section class="colours">
-        <h2 class="heading">Colours</h2>
-        <div class="section-divider"></div>
-        <h3 class="title">Background colour</h3>
-        <p class="text">For backgrounds of pages like this one, use pure white (#FFFFFF)</p>
-        <h3 class="title">Text colours</h3>
-        <p class="text">
-          Use either pure white (#FFFFFF) or pure black (#000000) depending on the background
-          colour. Text coloured with the accent colours shown below isn't frequently used but isn't
-          prohibited either.
-        </p>
-        <h3 class="title">Accent colours</h3>
-        <p class="text">
-          We use a range of vibrant accent colours, each representing one of our ministries. Central
-          Ministry blue represents both the ministry itself and the Government as a whole,
-          symbolising its role as the leading authority of the Government. If text is shown on these
-          colours, adjust the text's colour for better contrast and readability as shown below.
-        </p>
-        <div class="colours-list">
-          <div class="colours-list row">
-            <div class="colour central-ministry">Central Ministry blue (#68A0FF)</div>
-            <div class="colour ministry-of-foreign-affairs">
-              Ministry of Foreign Affairs blue (#3653FF)
-            </div>
-            <div class="colour ministry-of-finance">Ministry of Finance green (#00B000)</div>
-            <div class="colour ministry-of-technology">Ministry of Technology cyan (#4AFFD1)</div>
-          </div>
-          <div class="colours-list row">
-            <div class="colour ministry-of-food">Ministry of Food yellow (#FFDC00)</div>
-            <div class="colour ministry-of-health">Ministry of Health red (#FF0000)</div>
-            <div class="colour ministry-of-immigration">
-              Ministry of Immigration brown (#C38C00)
-            </div>
-            <div class="colour ministry-of-defence">Ministry of Defence grey (#A5A5A5)</div>
-          </div>
+    <div class="header-scrollable-area">
+      <header class="header">
+        <a class="logo-text" href="/">
+          <h3 class="logo-text top">Plushie Kingdom</h3>
+          <h3 class="logo-text bottom">Government</h3>
+        </a>
+        <pagefind-searchbox class="search-desktop" shortcut="none" hide-shortcut placeholder="Search pk-gov..." show-sub-results=true></pagefind-searchbox>
+        <div class="search-mobile">
+          <img class="search-icon" src="../assets/search.svg" alt="search icon">
+          <pagefind-modal class="mobile-modal">
+            <pagefind-modal-header>
+              <pagefind-input placeholder="Search pk-gov..."></pagefind-input>
+            </pagefind-modal-header>
+      
+            <pagefind-modal-body>
+              <pagefind-summary></pagefind-summary>
+              <pagefind-results></pagefind-results>
+            </pagefind-modal-body>
+          </pagefind-modal>
         </div>
+      </header>
+      <section class="content" data-pagefind-body>
+        <section class="hero">
+          <h1 class="hero-title">Government identity guidelines</h1>
+          <p class="hero-text">
+            Here's where to look for guidance on using the bold and modern, yet warm and welcoming
+            identity of the Plushie Kingdom Government.
+          </p>
+        </section>
+        <section class="colours">
+          <h2 class="heading">Colours</h2>
+          <div class="section-divider"></div>
+          <h3 class="title">Background colour</h3>
+          <p class="text">For backgrounds of pages like this one, use pure white (#FFFFFF)</p>
+          <h3 class="title">Text colours</h3>
+          <p class="text">
+            Use either pure white (#FFFFFF) or pure black (#000000) depending on the background
+            colour. Text coloured with the accent colours shown below isn't frequently used but isn't
+            prohibited either.
+          </p>
+          <h3 class="title">Accent colours</h3>
+          <p class="text">
+            We use a range of vibrant accent colours, each representing one of our ministries. Central
+            Ministry blue represents both the ministry itself and the Government as a whole,
+            symbolising its role as the leading authority of the Government. If text is shown on these
+            colours, adjust the text's colour for better contrast and readability as shown below.
+          </p>
+          <div class="colours-list">
+            <div class="colours-list row">
+              <div class="colour central-ministry">Central Ministry blue (#68A0FF)</div>
+              <div class="colour ministry-of-foreign-affairs">
+                Ministry of Foreign Affairs blue (#3653FF)
+              </div>
+              <div class="colour ministry-of-finance">Ministry of Finance green (#00B000)</div>
+              <div class="colour ministry-of-technology">Ministry of Technology cyan (#4AFFD1)</div>
+            </div>
+            <div class="colours-list row">
+              <div class="colour ministry-of-food">Ministry of Food yellow (#FFDC00)</div>
+              <div class="colour ministry-of-health">Ministry of Health red (#FF0000)</div>
+              <div class="colour ministry-of-immigration">
+                Ministry of Immigration brown (#C38C00)
+              </div>
+              <div class="colour ministry-of-defence">Ministry of Defence grey (#A5A5A5)</div>
+            </div>
+          </div>
+        </section>
+        <section class="typography">
+          <h2 class="heading">Typography</h2>
+          <div class="section-divider"></div>
+          <h3 class="title">Headers, Titles and Main Text</h3>
+          <p class="text">
+            For major headlines, titles and other significant text, use
+            <a href="https://github.com/IBM/plex" class="link" target="_blank" rel="noreferrer"
+              >IBM Plex Sans</a
+            >. For weights, we usually use the font in bold (700), but regular (400) can also be used
+            for "lighter" titles and subheadings.
+          </p>
+          <h3 class="title">Body text</h3>
+          <p class="text">
+            For body text, content, buttons and any other uses not mentioned for IBM Plex Sans, use
+            <a
+              href="https://github.com/github/mona-sans"
+              class="link"
+              target="_blank"
+              rel="noreferrer"
+              >Mona Sans</a
+            >. We use the font in its regular weight (400).
+          </p>
+        </section>
+        <section class="animation-principles">
+          <h2 class="heading">Animation principles</h2>
+          <div class="section-divider"></div>
+          <h3 class="title">Smooth and simple</h3>
+          <p class="text">
+            Animations must be smooth, simple and quick to prevent distracting from the content.
+            Spring physics animations are discouraged, but not forbidden. Ensure animations remain
+            consistent with those on our website and in our videos.
+          </p>
+          <h3 class="title">Avoid blurs and fades</h3>
+          <p class="text">
+            As animations may be inserted into videos using chroma key, avoid using animations that
+            change opacity, as those changes make it difficult for animations to be cleanly inserted.
+            Blurs and fades also do not fit our "smooth and simple" principle, potentially making
+            things harder to read or see. Consider using wipes instead of fades.
+          </p>
+          <h3 class="title">Don't overuse animations</h3>
+          <p class="text">
+            Each animation must serve a clear purpose, such as highlighting interactable elements or
+            drawing attention to important content. Too many animations will make content feel busy
+            and cluttered, while too less animations will make content feel unpolished and flat.
+          </p>
+        </section>
+        <section class="in-writing">
+          <h2 class="heading">In writing</h2>
+          <div class="section-divider"></div>
+          <h3 class="title">Key terms</h3>
+          <p class="text">
+            Always write "Plushie Kingdom", "Kingdom", "Government", and ministry names in Title Case
+            (first letter capitalised) when referring to these entities in writing.
+          </p>
+          <h3 class="title">Government members</h3>
+          <p class="text">
+            When mentioning plushies who work in the Government, write their job title first, then
+            their full name, all in Title Case, for example: Prime Minister Pink Bear Bear, Defence
+            Minister Stitch
+          </p>
+          <h3 class="title">"Defence" or "Defense"?</h3>
+          <p class="text">
+            Defence (unless you don't know what a kilometer is). Don't feel bad for not knowing, we
+            only realised this after making all the ministry assets and had to redo some of them. (we
+            even almost typed 'defense' in the example above :/)
+          </p>
+          <h3 class="title">"Plushie Kingdom Government", "Government" or "pk-gov"?</h3>
+          <p class="text">
+            Only use the full term "Plushie Kingdom Government" in formal contexts, or mentioning it
+            where other governments may be present. "Government" refers to the same entity anyways,
+            and is shorter to write. "pk-gov" is NOT the same as "Plushie Kingdom Government" or
+            "Government", as it is the platform to access Government information and services (the
+            website and YouTube channel)
+          </p>
+        </section>
+        <section class="government-assets">
+          <h2 class="heading">Government assets</h2>
+          <div class="section-divider"></div>
+          <p class="text">Download Government staff photos, ministry icons and more by clicking the buttons below! Each category will be downloaded as a .zip file containing the relevant assets.</p>
+          <div class="download-buttons">
+            <a class="download" href="/assets/downloadable/fonts.zip" download>Fonts</a>
+            <a class="download" href="/assets/downloadable/staff-photos.zip" download>Staff Photos</a>
+            <a class="download" href="/assets/downloadable/ministry-icons.zip" download>Ministry Icons</a>
+            <a class="download" href="/assets/downloadable/ministry-animations.zip" download>Ministry Animations</a>
+            <a class="download" href="/assets/downloadable/ministry-themes.zip" download>Ministry Themes</a>
+          </div>
+        </section>
       </section>
-      <section class="typography">
-        <h2 class="heading">Typography</h2>
-        <div class="section-divider"></div>
-        <h3 class="title">Headers, Titles and Main Text</h3>
-        <p class="text">
-          For major headlines, titles and other significant text, use
-          <a href="https://github.com/IBM/plex" class="link" target="_blank" rel="noreferrer"
-            >IBM Plex Sans</a
-          >. For weights, we usually use the font in bold (700), but regular (400) can also be used
-          for "lighter" titles and subheadings.
-        </p>
-        <h3 class="title">Body text</h3>
-        <p class="text">
-          For body text, content, buttons and any other uses not mentioned for IBM Plex Sans, use
-          <a
-            href="https://github.com/github/mona-sans"
-            class="link"
-            target="_blank"
-            rel="noreferrer"
-            >Mona Sans</a
-          >. We use the font in its regular weight (400).
-        </p>
-      </section>
-      <section class="animation-principles">
-        <h2 class="heading">Animation principles</h2>
-        <div class="section-divider"></div>
-        <h3 class="title">Smooth and simple</h3>
-        <p class="text">
-          Animations must be smooth, simple and quick to prevent distracting from the content.
-          Spring physics animations are discouraged, but not forbidden. Ensure animations remain
-          consistent with those on our website and in our videos.
-        </p>
-        <h3 class="title">Avoid blurs and fades</h3>
-        <p class="text">
-          As animations may be inserted into videos using chroma key, avoid using animations that
-          change opacity, as those changes make it difficult for animations to be cleanly inserted.
-          Blurs and fades also do not fit our "smooth and simple" principle, potentially making
-          things harder to read or see. Consider using wipes instead of fades.
-        </p>
-        <h3 class="title">Don't overuse animations</h3>
-        <p class="text">
-          Each animation must serve a clear purpose, such as highlighting interactable elements or
-          drawing attention to important content. Too many animations will make content feel busy
-          and cluttered, while too less animations will make content feel unpolished and flat.
-        </p>
-      </section>
-      <section class="in-writing">
-        <h2 class="heading">In writing</h2>
-        <div class="section-divider"></div>
-        <h3 class="title">Key terms</h3>
-        <p class="text">
-          Always write "Plushie Kingdom", "Kingdom", "Government", and ministry names in Title Case
-          (first letter capitalised) when referring to these entities in writing.
-        </p>
-        <h3 class="title">Government members</h3>
-        <p class="text">
-          When mentioning plushies who work in the Government, write their job title first, then
-          their full name, all in Title Case, for example: Prime Minister Pink Bear Bear, Defence
-          Minister Stitch
-        </p>
-        <h3 class="title">"Defence" or "Defense"?</h3>
-        <p class="text">
-          Defence (unless you don't know what a kilometer is). Don't feel bad for not knowing, we
-          only realised this after making all the ministry assets and had to redo some of them. (we
-          even almost typed 'defense' in the example above :/)
-        </p>
-        <h3 class="title">"Plushie Kingdom Government", "Government" or "pk-gov"?</h3>
-        <p class="text">
-          Only use the full term "Plushie Kingdom Government" in formal contexts, or mentioning it
-          where other governments may be present. "Government" refers to the same entity anyways,
-          and is shorter to write. "pk-gov" is NOT the same as "Plushie Kingdom Government" or
-          "Government", as it is the platform to access Government information and services (the
-          website and YouTube channel)
-        </p>
-      </section>
-      <section class="government-assets">
-        <h2 class="heading">Government assets</h2>
-        <div class="section-divider"></div>
-        <p class="text">Download Government staff photos, ministry icons and more by clicking the buttons below! Each category will be downloaded as a .zip file containing the relevant assets.</p>
-        <div class="download-buttons">
-          <a class="download" href="/assets/downloadable/fonts.zip" download>Fonts</a>
-          <a class="download" href="/assets/downloadable/staff-photos.zip" download>Staff Photos</a>
-          <a class="download" href="/assets/downloadable/ministry-icons.zip" download>Ministry Icons</a>
-          <a class="download" href="/assets/downloadable/ministry-animations.zip" download>Ministry Animations</a>
-          <a class="download" href="/assets/downloadable/ministry-themes.zip" download>Ministry Themes</a>
-
-        </div>
-      </section>
-    </section>
-    <a class="return" href="/">Return to homepage</a>
+      <a class="return" href="/">Return to homepage</a>
+    </div>
     <footer class="footer">
       <section class="footer-ministries">
         <h3 class="footer-title">Ministries</h3>
@@ -190,6 +207,7 @@
         <div class="footer-resources links">
           <a class="footer link" href="/info/">Life in the Plushie Kingdom</a>
           <a class="footer link" href="/news/">Government news</a>
+          <a class="footer link" href="/weather/">Plushie Kingdom weather</a>
         </div>
       </section>
       <section class="footer-about">
