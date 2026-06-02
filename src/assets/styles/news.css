@@ -33,6 +33,7 @@
 .hero-title {
   font-size: 4rem;
   margin-bottom: 1rem;
+  scroll-margin-top: 10rem;
 }
 
 .hero-text {
@@ -131,12 +132,14 @@ section:not(.content, footer section) {
   text-decoration-thickness: 2px;
   font-size: 2.5rem;
   line-height: 1.2;
+  scroll-margin-top: 10rem;
 }
 
 .article-excerpt {
   font-size: 1.5rem;
   font-weight: 400;
   font-family: var(--mona-sans);
+  scroll-margin-top: 10rem;
 }
 
 .return {

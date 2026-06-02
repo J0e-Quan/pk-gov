@@ -33,10 +33,12 @@
 .hero-title {
   font-size: 4rem;
   margin-bottom: 1rem;
+  scroll-margin-top: 10rem;
 }
 
 .hero-text {
   font-size: 2rem;
+  scroll-margin-top: 10rem;
 }
 
 section:not(.content, footer section) {
@@ -122,6 +124,7 @@ section:not(.content, footer section) {
 
 .directory.title {
   font-size: 3rem;
+  scroll-margin-top: 10rem;
 }
 
 .directory.text {

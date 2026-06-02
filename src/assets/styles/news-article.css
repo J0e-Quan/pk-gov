@@ -34,10 +34,12 @@
   font-size: 4rem;
   margin-bottom: 1rem;
   line-height: 1.2;
+  scroll-margin-top: 10rem;
 }
 
 .hero-text {
   font-size: 2rem;
+  scroll-margin-top: 10rem;
 }
 
 section:not(.content, footer section) {
@@ -49,6 +51,7 @@ section:not(.content, footer section) {
   position: relative;
   overflow: clip;
   display: inline-block;
+  scroll-margin-top: 10rem;
 }
 
 .article h2::before {
@@ -98,6 +101,8 @@ section:not(.content, footer section) {
 
 .article h3 {
   font-size: 2.5rem;
+  scroll-margin-top: 10rem;
+
 }
 
 .article p {
@@ -158,6 +163,7 @@ section.article {
   font-size: 2rem;
   font-weight: 400;
   font-family: var(--mona-sans);
+  scroll-margin-top: 10rem;
 }
 
 .hero-thumbnail {

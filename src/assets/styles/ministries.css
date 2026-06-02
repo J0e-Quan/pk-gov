@@ -87,6 +87,7 @@
 .hero-title {
   font-size: 4rem;
   margin-bottom: 1rem;
+  scroll-margin-top: 10rem;
 }
 
 .hero-text {
@@ -102,6 +103,7 @@ section:not(.content, footer section) {
   position: relative;
   overflow: clip;
   display: inline-block;
+  scroll-margin-top: 10rem;
 }
 
 .heading::before {
@@ -261,6 +263,7 @@ section:not(.content, footer section) {
 
 .minister.name {
   font-size: 3rem;
+  scroll-margin-top: 45rem;
 }
 
 .minister.job-title {
