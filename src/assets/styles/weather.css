@@ -306,8 +306,13 @@ footer .link:hover {
     animation-range-end: cover 20%;
   }
   .forecast-today .section-divider, .forecast-today .heading::before {
-    animation-range-start: cover -1%;
-    animation-range-end: cover 0%;
+    animation: none
+  }
+  .forecast-today .heading::before {
+    display: none;
+  }
+  .forecast-today .section-divider {
+    transform: scaleX(1);
   }
   .title {
     font-size: 1.5rem;
