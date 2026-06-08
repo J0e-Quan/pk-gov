@@ -201,13 +201,14 @@ section:not(.content, footer section) {
 }
 
 footer {
-  padding: 2rem 5rem 3rem 5rem;
+  padding: 2rem 5rem calc(3rem + 5px) 5rem;
   background-color: var(--central-ministry-colour);
   color: white;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   gap: 2rem;
+  margin-bottom: -5px;
 }
 
 .footer-title {
