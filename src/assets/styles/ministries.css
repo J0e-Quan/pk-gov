@@ -332,8 +332,5 @@ section:not(.content, footer section) {
   .small-text {
     font-size: 0.5rem;
   }
-  .return {
-    font-size: 1.5rem;
-  }
 }
 /* MEDIA QUERIES ABOVE */

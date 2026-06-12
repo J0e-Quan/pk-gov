@@ -161,7 +161,6 @@ section:not(.content, footer section) {
   .directory {
     margin-bottom: 0;
   }
-  .return,
   .directory.cta {
     font-size: 1.5rem;
   }

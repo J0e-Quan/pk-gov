@@ -280,4 +280,7 @@ pagefind-searchbox::part(input) {
   footer .link {
     font-size: 1rem;
   }
+  .return {
+    font-size: 1.5rem;
+  }
 }
