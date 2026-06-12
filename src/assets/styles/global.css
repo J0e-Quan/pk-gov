@@ -65,6 +65,28 @@ a {
   text-decoration: none;
 }
 
+.header {
+  background-color: var(--theme, var(--central-ministry-colour));
+  padding: 1rem 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 99999;
+}
+
+.logo-text {
+  color: var(--theme-accent, white);
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.logo-text.bottom {
+  margin-top: -0.2rem;
+  font-weight: 400;
+}
+
 footer {
   padding: 2rem 5rem calc(3rem + 5px) 5rem;
   background-color: var(--theme, var(--central-ministry-colour));
