@@ -132,6 +132,11 @@ a {
   }
 }
 
+.title, h3 {
+  font-size: 2.5rem;
+  scroll-margin-top: 10rem;
+}
+
 .section-divider, hr {
   min-width: 0;
   width: 100%;
@@ -336,6 +341,12 @@ pagefind-searchbox::part(input) {
   .hero-text {
     font-size: 1.5rem;
     margin-bottom: 2rem;
+  }
+  .heading, h2 {
+    font-size: 2rem;
+  }
+  .title, h3 {
+    font-size: 1.5rem;
   }
   .section-divider,
   hr {

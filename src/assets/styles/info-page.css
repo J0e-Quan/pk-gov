@@ -16,11 +16,6 @@ section:not(.content, footer section) {
   animation-range-end: cover 15%;
 }
 
-.info h3 {
-  font-size: 2.5rem;
-  scroll-margin-top: 10rem;
-}
-
 .info p {
   font-size: 1.5rem;
   margin-bottom: 2rem;
@@ -106,12 +101,6 @@ section:not(.content, footer section) {
   .hero-excerpt {
     font-size: 1.5rem;
     margin-bottom: 2rem;
-  }
-  .info h2 {
-    font-size: 2rem;
-  }
-  .info h3 {
-    font-size: 1.5rem;
   }
   .info p,
   .info ul,
