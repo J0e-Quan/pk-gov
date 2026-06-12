@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
   entry: {
     home: './src/home.js',
+    ministries: './src/ministries/ministries.js',
     central: './src/ministries/central.js',
     food: './src/ministries/food.js',
     'foreign-affairs': './src/ministries/foreign-affairs.js',
