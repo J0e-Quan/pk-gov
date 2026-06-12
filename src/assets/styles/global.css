@@ -224,4 +224,16 @@ pagefind-searchbox::part(input) {
   .search-desktop {
     display: none;
   }
+  footer {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 2rem 3rem 3rem 3rem;
+  }
+  .footer-divider {
+    animation-range-start: cover 0%;
+    animation-range-end: cover 10%;
+  }
+  footer .link {
+    font-size: 1rem;
+  }
 }
