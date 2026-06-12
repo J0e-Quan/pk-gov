@@ -167,28 +167,6 @@ section:not(.content, footer section) {
   height: auto;
 }
 
-.return {
-  padding: 1rem 2rem;
-  font-size: 2rem;
-  font-family: var(--mona-sans);
-  color: black;
-  background-color: transparent;
-  display: flex;
-  max-width: fit-content;
-  margin: 1rem auto 4rem auto;
-  box-shadow: inset 0 0 0 0px var(--central-ministry-colour);
-  border: 16px solid var(--central-ministry-colour);
-  transition:
-    box-shadow 0.4s ease-in-out,
-    color 0.4s ease-in-out;
-  will-change: box-shadow, color;
-}
-
-.return:hover {
-  box-shadow: inset 0 0 0 400px var(--central-ministry-colour);
-  color: white;
-}
-
 .header-scrollable-area {
   padding-bottom: 1px;
 }
