@@ -140,12 +140,6 @@ section.article {
   .article h2 {
     font-size: 2rem;
   }
-  .section-divider,
-  .article hr {
-    margin-bottom: 1rem;
-    animation-range-start: cover 0%;
-    animation-range-end: cover 20%;
-  }
   .article h3 {
     font-size: 1.5rem;
   }

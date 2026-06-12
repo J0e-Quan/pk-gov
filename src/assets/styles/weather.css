@@ -140,11 +140,6 @@ section:not(.content, footer section) {
   .heading {
     font-size: 2rem;
   }
-  .section-divider {
-    margin-bottom: 1rem;
-    animation-range-start: cover 0%;
-    animation-range-end: cover 20%;
-  }
   .forecast-today .section-divider, .forecast-today .heading::before {
     animation: none
   }

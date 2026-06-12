@@ -160,12 +160,6 @@ section:not(.content, footer section) {
   .info h2 {
     font-size: 2rem;
   }
-  .section-divider,
-  .info hr {
-    margin-bottom: 1rem;
-    animation-range-start: cover 0%;
-    animation-range-end: cover 15%;
-  }
   .info h3 {
     font-size: 1.5rem;
   }

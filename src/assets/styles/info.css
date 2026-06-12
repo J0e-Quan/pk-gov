@@ -122,12 +122,6 @@ section:not(.content, footer section) {
   .directory.title {
     font-size: 2rem;
   }
-  .section-divider,
-  .info hr {
-    margin-bottom: 1rem;
-    animation-range-start: cover 0%;
-    animation-range-end: cover 20%;
-  }
   .directory.text {
     font-size: 1rem;
     line-height: 1.5;

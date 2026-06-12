@@ -285,6 +285,12 @@ pagefind-searchbox::part(input) {
   .search-desktop {
     display: none;
   }
+  .section-divider,
+  hr {
+    margin-bottom: 1rem;
+    animation-range-start: cover 0%;
+    animation-range-end: cover 20%;
+  }
   footer {
     flex-direction: column;
     flex-wrap: nowrap;

@@ -269,11 +269,6 @@ section:not(.content, footer section) {
     animation-range-start: cover 25%;
     animation-range-end: cover 45%;
   }
-  .section-divider {
-    margin-bottom: 1rem;
-    animation-range-start: cover 0%;
-    animation-range-end: cover 20%;
-  }
   .minister {
     width: 100%;
   }
