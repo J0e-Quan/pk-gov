@@ -125,10 +125,6 @@ a svg {
   transform: translateY(-25%);
 }
 
-.header-scrollable-area {
-  padding-bottom: 1px;
-}
-
 /* MEDIA QUERIES BELOW */
 @media (max-width: 600px) {
   .header,

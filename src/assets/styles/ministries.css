@@ -259,10 +259,6 @@ section:not(.content, footer section) {
   margin-bottom: 2rem;
 }
 
-.header-scrollable-area {
-  padding-bottom: 1px;
-}
-
 .small-text {
   font-size: 1rem;
 }

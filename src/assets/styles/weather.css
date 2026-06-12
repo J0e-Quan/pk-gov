@@ -146,10 +146,6 @@ section:not(.content, footer section) {
   font-size: 2.5rem;
 }
 
-.header-scrollable-area {
-  padding-bottom: 1px;
-}
-
 /* MEDIA QUERIES BELOW */
 @media (max-width: 600px) {
   .header,

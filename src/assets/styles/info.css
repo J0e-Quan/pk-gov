@@ -125,10 +125,6 @@ section:not(.content, footer section) {
   color: white;
 }
 
-.header-scrollable-area {
-  padding-bottom: 1px;
-}
-
 /* MEDIA QUERIES BELOW */
 @media (max-width: 600px) {
   .header,

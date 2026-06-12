@@ -261,6 +261,10 @@ pagefind-searchbox::part(input) {
   border: 4px solid black;
 }
 
+.header-scrollable-area {
+  padding-bottom: 1px;
+}
+
 @media (max-width: 600px) {
   .search-mobile {
     display: flex;
