@@ -45,28 +45,6 @@ section:not(.content, footer section) {
   }
 }
 
-.section-divider {
-  width: 100%;
-  height: 10px;
-  background-color: var(--central-ministry-colour);
-  margin-bottom: 3rem;
-  transform-origin: left;
-  transform: scaleX(0);
-  animation: wipe-right ease-in both;
-  animation-timeline: view();
-  animation-range-start: cover 5%;
-  animation-range-end: cover 35%;
-}
-
-@keyframes wipe-right {
-  0% {
-    transform: scaleX(0);
-  }
-  100% {
-    transform: scaleX(1);
-  }
-}
-
 .title {
   font-size: 2.5rem;
 }
