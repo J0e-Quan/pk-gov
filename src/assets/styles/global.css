@@ -87,6 +87,22 @@ a {
   font-weight: 400;
 }
 
+.hero {
+  background-color: var(--theme, var(--central-ministry-colour));
+  color: var(--theme-accent, white);
+}
+
+.hero-title {
+  font-size: 4rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  scroll-margin-top: 10rem;
+}
+
+.hero-text {
+  font-size: 2rem;
+}
+
 .section-divider, hr {
   min-width: 0;
   width: 100%;

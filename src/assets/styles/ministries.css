@@ -57,21 +57,6 @@
   filter: invert(0)
 }
 
-.hero {
-  background-color: var(--theme);
-  color: var(--theme-accent);
-}
-
-.hero-title {
-  font-size: 4rem;
-  margin-bottom: 1rem;
-  scroll-margin-top: 10rem;
-}
-
-.hero-text {
-  font-size: 2rem;
-}
-
 section:not(.content, footer section) {
   padding: 2rem 5rem;
 }

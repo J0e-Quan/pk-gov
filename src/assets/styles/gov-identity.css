@@ -1,17 +1,3 @@
-.hero {
-  background-color: var(--central-ministry-colour);
-  color: white;
-}
-
-.hero-title {
-  font-size: 4rem;
-  margin-bottom: 1rem;
-}
-
-.hero-text {
-  font-size: 2rem;
-}
-
 section:not(.content, footer section) {
   padding: 2rem 5rem;
 }
