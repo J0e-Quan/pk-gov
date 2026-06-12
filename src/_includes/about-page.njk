@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href={{ "/assets/styles/about-page.css" | url }}>
+    <link rel="icon" href="/assets/favicons/generic.svg"/>
+    <link href="/pagefind/pagefind-component-ui.css" rel="stylesheet">
+    <script src="/pagefind/pagefind-component-ui.js" type="module"></script>
+    <title>{{ title }}</title>
+  </head>
+  <body>
+   <div class='header-scrollable-area'>
+     <header class="header">
+        <a class="logo-text" href="/">
+          <h3 class="logo-text top">Plushie Kingdom</h3>
+          <h3 class="logo-text bottom">Government</h3>
+        </a>
+        <pagefind-searchbox class="search-desktop" shortcut="none" hide-shortcut placeholder="Search pk-gov..." show-sub-results=true></pagefind-searchbox>
+        <div class="search-mobile">
+          <img class="search-icon" src="../assets/search.svg" alt="search icon">
+          <pagefind-modal class="mobile-modal">
+            <pagefind-modal-header>
+              <pagefind-input placeholder="Search pk-gov..."></pagefind-input>
+            </pagefind-modal-header>
+     
+            <pagefind-modal-body>
+              <pagefind-summary></pagefind-summary>
+              <pagefind-results></pagefind-results>
+            </pagefind-modal-body>
+          </pagefind-modal>
+        </div>
+      </header>
+      <section class="content" data-pagefind-body>
+        <section class="hero">
+          <h1 class="hero-title">{{ title }}</h1>
+          <h3 class="hero-excerpt">{{ excerpt }}</p>
+        </section>
+        <section class="page">
+          {{ content | safe }}
+        </section>
+      </section>
+      <a class="return" href="/">Return to homepage</a>
+   </div>
+    <footer class="footer">
+      <section class="footer-ministries">
+        <h3 class="footer-title">Ministries</h3>
+        <div class="footer-divider"></div>
+        <div class="footer-ministries links">
+          <a class="footer link" href="/ministries/central/">Central Ministry</a>
+          <a class="footer link" href="/ministries/food/">Ministry of Food</a>
+          <a class="footer link" href="/ministries/foreign-affairs/">Ministry of Foreign Affairs</a>
+          <a class="footer link" href="/ministries/health/">Ministry of Health</a>
+          <a class="footer link" href="/ministries/finance/">Ministry of Finance</a>
+          <a class="footer link" href="/ministries/immigration/">Ministry of Immigration</a>
+          <a class="footer link" href="/ministries/technology/">Ministry of Technology</a>
+          <a class="footer link" href="/ministries/defence/">Ministry of Defence</a>
+        </div>
+      </section>
+      <section class="footer-resources">
+        <h3 class="footer-title">Other resources</h3>
+        <div class="footer-divider"></div>
+        <div class="footer-resources links">
+          <a class="footer link" href="/info/">Life in the Plushie Kingdom</a>
+          <a class="footer link" href="/news/">Government news</a>      
+          <a class="footer link" href="/weather/">Plushie Kingdom weather</a>    
+        </div>
+      </section>
+      <section class="footer-about">
+        <h3 class="footer-title">About us</h3>
+        <div class="footer-divider"></div>
+        <div class="footer-resources links">
+          <a class="footer link" href="/about/pk-gov/">About the pk-gov website</a>
+          <a class="footer link" href="/info/who-we-are/#history-of-the-plushie-kingdom">History of the Plushie Kingdom</a>
+          <a class="footer link" href="/about/gov-identity/">Government identity guidelines</a>          
+        </div>
+      </section>
+    </footer>
+    <script src="/about-page.js">
+  </body>
+</html>
