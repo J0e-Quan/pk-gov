@@ -1,5 +1,11 @@
-section:not(.content, footer section) {
+section:not(.content, .page, footer section) {
   padding: 2rem 5rem;
+}
+
+.hero-excerpt {
+  font-family: var(--mona-sans);
+  font-size: 2rem;
+  font-weight: 400;
 }
 
 .text {
@@ -98,13 +104,17 @@ section:not(.content, footer section) {
 /* MEDIA QUERIES BELOW */
 @media (max-width: 600px) {
   .header,
-  section:not(.content, footer section) {
+  section:not(.content, .page, footer section) {
     padding: 1rem 2rem;
   }
   .colours .section-divider,
   .colours hr,
   .colours .heading::before {
     animation-range-end: cover 0%;
+  }
+  .hero-excerpt {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
   }
   .text {
     font-size: 1rem;

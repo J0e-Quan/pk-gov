@@ -7,10 +7,9 @@ module.exports = {
     ministries: './src/ministries/ministries.js',
     info: './src/info/info.js',
     news: './src/news/news.js',
-    pkGov: './src/about/pk-gov.js',
-    govIdentity: './src/about/gov-identity.js',
     weather: './src/weather/weather.js',
-    'content-page': './src/content-page.js'
+    'content-page': './src/content-page.js',
+    'about-page': './src/about/about-page.js'
   },
   externals: {
     '/pagefind/pagefind-component-ui.js': 'module /pagefind/pagefind-component-ui.js',
@@ -27,16 +26,6 @@ module.exports = {
       template: './src/index.html',
       filename: 'index.html',
       chunks: ['home']
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/about/pk-gov.html',
-      filename: 'about/pk-gov/index.html',
-      chunks: ['pkGov']
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/about/gov-identity.html',
-      filename: 'about/gov-identity/index.html',
-      chunks: ['govIdentity']
     }),
     new HtmlWebpackPlugin({
       template: './src/weather/weather.html',
