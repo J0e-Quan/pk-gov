@@ -4,21 +4,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
   entry: {
     home: './src/home.js',
-    central: './src/ministries/central.js',
-    food: './src/ministries/food.js',
-    'foreign-affairs': './src/ministries/foreign-affairs.js',
-    health: './src/ministries/health.js',
-    finance: './src/ministries/finance.js',
-    immigration: './src/ministries/immigration.js',
-    technology: './src/ministries/technology.js',
-    defence: './src/ministries/defence.js',
+    ministries: './src/ministries/ministries.js',
     info: './src/info/info.js',
-    'info-page': './src/info/info-page.js',
     news: './src/news/news.js',
-    'news-article': './src/news/news-article.js',
-    pkGov: './src/about/pk-gov.js',
-    govIdentity: './src/about/gov-identity.js',
-    weather: './src/weather/weather.js'
+    weather: './src/weather/weather.js',
+    'content-page': './src/content-page.js',
+    'about-page': './src/about/about-page.js'
   },
   externals: {
     '/pagefind/pagefind-component-ui.js': 'module /pagefind/pagefind-component-ui.js',
@@ -35,16 +26,6 @@ module.exports = {
       template: './src/index.html',
       filename: 'index.html',
       chunks: ['home']
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/about/pk-gov.html',
-      filename: 'about/pk-gov/index.html',
-      chunks: ['pkGov']
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/about/gov-identity.html',
-      filename: 'about/gov-identity/index.html',
-      chunks: ['govIdentity']
     }),
     new HtmlWebpackPlugin({
       template: './src/weather/weather.html',

@@ -1,6 +1,6 @@
 ---
 tags: news
-layout: news-article.njk
+layout: content-page.njk
 date: 2026-05-16
 author: Deputy Technology Minister Kodee
 title: Open-sourcing pk-gov for an open Government

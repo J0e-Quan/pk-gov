@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href={{ "/assets/styles/info-page.css" | url }}>
+    <link rel="stylesheet" href={{ "/assets/styles/content-page.css" | url }}>
     <link rel="icon" href="/assets/favicons/generic.svg"/>
     <link href="/pagefind/pagefind-component-ui.css" rel="stylesheet">
     <script src="/pagefind/pagefind-component-ui.js" type="module"></script>
@@ -33,17 +33,25 @@
       </header>
       <section class="content" data-pagefind-body>
         <section class="hero">
+          {% if date %}
+            <p class="hero-date">{{ date | postDate }}, by {{ author }}</p>
+          {% endif %}
           <h1 class="hero-title">{{ title }}</h1>
           <h3 class="hero-excerpt">{{ excerpt }}</p>
           {% if thumbnail %}
             <img class="hero-thumbnail" src="{{ thumbnail }}", alt="{{ thumbnail-alt }}">
           {% endif %}
         </section>
-        <section class="info">
+        <section class="page">
           {{ content | safe }}
         </section>
       </section>
+      {# if there's a date, its a news article. If not, its an info page. #}
+      {% if date %}
+        <a class="return" href="/news/">Return to news list</a>
+      {% else %}
       <a class="return" href="/info/">Return to information list</a>
+      {% endif %}
    </div>
     <footer class="footer">
       <section class="footer-ministries">
@@ -65,8 +73,8 @@
         <div class="footer-divider"></div>
         <div class="footer-resources links">
           <a class="footer link" href="/info/">Life in the Plushie Kingdom</a>
-          <a class="footer link" href="/news/">Government news</a>   
-          <a class="footer link" href="/weather/">Plushie Kingdom weather</a>       
+          <a class="footer link" href="/news/">Government news</a>      
+          <a class="footer link" href="/weather/">Plushie Kingdom weather</a>    
         </div>
       </section>
       <section class="footer-about">
@@ -79,6 +87,6 @@
         </div>
       </section>
     </footer>
-    <script src="/info-page.js"></script>
+    <script src="/content-page.js">
   </body>
 </html>

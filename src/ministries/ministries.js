@@ -1,17 +1,33 @@
 import '../assets/styles/global.css'
 import '../assets/styles/ministries.css'
 import Lottie from 'lottie-web'
-import logo from '../assets/lottie/technology.json'
 
 const logoContainer = document.querySelector('.logo-lottie')
 
-Lottie.loadAnimation({
-  container: logoContainer,
-  renderer: 'svg',
-  loop: false,
-  autoplay: true,
-  animationData: logo
-})
+getAnimation()
+
+async function getAnimation() {
+  const animationContainer = document.querySelector('html')
+  const animationName = animationContainer.classList.value
+  console.log('../assets/lottie/' + animationName + '.json')
+  try {
+    const logo = await import('../assets/lottie/' + animationName + '.json')
+    console.log(logo.default)
+    showAnimation(logo.default)
+  } catch (error) {
+    console.error(error)
+  }
+}
+
+function showAnimation(logo) {
+  Lottie.loadAnimation({
+    container: logoContainer,
+    renderer: 'svg',
+    loop: false,
+    autoplay: true,
+    animationData: logo
+  })
+}
 
 // code for opening pagefind modal for search-mobile
 document.addEventListener('DOMContentLoaded', () => {

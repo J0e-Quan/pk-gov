@@ -10,15 +10,15 @@ This contains information about the pk-gov codebase, such as what technologies w
 - lottie-web is used for the ministry animations (all other animations are made using only CSS)
 
 ## Structure of this website
-The general file structure and structure of the webiste will be listed here. In most cases, you should only be touching stuff in the `src/` folder. Everything outside of that is for dependencies and other dev tools. For all pages, the .html files are located together with their .js files, while ALL CSS files are located in `assets/styles/` (This may be confusing, we know. It may be simplified/fixed in the future). In consideration of this, whenever we mention where 'pages' are located, their corresponding .js files will be located at the same place too!
+The general file structure and structure of the webiste will be listed here. In most cases, you should only be touching stuff in the `src/` folder. Everything outside of that is for dependencies and other dev tools. For all pages (unless specified!), the .html files are located together with their .js files, while ALL CSS files are located in `assets/styles/` (This may be confusing, we know. It may be simplified/fixed in the future). In consideration of this, whenever we mention where 'pages' are located, their corresponding .js files will be located at the same place too!
 
 ### _includes/
 
-This is where 11ty templates which are used more than once (such as info pages and news articles) are located.
+This is where 11ty templates which are used more than once (such as info pages and news articles) are located. `about-page.njk` is used by the about pk-gov and gov identity guidelines pages. `content-page.njk` is used by about pages and news articles. `ministry.njk` is used by all ministry pages.
 
 ### about/
 
-This is where the 'about pk-gov' and 'government identity guidelines pages are located. Any assets they use are taken directly from `assets/`. The pages here DO NOT use 11ty.
+This is where the 'about pk-gov' and 'government identity guidelines pages are located. The pages here are generated with 11ty. Both pages share the `about-page.js` file.
 
 ### assets/
 
@@ -29,7 +29,7 @@ This is where 'universal' assets like fonts and `global.css`, as well as assets 
 - `fonts/` is where the font files are stored
 - `lottie/` is where the lottie animations used by the ministry pages are stored
 - `pictures/` is where all pictures used by vanilla HTML files are stored. Currently, only minister pictures are here, but they are kept in a `ministers/` folder in preparation for any other categories
-- `styles/` is where all .css files are stored, including `global.css`, which loads the custom fonts from `fonts/` and 'resets' some default css styling
+- `styles/` is where all .css files are stored, including `global.css`, which loads the custom fonts from `fonts/`, resets some default css styling and contains some styles commonly used throughout pk-gov.
 
 ### info/
 
@@ -37,7 +37,7 @@ This is where the 'life in the plushie kingdom' pages are located. Any assets th
 
 ### ministries/
 
-This is where all the ministry pages (the icons in the homepage) are located. Any assets they use are taken directly from `assets/`. All pages are generated with 11ty, the template file is in `_includes`
+This is where all the ministry pages (the icons in the homepage) are located. Any assets they use are taken directly from `assets/`. All pages are generated with 11ty, the template file is in `_includes`. All ministry pages share the `ministries.js` file.
 
 ### news/
 
@@ -45,7 +45,7 @@ This is where the 'government news' pages are located. Any assets they use (such
 
 ### root (src/)
 
-In the root of `src/`, `index.html` is the file for the homepage, and `home.js` is its script file. The homepage's CSS file is also named `home.css`. Any assets it uses are taken directly from `assets/`. The homepage DOES NOT use 11ty.
+In the root of `src/`, `index.html` is the file for the homepage, and `home.js` is its script file. The homepage's CSS file is also named `home.css`. Any assets it uses are taken directly from `assets/`. The homepage DOES NOT use 11ty. `content-page.js` is also located here, as its used by both info pages and news articles.
 
 ## Using 11ty
 
@@ -54,8 +54,8 @@ pk-gov uses 11ty to generate most of its pages, as it enables faster page creati
 - for pages that are only 'generated' once, such as the news homepage, there is an `index.njk` file where the 'index.html' file would be
 - for pages that are generated multiple times, such as news articles, there is a .njk template file located in `_includes/`
 - njk = Nunjucks, a templating language that allows for some dynamic content in pages (that's mainly what we use it for, for more details you can check out the documentation)
-- Pages that use a template from `_includes` are written using Markdown (.md) EXCEPT ministry pages, which currently still use regular HTML. This enables easier writing compared to writing actual HTML (search for a Markdown cheat sheet to know the syntax if you're unfamiliar)
-- Content from those .md pages are dynamically 'filled in' to replace `{{ content | safe }}` in the .njk template
+- Pages that use a template from `_includes` are written using Markdown (.md) EXCEPT ministry and about pages, which currently still use regular HTML. This enables easier writing compared to writing actual HTML (search for a Markdown cheat sheet to know the syntax if you're unfamiliar)
+- Content from those .md and .html files are dynamically 'filled in' to replace `{{ content | safe }}` in the .njk template
 
 ## .md guidelines
 

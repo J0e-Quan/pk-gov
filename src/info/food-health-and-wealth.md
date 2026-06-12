@@ -1,6 +1,6 @@
 ---
 tags: info
-layout: info-page.njk
+layout: content-page.njk
 title: Food, Health and Wealth
 excerpt: Get to know all the basic amenities and services offered in the Kingdom.
 thumbnail:

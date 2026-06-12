@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href={{ "/assets/styles/news-article.css" | url }}>
+    <link rel="stylesheet" href={{ "/assets/styles/about-page.css" | url }}>
     <link rel="icon" href="/assets/favicons/generic.svg"/>
     <link href="/pagefind/pagefind-component-ui.css" rel="stylesheet">
     <script src="/pagefind/pagefind-component-ui.js" type="module"></script>
@@ -33,18 +33,14 @@
       </header>
       <section class="content" data-pagefind-body>
         <section class="hero">
-          <p class="hero-date">{{ date | postDate }}, by {{ author }}</p>
           <h1 class="hero-title">{{ title }}</h1>
           <h3 class="hero-excerpt">{{ excerpt }}</p>
-          {% if thumbnail %}
-            <img class="hero-thumbnail" src="{{ thumbnail }}", alt="{{ thumbnail-alt }}">
-          {% endif %}
         </section>
-        <section class="article">
+        <section class="page">
           {{ content | safe }}
         </section>
       </section>
-      <a class="return" href="/news/">Return to news list</a>
+      <a class="return" href="/">Return to homepage</a>
    </div>
     <footer class="footer">
       <section class="footer-ministries">
@@ -80,6 +76,6 @@
         </div>
       </section>
     </footer>
-    <script src="/news-article.js">
+    <script src="/about-page.js">
   </body>
 </html>

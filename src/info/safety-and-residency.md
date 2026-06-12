@@ -1,6 +1,6 @@
 ---
 tags: info
-layout: info-page.njk
+layout: content-page.njk
 title: Safety and Residency
 excerpt: Know more about the Kingdom's safety measures and places to stay.
 thumbnail:

@@ -1,6 +1,6 @@
 ---
 tags: info
-layout: info-page.njk
+layout: content-page.njk
 title: Who we are
 excerpt: Learn about the Kingdom's storied history, current location and inhabitants.
 thumbnail:

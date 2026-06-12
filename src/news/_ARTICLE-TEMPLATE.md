@@ -1,6 +1,6 @@
 ---
 tags: news
-layout: news-article.njk
+layout: content-page.njk
 date: YYYY-MM-DD
 author: JOB-TITLE NAME
 title:
