@@ -94,7 +94,6 @@ a {
 
 .hero-title {
   font-size: 4rem;
-  line-height: 1.2;
   margin-bottom: 1rem;
   scroll-margin-top: 10rem;
 }
@@ -300,6 +299,13 @@ pagefind-searchbox::part(input) {
   }
   .search-desktop {
     display: none;
+  }
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  .hero-text {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
   }
   .section-divider,
   hr {

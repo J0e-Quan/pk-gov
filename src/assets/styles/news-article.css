@@ -87,10 +87,6 @@ section.article {
   font-size: 2rem;
 }
 
-.hero-title {
-  font-size: 4rem;
-}
-
 .hero-excerpt {
   font-size: 2rem;
   font-weight: 400;
@@ -109,9 +105,6 @@ section.article {
   .header,
   section:not(.content, footer section) {
     padding: 1rem 2rem;
-  }
-  .hero-title {
-    font-size: 2.5rem;
   }
   .hero-date {
     font-size: 1rem;

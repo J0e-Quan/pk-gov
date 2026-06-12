@@ -134,13 +134,6 @@ section:not(.content, footer section) {
   section:not(.content, footer section) {
     padding: 1rem 2rem;
   }
-  .hero-title {
-    font-size: 2.5rem;
-  }
-  .hero-text {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-  }
   .heading {
     font-size: 2rem;
   }

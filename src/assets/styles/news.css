@@ -87,13 +87,6 @@ section:not(.content, footer section) {
   .articles {
     margin-bottom: 4rem;
   }
-  .hero-title {
-    font-size: 2.5rem;
-  }
-  .hero-text {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-  }
   .article-title {
     font-size: 2rem;
   }
