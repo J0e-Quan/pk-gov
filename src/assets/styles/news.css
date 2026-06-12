@@ -57,6 +57,9 @@ section:not(.content, footer section) {
   .article-title {
     font-size: 2rem;
   }
+  .article-title::before {
+    display: none;
+  }
   .article-date {
     font-size: 1rem;
   }
