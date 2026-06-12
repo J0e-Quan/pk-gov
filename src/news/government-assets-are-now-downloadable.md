@@ -1,6 +1,6 @@
 ---
 tags: news
-layout: news-article.njk
+layout: content-page.njk
 date: 2026-05-23
 author: Prime Minister Pink Bear Bear
 title: Government assets are now downloadable

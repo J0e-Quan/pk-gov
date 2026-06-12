@@ -1,6 +1,6 @@
 ---
 tags: news
-layout: news-article.njk
+layout: content-page.njk
 date: 2026-06-02
 author: Technology Minister Android
 title: New updates to pk-gov are here

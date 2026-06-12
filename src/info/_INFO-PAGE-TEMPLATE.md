@@ -1,6 +1,6 @@
 ---
 tags: info
-layout: info-page.njk
+layout: content-page.njk
 title:
 excerpt:
 thumbnail:

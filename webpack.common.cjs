@@ -18,7 +18,8 @@ module.exports = {
     'news-article': './src/news/news-article.js',
     pkGov: './src/about/pk-gov.js',
     govIdentity: './src/about/gov-identity.js',
-    weather: './src/weather/weather.js'
+    weather: './src/weather/weather.js',
+    'content-page': './src/content-page.js'
   },
   externals: {
     '/pagefind/pagefind-component-ui.js': 'module /pagefind/pagefind-component-ui.js',

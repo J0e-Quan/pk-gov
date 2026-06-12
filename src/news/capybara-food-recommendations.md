@@ -1,6 +1,6 @@
 ---
 tags: news
-layout: news-article.njk
+layout: content-page.njk
 date: 2026-05-14
 author: Food Minister Capybara
 title: Capybara's Food Recommendations
