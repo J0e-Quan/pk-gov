@@ -84,6 +84,19 @@ section:not(.content, footer section) {
   height: auto;
 }
 
+.end-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.return, .share {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
 /* MEDIA QUERIES BELOW */
 @media (max-width: 600px) {
   .header,

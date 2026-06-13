@@ -160,7 +160,7 @@ a {
   }
 }
 
-.return {
+.return, .share {
   padding: 1rem 2rem;
   font-size: 2rem;
   font-family: var(--mona-sans);
@@ -168,7 +168,7 @@ a {
   background-color: transparent;
   display: flex;
   max-width: fit-content;
-  margin: 1rem auto 4rem auto;
+  margin: 1rem auto 0 auto;
   box-shadow: inset 0 0 0 0px var(--theme, var(--central-ministry-colour));
   border: 16px solid var(--theme, var(--central-ministry-colour));
   transition:
@@ -177,12 +177,13 @@ a {
   will-change: box-shadow, color;
 }
 
-.return:hover {
+.return:hover, .share:hover {
   box-shadow: inset 0 0 0 400px var(--theme, var(--central-ministry-colour));
   color: var(--theme-accent, white);
 }
 
 footer {
+  margin-top: 4rem;
   padding: 2rem 5rem calc(3rem + 5px) 5rem;
   background-color: var(--theme, var(--central-ministry-colour));
   color: var(--theme-accent, white);
