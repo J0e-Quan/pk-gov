@@ -24,8 +24,11 @@ const shareButton = document.querySelector('.share')
 shareButton.addEventListener('click', share)
 
 async function share() {
+  const url = window.location.href
+  const title = document.querySelector('.hero-title').textContent.trim().toLocaleUpperCase()
+  const excerpt = document.querySelector('.hero-excerpt').textContent.trim()
   const shareContent = {
-    url: window.location.href 
+    text: title + '\n' + excerpt + '\n\n' + 'View this page on ' + url
   } 
   const isValid = await navigator.canShare(shareContent)
   console.log(shareContent)
@@ -33,6 +36,6 @@ async function share() {
   if (isValid === true) {
     navigator.share(shareContent)
   } else if (isValid === false) {
-    navigator.clipboard.writeText(shareContent)
+    navigator.clipboard.writeText(shareContent.text)
   }
 }
