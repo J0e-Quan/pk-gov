@@ -15,6 +15,10 @@
   margin-bottom: 2rem;
 }
 
+h2.title::before {
+  display: none
+}
+
 .ministries {
   display: grid;
   grid-template-columns: 20vw 20vw 20vw 20vw;
