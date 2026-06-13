@@ -37,5 +37,6 @@ async function share() {
     navigator.share(shareContent)
   } else if (isValid === false) {
     navigator.clipboard.writeText(shareContent.text)
+    shareButton.textContent = 'Page details copied!'
   }
 }
