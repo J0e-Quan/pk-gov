@@ -368,7 +368,8 @@ pagefind-searchbox::part(input) {
   footer .link {
     font-size: 1rem;
   }
-  .return {
+  .return, .share {
     font-size: 1.5rem;
+    text-align: center;
   }
 }

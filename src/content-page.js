@@ -18,3 +18,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+// code for handling share button
+const shareButton = document.querySelector('.share')
+shareButton.addEventListener('click', share)
+
+async function share() {
+  const shareContent = {
+    url: window.location.href 
+  } 
+  const isValid = await navigator.canShare(shareContent)
+  console.log(shareContent)
+  console.log(isValid)
+  if (isValid === true) {
+    navigator.share(shareContent)
+  } else if (isValid === false) {
+    navigator.clipboard.writeText(shareContent)
+  }
+}
