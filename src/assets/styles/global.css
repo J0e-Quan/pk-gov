@@ -203,10 +203,11 @@ a {
 .end-buttons {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: baseline;
   flex-wrap: wrap;
   gap: 2rem;
 }
+
 .return, .share {
   padding: 1rem 2rem;
   font-size: 2rem;
