@@ -42,7 +42,10 @@
             <img class="hero-thumbnail" src="{{ thumbnail }}", alt="{{ thumbnail-alt }}">
           {% endif %}
         </section>
-        <div data-pagefind-ignore='all' class='table-of-contents'></div>
+        <details>
+          <summary class='table-of-contents-title'>In this page:</summary>
+          <div data-pagefind-ignore='all' class='table-of-contents'></div>
+        </details>
         <section class="page">
           {{ content | safe }}
         </section>
