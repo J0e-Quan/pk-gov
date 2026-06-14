@@ -29,6 +29,10 @@ section:not(.content, footer section) {
   scroll-margin-top: 10rem;
 }
 
+.directory.title::before {
+  display: none
+}
+
 .directory.text {
   font-size: 1.5rem;
   margin-bottom: -0rem;
