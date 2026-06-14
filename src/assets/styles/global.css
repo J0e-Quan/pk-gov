@@ -109,8 +109,14 @@ a {
   font-weight: 700;
 }
 
+.table-of-contents-title::before {
+  display: none;
+}
+
 .table-of-contents-container .section-divider {
   margin-bottom: 1rem;
+  animation: none;
+  transform: scaleX(1);
 }
 
 .toc-item-h2 {
@@ -378,8 +384,17 @@ pagefind-searchbox::part(input) {
     font-size: 1.5rem;
     margin-bottom: 2rem;
   }
-  .heading, h2 {
+  .heading, h2, .table-of-contents-title {
     font-size: 2rem;
+  }
+  .toc-item-h2 {
+    font-size: 1.25rem;
+  }
+  .toc-item-h3 {
+    font-size: 1rem;
+  }
+  .toc-list, .toc-list ul {
+    margin-bottom: 0.25rem;
   }
   .title, h3 {
     font-size: 1.5rem;
