@@ -19,7 +19,7 @@ section:not(.content, footer section) {
 }
 
 .article:visited {
-  color: rgb(100, 100, 100);
+  color: rgb(150, 150, 150);
 }
 
 .article:hover {
