@@ -223,7 +223,6 @@ a {
 }
 
 footer {
-  margin-top: 4rem;
   padding: 2rem 5rem calc(3rem + 5px) 5rem;
   background-color: var(--theme, var(--central-ministry-colour));
   color: var(--theme-accent, white);
@@ -367,7 +366,7 @@ pagefind-searchbox::part(input) {
 }
 
 .header-scrollable-area {
-  padding-bottom: 1px;
+  padding-bottom: 4rem;
 }
 
 @media (max-width: 600px) {
