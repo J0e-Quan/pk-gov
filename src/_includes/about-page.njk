@@ -36,10 +36,11 @@
           <h1 class="hero-title">{{ title }}</h1>
           <h3 class="hero-excerpt">{{ excerpt }}</p>
         </section>
-        <details data-pagefind-ignore='all'>
-          <summary class='table-of-contents-title'>In this page:</summary>
+        <section data-pagefind-ignore='all' class='table-of-contents-container'>
+          <h2 class='table-of-contents-title'>In this page:</h2>
+          <div class='section-divider'></div>
           <div class='table-of-contents'></div>
-        </details>
+        </section>
         <section class="page">
           {{ content | safe }}
         </section>
