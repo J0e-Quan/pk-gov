@@ -103,6 +103,40 @@ a {
   font-size: 2rem;
 }
 
+.table-of-contents-title {
+  font-family: var(--plex-sans);
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.table-of-contents-container .section-divider {
+  margin-bottom: 1rem;
+}
+
+.toc-item-h2 {
+  font-size: 1.5rem;
+}
+
+.toc-item-h3 {
+  font-size: 1.25rem;
+}
+
+.toc-list, .toc-list ul {
+  margin-left: 2rem;
+}
+
+.toc-list li {
+  margin-bottom: 0.5rem;
+}
+
+.toc-list li a {
+  color: black;
+}
+
+.toc-list li a:hover {
+  color: var(--central-ministry-colour);
+}
+
 .heading, h2 {
   font-size: 4rem;
   position: relative;
