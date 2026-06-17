@@ -113,6 +113,10 @@ function getCurrentPrecipitation() {
   return data.hourly.precipitation_probability[currentIndex]
 }
 
+function updateFavicon(icon) {
+  
+}
+
 function showCurrentWeather() {
   const currentWeatherLoader = document.querySelector('.current-weather.loader')
   currentWeatherLoader.remove()
