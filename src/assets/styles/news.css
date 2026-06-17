@@ -18,6 +18,10 @@ section:not(.content, footer section) {
   text-decoration: none;
 }
 
+.article:visited {
+  color: rgb(150, 150, 150);
+}
+
 .article:hover {
   color: var(--central-ministry-colour);
 }

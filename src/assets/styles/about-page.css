@@ -107,11 +107,6 @@ section:not(.content, .page, footer section) {
   section:not(.content, .page, footer section) {
     padding: 1rem 2rem;
   }
-  .colours .section-divider,
-  .colours hr,
-  .colours .heading::before {
-    animation-range-end: cover 0%;
-  }
   .hero-excerpt {
     font-size: 1.5rem;
     margin-bottom: 2rem;

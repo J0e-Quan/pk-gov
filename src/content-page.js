@@ -18,3 +18,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+// code for handling share button
+const shareButton = document.querySelector('.share')
+shareButton.addEventListener('click', share)
+
+async function share() {
+  const url = window.location.href
+  const title = document.querySelector('.hero-title').textContent.trim().toLocaleUpperCase()
+  const excerpt = document.querySelector('.hero-excerpt').textContent.trim()
+  const shareContent = {
+    text: title + '\n' + excerpt + '\n\n' + 'View this page on ' + url
+  } 
+  const isValid = await navigator.canShare(shareContent)
+  console.log(shareContent)
+  console.log(isValid)
+  if (isValid === true) {
+    navigator.share(shareContent)
+  } else if (isValid === false) {
+    navigator.clipboard.writeText(shareContent.text)
+    shareButton.textContent = 'Page details copied!'
+  }
+}

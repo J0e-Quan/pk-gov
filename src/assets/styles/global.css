@@ -103,6 +103,46 @@ a {
   font-size: 2rem;
 }
 
+.table-of-contents-title {
+  font-family: var(--plex-sans);
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.table-of-contents-title::before {
+  display: none;
+}
+
+.table-of-contents-container .section-divider {
+  margin-bottom: 1rem;
+  animation: none;
+  transform: scaleX(1);
+}
+
+.toc-item-h2 {
+  font-size: 1.5rem;
+}
+
+.toc-item-h3 {
+  font-size: 1.25rem;
+}
+
+.toc-list, .toc-list ul {
+  margin-left: 2rem;
+}
+
+.toc-list li {
+  margin-bottom: 0.5rem;
+}
+
+.toc-list li a {
+  color: black;
+}
+
+.toc-list li a:hover {
+  color: var(--central-ministry-colour);
+}
+
 .heading, h2 {
   font-size: 4rem;
   position: relative;
@@ -160,7 +200,15 @@ a {
   }
 }
 
-.return {
+.end-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.return, .share {
   padding: 1rem 2rem;
   font-size: 2rem;
   font-family: var(--mona-sans);
@@ -168,7 +216,7 @@ a {
   background-color: transparent;
   display: flex;
   max-width: fit-content;
-  margin: 1rem auto 4rem auto;
+  margin: 1rem auto 0 auto;
   box-shadow: inset 0 0 0 0px var(--theme, var(--central-ministry-colour));
   border: 16px solid var(--theme, var(--central-ministry-colour));
   transition:
@@ -177,9 +225,13 @@ a {
   will-change: box-shadow, color;
 }
 
-.return:hover {
+.return:hover, .share:hover {
   box-shadow: inset 0 0 0 400px var(--theme, var(--central-ministry-colour));
   color: var(--theme-accent, white);
+}
+
+.return {
+  margin-bottom: 4rem;
 }
 
 footer {
@@ -326,7 +378,7 @@ pagefind-searchbox::part(input) {
 }
 
 .header-scrollable-area {
-  padding-bottom: 1px;
+  padding-bottom: 0px;
 }
 
 @media (max-width: 600px) {
@@ -343,8 +395,17 @@ pagefind-searchbox::part(input) {
     font-size: 1.5rem;
     margin-bottom: 2rem;
   }
-  .heading, h2 {
+  .heading, h2, .table-of-contents-title {
     font-size: 2rem;
+  }
+  .toc-item-h2 {
+    font-size: 1rem;
+  }
+  .toc-item-h3 {
+    font-size: 0.75rem;
+  }
+  .toc-list, .toc-list ul {
+    margin-bottom: 0.25rem;
   }
   .title, h3 {
     font-size: 1.5rem;
@@ -367,7 +428,8 @@ pagefind-searchbox::part(input) {
   footer .link {
     font-size: 1rem;
   }
-  .return {
+  .return, .share {
     font-size: 1.5rem;
+    text-align: center;
   }
 }

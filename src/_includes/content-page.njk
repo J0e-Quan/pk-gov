@@ -42,16 +42,24 @@
             <img class="hero-thumbnail" src="{{ thumbnail }}", alt="{{ thumbnail-alt }}">
           {% endif %}
         </section>
+        <section data-pagefind-ignore='all' class='table-of-contents-container'>
+          <h2 class='table-of-contents-title'>In this page:</h2>
+          <div class='section-divider'></div>
+          <div class='table-of-contents'></div>
+        </section>
         <section class="page">
           {{ content | safe }}
         </section>
       </section>
-      {# if there's a date, its a news article. If not, its an info page. #}
-      {% if date %}
-        <a class="return" href="/news/">Return to news list</a>
-      {% else %}
-      <a class="return" href="/info/">Return to information list</a>
-      {% endif %}
+      <div class="end-buttons">
+        <button type="button" class="share">Share this</button>
+        {# if there's a date, its a news article. If not, its an info page. #}
+        {% if date %}
+          <a class="return" href="/news/">Return to news list</a>
+        {% else %}
+          <a class="return" href="/info/">Return to information list</a>
+        {% endif %}
+      </div>
    </div>
     <footer class="footer">
       <section class="footer-ministries">

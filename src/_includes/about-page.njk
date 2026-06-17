@@ -36,11 +36,16 @@
           <h1 class="hero-title">{{ title }}</h1>
           <h3 class="hero-excerpt">{{ excerpt }}</p>
         </section>
+        <section data-pagefind-ignore='all' class='table-of-contents-container'>
+          <h2 class='table-of-contents-title'>In this page:</h2>
+          <div class='section-divider'></div>
+          <div class='table-of-contents'></div>
+        </section>
         <section class="page">
           {{ content | safe }}
         </section>
       </section>
-      <a class="return" href="/">Return to homepage</a>
+      <div class='end-buttons'><a class="return" href="/">Return to homepage</a></div>
    </div>
     <footer class="footer">
       <section class="footer-ministries">
