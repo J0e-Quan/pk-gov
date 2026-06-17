@@ -24,7 +24,9 @@ const shareButton = document.querySelector('.share')
 shareButton.addEventListener('click', share)
 
 async function share() {
-  const url = window.location.href
+  const url = new URL(window.location.href)
+  // remove any id tags used by table of contents before sharing
+  url.hash = ''
   const title = document.querySelector('.hero-title').textContent.trim().toLocaleUpperCase()
   const excerpt = document.querySelector('.hero-excerpt').textContent.trim()
   const shareContent = {
