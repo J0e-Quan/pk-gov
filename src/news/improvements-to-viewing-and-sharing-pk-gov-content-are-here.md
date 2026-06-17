@@ -1,12 +1,14 @@
 ---
 tags: news
 layout: content-page.njk
-date: 2026-06-14
+date: 2026-06-17
 author: Technology Minister Android
 title: Improvements to viewing and sharing pk-gov content are here
 excerpt: Table of contents and sharing functionality for pk-gov content makes it easier to find relevant Government information and share it with others.
 thumbnail: ./news-media/improvements-to-viewing-and-sharing-pk-gov-content-are-here/thumbnail.webp
 ---
+
+(NOTE: Video version of this announcement is available <a class='link' href='https://www.youtube.com/watch?v=Cy6c9V2iPeI' target='_blank' rel='noreferrer'>here</a>)
 
 To keep up with increasing demand and use of the pk-gov website, we're introducing more features designed to make the viewing and sharing experience of pk-gov even better.
 
