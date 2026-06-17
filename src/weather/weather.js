@@ -114,7 +114,8 @@ function getCurrentPrecipitation() {
 }
 
 function updateFavicon(icon) {
-  
+  const favicon = document.querySelector("link[rel~='icon']")
+  favicon.href = icon
 }
 
 function showCurrentWeather() {
@@ -127,6 +128,7 @@ function showCurrentWeather() {
   currentWeatherIcon.classList.add('current-weather', 'icon')
   currentWeatherIcon.src = weather.icon
   currentWeather.appendChild(currentWeatherIcon)
+  updateFavicon(weather.icon)
   const currentWeatherTemp = document.createElement('h3')
   currentWeatherTemp.classList.add('current-weather', 'temp')
   currentWeatherTemp.textContent = data.current.apparent_temperature + '°C'
