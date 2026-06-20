@@ -44,7 +44,6 @@ async function getData() {
 }
 
 function checkData(data) {
-  console.log(data)
   if (data === null) {
     return alert("There was an error in fetching weather data! Please make sure you're online and refresh the page to try again.")
   } 
@@ -53,7 +52,7 @@ function checkData(data) {
   showForecastWeek()
 }
 
-function determineWeather(weatherCode, isDay, precipitation){
+function determineWeather(weatherCode, isDay, precipitation, precipitationThreshold){
   const weather = {
     icon: generic,
     condition: 'Unable to get weather information',
@@ -81,7 +80,14 @@ function determineWeather(weatherCode, isDay, precipitation){
   }  
   // check if precipitation is high enough for rain / thunderstorm (if not, show partly cloudy instead)
   if (weatherCode === 51 || weatherCode === 53 || weatherCode === 55 || weatherCode === 61 || weatherCode === 63 || weatherCode === 65 || weatherCode === 80 || weatherCode === 81 || weatherCode === 82 || weatherCode === 95 || weatherCode === 96 || weatherCode === 99) {
-    if (precipitation <= 30) {
+    // determine whether higher threshold for rain / thunderstorm should be used
+    let minPrecipitation
+    if (precipitationThreshold === 'low') {
+      minPrecipitation = 30
+    } else if (precipitationThreshold === 'high') {
+      minPrecipitation = 50
+    }
+    if (precipitation <= minPrecipitation) {
       if (isDay) {
         weather.icon = sunnyCloudy
         weather.condition = 'Partly cloudy'
@@ -89,7 +95,7 @@ function determineWeather(weatherCode, isDay, precipitation){
         weather.icon = nightCloudy
         weather.condition = 'Partly cloudy'
       }
-    } else if (precipitation > 30) {
+    } else if (precipitation > minPrecipitation) {
       // rain
       if (weatherCode === 51 || weatherCode === 53 || weatherCode === 55 || weatherCode === 61 || weatherCode === 63 || weatherCode === 65 || weatherCode === 80 || weatherCode === 81) {
         weather.icon = rain
@@ -113,16 +119,22 @@ function getCurrentPrecipitation() {
   return data.hourly.precipitation_probability[currentIndex]
 }
 
+function updateFavicon(icon) {
+  const favicon = document.querySelector("link[rel~='icon']")
+  favicon.href = icon
+}
+
 function showCurrentWeather() {
   const currentWeatherLoader = document.querySelector('.current-weather.loader')
   currentWeatherLoader.remove()
   const currentPrecipitation = getCurrentPrecipitation()
-  const weather = determineWeather(data.current.weather_code, data.current.is_day, currentPrecipitation)
+  const weather = determineWeather(data.current.weather_code, data.current.is_day, currentPrecipitation, 'low')
   const currentWeather = document.querySelector('.current-weather.content')
   const currentWeatherIcon = document.createElement('img')
   currentWeatherIcon.classList.add('current-weather', 'icon')
   currentWeatherIcon.src = weather.icon
   currentWeather.appendChild(currentWeatherIcon)
+  updateFavicon(weather.icon)
   const currentWeatherTemp = document.createElement('h3')
   currentWeatherTemp.classList.add('current-weather', 'temp')
   currentWeatherTemp.textContent = data.current.apparent_temperature + '°C'
@@ -142,11 +154,10 @@ function showForecastToday() {
     const currentTime = data.current.time.slice(0, -2) + '00'
     return time === currentTime
   })
-  console.log(currentIndex)
   for (let i = currentIndex; i <= (currentIndex + 24) && i < data.hourly.time.length; i++) {
     const item = document.createElement('div')
     item.classList.add('forecast-today', 'item')
-    const weather = determineWeather(data.hourly.weather_code[i], data.hourly.is_day[i], data.hourly.precipitation_probability[i])
+    const weather = determineWeather(data.hourly.weather_code[i], data.hourly.is_day[i], data.hourly.precipitation_probability[i], 'low')
     const time = document.createElement('h2')
     time.classList.add('forecast-today', 'time')
     if (i > 23) {
@@ -184,7 +195,7 @@ function showForecastWeek() {
   for (let i = 0; i < 7; i++) {
     const item = document.createElement('div')
     item.classList.add('forecast-week', 'item')
-    const weather = determineWeather(data.daily.weather_code[i], data.current.is_day, data.daily.precipitation_probability_max[i])
+    const weather = determineWeather(data.daily.weather_code[i], data.current.is_day, data.daily.precipitation_probability_max[i], 'high')
     const day = document.createElement('h2')
     day.classList.add('forecast-week', 'day')
     // logic for setting day name

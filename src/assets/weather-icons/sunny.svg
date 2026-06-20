@@ -1,1 +1,34 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5" viewBox="0 0 128 128"><defs><path id="reuse-0" d="M64 31V20"/></defs><circle cx="70" cy="73" r="30" fill="none" style="fill:#ebebeb;fill-opacity:0;stroke:#000;stroke-width:6px" transform="rotate(90 1 111.667)scale(-.66667 .66667)"/><use xlink:href="#reuse-0" style="fill:none;stroke:#000;stroke-width:3.65px" transform="rotate(225 14.78 1.809)scale(-1 1.18182)"/><use xlink:href="#reuse-0" style="fill:none;stroke:#000;stroke-width:3.65px" transform="rotate(45 -94.9 -1.818)scale(1 -1.18182)"/><use xlink:href="#reuse-0" style="fill:none;stroke:#000;stroke-width:3.65px" transform="rotate(135 -14.78 54.828)scale(-1 1.18182)"/><use xlink:href="#reuse-0" style="fill:none;stroke:#000;stroke-width:3.65px" transform="rotate(135 .753 92.328)scale(-1 1.18182)"/><use xlink:href="#reuse-0" style="fill:none;stroke:#000;stroke-width:3.65px" transform="matrix(1 0 0 -1.18182 0 56.636)"/><use xlink:href="#reuse-0" style="fill:none;stroke:#000;stroke-width:3.65px" transform="matrix(1 0 0 -1.18182 0 131.636)"/><use xlink:href="#reuse-0" style="fill:none;stroke:#000;stroke-width:3.65px" transform="matrix(0 -1 -1.18182 0 56.636 128)"/><use xlink:href="#reuse-0" style="fill:none;stroke:#000;stroke-width:3.65px" transform="matrix(0 -1 -1.18182 0 131.636 128)"/></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 128 128" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g transform="matrix(1.007874,0,0,1,0,0)">
+        <rect x="0" y="0" width="127" height="128" style="fill:white;"/>
+    </g>
+    <g transform="matrix(0,-0.66667,-0.66667,-0,112.667,110.667)">
+        <circle cx="70" cy="73" r="30" style="fill:rgb(235,235,235);fill-opacity:0;stroke:black;stroke-width:6px;"/>
+    </g>
+    <g id="reuse-0" transform="matrix(0.707107,0.707107,0.835673,-0.835673,23.951882,13.539194)">
+        <path d="M64,31L64,20" style="fill:none;stroke:black;stroke-width:3.65px;"/>
+    </g>
+    <g id="reuse-01" serif:id="reuse-0" transform="matrix(0.707107,0.707107,0.835673,-0.835673,-29.081087,66.571954)">
+        <path d="M64,31L64,20" style="fill:none;stroke:black;stroke-width:3.65px;"/>
+    </g>
+    <g id="reuse-02" serif:id="reuse-0" transform="matrix(0.707107,-0.707107,-0.835673,-0.835673,13.538212,104.048289)">
+        <path d="M64,31L64,20" style="fill:none;stroke:black;stroke-width:3.65px;"/>
+    </g>
+    <g id="reuse-03" serif:id="reuse-0" transform="matrix(0.707107,-0.707107,-0.835673,-0.835673,66.571206,157.081303)">
+        <path d="M64,31L64,20" style="fill:none;stroke:black;stroke-width:3.65px;"/>
+    </g>
+    <g id="reuse-04" serif:id="reuse-0" transform="matrix(1,0,0,-1.18182,0,56.636)">
+        <path d="M64,31L64,20" style="fill:none;stroke:black;stroke-width:3.65px;"/>
+    </g>
+    <g id="reuse-05" serif:id="reuse-0" transform="matrix(1,0,0,-1.18182,0,131.636)">
+        <path d="M64,31L64,20" style="fill:none;stroke:black;stroke-width:3.65px;"/>
+    </g>
+    <g id="reuse-06" serif:id="reuse-0" transform="matrix(0,-1,-1.18182,0,56.636,128)">
+        <path d="M64,31L64,20" style="fill:none;stroke:black;stroke-width:3.65px;"/>
+    </g>
+    <g id="reuse-07" serif:id="reuse-0" transform="matrix(0,-1,-1.18182,0,131.636,128)">
+        <path d="M64,31L64,20" style="fill:none;stroke:black;stroke-width:3.65px;"/>
+    </g>
+</svg>
