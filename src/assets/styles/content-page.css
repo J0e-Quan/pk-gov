@@ -30,7 +30,7 @@ section:not(.content, footer section) {
   margin: 0;
 }
 
-.page a {
+.page a:not(.button) {
   text-decoration: underline;
 }
 
@@ -88,7 +88,15 @@ section:not(.content, footer section) {
   height: auto;
 }
 
-.return, .share {
+.start-buttons {
+  margin-bottom: 5rem;
+}
+
+.start-buttons a {
+  display: inline;
+}
+
+.return, .share, .button {
   margin-left: 2rem;
   margin-right: 2rem;
 }

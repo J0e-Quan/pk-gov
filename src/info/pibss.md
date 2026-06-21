@@ -6,7 +6,10 @@ excerpt: Register a new plushie into the PIBSS database, or view information abo
 thumbnail:
 ---
 
-<!-- button here -->
+<div class='start-buttons'>
+  <a class='button' href='/pibss/'>Access PIBSS</a>
+  <a class='button' href='/pibss/register/'>Register a new plushie</a>
+</div>
 
 ## What is PIBSS?
 

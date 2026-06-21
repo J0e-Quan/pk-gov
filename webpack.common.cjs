@@ -9,7 +9,8 @@ module.exports = {
     news: './src/news/news.js',
     weather: './src/weather/weather.js',
     'content-page': './src/content-page.js',
-    'about-page': './src/about/about-page.js'
+    'about-page': './src/about/about-page.js',
+    pibss: './src/pibss/pibss.js'
   },
   externals: {
     '/pagefind/pagefind-component-ui.js': 'module /pagefind/pagefind-component-ui.js',
@@ -31,6 +32,16 @@ module.exports = {
       template: './src/weather/weather.html',
       filename: 'weather/index.html',
       chunks: ['weather']
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/pibss/index.html',
+      filename: 'pibss/index.html',
+      chunks: ['pibss']
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/pibss/register.html',
+      filename: 'pibss/register.html',
+      chunks: ['pibss']
     })
   ],
   module: {
