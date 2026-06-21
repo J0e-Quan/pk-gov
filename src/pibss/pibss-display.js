@@ -1,1 +1,50 @@
-import { supabase } from "./pibss-common";
+import { supabase } from "./pibss-common.js";
+
+async function getAllEntries() {
+  const { data, error } = await supabase
+    .from('database')                  // 1. Target your table
+    .select('*')                        // 2. Fetch all columns
+    .order('name', { ascending: true }) // 3. Sort alphabetically (A-Z)
+
+  if (error) {
+    return console.error('Error fetching data:', error.message)
+  }
+  console.log(data)
+  renderEntries(data)
+}
+
+function renderEntries(data) {
+  if (data === null) {
+    return console.error('no data received!')
+  }
+  const container = document.querySelector('.entries')
+  for (const entry of data) {
+    const card = document.createElement('div')
+    card.classList.add('pibss-card')
+    const picture = document.createElement('img')
+    picture.classList.add('pibss-picture')
+    picture.src = entry.photo_url
+    card.appendChild(picture)
+    const name = document.createElement('h2')
+    name.classList.add('pibss-name')
+    name.textContent = entry.name
+    card.appendChild(name)
+    const type = document.createElement('p')
+    type.classList.add('pibss-type')
+    type.textContent = 'Type: ' + entry.type 
+    card.appendChild(type)
+    const country = document.createElement('p')
+    country.classList.add('pibss-country')
+    country.textContent = 'Origin Country: ' + entry.country_of_origin
+    card.appendChild(country)
+    const date = document.createElement('p')
+    date.classList.add('pibss-date')
+    const dateRaw = new Date(entry.date_joined)
+    const formattedDate = dateRaw.toLocaleDateString('en-GB', {day: 'numeric', month: 'long', year: 'numeric'})
+    date.textContent = 'Date Joined: ' + formattedDate
+    card.appendChild(date)
+    container.appendChild(card) 
+  }
+}
+
+getAllEntries()

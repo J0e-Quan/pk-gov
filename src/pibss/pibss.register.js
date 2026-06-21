@@ -1,1 +1,1 @@
-import { supabase } from "./pibss-common";
+import { supabase } from "./pibss-common.js";

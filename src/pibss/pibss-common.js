@@ -1,5 +1,6 @@
 import '../assets/styles/global.css'
 import '../assets/styles/content-page.css'
+import '../assets/styles/pibss.css'
 import { createClient } from '@supabase/supabase-js'
 
 // code for opening pagefind modal for search-mobile
