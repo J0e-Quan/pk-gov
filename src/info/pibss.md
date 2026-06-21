@@ -38,7 +38,7 @@ If you are an existing Plushie Kingdom citizen,
 
 ---
 
-To request that information stored in PIBSS be updated, follow these steps:
+Although PIBSS data is openly accessible to the public, it remains managed by the Government to ensure the data can only be safely updated by Government staff. To request that information stored in PIBSS be updated, follow these steps:
 
 1. Ensure that the information you wish to update is specifically tied to YOU and not other plushies (an exception is made for children, as parents can request that information about their children is updated on their behalf)
 2. Contact your nearest Ministry of Immigration or Ministry of Technology staff member to update the information stored in PIBSS
