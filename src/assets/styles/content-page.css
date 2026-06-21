@@ -89,11 +89,10 @@ section:not(.content, footer section) {
 }
 
 .start-buttons {
-  margin-bottom: 5rem;
-}
-
-.start-buttons a {
-  display: inline;
+  margin: -2rem 0 5rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .return, .share, .button {
