@@ -1,12 +1,22 @@
 import { supabase } from "./pibss-common.js";
 
 async function getEntries() {
-  const { data, error } = await supabase
-    .from('database')                   // 1. Target table
-    .select('*')                        // 2. Fetch all columns
-    .order('name', { ascending: true }) // 3. Sort alphabetically (A-Z)
-    .ilike('location', location)        // 4. Filter by location 
-    .ilike('type', type)                // 5. Filter by type
+  const query = supabase
+    .from('database')
+    .select('*')
+    .ilike('location', location)
+    .ilike('type', type)
+    
+  if (order === 'A to Z') {
+    query.order('name', {ascending: true})
+  } else if (order === 'Z to A') {
+    query.order('name', {ascending: false})
+  } else if (order === 'Newest to Oldest') {
+    query.order('date_joined', {ascending: false})
+  } else if (order === 'Oldest to Newest') {
+    query.order('date_joined', {ascending: true})
+  }
+  const { data, error } = await query
 
   if (error) {
     return console.error('Error fetching data:', error.message)
@@ -101,7 +111,7 @@ function populateTypes(data) {
 }
 
 // initialise default values
-let order = 'a-z'
+let order = 'A to Z'
 let location = '%'
 let type = '%'
 let orderText = 'A to Z'
@@ -115,13 +125,14 @@ getPlushieTypes()
 const orderInput = document.getElementById('order')
 const locationInput = document.getElementById('location')
 const typeInput = document.getElementById('type')
-
 orderInput.addEventListener('change', updateOrder)
 locationInput.addEventListener('change', updateLocation)
 typeInput.addEventListener('change', updateType)
 
 async function updateOrder(e) {
   order = e.target.value
+  orderText = e.target.value
+  renderEntries( await getEntries())
 }
 
 async function updateLocation(e) {
