@@ -60,4 +60,48 @@ function renderEntries(data) {
   }
 }
 
+
 renderEntries( await getAllEntries())
+
+
+// code for handling filter changes
+const orderInput = document.getElementById('order')
+const locationInput = document.getElementById('location')
+const typeInput = document.getElementById('type')
+
+orderInput.addEventListener('change', updateOrder)
+locationInput.addEventListener('change', updateLocation)
+typeInput.addEventListener('change', updateType)
+
+function updateOrder(e) {
+  const order = e.target.value
+  if (order === 'a-z') {
+    // get data exactly like initially
+  } else if (order === 'z-a') {
+    // get data with ascending: false
+  } else if (order === 'new-old') {
+    // get data sorting date_joined with ascending: true
+  } else if (order === 'old-new') {
+    // get data sorting date_joined with ascending: false
+  }
+}
+
+function updateLocation(e) {
+  const location = e.target.value
+  if (location === 'Big Tent Plains') {
+
+  } else if (location === 'Big Tent Stacks') {
+    
+  } else if (location === 'The Studio') {
+
+  } else if (location === 'The Bedroom') {
+
+  } else if (location === 'The Sofa') {
+
+  }
+}
+
+function updateType(e) {
+  const type = e.target.value
+
+}
