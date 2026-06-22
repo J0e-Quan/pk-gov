@@ -27,6 +27,13 @@ function renderEntries(data) {
     return console.error('no data received!')
   }
   const container = document.querySelector('.entries')
+  if (data.length === 0) {
+    const emptyMessage = document.createElement('h3')
+    emptyMessage.classList.add('pibss-empty-message')
+    emptyMessage.textContent = "We couldn't find any plushies matching your filtering options."
+    container.appendChild(emptyMessage)
+    return 
+  }
   for (const entry of data) {
     const card = document.createElement('div')
     card.classList.add('pibss-card')
