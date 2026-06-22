@@ -2,18 +2,24 @@ import { supabase } from "./pibss-common.js";
 
 async function getAllEntries() {
   const { data, error } = await supabase
-    .from('database')                  // 1. Target your table
+    .from('database')                  // 1. Target table
     .select('*')                        // 2. Fetch all columns
     .order('name', { ascending: true }) // 3. Sort alphabetically (A-Z)
 
   if (error) {
     return console.error('Error fetching data:', error.message)
   }
-  console.log(data)
-  renderEntries(data)
+
+  return data
+}
+
+function removeLoader() {
+  const loader = document.querySelector('.loader')
+  loader.remove()
 }
 
 function renderEntries(data) {
+  removeLoader()
   if (data === null) {
     return console.error('no data received!')
   }
@@ -54,4 +60,4 @@ function renderEntries(data) {
   }
 }
 
-getAllEntries()
+renderEntries( await getAllEntries())

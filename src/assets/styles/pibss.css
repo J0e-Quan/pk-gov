@@ -5,6 +5,12 @@
   align-items: center;
 }
 
+.options-inputs div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 label {
   font-family: var(--plex-sans);
   font-weight: 700;
@@ -12,6 +18,8 @@ label {
 
 select {
   margin: 0;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
 }
 
 select option {
