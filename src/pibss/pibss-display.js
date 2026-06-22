@@ -25,24 +25,31 @@ function renderEntries(data) {
     picture.classList.add('pibss-picture')
     picture.src = entry.photo_url
     card.appendChild(picture)
+    const cardText = document.createElement('div')
+    cardText.classList.add('pibss-card-text')
     const name = document.createElement('h2')
     name.classList.add('pibss-name')
     name.textContent = entry.name
-    card.appendChild(name)
+    cardText.appendChild(name)
     const type = document.createElement('p')
     type.classList.add('pibss-type')
     type.textContent = 'Type: ' + entry.type 
-    card.appendChild(type)
+    cardText.appendChild(type)
     const country = document.createElement('p')
     country.classList.add('pibss-country')
     country.textContent = 'Origin Country: ' + entry.country_of_origin
-    card.appendChild(country)
+    cardText.appendChild(country)
     const date = document.createElement('p')
     date.classList.add('pibss-date')
     const dateRaw = new Date(entry.date_joined)
     const formattedDate = dateRaw.toLocaleDateString('en-GB', {day: 'numeric', month: 'long', year: 'numeric'})
     date.textContent = 'Date Joined: ' + formattedDate
-    card.appendChild(date)
+    cardText.appendChild(date)
+    const location = document.createElement('p')
+    location.classList.add('pibss-location')
+    location.textContent = 'Residence: ' + entry.location
+    cardText.appendChild(location)
+    card.appendChild(cardText)
     container.appendChild(card) 
   }
 }

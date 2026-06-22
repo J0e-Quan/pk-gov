@@ -4,42 +4,62 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
+  width: 100%;
 }
 
 .pibss-card {
-  width: calc(50% - 1rem);
-  display: grid;
-  grid-template-columns: 2fr 3fr;
-  grid-template-rows: 3.5fr 0.5fr 0.5fr 0.5fr;
-  column-gap: 1rem;
+  flex: 1 1 calc(50% - 0.5rem);
+  display: flex;
+  gap: 1rem;
+  min-width: 540px;
 }
 
 .pibss-picture {
+  min-width: 0;
+  flex-basis: 180px;
+  flex-shrink: 0;
+  height: auto;
+}
+
+.pibss-card-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
   width: 100%;
-  grid-column: 1;
-  grid-row: 1 / -1;
 }
 
 .pibss-name {
-  grid-column: 2;
-  grid-row: 1;
   line-height: 1.2;
+  font-size: 3rem;
 }
 
-.pibss-type {
-  grid-column: 2;
-  grid-row: 2;
-  font-size: 2rem;
+.pibss-name::before {
+  display: none;
 }
 
-.pibss-country {
-  grid-column: 2;
-  grid-row: 3;
+.pibss-type, .pibss-country, .pibss-date, .pibss-location {
   font-size: 1.5rem;
 }
 
-.pibss-date {
-  grid-column: 2;
-  grid-row: 4;
-  font-size: 1.5rem;
+@media (max-width: 600px) {
+  section.entries {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+  }
+  .pibss-card {
+    gap: 0.5rem;
+    min-width: 0;
+  }
+  .pibss-picture {
+    flex-shrink: 1;
+  }
+  .pibss-name {
+    font-size: 2rem;
+  }
+  .pibss-type, .pibss-country, .pibss-date, .pibss-location {
+    font-size: 1rem;
+  }
 }
