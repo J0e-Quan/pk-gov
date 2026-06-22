@@ -60,9 +60,33 @@ function renderEntries(data) {
   }
 }
 
+async function getPlushieTypes() {
+  const { data, error } = await supabase
+    .from('unique_types')                  // 1. Target 'unique_types' view
+    .select('*')                           // 2. Get all unique values from it
+
+  if (error) {
+    return console.error('Error fetching data:', error.message)
+  }
+
+  // converts array of objects into an array for easier looping
+  const dataArray = data.map(item => item.type)
+
+  populateTypes(dataArray)
+}
+
+function populateTypes(data) {
+  for (const type of data) {
+    const typeInput = document.getElementById('type')
+    const typeOption = document.createElement('option')
+    typeOption.value = type
+    typeOption.textContent = type
+    typeInput.appendChild(typeOption)
+  }
+}
 
 renderEntries( await getAllEntries())
-
+getPlushieTypes()
 
 // code for handling filter changes
 const orderInput = document.getElementById('order')
