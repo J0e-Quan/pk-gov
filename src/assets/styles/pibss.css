@@ -1,5 +1,24 @@
+.options-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+label {
+  font-family: var(--plex-sans);
+  font-weight: 700;
+}
+
+select {
+  margin: 0;
+}
+
+select option {
+  color: black;
+}
+
 .entries {
-  padding: 2rem 5rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -42,9 +61,7 @@
 }
 
 @media (max-width: 600px) {
-  section.entries {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+  .entries {
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: stretch;

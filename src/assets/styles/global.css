@@ -208,7 +208,7 @@ a {
   gap: 2rem;
 }
 
-.return, .share, .button {
+.return, .share, .button, select {
   padding: 1rem 2rem;
   font-size: 2rem;
   font-family: var(--mona-sans);
@@ -225,7 +225,7 @@ a {
   will-change: box-shadow, color;
 }
 
-.return:hover, .share:hover, .button:hover {
+.return:hover, .share:hover, .button:hover, select:hover {
   box-shadow: inset 0 0 0 400px var(--theme, var(--central-ministry-colour));
   color: var(--theme-accent, white);
 }

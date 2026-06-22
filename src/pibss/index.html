@@ -57,7 +57,43 @@
           <p class="hero-text">Find information on all Plushie Kingdom residents here.</p>
           <!-- PUT SEARCH BAR HERE -->
         </section>
-        <section class="entries"></div>
+        <section class="options">
+          <h2 class="heading">Refine your search</h2>
+          <div class="section-divider"></div>
+          <div class="options-inputs">
+            <div class="options-order">
+              <label for="order" class="options-order title">Sort order:</h3>
+              <select id="order">
+                <option value="a-z">A-Z</option>
+                <option value="z-a">Z-A</option>
+                <option value="new-old">Newest to Oldest</option>
+                <option value="old-new">Oldest to Newest</option>
+              </select>
+            </div>
+            <div class="options-location">
+              <label for="location" class="options-location title">Filter by location:</label>
+              <select id="location">
+                <option value="%">All</option>
+                <option value="Big Tent Plains">Big Tent Plains</option>
+                <option value="Big Tent Stacks">Big Tent Stacks</option>
+                <option value="The Studio">The Studio</option>
+                <option value="The Bedroom">The Bedroom</option>
+                <option value="The Sofa">The Sofa</option>
+              </select>
+            </div>
+            <div class="options-type">
+              <label for="type" class="options-type title">Filter by type:</label>
+              <select id="type">
+                <!-- DYNAMICALLY FILL THIS IN WITH VALUES FROM TYPE IN THE DATABASE -->
+              </select>
+            </div>
+          </div>
+        </section>
+        <section class="pibss">
+          <h2 class="heading pibss-category">Showing all plushies from A to Z</h2>
+          <div class="section-divider"></div>
+          <div class="entries"></div>
+        </section>
       </section>
       <div class="end-buttons"><a class="return" href="/">Return to homepage</a></div>
     </div>
