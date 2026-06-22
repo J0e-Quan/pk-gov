@@ -1,3 +1,12 @@
+h2::before {
+  display: none;
+}
+
+.section-divider {
+  animation: none;
+  transform: scaleX(1);
+}
+
 .options-inputs {
   display: flex;
   flex-wrap: wrap;
