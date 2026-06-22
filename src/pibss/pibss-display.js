@@ -1,10 +1,13 @@
 import { supabase } from "./pibss-common.js";
 
-async function getAllEntries() {
+async function getEntries() {
+  console.log(location)
   const { data, error } = await supabase
-    .from('database')                  // 1. Target table
+    .from('database')                   // 1. Target table
     .select('*')                        // 2. Fetch all columns
     .order('name', { ascending: true }) // 3. Sort alphabetically (A-Z)
+    .ilike('location', location)        // 4. Filter by location 
+    .ilike('type', type)                // 5. Filter by type
 
   if (error) {
     return console.error('Error fetching data:', error.message)
@@ -13,13 +16,13 @@ async function getAllEntries() {
   return data
 }
 
-function removeLoader() {
-  const loader = document.querySelector('.loader')
-  loader.remove()
+function clearEntries() {
+  const entries = document.querySelector('.entries')
+  entries.innerHTML = ''
 }
 
 function renderEntries(data) {
-  removeLoader()
+  clearEntries()
   if (data === null) {
     return console.error('no data received!')
   }
@@ -85,7 +88,11 @@ function populateTypes(data) {
   }
 }
 
-renderEntries( await getAllEntries())
+let order = 'a-z'
+let location = '%'
+let type = '%'
+
+renderEntries( await getEntries())
 getPlushieTypes()
 
 // code for handling filter changes
@@ -97,39 +104,24 @@ orderInput.addEventListener('change', updateOrder)
 locationInput.addEventListener('change', updateLocation)
 typeInput.addEventListener('change', updateType)
 
-function updateOrder(e) {
-  const order = e.target.value
-  if (order === 'a-z') {
-    // get data exactly like initially
-  } else if (order === 'z-a') {
-    // get data with ascending: false
-  } else if (order === 'new-old') {
-    // get data sorting date_joined with ascending: true
-  } else if (order === 'old-new') {
-    // get data sorting date_joined with ascending: false
-  }
+async function updateOrder(e) {
+  order = e.target.value
 }
 
-function updateLocation(e) {
-  const location = e.target.value
-  if (location === 'Big Tent Plains') {
-
-  } else if (location === 'Big Tent Stacks') {
-    
-  } else if (location === 'The Studio') {
-
-  } else if (location === 'The Bedroom') {
-
-  } else if (location === 'The Sofa') {
-
-  }
-}
-
-function updateType(e) {
-  const type = e.target.value
-  if (type === 'Any type') {
-    // get all plushies following the location and sort filters
+async function updateLocation(e) {
+  if (e.target.value === '%') {
+    location = e.target.value
   } else {
-    // get plushies fulfilling whatever type is given
+    location = '%' + e.target.value + '%'
   }
+  renderEntries( await getEntries())
+}
+
+async function updateType(e) {
+  if (e.target.value === '%') {
+    type = e.target.value
+  } else {
+    type = '%' + e.target.value + '%'
+  }
+  renderEntries( await getEntries())
 }
