@@ -10,6 +10,7 @@ thumbnail:
 
 <div class='start-buttons'>
   <a class='button' href='/pibss/'>Access PIBSS</a>
+  <a class='button' href='/pibss/visualisation/'>Visualise PIBSS data</a>
   <a class='button' href='/pibss/register/'>Register a new plushie</a>
 </div>
 

@@ -92,7 +92,6 @@ section:not(.content, footer section) {
   margin: -2rem 0 5rem 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
 }
 
 .return, .share, .button {
@@ -118,6 +117,9 @@ section:not(.content, footer section) {
   .page ol {
     font-size: 1rem;
     line-height: 1.5;
+  }
+  .start-buttons {
+    gap: 1rem;
   }
 }
 /* MEDIA QUERIES ABOVE */
