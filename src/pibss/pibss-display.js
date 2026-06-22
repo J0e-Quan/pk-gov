@@ -127,5 +127,9 @@ function updateLocation(e) {
 
 function updateType(e) {
   const type = e.target.value
-
+  if (type === 'Any type') {
+    // get all plushies following the location and sort filters
+  } else {
+    // get plushies fulfilling whatever type is given
+  }
 }
