@@ -1,7 +1,6 @@
 import { supabase } from "./pibss-common.js";
 
 async function getEntries() {
-  console.log(location)
   const { data, error } = await supabase
     .from('database')                   // 1. Target table
     .select('*')                        // 2. Fetch all columns
@@ -21,12 +20,18 @@ function clearEntries() {
   entries.innerHTML = ''
 }
 
+function updateResultsText() {
+  const resultsText = document.querySelector('.pibss-category')
+  resultsText.textContent = 'Showing ' + locationText + ' ' + typeText + ' from ' + orderText
+}
+
 function renderEntries(data) {
   clearEntries()
   if (data === null) {
     return console.error('no data received!')
   }
   const container = document.querySelector('.entries')
+  updateResultsText()
   if (data.length === 0) {
     const emptyMessage = document.createElement('h3')
     emptyMessage.classList.add('pibss-empty-message')
@@ -95,9 +100,13 @@ function populateTypes(data) {
   }
 }
 
+// initialise default values
 let order = 'a-z'
 let location = '%'
 let type = '%'
+let orderText = 'A to Z'
+let locationText = 'All'
+let typeText = 'Plushies'
 
 renderEntries( await getEntries())
 getPlushieTypes()
@@ -118,8 +127,10 @@ async function updateOrder(e) {
 async function updateLocation(e) {
   if (e.target.value === '%') {
     location = e.target.value
+    locationText = 'All'
   } else {
     location = '%' + e.target.value + '%'
+    locationText = e.target.value
   }
   renderEntries( await getEntries())
 }
@@ -127,8 +138,10 @@ async function updateLocation(e) {
 async function updateType(e) {
   if (e.target.value === '%') {
     type = e.target.value
+    typeText = 'Plushies'
   } else {
     type = '%' + e.target.value + '%'
+    typeText = e.target.value + 's'
   }
   renderEntries( await getEntries())
 }
