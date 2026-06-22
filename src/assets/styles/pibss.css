@@ -12,12 +12,12 @@ h2::before {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  gap: 2rem;
 }
 
 .options-inputs div {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 label {
@@ -91,7 +91,7 @@ select option {
     flex-shrink: 1;
   }
   .pibss-name {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   .pibss-type, .pibss-country, .pibss-date, .pibss-location {
     font-size: 1rem;

@@ -73,7 +73,7 @@ function renderEntries(data) {
     const date = document.createElement('p')
     date.classList.add('pibss-date')
     const dateRaw = new Date(entry.date_joined)
-    const formattedDate = dateRaw.toLocaleDateString('en-GB', {day: 'numeric', month: 'long', year: 'numeric'})
+    const formattedDate = dateRaw.toLocaleDateString('en-GB', {day: 'numeric', month: 'short', year: 'numeric'})
     date.textContent = 'Date Joined: ' + formattedDate
     cardText.appendChild(date)
     const location = document.createElement('p')
