@@ -12,7 +12,8 @@ module.exports = {
     'about-page': './src/about/about-page.js',
     'pibss-common': './src/pibss/pibss-common.js',
     'pibss-display': './src/pibss/pibss-display.js',
-    'pibss-register': './src/pibss/pibss-register.js'
+    'pibss-register': './src/pibss/pibss-register.js',
+    'pibss-statistics': './src/pibss/pibss-statistics.js'
   },
   externals: {
     '/pagefind/pagefind-component-ui.js': 'module /pagefind/pagefind-component-ui.js',
@@ -44,6 +45,11 @@ module.exports = {
       template: './src/pibss/register.html',
       filename: 'pibss/register.html',
       chunks: ['pibss-common', 'pibss-register']
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/pibss/statistics.html',
+      filename: 'pibss/statistics.html',
+      chunks: ['pibss-common', 'pibss-statistics']
     })
   ],
   module: {
