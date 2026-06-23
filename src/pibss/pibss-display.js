@@ -6,6 +6,7 @@ async function getEntries() {
     .select('*')
     .ilike('location', location)
     .ilike('type', type)
+    .ilike('name', search)
     
   if (order === 'A to Z') {
     query.order('name', {ascending: true})
@@ -33,6 +34,9 @@ function clearEntries() {
 function updateResultsText() {
   const resultsText = document.querySelector('.pibss-category')
   resultsText.textContent = 'Showing ' + locationText + ' ' + typeText + ' from ' + orderText
+  if (searchText !== '') {
+    resultsText.textContent +=  ' matching "' + searchText + '"'
+  }
 }
 
 function renderEntries(data) {
@@ -113,9 +117,11 @@ function populateTypes(data) {
 let order = 'A to Z'
 let location = '%'
 let type = '%'
+let search = '%'
 let orderText = 'A to Z'
 let locationText = 'All'
 let typeText = 'Plushies'
+let searchText = ''
 
 renderEntries( await getEntries())
 getPlushieTypes()
@@ -160,6 +166,11 @@ async function updateType(e) {
 
 async function updateSearch(e) {
   const searchBar = document.getElementById('search')
-  const result = searchBar.value
-  console.log(result)
+  if (searchBar.value === '') {
+    search = '%'
+  } else if (searchBar.value !== '') {
+    search = '%' + searchBar.value + '%'
+  }
+  searchText = searchBar.value
+  renderEntries( await getEntries())
 }
