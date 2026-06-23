@@ -3,15 +3,15 @@ tags: info
 layout: content-page.njk
 title: Plushie Immigration and Biodata Storage Service (PIBSS)
 excerpt: |
-  Register a new plushie into the PIBSS database, or view information about all Plushie Kingdom residents here. Powered by
+  View information and statistics on all Plushie Kingdom residents, or register a new plushie into the PIBSS database here. Powered by
   <a class='link' href='https://supabase.com/' target='_blank' rel='noreferrer'>Supabase</a>.
 thumbnail:
 ---
 
 <div class='start-buttons'>
-  <a class='button' href='/pibss/'>Access PIBSS</a>
-  <a class='button' href='/pibss/visualisation/'>Visualise PIBSS data</a>
-  <a class='button' href='/pibss/register/'>Register a new plushie</a>
+  <a class='button' href='/pibss/'>Access PIBSS data</a>
+  <a class='button' href='/pibss/statistics/'>See PIBSS statistics</a>
+  <a class='button' href='/pibss/register/'>Register a plushie</a>
 </div>
 
 ## What is PIBSS?

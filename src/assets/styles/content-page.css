@@ -92,6 +92,12 @@ section:not(.content, footer section) {
   margin: -2rem 0 5rem 0;
   display: flex;
   flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.start-buttons a {
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .return, .share, .button {
