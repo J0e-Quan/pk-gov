@@ -127,44 +127,46 @@ renderEntries( await getEntries())
 getPlushieTypes()
 
 // code for handling filter and search changes
-const orderInput = document.getElementById('order')
-const locationInput = document.getElementById('location')
-const typeInput = document.getElementById('type')
-const searchButton = document.querySelector('.search-submit')
-orderInput.addEventListener('change', updateOrder)
-locationInput.addEventListener('change', updateLocation)
-typeInput.addEventListener('change', updateType)
-searchButton.addEventListener('click', updateSearch)
+const submitBtn = document.querySelector('.options-submit')
+submitBtn.addEventListener('click', updateFilters)
 
-async function updateOrder(e) {
-  order = e.target.value
-  orderText = e.target.value
+async function updateFilters(){
+  updateOrder()
+  updateLocation()
+  updateType()
+  updateSearch()
   renderEntries( await getEntries())
 }
 
-async function updateLocation(e) {
-  if (e.target.value === '%') {
-    location = e.target.value
+function updateOrder() {
+  const orderInput = document.getElementById('order')
+  order = orderInput.value
+  orderText = orderInput.value
+}
+
+function updateLocation() {
+  const locationInput = document.getElementById('location')
+  if (locationInput.value === '%') {
+    location = locationInput.value
     locationText = 'All'
   } else {
-    location = '%' + e.target.value + '%'
-    locationText = e.target.value
+    location = '%' + locationInput.value + '%'
+    locationText = locationInput.value
   }
-  renderEntries( await getEntries())
 }
 
-async function updateType(e) {
-  if (e.target.value === '%') {
-    type = e.target.value
+function updateType() {
+  const typeInput = document.getElementById('type')
+  if (typeInput.value === '%') {
+    type = typeInput.value
     typeText = 'Plushies'
   } else {
-    type = '%' + e.target.value + '%'
-    typeText = e.target.value + 's'
+    type = '%' + typeInput.value + '%'
+    typeText = typeInput.value + 's'
   }
-  renderEntries( await getEntries())
 }
 
-async function updateSearch(e) {
+function updateSearch() {
   const searchBar = document.getElementById('search')
   if (searchBar.value === '') {
     search = '%'
@@ -172,5 +174,4 @@ async function updateSearch(e) {
     search = '%' + searchBar.value + '%'
   }
   searchText = searchBar.value
-  renderEntries( await getEntries())
 }
