@@ -93,12 +93,8 @@ select option {
   height: 100%;
 }
 
-.pibss-search-icon {
-  padding: 0.5rem;
-  height: 100%;
-  min-width: none;
-  min-height: none;
-  margin: 0 0 0 -16px
+.options-submit {
+
 }
 
 @media (max-width: 600px) {
