@@ -124,12 +124,11 @@ getPlushieTypes()
 const orderInput = document.getElementById('order')
 const locationInput = document.getElementById('location')
 const typeInput = document.getElementById('type')
-const searchBar = document.getElementById('search')
+const searchButton = document.querySelector('.search-submit')
 orderInput.addEventListener('change', updateOrder)
 locationInput.addEventListener('change', updateLocation)
 typeInput.addEventListener('change', updateType)
-// 'input' detects when user presses 'X' to clear search results, while 'change' cannot
-searchBar.addEventListener('input', updateSearch)
+searchButton.addEventListener('click', updateSearch)
 
 async function updateOrder(e) {
   order = e.target.value
@@ -160,5 +159,7 @@ async function updateType(e) {
 }
 
 async function updateSearch(e) {
-
+  const searchBar = document.getElementById('search')
+  const result = searchBar.value
+  console.log(result)
 }
