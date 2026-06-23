@@ -13,6 +13,7 @@ h2::before {
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
+  margin-bottom: 2rem;
 }
 
 .options-inputs div {
@@ -75,6 +76,14 @@ select option {
 
 .pibss-type, .pibss-country, .pibss-date, .pibss-location {
   font-size: 1.5rem;
+}
+
+.search-input {
+  padding: 0.5rem 1rem;
+  border: 16px solid var(--central-ministry-colour);
+  font-size: 1.5rem;
+  min-width: 0;
+  width: 100%;
 }
 
 @media (max-width: 600px) {

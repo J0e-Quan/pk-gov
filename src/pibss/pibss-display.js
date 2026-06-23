@@ -96,7 +96,6 @@ async function getPlushieTypes() {
 
   // converts array of objects into an array for easier looping
   const dataArray = data.map(item => item.type)
-
   populateTypes(dataArray)
 }
 
@@ -121,13 +120,16 @@ let typeText = 'Plushies'
 renderEntries( await getEntries())
 getPlushieTypes()
 
-// code for handling filter changes
+// code for handling filter and search changes
 const orderInput = document.getElementById('order')
 const locationInput = document.getElementById('location')
 const typeInput = document.getElementById('type')
+const searchBar = document.getElementById('search')
 orderInput.addEventListener('change', updateOrder)
 locationInput.addEventListener('change', updateLocation)
 typeInput.addEventListener('change', updateType)
+// 'input' detects when user presses 'X' to clear search results, while 'change' cannot
+searchBar.addEventListener('input', updateSearch)
 
 async function updateOrder(e) {
   order = e.target.value
@@ -155,4 +157,8 @@ async function updateType(e) {
     typeText = e.target.value + 's'
   }
   renderEntries( await getEntries())
+}
+
+async function updateSearch(e) {
+
 }
