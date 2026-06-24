@@ -4,10 +4,14 @@ async function getEntries() {
   const query = supabase
     .from('database')
     .select('*')
-    .ilike('location', location)
-    .ilike('type', type)
     .ilike('name', search)
     
+  if (location !== '') {
+    query.eq('location', location)
+  }
+  if (type !== '') {
+    query.eq('type', type)
+  }
   if (order === 'A to Z') {
     query.order('name', {ascending: true})
   } else if (order === 'Z to A') {
@@ -115,8 +119,8 @@ function populateTypes(data) {
 
 // initialise default values
 let order = 'A to Z'
-let location = '%'
-let type = '%'
+let location = ''
+let type = ''
 let search = '%'
 let orderText = 'A to Z'
 let locationText = 'All'
@@ -146,22 +150,22 @@ function updateOrder() {
 
 function updateLocation() {
   const locationInput = document.getElementById('location')
-  if (locationInput.value === '%') {
+  if (locationInput.value === '') {
     location = locationInput.value
     locationText = 'All'
   } else {
-    location = '%' + locationInput.value + '%'
+    location =locationInput.value
     locationText = locationInput.value
   }
 }
 
 function updateType() {
   const typeInput = document.getElementById('type')
-  if (typeInput.value === '%') {
+  if (typeInput.value === '') {
     type = typeInput.value
     typeText = 'Plushies'
   } else {
-    type = '%' + typeInput.value + '%'
+    type = typeInput.value
     typeText = typeInput.value + 's'
   }
 }
