@@ -1,4 +1,8 @@
 import { supabase } from "./pibss-common.js";
+import { Chart, Colors, PieController, ArcElement, Tooltip, Legend } from "chart.js";
+
+// provides automatic chart colours
+Chart.register(Colors, PieController, ArcElement, Tooltip, Legend);
 
 async function getData() {
   const { data, error } = await supabase
@@ -22,7 +26,8 @@ function getNewCitizens() {
   return newCitizensArray.length
 }
 
-function getLargestType() {
+function sortType() {
+  // Set automatically removes all duplicates
   const typesArray = Array.from(new Set(data.map((plushie) => plushie.type)))
   const types = typesArray.map(type => {
     return {
@@ -33,14 +38,15 @@ function getLargestType() {
     const typePopulation = data.filter((plushie) => plushie.type === types[i].name)
     types[i].population = typePopulation.length
   }
-  console.log(types)
   types.sort((a, b) => b.population - a.population)
-  console.log(types)
+  return types
+}
+
+function getLargestType(types) {
   return types[0].name + 's'
 }
 
-
-function getLargestLocation() {
+function sortLocation() {
   const locations = [
     {name: 'Big Tent Plains', population: undefined}, 
     {name: 'Big Tent Stacks', population: undefined}, 
@@ -52,9 +58,11 @@ function getLargestLocation() {
     const locationPopulation = data.filter((plushie) => plushie.location === locations[i].name)
     locations[i].population = locationPopulation.length
   }
-  console.log(locations)
   locations.sort((a, b) => b.population - a.population)
-  console.log(locations)
+  return locations
+}
+
+function getLargestLocation(locations) {
   return locations[0].name
 }
 
@@ -69,13 +77,36 @@ function displayStatistics() {
     const newCitizensText = document.querySelector('.new-citizens.text')
     newCitizensText.textContent = 'new citizen joined the Plushie Kingdom this year'
   }
-  const largestType = getLargestType()
+  const largestType = getLargestType(sortedTypes)
   const largestTypeText = document.querySelector('.largest-type.value')
   largestTypeText.textContent = largestType
-  const largestLocation = getLargestLocation()
+  const largestLocation = getLargestLocation(sortedLocations)
   const largestLocationText = document.querySelector('.largest-location.value')
   largestLocationText.textContent = largestLocation
 }
 
+function displayCharts() {
+ displayLocationDistributionChart()
+}
+
+function displayLocationDistributionChart() {
+  return new Chart(
+    document.getElementById('location-distribution'), 
+    {
+      type: 'pie',
+      data: {
+        labels: sortedLocations.filter(location => location.population > 0).map(location => location.name),
+        datasets: [{
+          label: 'Residents',
+          data: sortedLocations.filter(location => location.population > 0).map(location => location.population),
+        }]
+      }
+    }
+  )
+}
+
 const data = await getData()
+const sortedTypes = sortType()
+const sortedLocations = sortLocation()
 displayStatistics()
+displayCharts()

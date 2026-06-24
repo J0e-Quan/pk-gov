@@ -1,14 +1,4 @@
 /* PIBSS DATABASE STYLES BELOW */
-
-h2::before {
-  display: none;
-}
-
-.section-divider {
-  animation: none;
-  transform: scaleX(1);
-}
-
 section.options {
   padding-bottom: 0;
 }
@@ -102,7 +92,7 @@ select option {
 /* PIBSS STATISTICS STYLES BELOW */
 .value {
   font-size: 10rem;
-  margin-bottom: -2rem;
+  margin-bottom: -1rem;
   line-height: 1.1;
 }
 .text {
@@ -110,7 +100,7 @@ select option {
   margin-bottom: 4rem;
 }
 /* PIBSS STATISTICS STYLES ABOVE */
-
+/* MEDIA QUERIES BELOW */
 @media (max-width: 600px) {
   .entries {
     flex-direction: column;
@@ -142,3 +132,4 @@ select option {
     margin-bottom: 3rem;
   }
 }
+/* MEDIA QUERIES ABOVE */
