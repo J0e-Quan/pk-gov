@@ -87,6 +87,7 @@ function displayStatistics() {
 
 function displayCharts() {
  displayLocationDistributionChart()
+ displayTypeDistributionChart()
 }
 
 function displayLocationDistributionChart() {
@@ -99,6 +100,22 @@ function displayLocationDistributionChart() {
         datasets: [{
           label: 'Residents',
           data: sortedLocations.filter(location => location.population > 0).map(location => location.population),
+        }]
+      }
+    }
+  )
+}
+
+function displayTypeDistributionChart() {
+  return new Chart(
+    document.getElementById('type-distribution'), 
+    {
+      type: 'pie',
+      data: {
+        labels: sortedTypes.map(type => type.name),
+        datasets: [{
+          label: 'Plushies',
+          data: sortedTypes.map(type => type.population),
         }]
       }
     }
