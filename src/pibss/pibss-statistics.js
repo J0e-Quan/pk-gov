@@ -1,8 +1,6 @@
 import { supabase } from "./pibss-common.js";
-import { Chart, Colors, PieController, ArcElement, Tooltip, Legend, BarController, BarElement, CategoryScale, LinearScale } from "chart.js";
-
-// provides automatic chart colours
-Chart.register(Colors, PieController, ArcElement, Tooltip, Legend, BarController, BarElement, CategoryScale, LinearScale);
+import { Chart, Colors, PieController, ArcElement, Tooltip, Legend, BarController, BarElement, CategoryScale, LinearScale, LineController, LineElement, PointElement } from "chart.js";
+Chart.register(Colors, PieController, ArcElement, Tooltip, Legend, BarController, BarElement, CategoryScale, LinearScale, LineController, LineElement, PointElement);
 
 async function getData() {
   const { data, error } = await supabase
@@ -71,6 +69,20 @@ function getYearlyNewCitizens() {
   return yearsPopulationArray
 }
 
+function getTotalPopulation() {
+  const yearsArray = generateYearsArray()
+  const populationTotalArray = yearsArray.map(year => {
+    return {
+      name: year,
+      population: undefined
+    }})
+  for (let i = 0; i < yearsArray.length; i++) {
+    const yearPopulation = data.filter((plushie) => new Date(plushie.date_joined).getFullYear() <= yearsArray[i]).length
+    populationTotalArray[i].population = yearPopulation
+  }
+  return populationTotalArray
+}
+
 function sortLocation() {
   const locations = [
     {name: 'Big Tent Plains', population: undefined}, 
@@ -114,6 +126,7 @@ function displayCharts() {
  displayLocationDistributionChart()
  displayTypeDistributionChart()
  displayYearlyNewCitizensChart()
+ displayPopulationHistoryChart()
 }
 
 function displayLocationDistributionChart() {
@@ -164,8 +177,25 @@ function displayYearlyNewCitizensChart() {
   )
 }
 
+function displayPopulationHistoryChart() {
+  return new Chart(
+    document.getElementById('population-history'), 
+    {
+      type: 'line',
+      data: {
+        labels: totalPopulation.map(year => year.name),
+        datasets: [{
+          label: 'Total citizens',
+          data: totalPopulation.map(year => year.population),
+        }]
+      }
+    }
+  )
+}
+
 const data = await getData()
 const yearlyNewCitizens = getYearlyNewCitizens()
+const totalPopulation = getTotalPopulation()
 const sortedTypes = sortType()
 const sortedLocations = sortLocation()
 displayStatistics()
