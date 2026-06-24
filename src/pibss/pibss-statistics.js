@@ -1,6 +1,8 @@
 import { supabase } from "./pibss-common.js";
 import { Chart, Colors, PieController, ArcElement, Tooltip, Legend, BarController, BarElement, CategoryScale, LinearScale, LineController, LineElement, PointElement } from "chart.js";
 Chart.register(Colors, PieController, ArcElement, Tooltip, Legend, BarController, BarElement, CategoryScale, LinearScale, LineController, LineElement, PointElement);
+Chart.defaults.font.family = "'Mona Sans', serif";
+Chart.defaults.font.size = 24;
 
 async function getData() {
   const { data, error } = await supabase
@@ -172,6 +174,10 @@ function displayYearlyNewCitizensChart() {
           label: 'New citizens',
           data: yearlyNewCitizens.map(year => year.population),
         }]
+      },
+      options: {
+        maintainAspectRatio: true,
+        aspectRatio: 1.5
       }
     }
   )
@@ -188,6 +194,11 @@ function displayPopulationHistoryChart() {
           label: 'Total citizens',
           data: totalPopulation.map(year => year.population),
         }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: true,
+        aspectRatio: 1.5
       }
     }
   )
