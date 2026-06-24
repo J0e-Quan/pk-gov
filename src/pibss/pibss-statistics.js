@@ -1,8 +1,8 @@
 import { supabase } from "./pibss-common.js";
-import { Chart, Colors, PieController, ArcElement, Tooltip, Legend } from "chart.js";
+import { Chart, Colors, PieController, ArcElement, Tooltip, Legend, BarController, BarElement, CategoryScale, LinearScale } from "chart.js";
 
 // provides automatic chart colours
-Chart.register(Colors, PieController, ArcElement, Tooltip, Legend);
+Chart.register(Colors, PieController, ArcElement, Tooltip, Legend, BarController, BarElement, CategoryScale, LinearScale);
 
 async function getData() {
   const { data, error } = await supabase
@@ -44,6 +44,31 @@ function sortType() {
 
 function getLargestType(types) {
   return types[0].name + 's'
+}
+
+function generateYearsArray() {
+  // creates an array containing all years from 2013 onwards
+  const currentYear = new Date().getFullYear()
+  const startYear = 2013
+  const yearsArray = []
+  for (let i = startYear; i <= currentYear; i++) {
+    yearsArray.push(i)
+  }
+  return yearsArray
+} 
+
+function getYearlyNewCitizens() {
+  const yearsArray = generateYearsArray()
+  const yearsPopulationArray = yearsArray.map(year => {
+    return {
+      name: year,
+      population: undefined
+    }})
+  for (let i = 0; i < yearsArray.length; i++) {
+    const yearPopulation = data.filter((plushie) => new Date(plushie.date_joined).getFullYear() === yearsArray[i]).length
+    yearsPopulationArray[i].population = yearPopulation
+  }
+  return yearsPopulationArray
 }
 
 function sortLocation() {
@@ -88,6 +113,7 @@ function displayStatistics() {
 function displayCharts() {
  displayLocationDistributionChart()
  displayTypeDistributionChart()
+ displayYearlyNewCitizensChart()
 }
 
 function displayLocationDistributionChart() {
@@ -122,7 +148,24 @@ function displayTypeDistributionChart() {
   )
 }
 
+function displayYearlyNewCitizensChart() {
+  return new Chart(
+    document.getElementById('yearly-new-citizens'), 
+    {
+      type: 'bar',
+      data: {
+        labels: yearlyNewCitizens.map(year => year.name),
+        datasets: [{
+          label: 'New citizens',
+          data: yearlyNewCitizens.map(year => year.population),
+        }]
+      }
+    }
+  )
+}
+
 const data = await getData()
+const yearlyNewCitizens = getYearlyNewCitizens()
 const sortedTypes = sortType()
 const sortedLocations = sortLocation()
 displayStatistics()
