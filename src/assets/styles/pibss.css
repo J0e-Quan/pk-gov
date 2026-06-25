@@ -55,7 +55,7 @@ select option {
   animation: scale-out ease-out backwards;
   animation-timeline: view();
   animation-range-start: cover 10%;
-  animation-range-end: cover 40%;
+  animation-range-end: cover 30%;
 }
 
 @keyframes scale-out {
