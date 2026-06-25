@@ -198,7 +198,7 @@ function displayPopulationHistoryChart() {
       options: {
         responsive: true,
         maintainAspectRatio: true,
-        aspectRatio: 1.5
+        aspectRatio: 1.25
       }
     }
   )
