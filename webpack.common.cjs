@@ -12,8 +12,9 @@ module.exports = {
     'about-page': './src/about/about-page.js',
     'pibss-common': './src/pibss/pibss-common.js',
     'pibss-display': './src/pibss/pibss-display.js',
-    'pibss-register': './src/pibss/pibss-register.js',
-    'pibss-statistics': './src/pibss/pibss-statistics.js'
+    'pibss-manage': './src/pibss/pibss-manage.js',
+    'pibss-statistics': './src/pibss/pibss-statistics.js',
+    'pibss-login': './src/pibss/pibss-login.js'
   },
   externals: {
     '/pagefind/pagefind-component-ui.js': 'module /pagefind/pagefind-component-ui.js',
@@ -42,14 +43,19 @@ module.exports = {
       chunks: ['pibss-common', 'pibss-display']
     }),
     new HtmlWebpackPlugin({
-      template: './src/pibss/register.html',
-      filename: 'pibss/register.html',
-      chunks: ['pibss-common', 'pibss-register']
+      template: './src/pibss/manage.html',
+      filename: 'pibss/manage.html',
+      chunks: ['pibss-common', 'pibss-manage']
     }),
     new HtmlWebpackPlugin({
       template: './src/pibss/statistics.html',
       filename: 'pibss/statistics.html',
       chunks: ['pibss-common', 'pibss-statistics']
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/pibss/login.html',
+      filename: 'pibss/login.html',
+      chunks: ['pibss-common', 'pibss-login']
     })
   ],
   module: {

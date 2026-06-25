@@ -11,7 +11,7 @@ thumbnail:
 <div class='start-buttons'>
   <a class='button' href='/pibss/'>Access PIBSS data</a>
   <a class='button' href='/pibss/statistics/'>See PIBSS statistics</a>
-  <a class='button' href='/pibss/register/'>Register a plushie</a>
+  <a class='button' href='/pibss/login/'>Manage PIBSS data (login needed)</a>
 </div>
 
 ## What is PIBSS?
