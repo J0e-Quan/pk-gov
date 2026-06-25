@@ -221,8 +221,7 @@ a {
   border: 16px solid var(--theme, var(--central-ministry-colour));
   transition:
     box-shadow 0.4s ease-in-out,
-    color 0.4s ease-in-out,
-    stroke 0.4s ease-in-out;
+    color 0.4s ease-in-out;
   will-change: box-shadow, color;
 }
 

@@ -215,6 +215,30 @@ section.login-form {
   border-radius: 2px;
   transition: width 0.5s ease-in-out;
 }
+.update-location-search-wrapper {
+  display: flex;
+  justify-content: stretch;
+  width: 100%;
+}
+.update-location-searchbar {
+  padding: 1rem 2rem;
+  border: 16px solid var(--central-ministry-colour);
+  font-size: 2rem;
+  min-width: 0;
+  flex-basis: 500px;
+  height: 100%;
+  margin-right: -16px;
+}
+.update-location-search-button {
+  margin: 0;
+  min-width: 100px;
+  flex-basis: 500px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
 /* PIBSS MANAGE STYLES ABOVE */
 /* MEDIA QUERIES BELOW */
 @media (max-width: 600px) {

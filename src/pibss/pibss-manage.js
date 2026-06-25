@@ -1,4 +1,5 @@
 import { supabase } from "./pibss-common.js";
+import searchIconPath from '../assets/search.svg'
 
 // check if user is authenticated immediately
 checkUserAuthentication()
@@ -87,4 +88,40 @@ function beginUpdateLocation() {
 
 function renderPlushieSelectionForm() {
   incrementProgress()
+  const form = document.createElement('section')
+  form.classList.add('form')
+  const instruction = document.createElement('h3')
+  instruction.classList.add('instruction')
+  instruction.textContent = 'Please select an existing plushie from its name'
+  form.appendChild(instruction)
+  const searchWrapper = document.createElement('div')
+  searchWrapper.classList.add('update-location-search-wrapper')
+  const searchBar = document.createElement('input')
+  searchBar.type = 'text'
+  searchBar.placeholder = 'Enter plushie name here...'
+  searchBar.classList.add('update-location-searchbar')
+  searchBar.id = 'search'
+  searchWrapper.appendChild(searchBar)
+  const searchButton = document.createElement('button')
+  searchButton.classList.add('update-location-search-button', 'button')
+  const searchIcon = document.createElement('img')
+  searchIcon.classList.add('update-location-search-icon')
+  searchIcon.src = searchIconPath
+  searchIcon.alt = 'Search icon'
+  searchButton.appendChild(searchIcon)
+  searchWrapper.appendChild(searchButton)
+  form.appendChild(searchWrapper)
+  content.appendChild(form)
+  initPlushieSearch()
+}
+
+function initPlushieSearch() {
+  const searchButton = document.querySelector('update-location-search-icon')
+  searchButton.addEventListener('click', searchPlushies)
+}
+
+function searchPlushies() {
+  const searchBar = document.querySelector('update-location-searchbar')
+  const search = searchBar.value
+  // send query to supabase
 }
