@@ -154,9 +154,37 @@ select option {
   height: 100%;
 }
 /* PIBSS STATISTICS STYLES ABOVE */
-/* PIBSS REGISTER STYLES BELOW */
-
-/* PIBSS REGISTER STYLES ABOVE */
+/* PIBSS LOGIN STYLES BELOW */
+.notice-text {
+  font-size: 2rem;
+}
+section.login-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  padding-top: 0;
+}
+.login-item {
+  display: flex;
+  flex-direction: column;
+}
+.login-item label {
+  font-size: 3rem;
+}
+.login-item input {
+  padding: 0.5rem 1rem;
+  border: 16px solid var(--central-ministry-colour);
+  font-size: 2rem;
+  min-width: 0;
+}
+.login-form button {
+  margin: 0;
+  padding: 0.5rem 2rem;
+  height: fit-content;
+  align-self: flex-end;
+}
+/* PIBSS LOGIN STYLES ABOVE */
 /* MEDIA QUERIES BELOW */
 @media (max-width: 600px) {
   .entries {
