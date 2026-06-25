@@ -198,6 +198,23 @@ section.login-form {
 .disclaimer-text {
   font-size: 2rem;
 }
+.progress-title {
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+.progress-bar-wrapper {
+  width: 100%;
+  height: 10px;
+  border-radius: 2px;
+  overflow: hidden;
+}
+.progress-bar {
+  height: 100%;
+  width: 0%; 
+  background-color: var(--central-ministry-colour);
+  border-radius: 2px;
+  transition: width 0.5s ease-in-out;
+}
 /* PIBSS MANAGE STYLES ABOVE */
 /* MEDIA QUERIES BELOW */
 @media (max-width: 600px) {

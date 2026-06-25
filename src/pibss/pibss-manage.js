@@ -19,6 +19,8 @@ const updateLocationButton = document.querySelector('.update-location-button')
 const content = document.querySelector('.content')
 // initially, form is done because there is no form to begin with
 let isFormDone = true
+let currentStep = 0
+let totalSteps
 
 registerButton.addEventListener('click', beginRegister)
 updateLocationButton.addEventListener('click', beginUpdateLocation)
@@ -27,12 +29,13 @@ function changeReturnButton() {
   const returnButton = document.querySelector('.return')
   returnButton.textContent = 'Return to dashboard'
   returnButton.href = '/pibss/manage/'
-  window.addEventListener('beforeunload', (event) => {
-    if (isFormDone === false) {
-      event.preventDefault()
-      event.returnValue = ''
-    }
-  })
+  // ENABLE THIS WHEN FORM IS DONE!!!!!!
+  // window.addEventListener('beforeunload', (event) => {
+  //   if (isFormDone === false) {
+  //     event.preventDefault()
+  //     event.returnValue = ''
+  //   }
+  // })
 }
 
 function showProgressUI(formTitle, formSteps) {
@@ -43,14 +46,30 @@ function showProgressUI(formTitle, formSteps) {
   title.textContent = formTitle + ': Step ' 
   const stepNumber = document.createElement('span')
   stepNumber.classList.add('progress-number')
+  stepNumber.textContent = 0
   title.appendChild(stepNumber)
-  title.append('1 of ', formSteps)
+  title.append(' of ', formSteps)
   progress.appendChild(title)
+  const progressBarWrapper = document.createElement('div')
+  progressBarWrapper.classList.add('progress-bar-wrapper')
   const progressBar = document.createElement('div')
   progressBar.classList.add('progress-bar')
-  progress.appendChild(progressBar)
+  progressBarWrapper.appendChild(progressBar)
+  progress.appendChild(progressBarWrapper)
   content.appendChild(progress)
   changeReturnButton()
+}
+
+function incrementProgress() {
+  currentStep++
+  const stepNumber = document.querySelector('.progress-number')
+  stepNumber.textContent = currentStep
+  const progressBar = document.querySelector('.progress-bar')
+  const increment = 100 / 3
+  const percentage = (currentStep - 0) * increment
+  requestAnimationFrame(() => {
+    progressBar.style.width = percentage + '%';
+  });
 }
 
 function beginRegister() {
@@ -61,10 +80,11 @@ function beginRegister() {
 function beginUpdateLocation() {
   content.innerHTML = ''
   showProgressUI('Update plushie location', '3')
+  totalSteps = 3
   isFormDone = false
   renderPlushieSelectionForm()
 }
 
 function renderPlushieSelectionForm() {
-
+  incrementProgress()
 }
