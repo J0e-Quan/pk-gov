@@ -222,5 +222,19 @@ section.login-form {
     align-items: center;
     justify-content: center;
   }
+  .notice .heading {
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+  .notice-text {
+    font-size: 1rem;
+  }
+  .login-item label {
+    font-size: 1.5rem;
+  }
+  .login-item input {
+    width: 100%;
+    font-size: 1.5rem;
+  }
 }
 /* MEDIA QUERIES ABOVE */
