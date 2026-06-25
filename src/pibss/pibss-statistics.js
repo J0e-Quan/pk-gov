@@ -105,23 +105,35 @@ function getLargestLocation(locations) {
   return locations[0].name
 }
 
+function animateStatistics(element, value) {
+  element.classList.add('animate-shrink-grow')
+  element.addEventListener('animationiteration', () => {
+    console.log('before:' + element + "'s text is " + value)
+    element.textContent = value
+  }, {once: true})
+  console.log('after:' + element + "'s text is now " + value)
+  element.addEventListener('animationend', () => {
+    element.classList.remove('animate-shrink-grow')
+  }, {once: true})
+}
+
 function displayStatistics() {
   const totalCitizens = getTotalCitizens()
   const totalCitizensNumber = document.querySelector('.total-citizens.value')
-  totalCitizensNumber.textContent = totalCitizens
+  animateStatistics(totalCitizensNumber, totalCitizens)
   const newCitizens = getNewCitizens()
   const newCitizensNumber = document.querySelector('.new-citizens.value')
-  newCitizensNumber.textContent = newCitizens
-  if (newCitizens <= 1) {
+  animateStatistics(newCitizensNumber, newCitizens)
+  if (newCitizens === 1) {
     const newCitizensText = document.querySelector('.new-citizens.text')
     newCitizensText.textContent = 'new citizen joined the Plushie Kingdom this year'
   }
   const largestType = getLargestType(sortedTypes)
   const largestTypeText = document.querySelector('.largest-type.value')
-  largestTypeText.textContent = largestType
+  animateStatistics(largestTypeText, largestType)
   const largestLocation = getLargestLocation(sortedLocations)
   const largestLocationText = document.querySelector('.largest-location.value')
-  largestLocationText.textContent = largestLocation
+  animateStatistics(largestLocationText, largestLocation)
 }
 
 function displayCharts() {
