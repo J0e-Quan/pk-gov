@@ -133,7 +133,7 @@ select option {
   0% { transform: scale(1); }
   100% { transform: scale(0); }
 }
-.text {
+.statistics .text {
   font-size: 4rem;
   margin-bottom: 4rem;
 }
@@ -185,6 +185,20 @@ section.login-form {
   align-self: flex-end;
 }
 /* PIBSS LOGIN STYLES ABOVE */
+/* PIBSS MANAGE STYLES BELOW */
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+.options button {
+  margin: 0;
+}
+.disclaimer-text {
+  font-size: 2rem;
+}
+/* PIBSS MANAGE STYLES ABOVE */
 /* MEDIA QUERIES BELOW */
 @media (max-width: 600px) {
   .entries {
@@ -226,7 +240,7 @@ section.login-form {
     line-height: 1.2;
     margin-bottom: 0.5rem;
   }
-  .notice-text {
+  .notice-text, .disclaimer-text {
     font-size: 1rem;
   }
   .login-item label {
