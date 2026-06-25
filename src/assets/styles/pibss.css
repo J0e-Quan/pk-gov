@@ -52,6 +52,19 @@ select option {
   flex-basis: 180px;
   flex-shrink: 0;
   height: auto;
+  animation: scale-out ease-out backwards;
+  animation-timeline: view();
+  animation-range-start: cover 10%;
+  animation-range-end: cover 40%;
+}
+
+@keyframes scale-out {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .pibss-card-text {
@@ -64,14 +77,29 @@ select option {
 .pibss-name {
   line-height: 1.2;
   font-size: 3rem;
-}
-
-.pibss-name::before {
-  display: none;
+  position: relative;
+  overflow: clip;
+  display: inline-block;
 }
 
 .pibss-type, .pibss-country, .pibss-date, .pibss-location {
   font-size: 1.5rem;
+  position: relative;
+  overflow: clip;
+  display: inline-block;
+}
+
+.pibss-type::before, .pibss-country::before, .pibss-date::before, .pibss-location::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  animation: wipe-up ease-out both;
+  animation-timeline: view();
+  animation-range-start: cover 10%;
+  animation-range-end: cover 50%;
 }
 
 .search-input {
