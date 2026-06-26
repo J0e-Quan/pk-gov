@@ -65,7 +65,7 @@ function incrementProgress() {
   const stepNumber = document.querySelector('.progress-number')
   stepNumber.textContent = currentStep
   const progressBar = document.querySelector('.progress-bar')
-  const increment = 100 / 3
+  const increment = 100 / totalSteps
   const percentage = (currentStep - 0) * increment
   requestAnimationFrame(() => {
     progressBar.style.width = percentage + '%';
@@ -84,8 +84,8 @@ function beginRegister() {
 
 function beginUpdateLocation() {
   content.innerHTML = ''
-  showProgressUI('Update plushie location', '4')
-  totalSteps = 4
+  totalSteps = 3
+  showProgressUI('Update plushie location', totalSteps)
   isFormDone = false
   renderPlushieSelectionForm()
 }
@@ -122,17 +122,21 @@ function initPlushieSearch() {
 
 async function searchPlushies() {
   const searchBar = document.querySelector('.update-location-searchbar')
-  const search = '%' + searchBar.value + '%'
-  const { data, error } = await supabase
-    .from('database')
-    .select('*')
-    .ilike('name', search)
+  if (searchBar.value !== '') {
+    const search = '%' + searchBar.value + '%'
+    const { data, error } = await supabase
+      .from('database')
+      .select('*')
+      .ilike('name', search)
 
-  if (error) {
-    console.error(error)
+    if (error) {
+      console.error(error)
+    }
+
+    renderSearchResults(data)
+  } else {
+    alert("Please enter a plushie's name!")
   }
-
-  renderSearchResults(data)
 }
 
 function renderSearchResults(data) {
@@ -158,6 +162,7 @@ function renderSearchResults(data) {
   for (const entry of data) {
     const card = document.createElement('button')
     card.type = 'button'
+    card.id = entry.name + '|' + entry.location
     card.classList.add('pibss-card')
     const picture = document.createElement('img')
     picture.classList.add('pibss-picture')
@@ -195,5 +200,13 @@ function renderSearchResults(data) {
 }
 
 function selectPlushie(e) {
-  
+  // currentTarget gets the element which has the eventListener instead of whatever was clicked
+  const selectedPlushie = e.currentTarget
+  console.log(selectedPlushie)
+  renderUpdateLocationPage(selectedPlushie)
+}
+
+function renderUpdateLocationPage(selectedPlushie) {
+  clearForm()
+  incrementProgress()
 }

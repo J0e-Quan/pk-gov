@@ -218,6 +218,9 @@ section.form {
   border-radius: 2px;
   transition: width 0.5s ease-in-out;
 }
+.instruction {
+  margin-bottom: 1rem;
+}
 .update-location-search-wrapper {
   display: flex;
   justify-content: stretch;
@@ -238,6 +241,20 @@ section.form {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.form .pibss-picture {
+  animation: none;
+}
+.form .pibss-name::before, .pibss-type::before, .pibss-country::before, .pibss-date::before, .pibss-location::before {
+  display: none;
+}
+.form .pibss-card {
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  text-align: start;
+}
+.form .pibss-card:hover {
+  background-color: var(--central-ministry-colour);
+  color: white;
 }
 /* PIBSS MANAGE STYLES ABOVE */
 /* MEDIA QUERIES BELOW */
