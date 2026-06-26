@@ -1,5 +1,4 @@
 import { supabase } from "./pibss-common.js";
-import searchIconPath from '../assets/search.svg'
 
 // check if user is authenticated immediately
 checkUserAuthentication()
@@ -104,11 +103,7 @@ function renderPlushieSelectionForm() {
   searchWrapper.appendChild(searchBar)
   const searchButton = document.createElement('button')
   searchButton.classList.add('update-location-search-button', 'button')
-  const searchIcon = document.createElement('img')
-  searchIcon.classList.add('update-location-search-icon')
-  searchIcon.src = searchIconPath
-  searchIcon.alt = 'Search icon'
-  searchButton.appendChild(searchIcon)
+  searchButton.textContent = 'Search'
   searchWrapper.appendChild(searchButton)
   form.appendChild(searchWrapper)
   content.appendChild(form)
