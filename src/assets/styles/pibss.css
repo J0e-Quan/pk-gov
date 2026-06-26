@@ -281,6 +281,10 @@ button.update-location-submit-button {
   margin: 2rem auto;
   display: block;
 }
+.status-text {
+  text-align: center;
+  width: 100%;
+}
 /* PIBSS MANAGE STYLES ABOVE */
 /* MEDIA QUERIES BELOW */
 @media (max-width: 600px) {
