@@ -1,4 +1,7 @@
 import { supabase } from "./pibss-common.js";
+import loadingCirclePath from '../assets/loading-circle.svg'
+import successCirclePath from '../assets/success-circle.svg'
+import errorCirclePath from '../assets/error-circle.svg'
 
 // check if user is authenticated immediately
 checkUserAuthentication()
@@ -206,7 +209,6 @@ function selectPlushie(e) {
   const selectedPlushie = {
     name: dataArray[0],
     currentLocation: dataArray[1],
-    newLocation: undefined
   }
   renderUpdateLocationPage(selectedPlushie)
 }
@@ -238,6 +240,7 @@ function renderUpdateLocationPage(selectedPlushie) {
   updateLocationWrapper2.appendChild(newLocationLabel)
   const newLocationSelect = document.createElement('select')
   newLocationSelect.classList.add('update-location-new-location-select')
+  newLocationSelect.id = 'new-location-select'
   const locations = ['Big Tent Plains', 'Big Tent Stacks', 'The Studio', 'The Bedroom', 'The Sofa']
   for (let i = 0; i < locations.length; i++) {
     if (locations[i] === selectedPlushie.currentLocation) {
@@ -256,4 +259,30 @@ function renderUpdateLocationPage(selectedPlushie) {
   locationSubmit.textContent = 'Update location'
   updateLocationWrapper2.appendChild(locationSubmit)
   form.appendChild(updateLocationWrapper2)
+  // actual function is wrapped in an arrow function, otherwise it will run immediately when the eventlistener runs
+  locationSubmit.addEventListener('click', () => submitNewLocation(selectedPlushie), {once: true})
+}
+
+async function submitNewLocation(selectedPlushie) {
+  const newLocationInput = document.querySelector('.update-location-new-location-select')
+  const newLocation = newLocationInput.value
+  clearForm()
+  const progress = document.querySelector('.progress')
+  progress.remove()
+  const form = document.querySelector('.form')
+  const loadingCircle = document.createElement('img')
+  loadingCircle.classList.add('loading-circle')
+  loadingCircle.src = loadingCirclePath
+  loadingCircle.alt = 'Loading animation showing a spinning circle'
+  form.appendChild(loadingCircle)
+  const { error } = await supabase
+    .from('database')
+    .update({location: newLocation})
+    .eq('name', selectedPlushie.name)
+  if (error) {
+    console.error(error)
+    showErrorScreen()
+  } else {
+    showSuccessScreen()
+  }
 }

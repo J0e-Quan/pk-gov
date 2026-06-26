@@ -275,6 +275,12 @@ button.update-location-submit-button {
   font-size: 1.5rem;
   padding: 0.5rem 1rem;
 }
+.loading-circle {
+  width: 50vh;
+  height: auto;
+  margin: 2rem auto;
+  display: block;
+}
 /* PIBSS MANAGE STYLES ABOVE */
 /* MEDIA QUERIES BELOW */
 @media (max-width: 600px) {
