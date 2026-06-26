@@ -201,12 +201,18 @@ function renderSearchResults(data) {
 
 function selectPlushie(e) {
   // currentTarget gets the element which has the eventListener instead of whatever was clicked
-  const selectedPlushie = e.currentTarget
-  console.log(selectedPlushie)
+  const selectedPlushieData = e.currentTarget.id
+  const dataArray = selectedPlushieData.split('|')
+  const selectedPlushie = {
+    name: dataArray[0],
+    currentlocation: dataArray[1],
+    newLocation: undefined
+  }
   renderUpdateLocationPage(selectedPlushie)
 }
 
 function renderUpdateLocationPage(selectedPlushie) {
   clearForm()
   incrementProgress()
+  console.log(selectedPlushie)
 }
