@@ -205,7 +205,7 @@ function selectPlushie(e) {
   const dataArray = selectedPlushieData.split('|')
   const selectedPlushie = {
     name: dataArray[0],
-    currentlocation: dataArray[1],
+    currentLocation: dataArray[1],
     newLocation: undefined
   }
   renderUpdateLocationPage(selectedPlushie)
@@ -214,5 +214,46 @@ function selectPlushie(e) {
 function renderUpdateLocationPage(selectedPlushie) {
   clearForm()
   incrementProgress()
-  console.log(selectedPlushie)
+  const form = document.querySelector('.form')
+  const instruction = document.createElement('h3')
+  instruction.classList.add('instruction')
+  instruction.textContent = 'Update location of ' + selectedPlushie.name
+  form.appendChild(instruction)
+  const updateLocationWrapper1 = document.createElement('div')
+  updateLocationWrapper1.classList.add('update-location-wrapper')
+  const oldLocationLabel = document.createElement('h4')
+  oldLocationLabel.classList.add('update-location-label')
+  oldLocationLabel.textContent = 'Current location: '
+  updateLocationWrapper1.appendChild(oldLocationLabel)
+  const oldLocationText = document.createElement('p')
+  oldLocationText.classList.add('update-location-old-location-text')
+  oldLocationText.textContent = selectedPlushie.currentLocation
+  updateLocationWrapper1.appendChild(oldLocationText)
+  form.appendChild(updateLocationWrapper1)
+  const updateLocationWrapper2 = document.createElement('div')
+  updateLocationWrapper2.classList.add('update-location-wrapper')
+  const newLocationLabel = document.createElement('h4')
+  newLocationLabel.classList.add('update-location-label')
+  newLocationLabel.textContent = 'New location: '
+  updateLocationWrapper2.appendChild(newLocationLabel)
+  const newLocationSelect = document.createElement('select')
+  newLocationSelect.classList.add('update-location-new-location-select')
+  const locations = ['Big Tent Plains', 'Big Tent Stacks', 'The Studio', 'The Bedroom', 'The Sofa']
+  for (let i = 0; i < locations.length; i++) {
+    if (locations[i] === selectedPlushie.currentLocation) {
+      continue
+    }
+    const locationOption = document.createElement('option')
+    locationOption.classList.add('update-location-option')
+    locationOption.value = locations[i]
+    locationOption.textContent = locations[i]
+    newLocationSelect.appendChild(locationOption)
+  }
+  updateLocationWrapper2.appendChild(newLocationSelect)
+  const locationSubmit = document.createElement('button')
+  locationSubmit.type = 'button'
+  locationSubmit.classList.add('update-location-submit-button', 'button')
+  locationSubmit.textContent = 'Update location'
+  updateLocationWrapper2.appendChild(locationSubmit)
+  form.appendChild(updateLocationWrapper2)
 }

@@ -219,6 +219,7 @@ section.form {
   transition: width 0.5s ease-in-out;
 }
 .instruction {
+  font-size: 3rem;
   margin-bottom: 1rem;
 }
 .update-location-search-wrapper {
@@ -255,6 +256,24 @@ section.form {
 .form .pibss-card:hover {
   background-color: var(--central-ministry-colour);
   color: white;
+}
+.update-location-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+.update-location-label {
+  font-size: 3rem;
+}
+.update-location-old-location-text {
+  font-size: 3rem;
+}
+button.update-location-submit-button {
+  margin: 0;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
 }
 /* PIBSS MANAGE STYLES ABOVE */
 /* MEDIA QUERIES BELOW */
