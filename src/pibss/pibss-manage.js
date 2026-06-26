@@ -84,8 +84,8 @@ function beginRegister() {
 
 function beginUpdateLocation() {
   content.innerHTML = ''
-  showProgressUI('Update plushie location', '3')
-  totalSteps = 3
+  showProgressUI('Update plushie location', '4')
+  totalSteps = 4
   isFormDone = false
   renderPlushieSelectionForm()
 }
@@ -156,7 +156,8 @@ function renderSearchResults(data) {
     return 
   }
   for (const entry of data) {
-    const card = document.createElement('div')
+    const card = document.createElement('button')
+    card.type = 'button'
     card.classList.add('pibss-card')
     const picture = document.createElement('img')
     picture.classList.add('pibss-picture')
@@ -187,7 +188,12 @@ function renderSearchResults(data) {
     location.textContent = 'Residence: ' + entry.location
     cardText.appendChild(location)
     card.appendChild(cardText)
+    card.addEventListener('click', selectPlushie)
     container.appendChild(card) 
   }
   form.appendChild(container)
+}
+
+function selectPlushie(e) {
+  
 }
