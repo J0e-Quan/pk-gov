@@ -198,6 +198,9 @@ section.login-form {
 .disclaimer-text {
   font-size: 2rem;
 }
+section.form {
+  padding-top: 0;
+}
 .progress-title {
   line-height: 1.2;
   margin-bottom: 1rem;
@@ -287,6 +290,10 @@ section.login-form {
   .login-item input {
     width: 100%;
     font-size: 1.5rem;
+  }
+  .update-location-search-button, .update-location-searchbar {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
   }
 }
 /* MEDIA QUERIES ABOVE */
