@@ -131,7 +131,7 @@ renderEntries( await getEntries())
 getPlushieTypes()
 
 // code for handling filter and search changes
-const submitBtn = document.querySelector('.options-submit')
+const submitBtn = document.querySelector('.filters-submit')
 submitBtn.addEventListener('click', updateFilters)
 
 async function updateFilters(){

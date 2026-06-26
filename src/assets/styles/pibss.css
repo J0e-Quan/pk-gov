@@ -1,9 +1,9 @@
 /* PIBSS DATABASE STYLES BELOW */
-section.options {
+section.filters {
   padding-bottom: 0;
 }
 
-.options-inputs {
+.filters-inputs {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -12,7 +12,7 @@ section.options {
   margin-bottom: 2rem;
 }
 
-.options-inputs div {
+.filters-inputs div {
   display: flex;
   flex-direction: column;
 }
@@ -111,8 +111,8 @@ select option {
   height: 100%;
 }
 
-.options-submit {
-  margin-bottom: 0;
+.filters-submit {
+  margin: 0 auto;
   font-size: 1.5rem;
 }
 
@@ -121,7 +121,7 @@ select option {
 .value {
   font-size: 10rem;
   margin-bottom: -1rem;
-  line-height: 1.1;
+  line-height: 1.2;
   display: inline-block;
   overflow: hidden;
   transition: transform 0.3s ease-in-out;
@@ -220,6 +220,7 @@ section.form {
 }
 .instruction {
   font-size: 3rem;
+  line-height: 1.2;
   margin-bottom: 1rem;
 }
 .update-location-search-wrapper {
@@ -276,7 +277,7 @@ button.update-location-submit-button {
   padding: 0.5rem 1rem;
 }
 .loading-circle {
-  width: 50vh;
+  width: 30vw;
   height: auto;
   margin: 2rem auto;
   display: block;
@@ -284,6 +285,9 @@ button.update-location-submit-button {
 .status-text {
   text-align: center;
   width: 100%;
+}
+.status-text::before {
+  display: none;
 }
 /* PIBSS MANAGE STYLES ABOVE */
 /* MEDIA QUERIES BELOW */
@@ -306,14 +310,14 @@ button.update-location-submit-button {
   .pibss-type, .pibss-country, .pibss-date, .pibss-location {
     font-size: 1rem;
   }
-  .options-submit {
-    justify-self: baseline;
+  .filters-submit {
+    margin: 1rem 0 0 0;
   }
   .value {
     font-size: 4rem;
     margin-bottom: -0.5rem;
   }
-  .text {
+  .statistics .text {
     font-size: 1.5rem;
     margin-bottom: 3rem;
   }
@@ -340,6 +344,24 @@ button.update-location-submit-button {
   .update-location-search-button, .update-location-searchbar {
     font-size: 1rem;
     padding: 0.5rem 1rem;
+  }
+  .instruction {
+    font-size: 2rem;
+  }
+  .update-location-wrapper {
+    gap: 0;
+  }
+  .update-location-label {
+    font-size: 1.5rem;
+  }
+  .update-location-old-location-text {
+    font-size: 1.5rem;
+  }
+  .update-location-wrapper select {
+    margin-bottom: 1rem;
+  }
+  .loading-circle {
+    width: 100%;
   }
 }
 /* MEDIA QUERIES ABOVE */

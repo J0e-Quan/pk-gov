@@ -56,12 +56,12 @@
           <h1 class="hero-title">Access the PIBSS database</h1>
           <p class="hero-text">Find information on all Plushie Kingdom residents here.</p>
         </section>
-        <section class="options">
+        <section class="filters">
           <h2 class="heading">Refine your search</h2>
           <div class="section-divider"></div>
-          <div class="options-inputs">
-            <div class="options-order">
-              <label for="order" class="options-order title">Sort order:</h3>
+          <div class="filters-inputs">
+            <div class="filters-order">
+              <label for="order" class="filters-order title">Sort order:</h3>
               <select id="order">
                 <option value="A to Z">A-Z</option>
                 <option value="Z to A">Z-A</option>
@@ -69,8 +69,8 @@
                 <option value="Oldest to Newest">Oldest to Newest</option>
               </select>
             </div>
-            <div class="options-location">
-              <label for="location" class="options-location title">Filter by location:</label>
+            <div class="filters-location">
+              <label for="location" class="filters-location title">Filter by location:</label>
               <select id="location">
                 <option value="">All</option>
                 <option value="Big Tent Plains">Big Tent Plains</option>
@@ -80,8 +80,8 @@
                 <option value="The Sofa">The Sofa</option>
               </select>
             </div>
-            <div class="options-type">
-              <label for="type" class="options-type title">Filter by type:</label>
+            <div class="filters-type">
+              <label for="type" class="filters-type title">Filter by type:</label>
               <select id="type">
                 <option value="">Any type</option>
                 <!-- this is dynamically filled in by getPlushieTypes() -->
@@ -91,7 +91,7 @@
               <label for="search" class="search title">Search by name:</label>
               <input type="text" id="search" class="search-input" placeholder="Search PIBSS...">
             </div>
-            <button type="button" class="options-submit">Apply filters</button>
+            <button type="button" class="filters-submit button">Apply filters</button>
           </div>
         </section>
         <section class="pibss">
