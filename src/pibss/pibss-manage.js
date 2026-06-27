@@ -22,7 +22,7 @@ let isFormDone = true
 let currentStep = 0
 let totalSteps
 let formData
-let isFromPrevStep = false
+let isFromStepButton = false
 
 registerButton.addEventListener('click', beginRegister)
 updateLocationButton.addEventListener('click', beginUpdateLocation)
@@ -111,13 +111,14 @@ function updateFormStepButtons(canSkipStep) {
 function previousStep() {
   currentStep--
   updateProgress()
-  isFromPrevStep = true
+  isFromStepButton = true
   formData.formSteps[(currentStep - 1)]()
 }
 
 function nextStep() {
   currentStep++
   updateProgress()
+  isFromStepButton = true
   formData.formSteps[(currentStep - 1)]()
 }
 
@@ -150,10 +151,10 @@ function beginUpdateLocation() {
 
 function renderPlushieSelectionForm() {
   console.log('rendering first step')
-  if (!isFromPrevStep) {
+  if (!isFromStepButton) {
     currentStep++
   }
-  isFromPrevStep = false
+  isFromStepButton = false
   clearForm()
   updateProgress()
   updateFormStepButtons(false)
@@ -197,9 +198,9 @@ function initPlushieSearch() {
 
 async function searchPlushies() {
   const searchBar = document.querySelector('.update-location-searchbar')
-  if (searchBar.value !== '') {
+  if (searchBar !== null && searchBar.value !== '') {
     formData.searchValue = searchBar.value
-  } else {
+  } else if (searchBar !== null && searchBar.value === '') {
     alert("Please enter a plushie's name!")
   }
   const search = '%' + formData.searchValue + '%'
@@ -217,10 +218,10 @@ async function searchPlushies() {
 }
 
 function renderSearchResults(data) {
-  if (!isFromPrevStep) {
+  if (!isFromStepButton) {
     currentStep++
   }
-  isFromPrevStep = false
+  isFromStepButton = false
   clearForm()
   updateProgress()
   updateFormStepButtons(false)
@@ -293,10 +294,10 @@ function selectPlushie(e) {
 }
 
 function renderUpdateLocationPage(selectedPlushie) {
-  if (!isFromPrevStep) {
+  if (!isFromStepButton) {
     currentStep++
   }
-  isFromPrevStep = false
+  isFromStepButton = false
   clearForm()
   updateProgress()
   updateFormStepButtons(false)
