@@ -201,6 +201,22 @@ section.login-form {
 section.form {
   padding-top: 0;
 }
+.form-step-button-wrapper {
+  margin: -1rem 0 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.form-step-button {
+  font-size: 2rem;
+  text-decoration: underline;
+}
+.form-step-button:hover {
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: 4px;
+  color: var(--central-ministry-colour);
+}
 .progress-title {
   line-height: 1.2;
   margin-bottom: 1rem;
@@ -243,6 +259,9 @@ section.form {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.hidden {
+  display: none;
 }
 .form .pibss-picture {
   animation: none;
@@ -347,6 +366,12 @@ button.update-location-submit-button {
   }
   .instruction {
     font-size: 2rem;
+  }
+  .form-step-button-wrapper {
+    margin-bottom: 0.5rem;
+  }
+  .form-step-button {
+    font-size: 1rem;
   }
   .update-location-wrapper {
     gap: 0;

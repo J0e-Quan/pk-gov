@@ -21,6 +21,8 @@ const content = document.querySelector('.content')
 let isFormDone = true
 let currentStep = 0
 let totalSteps
+let formData
+let isFromPrevStep = false
 
 registerButton.addEventListener('click', beginRegister)
 updateLocationButton.addEventListener('click', beginUpdateLocation)
@@ -50,7 +52,19 @@ function showProgressUI(formTitle, formSteps) {
   title.appendChild(stepNumber)
   title.append(' of ', formSteps)
   progress.appendChild(title)
-  const prev = document.createElement('div')
+  const prevNextWrapper = document.createElement('div')
+  prevNextWrapper.classList.add('form-step-button-wrapper')
+  const prev = document.createElement('button')
+  prev.classList.add('form-step-button', 'previous-step', 'hidden')
+  prev.type = 'button'
+  prev.textContent = '< Previous step'
+  prevNextWrapper.appendChild(prev)
+  const next = document.createElement('button')
+  next.classList.add('form-step-button', 'next-step', 'hidden')
+  next.type = 'button'
+  next.textContent = 'Next step >'
+  prevNextWrapper.appendChild(next)
+  progress.append(prevNextWrapper)
   const progressBarWrapper = document.createElement('div')
   progressBarWrapper.classList.add('progress-bar-wrapper')
   const progressBar = document.createElement('div')
@@ -61,8 +75,8 @@ function showProgressUI(formTitle, formSteps) {
   changeReturnButton()
 }
 
-function incrementProgress() {
-  currentStep++
+function updateProgress() {
+  console.log(currentStep)
   const stepNumber = document.querySelector('.progress-number')
   stepNumber.textContent = currentStep
   const progressBar = document.querySelector('.progress-bar')
@@ -73,9 +87,46 @@ function incrementProgress() {
   });
 }
 
+function updateFormStepButtons(canSkipStep) {
+  if (currentStep > 1) {
+    const prev = document.querySelector('.previous-step')
+    prev.classList.remove('hidden')
+    prev.addEventListener('click', previousStep)
+  } else if (currentStep === 1) {
+    const prev = document.querySelector('.previous-step')
+    prev.classList.add('hidden') 
+    prev.removeEventListener('click', previousStep)
+  }
+  if (canSkipStep) {
+    const next = document.querySelector('.next-step')
+    next.classList.remove('hidden')
+    next.addEventListener('click', nextStep)
+  } else if (!canSkipStep) {
+    const next = document.querySelector('.next-step')
+    next.classList.add('hidden') 
+    next.removeEventListener('click', nextStep)
+  }
+}
+
+function previousStep() {
+  currentStep--
+  updateProgress()
+  isFromPrevStep = true
+  formData.formSteps[(currentStep - 1)]()
+}
+
+function nextStep() {
+  currentStep++
+  updateProgress()
+  formData.formSteps[(currentStep - 1)]()
+}
+
 function clearForm() {
   const form = document.querySelector('.form')
-  form.innerHTML = ''
+  console.log(form)
+  if (form !== null) {
+    form.innerHTML = ''
+  }
 }
 
 function beginRegister() {
@@ -86,15 +137,36 @@ function beginRegister() {
 function beginUpdateLocation() {
   content.innerHTML = ''
   totalSteps = 3
+  formData = {
+    name: 'updateLocation',
+    formSteps: [renderPlushieSelectionForm, searchPlushies, renderUpdateLocationPage],
+    searchValue: undefined,
+    newLocation: undefined,
+  }
   showProgressUI('Update plushie location', totalSteps)
   isFormDone = false
   renderPlushieSelectionForm()
 }
 
 function renderPlushieSelectionForm() {
-  incrementProgress()
-  const form = document.createElement('section')
-  form.classList.add('form')
+  console.log('rendering first step')
+  if (!isFromPrevStep) {
+    currentStep++
+  }
+  isFromPrevStep = false
+  clearForm()
+  updateProgress()
+  updateFormStepButtons(false)
+  let form = document.querySelector('.form')
+  if (form === null) {
+    console.log('creating form')
+    const form = document.createElement('section')
+    form.classList.add('form')
+    content.appendChild(form)
+  }
+  form = content.querySelector('.form')
+  console.log(form)
+  console.log('creating other stuff')
   const instruction = document.createElement('h3')
   instruction.classList.add('instruction')
   instruction.textContent = "Please search for an existing plushie's name"
@@ -106,13 +178,15 @@ function renderPlushieSelectionForm() {
   searchBar.placeholder = 'Enter a name here...'
   searchBar.classList.add('update-location-searchbar')
   searchBar.id = 'search'
+  if (formData.searchValue !== undefined) {
+    searchBar.value = formData.searchValue
+  }
   searchWrapper.appendChild(searchBar)
   const searchButton = document.createElement('button')
   searchButton.classList.add('update-location-search-button', 'button')
   searchButton.textContent = 'Search'
   searchWrapper.appendChild(searchButton)
   form.appendChild(searchWrapper)
-  content.appendChild(form)
   initPlushieSearch()
 }
 
@@ -124,25 +198,32 @@ function initPlushieSearch() {
 async function searchPlushies() {
   const searchBar = document.querySelector('.update-location-searchbar')
   if (searchBar.value !== '') {
-    const search = '%' + searchBar.value + '%'
-    const { data, error } = await supabase
-      .from('database')
-      .select('*')
-      .ilike('name', search)
-
-    if (error) {
-      console.error(error)
-    }
-
-    renderSearchResults(data)
+    formData.searchValue = searchBar.value
   } else {
     alert("Please enter a plushie's name!")
   }
+  const search = '%' + formData.searchValue + '%'
+  const { data, error } = await supabase
+    .from('database')
+    .select('*')
+    .ilike('name', search)
+
+  if (error) {
+    console.error(error)
+  }
+
+  renderSearchResults(data)
+  
 }
 
 function renderSearchResults(data) {
+  if (!isFromPrevStep) {
+    currentStep++
+  }
+  isFromPrevStep = false
   clearForm()
-  incrementProgress()
+  updateProgress()
+  updateFormStepButtons(false)
   if (data === null) {
     return console.error('no data received!')
   }
@@ -212,8 +293,13 @@ function selectPlushie(e) {
 }
 
 function renderUpdateLocationPage(selectedPlushie) {
+  if (!isFromPrevStep) {
+    currentStep++
+  }
+  isFromPrevStep = false
   clearForm()
-  incrementProgress()
+  updateProgress()
+  updateFormStepButtons(false)
   const form = document.querySelector('.form')
   const instruction = document.createElement('h3')
   instruction.classList.add('instruction')
@@ -287,6 +373,7 @@ async function submitNewLocation(selectedPlushie) {
 }
 
 function showErrorScreen() {
+  isFormDone = true
   const form = document.querySelector('.form')
   const loadingCircleAnimation = document.querySelector('.loading-circle animate')
   loadingCircleAnimation.addEventListener('repeatEvent', () => {
@@ -303,6 +390,7 @@ function showErrorScreen() {
 }
 
 function showSuccessScreen() {
+  isFormDone = true
   const form = document.querySelector('.form')
   const loadingCircleAnimation = document.querySelector('.loading-circle animate')
   loadingCircleAnimation.addEventListener('repeatEvent', () => {
