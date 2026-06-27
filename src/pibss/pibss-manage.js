@@ -50,6 +50,7 @@ function showProgressUI(formTitle, formSteps) {
   title.appendChild(stepNumber)
   title.append(' of ', formSteps)
   progress.appendChild(title)
+  const prev = document.createElement('div')
   const progressBarWrapper = document.createElement('div')
   progressBarWrapper.classList.add('progress-bar-wrapper')
   const progressBar = document.createElement('div')
