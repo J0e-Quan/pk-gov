@@ -142,6 +142,7 @@ function beginUpdateLocation() {
     name: 'updateLocation',
     formSteps: [renderPlushieSelectionForm, searchPlushies, renderUpdateLocationPage],
     searchValue: undefined,
+    selectedPlushie: undefined,
     newLocation: undefined,
   }
   showProgressUI('Update plushie location', totalSteps)
@@ -150,7 +151,6 @@ function beginUpdateLocation() {
 }
 
 function renderPlushieSelectionForm() {
-  console.log('rendering first step')
   if (!isFromStepButton) {
     currentStep++
   }
@@ -160,14 +160,11 @@ function renderPlushieSelectionForm() {
   updateFormStepButtons(false)
   let form = document.querySelector('.form')
   if (form === null) {
-    console.log('creating form')
     const form = document.createElement('section')
     form.classList.add('form')
     content.appendChild(form)
   }
   form = content.querySelector('.form')
-  console.log(form)
-  console.log('creating other stuff')
   const instruction = document.createElement('h3')
   instruction.classList.add('instruction')
   instruction.textContent = "Please search for an existing plushie's name"
@@ -224,7 +221,11 @@ function renderSearchResults(data) {
   isFromStepButton = false
   clearForm()
   updateProgress()
-  updateFormStepButtons(false)
+  if (formData.selectedPlushie !== undefined) {
+    updateFormStepButtons(true)
+  } else {
+    updateFormStepButtons(false)
+  }
   if (data === null) {
     return console.error('no data received!')
   }
@@ -286,14 +287,18 @@ function selectPlushie(e) {
   // currentTarget gets the element which has the eventListener instead of whatever was clicked
   const selectedPlushieData = e.currentTarget.id
   const dataArray = selectedPlushieData.split('|')
-  const selectedPlushie = {
+  // if formData.selectedPlushie is undefined, trying to get .name will crash, '?' causes it to just be undefined instead of crashing
+  if (formData.selectedPlushie?.name !== undefined && dataArray[0] !== formData.selectedPlushie.name) {
+    formData.newLocation = undefined
+  }
+  formData.selectedPlushie = {
     name: dataArray[0],
     currentLocation: dataArray[1],
   }
-  renderUpdateLocationPage(selectedPlushie)
+  renderUpdateLocationPage()
 }
 
-function renderUpdateLocationPage(selectedPlushie) {
+function renderUpdateLocationPage() {
   if (!isFromStepButton) {
     currentStep++
   }
@@ -304,7 +309,7 @@ function renderUpdateLocationPage(selectedPlushie) {
   const form = document.querySelector('.form')
   const instruction = document.createElement('h3')
   instruction.classList.add('instruction')
-  instruction.textContent = 'Update location of ' + selectedPlushie.name
+  instruction.textContent = 'Update location of ' + formData.selectedPlushie.name
   form.appendChild(instruction)
   const updateLocationWrapper1 = document.createElement('div')
   updateLocationWrapper1.classList.add('update-location-wrapper')
@@ -314,7 +319,7 @@ function renderUpdateLocationPage(selectedPlushie) {
   updateLocationWrapper1.appendChild(oldLocationLabel)
   const oldLocationText = document.createElement('p')
   oldLocationText.classList.add('update-location-old-location-text')
-  oldLocationText.textContent = selectedPlushie.currentLocation
+  oldLocationText.textContent = formData.selectedPlushie.currentLocation
   updateLocationWrapper1.appendChild(oldLocationText)
   form.appendChild(updateLocationWrapper1)
   const updateLocationWrapper2 = document.createElement('div')
@@ -328,7 +333,7 @@ function renderUpdateLocationPage(selectedPlushie) {
   newLocationSelect.id = 'new-location-select'
   const locations = ['Big Tent Plains', 'Big Tent Stacks', 'The Studio', 'The Bedroom', 'The Sofa']
   for (let i = 0; i < locations.length; i++) {
-    if (locations[i] === selectedPlushie.currentLocation) {
+    if (locations[i] === formData.selectedPlushie.currentLocation) {
       continue
     }
     const locationOption = document.createElement('option')
@@ -337,6 +342,10 @@ function renderUpdateLocationPage(selectedPlushie) {
     locationOption.textContent = locations[i]
     newLocationSelect.appendChild(locationOption)
   }
+  if (formData.newLocation !== undefined) {
+    newLocationSelect.value = formData.newLocation
+  }
+  newLocationSelect.addEventListener('change', updateNewLocation)
   updateLocationWrapper2.appendChild(newLocationSelect)
   const locationSubmit = document.createElement('button')
   locationSubmit.type = 'button'
@@ -345,7 +354,11 @@ function renderUpdateLocationPage(selectedPlushie) {
   updateLocationWrapper2.appendChild(locationSubmit)
   form.appendChild(updateLocationWrapper2)
   // actual function is wrapped in an arrow function, otherwise it will run immediately when the eventlistener runs
-  locationSubmit.addEventListener('click', () => submitNewLocation(selectedPlushie), {once: true})
+  locationSubmit.addEventListener('click', () => submitNewLocation(formData.selectedPlushie), {once: true})
+}
+
+function updateNewLocation(e) {
+  formData.newLocation = e.target.value
 }
 
 async function submitNewLocation(selectedPlushie) {
