@@ -357,15 +357,14 @@ async function renderCountryForm() {
     countryOption.classList.add('register-type-option')
     countryOption.value = country.name
     countryOption.textContent = country.name
-    // Set Malaysia as default option
-    if (country.code === 'MY') {
-      countryOption.selected = true
-    }
     countrySelect.appendChild(countryOption)
   }
   if (formData.plushieOriginCountry !== undefined) {
     countrySelect.value = formData.plushieOriginCountry
     updateFormStepButtons(true)
+  } else {
+    // Set Malaysia as default location
+    countrySelect.value = 'Malaysia'
   }
   countryWrapper.appendChild(countrySelect)
   const submitButton = document.createElement('button')
