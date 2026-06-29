@@ -135,7 +135,7 @@ function beginRegister() {
   totalSteps = 6
   formData = {
     name: 'newPlushie',
-    formSteps: , // fill this in when steps are done!!!
+    formSteps: [], // fill this in when steps are done!!!
     plushieName: undefined,
     plushieDateJoined: undefined,
     plushieType: undefined,
