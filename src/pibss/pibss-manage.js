@@ -400,10 +400,6 @@ function renderLocationForm() {
   instruction.classList.add('instruction')
   instruction.textContent = "Where are you going to stay?"
   form.appendChild(instruction)
-  const note = document.createElement('p')
-  note.classList.add('note')
-  note.textContent = "Having trouble deciding? Don't worry, you can always change this later!"
-  form.appendChild(note)
   const locationWrapper = document.createElement('div')
   locationWrapper.classList.add('update-location-search-wrapper')
   const locationSelect = document.createElement('select')
@@ -427,6 +423,10 @@ function renderLocationForm() {
   locationWrapper.appendChild(submitButton)
   form.appendChild(locationWrapper)
   submitButton.addEventListener('click', submitLocation)
+  const note = document.createElement('p')
+  note.classList.add('note')
+  note.textContent = "Having trouble deciding? Don't worry, you can always change this later!"
+  form.appendChild(note)
 }
 
 function submitLocation() {
