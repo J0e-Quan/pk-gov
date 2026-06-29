@@ -343,12 +343,15 @@ async function renderCountryForm() {
   const countrySelect = document.createElement('select')
   countrySelect.classList.add('register-country-select')
   const countries = await getCountries()
-  console.log(countries)
   for (const country of countries) {
     const countryOption = document.createElement('option')
     countryOption.classList.add('register-type-option')
     countryOption.value = country.name
     countryOption.textContent = country.name
+    // Set Malaysia as default option
+    if (country.code === 'MY') {
+      countryOption.selected = true
+    }
     countrySelect.appendChild(countryOption)
   }
   if (formData.plushieOriginCountry !== undefined) {
@@ -377,7 +380,7 @@ function submitCountry() {
 }
 
 function renderLocationForm() {
-  
+
 }
 
 function beginUpdateLocation() {
