@@ -259,6 +259,18 @@ section.form {
   justify-content: center;
   align-items: center;
 }
+.register-photo-wrapper {
+  display: flex;
+  gap: 2rem;
+  justify-content: stretch;
+  width: 100%;
+  max-width: 1000px;
+  height: 7rem;
+}
+button.register-photo-form-button {
+  font-size: 2rem;
+  margin: 0;
+}
 .update-location-search-wrapper {
   display: flex;
   justify-content: stretch;

@@ -448,6 +448,17 @@ function renderPhotoForm() {
   instruction.classList.add('instruction')
   instruction.textContent = "Now, we need a photo of you."
   form.appendChild(instruction)
+  const photoWrapper = document.createElement('div')
+  photoWrapper.classList.add('register-photo-wrapper')
+  const cameraButton = document.createElement('button')
+  cameraButton.classList.add('register-photo-form-button', 'button')
+  cameraButton.textContent = 'Take a photo'
+  photoWrapper.appendChild(cameraButton)
+  const galleryButton = document.createElement('button')
+  galleryButton.classList.add('register-photo-form-button', 'button')
+  galleryButton.textContent = 'Upload an existing photo'
+  photoWrapper.appendChild(galleryButton)
+  form.appendChild(photoWrapper)
 }
 
 function beginUpdateLocation() {
