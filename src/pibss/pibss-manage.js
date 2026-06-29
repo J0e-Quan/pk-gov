@@ -256,7 +256,7 @@ async function renderTypeForm() {
   instruction.textContent = "What type of plushie are you?"
   form.appendChild(instruction)
   const typeWrapper = document.createElement('div')
-  typeWrapper.classList.add('update-location-search-wrapper')
+  typeWrapper.classList.add('register-type-wrapper')
   const typeSelect = document.createElement('select')
   typeSelect.classList.add('register-type-select')
   const typesArray = await getUniqueTypes()
@@ -273,10 +273,6 @@ async function renderTypeForm() {
   typeOption.value = 'Other'
   typeOption.textContent = 'Other'
   typeSelect.appendChild(typeOption)
-  if (formData.plushieType !== undefined) {
-    typeSelect.value = formData.plushieType
-    updateFormStepButtons(true)
-  }
   typeSelect.addEventListener('change', toggleOtherTypeInput)
   typeWrapper.appendChild(typeSelect)
   const otherInput = document.createElement('input')
@@ -285,6 +281,17 @@ async function renderTypeForm() {
   otherInput.classList.add('update-location-searchbar', 'hidden')
   otherInput.id = 'other-input'
   typeWrapper.appendChild(otherInput)
+  if (formData.plushieType !== undefined) {
+    if (typesArray.includes(formData.plushieType)) {
+      typeSelect.value = formData.plushieType
+    } else {
+      typeSelect.value = 'Other'
+      // otherInput is manually removed here because the 'Other' option was not appended yet
+      otherInput.classList.remove('hidden')
+      otherInput.value = formData.plushieType
+    }
+    updateFormStepButtons(true)
+  }
   const submitButton = document.createElement('button')
   submitButton.classList.add('register-submit-name-button', 'button')
   submitButton.textContent = '→'
@@ -304,7 +311,7 @@ async function getUniqueTypes() {
 
   // converts array of objects into an array for easier looping
   const dataArray = data.map(item => item.type)
-  return dataArray
+  return dataArray.sort((a, b) => a.localeCompare(b.name))
 }
 
 function toggleOtherTypeInput() {

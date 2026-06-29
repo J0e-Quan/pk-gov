@@ -270,7 +270,7 @@ section.form {
   font-size: 2rem;
   margin: 0;
 }
-.update-location-search-wrapper {
+.update-location-search-wrapper, .register-type-wrapper {
   display: flex;
   justify-content: stretch;
   width: 100%;
@@ -406,6 +406,11 @@ button.update-location-submit-button {
   }
   .update-location-search-wrapper {
     height: auto;
+  }
+  .register-type-wrapper {
+    height: auto;
+    flex-wrap: wrap;
+    /* justify-content: center; */
   }
   .update-location-search-button, .update-location-searchbar, .register-type-select, .register-country-select, .register-location-select {
     font-size: 1rem;
