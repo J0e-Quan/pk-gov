@@ -266,7 +266,7 @@ section.form {
   max-width: 1000px;
   height: 7rem;
 }
-button.register-photo-form-button {
+.register-photo-form-button {
   font-size: 2rem;
   margin: 0;
 }
@@ -410,6 +410,18 @@ button.update-location-submit-button {
   .update-location-search-button, .update-location-searchbar, .register-type-select, .register-country-select, .register-location-select {
     font-size: 1rem;
     padding: 0.5rem 1rem;
+  }
+  .register-photo-wrapper {
+    height: auto;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+  .register-photo-form-button {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
   }
   .instruction {
     font-size: 2rem;
