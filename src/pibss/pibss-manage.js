@@ -380,7 +380,51 @@ function submitCountry() {
 }
 
 function renderLocationForm() {
+  if (!isFromStepButton) {
+    currentStep++
+  }
+  isFromStepButton = false
+  clearForm()
+  updateProgress()
+  updateFormStepButtons(false)
+  const form = content.querySelector('.form')
+  const instruction = document.createElement('h3')
+  instruction.classList.add('instruction')
+  instruction.textContent = "Where are you going to stay?"
+  form.appendChild(instruction)
+  const locationWrapper = document.createElement('div')
+  locationWrapper.classList.add('update-location-search-wrapper')
+  const locationSelect = document.createElement('select')
+  locationSelect.classList.add('register-location-select')
+  const locations = ['Big Tent Plains', 'Big Tent Stacks', 'The Studio', 'The Bedroom', 'The Sofa'] 
+  for (const location of locations) {
+    const locationOption = document.createElement('option')
+    locationOption.classList.add('register-type-option')
+    locationOption.value = location
+    locationOption.textContent = location
+    locationSelect.appendChild(locationOption)
+  }
+  if (formData.plushieLocation !== undefined) {
+    locationSelect.value = formData.plushieLocation
+    updateFormStepButtons(true)
+  }
+  locationWrapper.appendChild(locationSelect)
+  const submitButton = document.createElement('button')
+  submitButton.classList.add('register-submit-name-button', 'button')
+  submitButton.textContent = '→'
+  locationWrapper.appendChild(submitButton)
+  form.appendChild(locationWrapper)
+  submitButton.addEventListener('click', submitLocation)
+}
 
+function submitLocation() {
+  const locationSelect = document.querySelector('.register-location-select')
+  formData.plushieLocation = locationSelect.value
+  renderPhotoForm()
+}
+
+function renderPhotoForm() {
+  
 }
 
 function beginUpdateLocation() {
