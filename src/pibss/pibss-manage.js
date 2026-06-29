@@ -40,17 +40,17 @@ function changeReturnButton() {
   // })
 }
 
-function showProgressUI(formTitle, formSteps) {
+function showProgressUI() {
   const progress = document.createElement('section')
   progress.classList.add('progress')
   const title = document.createElement('h2')
   title.classList.add('progress-title')
-  title.textContent = formTitle + ': Step ' 
+  title.textContent = formData.name + ': Step ' 
   const stepNumber = document.createElement('span')
   stepNumber.classList.add('progress-number')
   stepNumber.textContent = 0
   title.appendChild(stepNumber)
-  title.append(' of ', formSteps)
+  title.append(' of ', totalSteps)
   progress.appendChild(title)
   const prevNextWrapper = document.createElement('div')
   prevNextWrapper.classList.add('form-step-button-wrapper')
@@ -72,11 +72,9 @@ function showProgressUI(formTitle, formSteps) {
   progressBarWrapper.appendChild(progressBar)
   progress.appendChild(progressBarWrapper)
   content.appendChild(progress)
-  changeReturnButton()
 }
 
 function updateProgress() {
-  console.log(currentStep)
   const stepNumber = document.querySelector('.progress-number')
   stepNumber.textContent = currentStep
   const progressBar = document.querySelector('.progress-bar')
@@ -124,7 +122,6 @@ function nextStep() {
 
 function clearForm() {
   const form = document.querySelector('.form')
-  console.log(form)
   if (form !== null) {
     form.innerHTML = ''
   }
@@ -134,7 +131,7 @@ function beginRegister() {
   content.innerHTML = ''
   totalSteps = 6
   formData = {
-    name: 'newPlushie',
+    name: 'Register a new plushie',
     formSteps: [], // fill this in when steps are done!!!
     plushieName: undefined,
     plushieDateJoined: undefined,
@@ -143,20 +140,112 @@ function beginRegister() {
     plushieLocation: undefined,
     plushiePhoto: undefined,
   }
-  // show start registering splash screen n stuff
+  renderSplashScreen()
+}
+
+function renderSplashScreen() {
+  const splashScreen = document.createElement('section')
+  splashScreen.classList.add('register-splash-screen')
+  const introTitle = document.createElement('h2')
+  introTitle.classList.add('register-intro-title')
+  introTitle.textContent = "Welcome to the Plushie Kingdom"
+  splashScreen.appendChild(introTitle)
+  const introText = document.createElement('p')
+  introText.classList.add('register-intro-text')
+  introText.textContent = "Let's get you registered in PIBSS. To start, we'll need some basic details about you."
+  splashScreen.appendChild(introText)
+  const startButton = document.createElement('button')
+  startButton.type = 'button'
+  startButton.classList.add('register-start-button', 'button')
+  startButton.textContent = 'Begin registration'
+  startButton.addEventListener('click', renderNameForm, {once: true})
+  splashScreen.appendChild(startButton)
+  content.appendChild(splashScreen)
+  changeReturnButton()
+}
+
+function renderNameForm() {
+  content.innerHTML = ''
+  isFormDone = false
+  showProgressUI()
+  if (!isFromStepButton) {
+    currentStep++
+  }
+  isFromStepButton = false
+  clearForm()
+  updateProgress()
+  updateFormStepButtons(false)
+  let form = document.querySelector('.form')
+  if (form === null) {
+    const form = document.createElement('section')
+    form.classList.add('form')
+    content.appendChild(form)
+  }
+  form = content.querySelector('.form')
+  const instruction = document.createElement('h3')
+  instruction.classList.add('instruction')
+  instruction.textContent = "What is your name?"
+  form.appendChild(instruction)
+  const nameWrapper = document.createElement('div')
+  nameWrapper.classList.add('update-location-search-wrapper')
+  const nameInput = document.createElement('input')
+  nameInput.type = 'text'
+  nameInput.placeholder = 'Enter a name here...'
+  nameInput.classList.add('update-location-searchbar')
+  nameInput.id = 'name'
+  if (formData.plushieName !== undefined) {
+    nameInput.value = formData.plushieName
+  }
+  nameWrapper.appendChild(nameInput)
+  const submitButton = document.createElement('button')
+  submitButton.classList.add('register-submit-name-button', 'button')
+  submitButton.textContent = '→'
+  nameWrapper.appendChild(submitButton)
+  form.appendChild(nameWrapper)
+  submitButton.addEventListener('click', submitName)
+}
+
+async function submitName() {
+  const nameInput = document.getElementById('name')
+  const name = nameInput.value
+  if (name === '') {
+    alert('Please enter a name!')
+  } else {
+    const {data, error} = await supabase
+      .from('database')
+      .select('name')
+
+    if (error) {
+      console.error(error)
+    }
+    // data returns an array of objects by default, we just need array of names (case-insensitive)
+    const namesArray = data.map(entry => entry.name.toLowerCase())
+    if (namesArray.includes(name.toLowerCase())) {
+      alert("Name cannot be a duplicate of an existing plushie's name!")
+      nameInput.value = ''
+    } else {
+      formData.plushieName = name
+      renderDateForm()
+    }
+  }
+}
+
+function renderDateForm() {
+
 }
 
 function beginUpdateLocation() {
   content.innerHTML = ''
   totalSteps = 3
   formData = {
-    name: 'updateLocation',
+    name: 'Update plushie location',
     formSteps: [renderPlushieSelectionForm, searchPlushies, renderUpdateLocationPage],
     searchValue: undefined,
     selectedPlushie: undefined,
     newLocation: undefined,
   }
-  showProgressUI('Update plushie location', totalSteps)
+  showProgressUI()
+  changeReturnButton()
   isFormDone = false
   renderPlushieSelectionForm()
 }
@@ -196,11 +285,6 @@ function renderPlushieSelectionForm() {
   searchButton.textContent = 'Search'
   searchWrapper.appendChild(searchButton)
   form.appendChild(searchWrapper)
-  initPlushieSearch()
-}
-
-function initPlushieSearch() {
-  const searchButton = document.querySelector('.update-location-search-button')
   searchButton.addEventListener('click', searchPlushies)
 }
 

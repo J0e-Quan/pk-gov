@@ -239,6 +239,21 @@ section.form {
   line-height: 1.2;
   margin-bottom: 1rem;
 }
+.register-intro-text {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.register-start-button {
+  margin: 0 auto;
+}
+.register-submit-name-button {
+  font-size: 3rem;
+  margin: 0;
+  padding: 0rem 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .update-location-search-wrapper {
   display: flex;
   justify-content: stretch;
