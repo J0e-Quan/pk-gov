@@ -459,6 +459,16 @@ function renderPhotoForm() {
   galleryButton.textContent = 'Upload an existing photo'
   photoWrapper.appendChild(galleryButton)
   form.appendChild(photoWrapper)
+  cameraButton.addEventListener('click', takePhoto)
+  galleryButton.addEventListener('click', uploadPhoto)
+}
+
+function takePhoto() {
+  // use <input type="file" accept="image/*" capture="environment"> for camera ui
+}
+
+function uploadPhoto() {
+  // use the same thing as takePhoto() without capture="environment"
 }
 
 function beginUpdateLocation() {
