@@ -132,6 +132,17 @@ function clearForm() {
 
 function beginRegister() {
   content.innerHTML = ''
+  totalSteps = 6
+  formData = {
+    name: 'newPlushie',
+    formSteps: , // fill this in when steps are done!!!
+    plushieName: undefined,
+    plushieDateJoined: undefined,
+    plushieType: undefined,
+    plushieOriginCountry: undefined,
+    plushieLocation: undefined,
+    plushiePhoto: undefined,
+  }
   // show start registering splash screen n stuff
 }
 
