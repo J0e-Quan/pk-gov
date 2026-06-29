@@ -104,7 +104,7 @@ async function getPlushieTypes() {
 
   // converts array of objects into an array for easier looping
   const dataArray = data.map(item => item.type)
-  populateTypes(dataArray)
+  populateTypes(dataArray.sort((a, b) => a.localeCompare(b.name)))
 }
 
 function populateTypes(data) {
