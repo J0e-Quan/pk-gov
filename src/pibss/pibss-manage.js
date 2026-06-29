@@ -132,7 +132,7 @@ function beginRegister() {
   totalSteps = 6
   formData = {
     name: 'Register a new plushie',
-    formSteps: [], // fill this in when steps are done!!!
+    formSteps: [renderNameForm, renderTypeForm], // fill this in when steps are done!!!
     plushieName: undefined,
     plushieDateJoined: Date.now(),
     plushieType: undefined,
@@ -168,10 +168,10 @@ function renderSplashScreen() {
 }
 
 function renderNameForm() {
-  isFormDone = false
-  showProgressUI()
   if (!isFromStepButton) {
     currentStep++
+    isFormDone = false
+    showProgressUI()
   }
   isFromStepButton = false
   clearForm()

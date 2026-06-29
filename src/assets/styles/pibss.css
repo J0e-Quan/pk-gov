@@ -260,7 +260,7 @@ section.form {
   width: 100%;
   max-width: 1000px;
 }
-.update-location-searchbar {
+.update-location-searchbar, .register-type-select {
   padding: 1rem 2rem;
   border: 16px solid var(--central-ministry-colour);
   font-size: 2rem;
