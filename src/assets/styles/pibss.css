@@ -401,10 +401,13 @@ button.update-location-submit-button {
   .note {
     font-size: 1rem;
   }
+  .register-submit-name-button {
+    font-size: 1.5rem;
+  }
   .update-location-search-wrapper {
     height: auto;
   }
-  .update-location-search-button, .update-location-searchbar {
+  .update-location-search-button, .update-location-searchbar, .register-type-select, .register-country-select, .register-location-select {
     font-size: 1rem;
     padding: 0.5rem 1rem;
   }
