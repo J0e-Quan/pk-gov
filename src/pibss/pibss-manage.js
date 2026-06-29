@@ -323,11 +323,11 @@ function submitType() {
     const typeSelect = document.querySelector('.register-type-select')
     formData.plushieType = typeSelect.value
   }
-  renderOriginForm()
+  renderCountryForm()
 }
 
-function renderOriginForm() {
-  console.log(formData)
+function renderCountryForm() {
+  
 }
 
 function beginUpdateLocation() {
