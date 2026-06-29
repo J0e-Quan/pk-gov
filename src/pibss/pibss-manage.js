@@ -1,4 +1,5 @@
 import { supabase } from "./pibss-common.js";
+import imageCompression from "browser-image-compression";
 
 // check if user is authenticated immediately
 checkUserAuthentication()
@@ -455,27 +456,73 @@ function renderPhotoForm() {
   instruction.classList.add('instruction')
   instruction.textContent = "Now, we need a photo of you."
   form.appendChild(instruction)
+  // create hidden inputs for receiving photos
+  const photoInput = document.createElement('input')
+  photoInput.type = 'file'
+  photoInput.id = 'photo'
+  photoInput.accept = 'image/*'
+  photoInput.setAttribute('capture', 'environment')
+  photoInput.classList.add('hidden')
+  form.appendChild(photoInput)
   const photoWrapper = document.createElement('div')
   photoWrapper.classList.add('register-photo-wrapper')
-  const cameraButton = document.createElement('button')
-  cameraButton.classList.add('register-photo-form-button', 'button')
-  cameraButton.textContent = 'Take a photo'
-  photoWrapper.appendChild(cameraButton)
-  const galleryButton = document.createElement('button')
-  galleryButton.classList.add('register-photo-form-button', 'button')
-  galleryButton.textContent = 'Upload an existing photo'
-  photoWrapper.appendChild(galleryButton)
+  const photoButton = document.createElement('button')
+  photoButton.classList.add('register-photo-form-button', 'button')
+  photoButton.textContent = 'Take or upload a photo'
+  photoWrapper.appendChild(photoButton)
   form.appendChild(photoWrapper)
-  cameraButton.addEventListener('click', takePhoto)
-  galleryButton.addEventListener('click', uploadPhoto)
+  photoButton.addEventListener('click', () => {
+    photoInput.click()
+  })
+  photoInput.addEventListener('change', (e) => processPhoto(e.target.files[0]))
 }
 
-function takePhoto() {
-  // use <input type="file" accept="image/*" capture="environment"> for camera ui
+async function processPhoto(photo) {
+  const options = {
+    maxSizeMB: 0.5,
+    useWebWorker: true,
+    maxWidthOrHeight: 1020,
+    fileType: 'image/webp'
+  }
+  try {
+    const compressedPhoto = await imageCompression(photo, options)
+    renderPhoto(compressedPhoto)
+  } catch (error) {
+    console.error(error)
+  }
 }
 
-function uploadPhoto() {
-  // use the same thing as takePhoto() without capture="environment"
+function renderPhoto(photo) {
+  const form = document.querySelector('.form')
+  const photoWrapper = document.querySelector('.register-photo-wrapper')
+  photoWrapper.remove()
+  const photoContainer = document.createElement('div')
+  photoContainer.classList.add('register-photo-preview')
+  const photoURL = URL.createObjectURL(photo);
+  const photoElement = document.createElement('img')
+  photoElement.classList.add('register-photo')
+  photoElement.src = photoURL
+  photoElement.alt = 'Picture of the plushie'
+  photoContainer.appendChild(photoElement)
+  const confirmationText = document.createElement('p')
+  confirmationText.classList.add('note')
+  confirmationText.textContent = "This is your photo which will be stored in PIBSS. Happy with it?"
+  photoContainer.appendChild(confirmationText)
+  const retakeButton = document.createElement('button')
+  retakeButton.type = 'button'
+  retakeButton.classList.add('register-photo-form-button', 'button')
+  retakeButton.textContent = 'Retake or use a different photo'
+  photoContainer.appendChild(retakeButton)
+  const submitButton = document.createElement('button')
+  submitButton.type = 'button'
+  submitButton.classList.add('button')
+  submitButton.textContent = 'Use this photo'
+  photoContainer.appendChild(submitButton)
+  form.appendChild(photoContainer)
+  retakeButton.addEventListener('click', () => {
+    const photoInput = document.getElementById('photo')
+    photoInput.click()
+  })
 }
 
 function beginUpdateLocation() {
