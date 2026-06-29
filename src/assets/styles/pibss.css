@@ -261,7 +261,7 @@ section.form {
   max-width: 1000px;
   height: 7rem;
 }
-.update-location-searchbar, .register-type-select {
+.update-location-searchbar, .register-type-select, .register-country-select {
   padding: 1rem 2rem;
   border: 16px solid var(--central-ministry-colour);
   font-size: 2rem;

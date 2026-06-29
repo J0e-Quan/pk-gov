@@ -270,7 +270,6 @@ async function renderTypeForm() {
   }
   typeSelect.addEventListener('change', toggleOtherTypeInput)
   typeWrapper.appendChild(typeSelect)
-
   const otherInput = document.createElement('input')
   otherInput.type = 'text'
   otherInput.placeholder = 'Enter a type here...'
@@ -326,7 +325,58 @@ function submitType() {
   renderCountryForm()
 }
 
-function renderCountryForm() {
+async function renderCountryForm() {
+  if (!isFromStepButton) {
+    currentStep++
+  }
+  isFromStepButton = false
+  clearForm()
+  updateProgress()
+  updateFormStepButtons(false)
+  const form = content.querySelector('.form')
+  const instruction = document.createElement('h3')
+  instruction.classList.add('instruction')
+  instruction.textContent = "Which country are you from?"
+  form.appendChild(instruction)
+  const countryWrapper = document.createElement('div')
+  countryWrapper.classList.add('update-location-search-wrapper')
+  const countrySelect = document.createElement('select')
+  countrySelect.classList.add('register-country-select')
+  const countries = await getCountries()
+  console.log(countries)
+  for (const country of countries) {
+    const countryOption = document.createElement('option')
+    countryOption.classList.add('register-type-option')
+    countryOption.value = country.name
+    countryOption.textContent = country.name
+    countrySelect.appendChild(countryOption)
+  }
+  if (formData.plushieOriginCountry !== undefined) {
+    countrySelect.value = formData.plushieOriginCountry
+    updateFormStepButtons(true)
+  }
+  countryWrapper.appendChild(countrySelect)
+  const submitButton = document.createElement('button')
+  submitButton.classList.add('register-submit-name-button', 'button')
+  submitButton.textContent = '→'
+  countryWrapper.appendChild(submitButton)
+  form.appendChild(countryWrapper)
+  submitButton.addEventListener('click', submitCountry)
+}
+
+async function getCountries() {
+  const countries = await fetch('https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/index.json')
+  const countriesArray = await countries.json()
+  return countriesArray.sort((a, b) => a.name.localeCompare(b.name))
+}
+
+function submitCountry() {
+  const countrySelect = document.querySelector('.register-country-select')
+  formData.plushieOriginCountry = countrySelect.value
+  renderLocationForm()
+}
+
+function renderLocationForm() {
   
 }
 
