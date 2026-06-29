@@ -132,15 +132,24 @@ function beginRegister() {
   totalSteps = 6
   formData = {
     name: 'Register a new plushie',
-    formSteps: [renderNameForm, renderTypeForm], // fill this in when steps are done!!!
+    formSteps: [renderNameForm, renderTypeForm, renderCountryForm, renderLocationForm, renderPhotoForm], // fill this in when steps are done!!!
     plushieName: undefined,
-    plushieDateJoined: Date.now(),
+    plushieDateJoined: getDate(),
     plushieType: undefined,
     plushieOriginCountry: undefined,
     plushieLocation: undefined,
     plushiePhoto: undefined,
   }
   renderSplashScreen()
+}
+
+function getDate() {
+  // Date.now() isn't used because it gives the date in ms, this ensures the date matches the user's timezone
+  const localDate = new Date();
+  const year = localDate.getFullYear();
+  const month = String(localDate.getMonth() + 1).padStart(2, '0') // Months are 0-indexed
+  const day = String(localDate.getDate()).padStart(2, '0') // Days are 0-indexed
+  return year + '-' + month + '-' + day
 }
 
 function renderSplashScreen() {
@@ -424,7 +433,19 @@ function submitLocation() {
 }
 
 function renderPhotoForm() {
-  
+  if (!isFromStepButton) {
+    currentStep++
+  }
+  isFromStepButton = false
+  clearForm()
+  updateProgress()
+  updateFormStepButtons(false)
+  const form = content.querySelector('.form')
+  const instruction = document.createElement('h3')
+  instruction.classList.add('instruction')
+  instruction.textContent = "Now, we need a photo of you."
+  form.appendChild(instruction)
+  console.log(formData)
 }
 
 function beginUpdateLocation() {
