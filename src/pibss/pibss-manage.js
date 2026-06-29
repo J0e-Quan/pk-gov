@@ -134,7 +134,7 @@ function beginRegister() {
     name: 'Register a new plushie',
     formSteps: [], // fill this in when steps are done!!!
     plushieName: undefined,
-    plushieDateJoined: undefined,
+    plushieDateJoined: Date.now(),
     plushieType: undefined,
     plushieOriginCountry: undefined,
     plushieLocation: undefined,
@@ -158,14 +158,16 @@ function renderSplashScreen() {
   startButton.type = 'button'
   startButton.classList.add('register-start-button', 'button')
   startButton.textContent = 'Begin registration'
-  startButton.addEventListener('click', renderNameForm, {once: true})
+  startButton.addEventListener('click', () => {
+    content.innerHTML = ''
+    renderNameForm()
+  }, {once: true})
   splashScreen.appendChild(startButton)
   content.appendChild(splashScreen)
   changeReturnButton()
 }
 
 function renderNameForm() {
-  content.innerHTML = ''
   isFormDone = false
   showProgressUI()
   if (!isFromStepButton) {
@@ -195,6 +197,7 @@ function renderNameForm() {
   nameInput.id = 'name'
   if (formData.plushieName !== undefined) {
     nameInput.value = formData.plushieName
+    updateFormStepButtons(true)
   }
   nameWrapper.appendChild(nameInput)
   const submitButton = document.createElement('button')
@@ -225,13 +228,91 @@ async function submitName() {
       nameInput.value = ''
     } else {
       formData.plushieName = name
-      renderDateForm()
+      renderTypeForm()
     }
   }
 }
 
-function renderDateForm() {
+async function renderTypeForm() {
+  if (!isFromStepButton) {
+    currentStep++
+  }
+  isFromStepButton = false
+  clearForm()
+  updateProgress()
+  updateFormStepButtons(false)
+  const form = content.querySelector('.form')
+  const instruction = document.createElement('h3')
+  instruction.classList.add('instruction')
+  instruction.textContent = "What type of plushie are you?"
+  form.appendChild(instruction)
+  const typeWrapper = document.createElement('div')
+  typeWrapper.classList.add('update-location-search-wrapper')
+  const typeSelect = document.createElement('select')
+  typeSelect.classList.add('register-type-select')
+  const typesArray = await getUniqueTypes()
+  console.log(typesArray)
+  for (const type of typesArray) {
+    const typeOption = document.createElement('option')
+    typeOption.classList.add('register-type-option')
+    typeOption.value = type
+    typeOption.textContent = type
+    typeSelect.appendChild(typeOption)
+  }
+  const typeOption = document.createElement('option')
+  typeOption.classList.add('register-type-option')
+  typeOption.id = 'other-type'
+  typeOption.value = 'Other'
+  typeOption.textContent = 'Other'
+  typeSelect.appendChild(typeOption)
+  if (formData.plushieType !== undefined) {
+    typeSelect.value = formData.plushieType
+    updateFormStepButtons(true)
+  }
+  typeSelect.addEventListener('change', toggleOtherTypeInput)
+  typeWrapper.appendChild(typeSelect)
 
+  const otherInput = document.createElement('input')
+  otherInput.type = 'text'
+  otherInput.placeholder = 'Enter a type here...'
+  otherInput.classList.add('update-location-searchbar', 'hidden')
+  otherInput.id = 'other-input'
+  typeWrapper.appendChild(otherInput)
+  const submitButton = document.createElement('button')
+  submitButton.classList.add('register-submit-name-button', 'button')
+  submitButton.textContent = '→'
+  typeWrapper.appendChild(submitButton)
+  form.appendChild(typeWrapper)
+  submitButton.addEventListener('click', submitType)
+}
+
+async function getUniqueTypes() {
+  const { data, error } = await supabase
+    .from('unique_types')                  // 1. Target 'unique_types' view
+    .select('*')                           // 2. Get all unique values from it
+
+  if (error) {
+    return console.error('Error fetching data:', error.message)
+  }
+
+  // converts array of objects into an array for easier looping
+  const dataArray = data.map(item => item.type)
+  return dataArray
+}
+
+function toggleOtherTypeInput() {
+  const other = document.getElementById('other-type')
+  if (other.selected) {
+    const otherInput = document.getElementById('other-input')
+    otherInput.classList.remove('hidden')
+  } else {
+    const otherInput = document.getElementById('other-input')
+    otherInput.classList.add('hidden')
+  }
+}
+
+function submitType() {
+  
 }
 
 function beginUpdateLocation() {
