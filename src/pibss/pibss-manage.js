@@ -251,7 +251,6 @@ async function renderTypeForm() {
   const typeSelect = document.createElement('select')
   typeSelect.classList.add('register-type-select')
   const typesArray = await getUniqueTypes()
-  console.log(typesArray)
   for (const type of typesArray) {
     const typeOption = document.createElement('option')
     typeOption.classList.add('register-type-option')
@@ -312,7 +311,23 @@ function toggleOtherTypeInput() {
 }
 
 function submitType() {
-  
+  const other = document.getElementById('other-type')
+  if (other.selected) {
+    const otherInput = document.getElementById('other-input')
+    if (otherInput.value === '') {
+      alert('Please input a type or choose from the existing options!')
+    } else {
+      formData.plushieType = otherInput.value
+    }
+  } else if (!other.selected) {
+    const typeSelect = document.querySelector('.register-type-select')
+    formData.plushieType = typeSelect.value
+  }
+  renderOriginForm()
+}
+
+function renderOriginForm() {
+  console.log(formData)
 }
 
 function beginUpdateLocation() {
