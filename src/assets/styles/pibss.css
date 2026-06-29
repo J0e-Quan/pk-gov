@@ -207,6 +207,12 @@ section.form {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+.prev-step {
+  margin-right: auto;
+}
+.next-step {
+  margin-left: auto;
+}
 .form-step-button {
   font-size: 2rem;
   text-decoration: underline;
