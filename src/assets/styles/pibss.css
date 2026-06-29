@@ -392,6 +392,18 @@ button.update-location-submit-button {
     width: 100%;
     font-size: 1.5rem;
   }
+  .register-intro-title {
+    font-size: 2.5rem;
+  }
+  .register-intro-text {
+    font-size: 1.25rem;
+  }
+  .note {
+    font-size: 1rem;
+  }
+  .update-location-search-wrapper {
+    height: auto;
+  }
   .update-location-search-button, .update-location-searchbar {
     font-size: 1rem;
     padding: 0.5rem 1rem;
