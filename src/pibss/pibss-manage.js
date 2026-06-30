@@ -497,27 +497,30 @@ function renderPhoto(photo) {
   const photoWrapper = document.querySelector('.register-photo-wrapper')
   photoWrapper.remove()
   const photoContainer = document.createElement('div')
-  photoContainer.classList.add('register-photo-preview')
+  photoContainer.classList.add('register-photo-container')
   const photoURL = URL.createObjectURL(photo);
   const photoElement = document.createElement('img')
-  photoElement.classList.add('register-photo')
+  photoElement.classList.add('register-photo-preview')
   photoElement.src = photoURL
   photoElement.alt = 'Picture of the plushie'
   photoContainer.appendChild(photoElement)
+  const textContainer = document.createElement('div')
+  textContainer.classList.add('register-photo-text-container')
   const confirmationText = document.createElement('p')
   confirmationText.classList.add('note')
   confirmationText.textContent = "This is your photo which will be stored in PIBSS. Happy with it?"
-  photoContainer.appendChild(confirmationText)
+  textContainer.appendChild(confirmationText)
   const retakeButton = document.createElement('button')
   retakeButton.type = 'button'
   retakeButton.classList.add('register-photo-form-button', 'button')
-  retakeButton.textContent = 'Retake or use a different photo'
-  photoContainer.appendChild(retakeButton)
+  retakeButton.textContent = 'Use another photo'
+  textContainer.appendChild(retakeButton)
   const submitButton = document.createElement('button')
   submitButton.type = 'button'
-  submitButton.classList.add('button')
+  submitButton.classList.add('register-photo-form-button', 'button')
   submitButton.textContent = 'Use this photo'
-  photoContainer.appendChild(submitButton)
+  textContainer.appendChild(submitButton)
+  photoContainer.appendChild(textContainer)
   form.appendChild(photoContainer)
   retakeButton.addEventListener('click', () => {
     const photoInput = document.getElementById('photo')
