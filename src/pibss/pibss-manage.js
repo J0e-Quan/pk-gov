@@ -584,8 +584,13 @@ function renderConfirmationForm(photoURL) {
   const submitButton = document.createElement('button')
   submitButton.classList.add('register-confirm-button', 'button')
   submitButton.textContent = 'Submit data to PIBSS'
+  submitButton.addEventListener('click', submitData)
   form.appendChild(card) 
   form.appendChild(submitButton)
+}
+
+function submitData() {
+  
 }
 
 function beginUpdateLocation() {
