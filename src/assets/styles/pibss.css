@@ -40,7 +40,7 @@ select option {
   width: 100%;
 }
 
-.pibss-card {
+.pibss-card, .register-pibss-card {
   flex: 1 1 calc(50% - 0.5rem);
   display: flex;
   gap: 1rem;
@@ -299,6 +299,20 @@ section.form {
 .register-photo-text-container .register-photo-form-button {
   margin: 0;
 }
+.register-pibss-card {
+  transition: none;
+  width: fit-content;
+  margin: 0 auto 1rem;
+}
+.register-pibss-card .pibss-card-text {
+  width: fit-content;
+}
+.register-confirm-note {
+  margin: -1rem 0 2rem;
+}
+.register-confirm-button {
+  margin: 0 auto;
+}
 .update-location-search-wrapper, .register-type-wrapper {
   display: flex;
   justify-content: stretch;
@@ -377,7 +391,7 @@ button.update-location-submit-button {
     flex-wrap: nowrap;
     align-items: stretch;
   }
-  .pibss-card {
+  .pibss-card, .register-pibss-card {
     gap: 0.5rem;
     min-width: 0;
   }
@@ -439,7 +453,6 @@ button.update-location-submit-button {
   .register-type-wrapper {
     height: auto;
     flex-wrap: wrap;
-    /* justify-content: center; */
   }
   .update-location-search-button, .update-location-searchbar, .register-type-select, .register-country-select, .register-location-select {
     font-size: 1rem;
@@ -462,6 +475,13 @@ button.update-location-submit-button {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+  }
+  .register-confirm-button {
+    max-width: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
   }
   .instruction {
     font-size: 2rem;

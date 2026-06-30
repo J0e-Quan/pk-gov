@@ -526,6 +526,66 @@ function renderPhoto(photo) {
     const photoInput = document.getElementById('photo')
     photoInput.click()
   })
+  submitButton.addEventListener('click', () => {
+    formData.plushiePhoto = photo
+    renderConfirmationForm(photoURL)
+  })
+}
+
+function renderConfirmationForm(photoURL) {
+  if (!isFromStepButton) {
+    currentStep++
+  }
+  isFromStepButton = false
+  clearForm()
+  updateProgress()
+  updateFormStepButtons(false)
+  const form = content.querySelector('.form')
+  const instruction = document.createElement('h3')
+  instruction.classList.add('instruction')
+  instruction.textContent = "You're almost there! Make sure that all your data is accurate before submitting."
+  form.appendChild(instruction)
+  const note = document.createElement('p')
+  note.classList.add('note', 'register-confirm-note')
+  note.textContent = "If you want to change anything, please use the 'Previous step' button to do so!"
+  form.appendChild(note)
+  const card = document.createElement('div')
+  card.classList.add('register-pibss-card')
+  const picture = document.createElement('img')
+  picture.classList.add('pibss-picture')
+  // photo from formData cannot be used, the URL from photo-preview is passed in here instead
+  picture.src = photoURL
+  card.appendChild(picture)
+  const cardText = document.createElement('div')
+  cardText.classList.add('pibss-card-text')
+  const name = document.createElement('h2')
+  name.classList.add('pibss-name')
+  name.textContent = formData.plushieName
+  cardText.appendChild(name)
+  const type = document.createElement('p')
+  type.classList.add('pibss-type')
+  type.textContent = 'Type: ' + formData.plushieType
+  cardText.appendChild(type)
+  const country = document.createElement('p')
+  country.classList.add('pibss-country')
+  country.textContent = 'Origin Country: ' + formData.plushieOriginCountry
+  cardText.appendChild(country)
+  const date = document.createElement('p')
+  date.classList.add('pibss-date')
+  const dateRaw = new Date(formData.plushieDateJoined)
+  const formattedDate = dateRaw.toLocaleDateString('en-GB', {day: 'numeric', month: 'short', year: 'numeric'})
+  date.textContent = 'Date Joined: ' + formattedDate
+  cardText.appendChild(date)
+  const location = document.createElement('p')
+  location.classList.add('pibss-location')
+  location.textContent = 'Residence: ' + formData.plushieLocation
+  cardText.appendChild(location)
+  card.appendChild(cardText)
+  const submitButton = document.createElement('button')
+  submitButton.classList.add('register-confirm-button', 'button')
+  submitButton.textContent = 'Submit data to PIBSS'
+  form.appendChild(card) 
+  form.appendChild(submitButton)
 }
 
 function beginUpdateLocation() {
