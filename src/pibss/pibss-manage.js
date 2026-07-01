@@ -32,13 +32,12 @@ function changeReturnButton() {
   const returnButton = document.querySelector('.return')
   returnButton.textContent = 'Return to dashboard'
   returnButton.href = '/pibss/manage/'
-  // ENABLE THIS WHEN FORM IS DONE!!!!!!
-  // window.addEventListener('beforeunload', (event) => {
-  //   if (isFormDone === false) {
-  //     event.preventDefault()
-  //     event.returnValue = ''
-  //   }
-  // })
+  window.addEventListener('beforeunload', (event) => {
+    if (isFormDone === false) {
+      event.preventDefault()
+      event.returnValue = ''
+    }
+  })
 }
 
 function showProgressUI() {
@@ -141,10 +140,10 @@ function beginRegister() {
     plushieLocation: undefined,
     plushiePhoto: undefined,
   }
-  renderSplashScreen()
+  renderRegisterSplashScreen()
 }
 
-function renderSplashScreen() {
+function renderRegisterSplashScreen() {
   const splashScreen = document.createElement('section')
   splashScreen.classList.add('register-splash-screen')
   const introTitle = document.createElement('h2')
@@ -850,14 +849,38 @@ function beginUpdateLocation() {
     selectedPlushie: undefined,
     newLocation: undefined,
   }
-  showProgressUI()
   changeReturnButton()
-  isFormDone = false
-  renderPlushieSelectionForm()
+  rederUpdateLocationSplashScreen()
+}
+
+function rederUpdateLocationSplashScreen() {
+  const splashScreen = document.createElement('section')
+  splashScreen.classList.add('register-splash-screen')
+  const introTitle = document.createElement('h2')
+  introTitle.classList.add('register-intro-title')
+  introTitle.textContent = "Update the location of an existing plushie in PIBSS"
+  splashScreen.appendChild(introTitle)
+  const introText = document.createElement('p')
+  introText.classList.add('register-intro-text')
+  introText.textContent = "Keep a plushie's whereabouts in check by updating their location. Location data can ONLY be updated by the plushie themselves or the plushie's parent(s) if they are a child."
+  splashScreen.appendChild(introText)
+  const startButton = document.createElement('button')
+  startButton.type = 'button'
+  startButton.classList.add('register-start-button', 'button')
+  startButton.textContent = 'Update location'
+  startButton.addEventListener('click', () => {
+    content.innerHTML = ''
+    renderPlushieSelectionForm()
+  }, {once: true})
+  splashScreen.appendChild(startButton)
+  content.appendChild(splashScreen)
+  changeReturnButton()
 }
 
 function renderPlushieSelectionForm() {
   if (!isFromStepButton) {
+    showProgressUI()
+    isFormDone = false
     currentStep++
   }
   isFromStepButton = false
