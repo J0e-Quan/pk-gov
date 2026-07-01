@@ -127,6 +127,30 @@ function clearForm() {
   }
 }
 
+function renderSplashScreen(title, text, buttonText, firstForm) {
+  const splashScreen = document.createElement('section')
+  splashScreen.classList.add('register-splash-screen')
+  const introTitle = document.createElement('h2')
+  introTitle.classList.add('register-intro-title')
+  introTitle.textContent = title
+  splashScreen.appendChild(introTitle)
+  const introText = document.createElement('p')
+  introText.classList.add('register-intro-text')
+  introText.textContent = text
+  splashScreen.appendChild(introText)
+  const startButton = document.createElement('button')
+  startButton.type = 'button'
+  startButton.classList.add('register-start-button', 'button')
+  startButton.textContent = buttonText
+  startButton.addEventListener('click', () => {
+    content.innerHTML = ''
+    firstForm()
+  }, {once: true})
+  splashScreen.appendChild(startButton)
+  content.appendChild(splashScreen)
+  changeReturnButton()
+}
+
 function beginRegister() {
   content.innerHTML = ''
   totalSteps = 7
@@ -140,31 +164,12 @@ function beginRegister() {
     plushieLocation: undefined,
     plushiePhoto: undefined,
   }
-  renderRegisterSplashScreen()
-}
-
-function renderRegisterSplashScreen() {
-  const splashScreen = document.createElement('section')
-  splashScreen.classList.add('register-splash-screen')
-  const introTitle = document.createElement('h2')
-  introTitle.classList.add('register-intro-title')
-  introTitle.textContent = "Register yourself in the Plushie Immigration and Biodata Storage Service (PIBSS)"
-  splashScreen.appendChild(introTitle)
-  const introText = document.createElement('p')
-  introText.classList.add('register-intro-text')
-  introText.textContent = "Let's get you registered in PIBSS to obtain your Plushie Kingdom citizenship. We just need some basic details about you."
-  splashScreen.appendChild(introText)
-  const startButton = document.createElement('button')
-  startButton.type = 'button'
-  startButton.classList.add('register-start-button', 'button')
-  startButton.textContent = 'Begin registration'
-  startButton.addEventListener('click', () => {
-    content.innerHTML = ''
-    renderNameForm()
-  }, {once: true})
-  splashScreen.appendChild(startButton)
-  content.appendChild(splashScreen)
-  changeReturnButton()
+  renderSplashScreen(
+    'Register yourself in the Plushie Immigration and Biodata Storage Service (PIBSS)',
+    "Let's get you registered in PIBSS to obtain your Plushie Kingdom citizenship. We just need some basic details about you.",
+    'Begin registration',
+    renderNameForm
+  )
 }
 
 function renderNameForm() {
@@ -850,31 +855,12 @@ function beginUpdateLocation() {
     newLocation: undefined,
   }
   changeReturnButton()
-  rederUpdateLocationSplashScreen()
-}
-
-function rederUpdateLocationSplashScreen() {
-  const splashScreen = document.createElement('section')
-  splashScreen.classList.add('register-splash-screen')
-  const introTitle = document.createElement('h2')
-  introTitle.classList.add('register-intro-title')
-  introTitle.textContent = "Update the location of an existing plushie in PIBSS"
-  splashScreen.appendChild(introTitle)
-  const introText = document.createElement('p')
-  introText.classList.add('register-intro-text')
-  introText.textContent = "Keep a plushie's whereabouts in check by updating their location. Location data can ONLY be updated by the plushie themselves or the plushie's parent(s) if they are a child."
-  splashScreen.appendChild(introText)
-  const startButton = document.createElement('button')
-  startButton.type = 'button'
-  startButton.classList.add('register-start-button', 'button')
-  startButton.textContent = 'Update location'
-  startButton.addEventListener('click', () => {
-    content.innerHTML = ''
-    renderPlushieSelectionForm()
-  }, {once: true})
-  splashScreen.appendChild(startButton)
-  content.appendChild(splashScreen)
-  changeReturnButton()
+  renderSplashScreen(
+    "Update the location of an existing plushie in PIBSS",
+    "Keep a plushie's whereabouts in check by updating their location. Location data can ONLY be updated by the plushie themselves or the plushie's parents if they are a child.",
+    'Update location',
+    renderPlushieSelectionForm
+  )
 }
 
 function renderPlushieSelectionForm() {
