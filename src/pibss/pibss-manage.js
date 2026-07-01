@@ -289,6 +289,16 @@ async function renderTypeForm() {
   submitButton.textContent = '→'
   typeWrapper.appendChild(submitButton)
   form.appendChild(typeWrapper)
+  typeSelect.addEventListener('change', () => {
+    if (typeSelect.value !== 'Other') {
+      formData.plushieType = typeSelect.value
+    } else if (typeSelect.value === 'Other') {
+      formData.plushieType = otherInput.value
+    }
+  })
+  otherInput.addEventListener('change', () => {
+    formData.plushieType = otherInput.value
+  })
   submitButton.addEventListener('click', submitType)
 }
 
