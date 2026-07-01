@@ -32,12 +32,12 @@ function changeReturnButton() {
   const returnButton = document.querySelector('.return')
   returnButton.textContent = 'Return to dashboard'
   returnButton.href = '/pibss/manage/'
-  window.addEventListener('beforeunload', (event) => {
-    if (isFormDone === false) {
-      event.preventDefault()
-      event.returnValue = ''
-    }
-  })
+  // window.addEventListener('beforeunload', (event) => {
+  //   if (isFormDone === false) {
+  //     event.preventDefault()
+  //     event.returnValue = ''
+  //   }
+  // })
 }
 
 function showProgressUI() {
@@ -808,12 +808,31 @@ async function submitData(photoURL) {
   // delete the URL from memory to save RAM
   URL.revokeObjectURL(photoURL)
   showLoadingScreen('Submitting your data to PIBSS...')
+  // 'Plushie name' becomes 'plushie-name'
+  const photoFileName = formData.plushieName.trim().toLowerCase().replace(/\s+/g, '-')
+  // upload image to supabase storage first
+  const {error: storageError} = await supabase
+    .storage
+    .from('pibss-images')
+    .upload(photoFileName, formData.plushiePhoto, {
+      contentType: 'image/webp',
+      cacheControl: '3600'
+    })
+  if (storageError) {
+    console.error(storageError)
+  }
+  // get public url of image in supabase storage
+  const { data: { publicUrl } } = supabase
+      .storage
+      .from('pibss-images')
+      .getPublicUrl(photoFileName)
+  // submit all data to supabase
   const { error } = await supabase
     .from('database')
     .insert({ 
       name: formData.plushieName,
       type: formData.plushieType,
-      photo_url: formData.plushiePhoto,
+      photo_url: publicUrl,
       country_of_origin: formData.plushieOriginCountry,
       location: formData.plushieLocation,
     })
