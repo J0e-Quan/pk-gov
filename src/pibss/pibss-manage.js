@@ -658,13 +658,15 @@ function renderConfirmationForm(photoURL) {
   const submitButton = document.createElement('button')
   submitButton.classList.add('register-confirm-button', 'button')
   submitButton.textContent = 'Submit data to PIBSS'
-  submitButton.addEventListener('click', submitData)
+  submitButton.addEventListener('click', () => submitData(photoURL))
   form.appendChild(card) 
   form.appendChild(submitButton)
 }
 
-function submitData() {
-  
+function submitData(photoURL) {
+  // delete the URL from memory to save RAM
+  URL.revokeObjectURL(photoURL)
+  // send data to supabase and show loadingCircle
 }
 
 function beginUpdateLocation() {
