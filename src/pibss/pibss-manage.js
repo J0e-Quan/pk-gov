@@ -477,7 +477,50 @@ function renderPhotoForm() {
   photoInput.addEventListener('change', (e) => processPhoto(e.target.files[0]))
 }
 
+async function autoCropTo34(file) {
+  // 1. Convert the file into an Image element while fixing EXIF orientation
+  const image = await imageCompression.drawFileInCanvas(file);
+  
+  const canvas = document.createElement('canvas');
+  const ctx = canvas.getContext('2d');
+
+  let sourceX = 0;
+  let sourceY = 0;
+  let targetWidth = image.width;
+  let targetHeight = image.height;
+
+  // 2. Determine if the image is Portrait or Landscape and calculate the 3:4 crop
+  if (image.width < image.height) {
+    // TALL PORTRAIT (e.g., 9:16 from a phone camera)
+    // Keep 100% of the width, shorten the height to match 3:4
+    targetHeight = image.width * (4 / 3);
+    sourceY = (image.height - targetHeight) / 2; // Center vertically
+  } else {
+    // WIDE LANDSCAPE (or a flat 1:1 square)
+    // Keep 100% of the height, narrow the width to match 3:4
+    targetWidth = image.height * (3 / 4);
+    sourceX = (image.width - targetWidth) / 2; // Center horizontally
+  }
+
+  // 3. Set canvas to our new precise 3:4 bounding box dimensions
+  canvas.width = targetWidth;
+  canvas.height = targetHeight;
+
+  // 4. Extract the centered 3:4 frame out of the source image
+  ctx.drawImage(
+    image,
+    sourceX, sourceY, targetWidth, targetHeight, // Crop window area
+    0, 0, targetWidth, targetHeight             // Draw size matching canvas
+  );
+
+  // 5. Convert back to a standard Blob using the original image format type
+  return new Promise((resolve) => {
+    canvas.toBlob((blob) => resolve(blob), file.type);
+  });
+}
+
 async function processPhoto(photo) {
+  const croppedPhoto = await autocropto34(photo)
   const options = {
     maxSizeMB: 0.5,
     useWebWorker: true,
@@ -485,7 +528,7 @@ async function processPhoto(photo) {
     fileType: 'image/webp'
   }
   try {
-    const compressedPhoto = await imageCompression(photo, options)
+    const compressedPhoto = await imageCompression(croppedPhoto, options)
     renderPhoto(compressedPhoto)
   } catch (error) {
     console.error(error)
