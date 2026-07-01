@@ -130,27 +130,18 @@ function clearForm() {
 
 function beginRegister() {
   content.innerHTML = ''
-  totalSteps = 6
+  totalSteps = 7
   formData = {
     name: 'Register a new plushie',
-    formSteps: [renderNameForm, renderTypeForm, renderCountryForm, renderLocationForm, renderPhotoForm, renderConfirmationForm],
+    formSteps: [renderNameForm, renderTypeForm, renderCountryForm, renderDateForm, renderLocationForm, renderPhotoForm, renderConfirmationForm],
     plushieName: undefined,
-    plushieDateJoined: getDate(),
+    plushieDateJoined: undefined,
     plushieType: undefined,
     plushieOriginCountry: undefined,
     plushieLocation: undefined,
     plushiePhoto: undefined,
   }
   renderSplashScreen()
-}
-
-function getDate() {
-  // Date.now() isn't used because it gives the date in ms, this ensures the date matches the user's timezone
-  const localDate = new Date();
-  const year = localDate.getFullYear();
-  const month = String(localDate.getMonth() + 1).padStart(2, '0') // Months are 0-indexed
-  const day = String(localDate.getDate()).padStart(2, '0') // Days are 0-indexed
-  return year + '-' + month + '-' + day
 }
 
 function renderSplashScreen() {
@@ -393,6 +384,31 @@ function submitCountry() {
   const countrySelect = document.querySelector('.register-country-select')
   formData.plushieOriginCountry = countrySelect.value
   renderLocationForm()
+}
+
+// ADD FORM STEP ASKING FOR DATE, CAN USE RADIO BUTTONS AND DATE OBJECT FOR "OTHERS"
+function renderDateForm() {
+  if (!isFromStepButton) {
+    currentStep++
+  }
+  isFromStepButton = false
+  clearForm()
+  updateProgress()
+  updateFormStepButtons(false)
+  const form = content.querySelector('.form')
+  const instruction = document.createElement('h3')
+  instruction.classList.add('instruction')
+  instruction.textContent = "When did you arrive at the Plushie Kingdom?"
+  form.appendChild(instruction)
+}
+
+function getCurrentDate() {
+  // Date.now() isn't used because it gives the date in ms, this ensures the date matches the user's timezone
+  const localDate = new Date();
+  const year = localDate.getFullYear();
+  const month = String(localDate.getMonth() + 1).padStart(2, '0') // Months are 0-indexed
+  const day = String(localDate.getDate()).padStart(2, '0') // Days are 0-indexed
+  return year + '-' + month + '-' + day
 }
 
 function renderLocationForm() {
