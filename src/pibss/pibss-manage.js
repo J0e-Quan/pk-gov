@@ -471,6 +471,10 @@ function renderPhotoForm() {
   photoButton.textContent = 'Take or upload a photo'
   photoWrapper.appendChild(photoButton)
   form.appendChild(photoWrapper)
+  const note = document.createElement('p')
+  note.classList.add('note')
+  note.textContent = "Please ensure the photo is in 3:4 aspect ratio (the photo will be cropped automatically if it isn't)"
+  form.appendChild(note)
   photoButton.addEventListener('click', () => {
     photoInput.click()
   })
