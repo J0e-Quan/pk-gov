@@ -206,6 +206,9 @@ function renderNameForm() {
   submitButton.textContent = '→'
   nameWrapper.appendChild(submitButton)
   form.appendChild(nameWrapper)
+  nameInput.addEventListener('change', () => {
+    formData.plushieName = nameInput.value
+  })
   submitButton.addEventListener('click', submitName)
 }
 
