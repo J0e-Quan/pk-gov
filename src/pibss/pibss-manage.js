@@ -336,6 +336,7 @@ function submitType() {
     const otherInput = document.getElementById('other-input')
     if (otherInput.value === '') {
       alert('Please input a type or choose from the existing options!')
+      return
     } else {
       formData.plushieType = otherInput.value
     }
@@ -499,8 +500,13 @@ function submitDate() {
     const otherInput = document.getElementById('other-input')
     if (otherInput.value === '') {
       alert('Please input a date or choose from the existing options!')
+      return
+    } else if (otherInput.value > getPresetDate('Today')) {
+      alert('Date cannot be further than today!')
+      return
     } else {
       formData.plushieDateJoined = otherInput.value
+
     }
   } else if (!other.selected) {
     const dateSelect = document.querySelector('.register-type-select')
@@ -816,13 +822,14 @@ async function submitData(photoURL) {
 }
 
 function checkData(photoURL) {
+  // this checks all fields to ensure they are not empty or skipped, this is just a band-aid, please do a proper check on input validity AT THE RELEVANT PAGE instead of at the end
   if (formData.plushieName === '' || formData.plushieName === undefined) {
     alert('Plushie name is empty or invalid! Please ensure you have inputted a unique name!')
   } else if (formData.plushieType === '' || formData.plushieType === undefined) {
     alert('Plushie type is empty or invalid! Please ensure you have chosen an existing option or entered a new type!')
   } else if (formData.plushieOriginCountry === '' || formData.plushieOriginCountry === undefined) {
     alert('Plushie origin country is empty or invalid! Please choose an option from the list of countries provided!')
-  } else if (formData.plushieDateJoined === '' || formData.plushieDateJoined === undefined) {
+  } else if (formData.plushieDateJoined === '' || formData.plushieDateJoined === undefined || formData.plushieDateJoined > getPresetDate('Today')) {
     alert('Date of arrival for plushie is invalid! Please ensure you have inputted a valid date!')
   } else if (formData.plushieLocation === '' || formData.plushieLocation === undefined) {
     alert('Plushie location is empty or invalid! Please choose a valid location option!')
