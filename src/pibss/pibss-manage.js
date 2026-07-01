@@ -472,7 +472,7 @@ function renderPhotoForm() {
   photoWrapper.appendChild(photoButton)
   form.appendChild(photoWrapper)
   const note = document.createElement('p')
-  note.classList.add('note')
+  note.classList.add('note', 'register-photo-note')
   note.textContent = "Please ensure the photo is in 3:4 aspect ratio (the photo will be cropped automatically if it isn't)"
   form.appendChild(note)
   photoButton.addEventListener('click', () => {
@@ -482,44 +482,63 @@ function renderPhotoForm() {
 }
 
 async function autoCropTo34(file) {
-  // 1. Convert the file into an Image element while fixing EXIF orientation
-  const image = await imageCompression.drawFileInCanvas(file);
-  
-  const canvas = document.createElement('canvas');
-  const ctx = canvas.getContext('2d');
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    
+    // Convert the File/Blob directly into an image source URL
+    img.src = URL.createObjectURL(file);
 
-  let sourceX = 0;
-  let sourceY = 0;
-  let targetWidth = image.width;
-  let targetHeight = image.height;
+    img.onload = () => {
+      // Clean up the object URL from memory immediately after loading
+      URL.revokeObjectURL(img.src);
 
-  // 2. Determine if the image is Portrait or Landscape and calculate the 3:4 crop
-  if (image.width < image.height) {
-    // TALL PORTRAIT (e.g., 9:16 from a phone camera)
-    // Keep 100% of the width, shorten the height to match 3:4
-    targetHeight = image.width * (4 / 3);
-    sourceY = (image.height - targetHeight) / 2; // Center vertically
-  } else {
-    // WIDE LANDSCAPE (or a flat 1:1 square)
-    // Keep 100% of the height, narrow the width to match 3:4
-    targetWidth = image.height * (3 / 4);
-    sourceX = (image.width - targetWidth) / 2; // Center horizontally
-  }
+      const canvas = document.createElement('canvas');
+      const ctx = canvas.getContext('2d');
 
-  // 3. Set canvas to our new precise 3:4 bounding box dimensions
-  canvas.width = targetWidth;
-  canvas.height = targetHeight;
+      // 1. Precise aspect ratio bounding calculations
+      const targetAspect = 3 / 4; // 0.75
+      const imageAspect = img.width / img.height;
 
-  // 4. Extract the centered 3:4 frame out of the source image
-  ctx.drawImage(
-    image,
-    sourceX, sourceY, targetWidth, targetHeight, // Crop window area
-    0, 0, targetWidth, targetHeight             // Draw size matching canvas
-  );
+      let targetWidth, targetHeight, sourceX, sourceY;
 
-  // 5. Convert back to a standard Blob using the original image format type
-  return new Promise((resolve) => {
-    canvas.toBlob((blob) => resolve(blob), file.type);
+      if (imageAspect > targetAspect) {
+        // Image is wider than 3:4 (e.g., Landscape, Square)
+        targetHeight = img.height;
+        targetWidth = img.height * targetAspect;
+        sourceX = (img.width - targetWidth) / 2;
+        sourceY = 0;
+      } else {
+        // Image is taller than 3:4 (e.g., Slim phone Portrait 9:16)
+        targetWidth = img.width;
+        targetHeight = img.width / targetAspect;
+        sourceX = 0;
+        sourceY = (img.height - targetHeight) / 2;
+      }
+
+      // 2. Adjust canvas size to match our targeted 3:4 resolution crop box
+      canvas.width = targetWidth;
+      canvas.height = targetHeight;
+
+      // 3. Perform the crop
+      ctx.drawImage(
+        img,
+        sourceX, sourceY, targetWidth, targetHeight, // Crop source coords
+        0, 0, targetWidth, targetHeight             // Draw destination coords
+      );
+
+      // 4. Safely pipe back into your compression pipeline
+      canvas.toBlob((blob) => {
+        if (blob) {
+          resolve(blob);
+        } else {
+          reject(new Error("Canvas conversion to Blob failed."));
+        }
+      }, file.type || 'image/jpeg', 0.95);
+    };
+
+    img.onerror = (err) => {
+      console.error(err)
+    };
   });
 }
 
@@ -543,6 +562,8 @@ function renderPhoto(photo) {
   const form = document.querySelector('.form')
   const photoWrapper = document.querySelector('.register-photo-wrapper')
   photoWrapper.remove()
+  const note = document.querySelector('.note')
+  note.remove()
   const photoContainer = document.createElement('div')
   photoContainer.classList.add('register-photo-container')
   const photoURL = URL.createObjectURL(photo);
@@ -572,6 +593,7 @@ function renderPhoto(photo) {
   retakeButton.addEventListener('click', () => {
     const photoInput = document.getElementById('photo')
     photoInput.click()
+    photoInput.addEventListener('change', (e) => processPhoto(e.target.files[0]))
   })
   submitButton.addEventListener('click', () => {
     formData.plushiePhoto = photo
