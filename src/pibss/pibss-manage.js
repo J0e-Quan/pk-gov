@@ -558,6 +558,7 @@ async function processPhoto(photo) {
     } else {
       reRenderPhoto(compressedPhoto)
     }
+    formData.plushiePhoto = compressedPhoto
   } catch (error) {
     console.error(error)
   }
@@ -605,7 +606,6 @@ function renderPhoto(photo) {
     photoInput.addEventListener('change', (e) => processPhoto(e.target.files[0]))
   })
   submitButton.addEventListener('click', () => {
-    formData.plushiePhoto = photo
     renderConfirmationForm(photoURL)
   })
 }
@@ -625,6 +625,9 @@ function renderConfirmationForm(photoURL) {
   clearForm()
   updateProgress()
   updateFormStepButtons(false)
+  if (!photoURL) {
+    photoURL = URL.createObjectURL(formData.plushiePhoto)
+  }
   const form = content.querySelector('.form')
   const instruction = document.createElement('h3')
   instruction.classList.add('instruction')
