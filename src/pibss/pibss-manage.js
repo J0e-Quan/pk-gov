@@ -663,11 +663,26 @@ function renderConfirmationForm(photoURL) {
   form.appendChild(submitButton)
 }
 
-function submitData(photoURL) {
+async function submitData(photoURL) {
   // delete the URL from memory to save RAM
   URL.revokeObjectURL(photoURL)
   showLoadingScreen('Submitting your data to PIBSS...')
-  // send data to supabase and show loadingCircle
+  // send data to supabase
+  const { error } = await supabase
+    .from('database')
+    .insert({ 
+      name: formData.plushieName,
+      type: formData.plushieType,
+      photo_url: formData.plushiePhoto,
+      country_of_origin: formData.plushieOriginCountry,
+      location: formData.plushieLocation,
+    })
+  if (error) {
+    console.error(error)
+    showErrorScreen("PIBSS registeration has failed! Please try again, or contact the Ministry of Technology for help if this error persists.")
+  } else {
+    showSuccessScreen("You've been successfully registered in PIBSS! Welcome to the Plushie Kingdom, " + formData.plushieName + '!')
+  }
 }
 
 function beginUpdateLocation() {
@@ -902,9 +917,9 @@ async function submitNewLocation(selectedPlushie) {
     .eq('name', selectedPlushie.name)
   if (error) {
     console.error(error)
-    showErrorScreen()
+    showErrorScreen('Failed to update location! Please try again, or contact the Ministry of Technology for help if this error persists.')
   } else {
-    showSuccessScreen()
+    showSuccessScreen('Location successfully updated!')
   }
 }
 
@@ -921,7 +936,7 @@ function showLoadingScreen(text) {
   form.appendChild(statusText)
 }
 
-function showErrorScreen() {
+function showErrorScreen(text) {
   isFormDone = true
   const form = document.querySelector('.form')
   const loadingCircleAnimation = document.querySelector('.loading-circle animate')
@@ -933,12 +948,12 @@ function showErrorScreen() {
   errorCircle.addEventListener('repeatEvent', () => {
     const statusText = document.createElement('h2')
     statusText.classList.add('status-text')
-    statusText.textContent = 'Failed to update location! Please try again, or contact the Ministry of Technology if this error persists.'
+    statusText.textContent = text
     form.appendChild(statusText)
   })
 }
 
-function showSuccessScreen() {
+function showSuccessScreen(text) {
   isFormDone = true
   const form = document.querySelector('.form')
   const loadingCircleAnimation = document.querySelector('.loading-circle animate')
@@ -950,7 +965,7 @@ function showSuccessScreen() {
   successCircle.addEventListener('repeatEvent', () => {
     const statusText = document.createElement('h2')
     statusText.classList.add('status-text')
-    statusText.textContent = 'Location successfully updated!'
+    statusText.textContent = text
     form.appendChild(statusText)
   })
 }
