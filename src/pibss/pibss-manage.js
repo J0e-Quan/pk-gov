@@ -402,7 +402,6 @@ function submitCountry() {
   renderDateForm()
 }
 
-// ADD FORM STEP ASKING FOR DATE, CAN USE RADIO BUTTONS AND DATE OBJECT FOR "OTHERS"
 function renderDateForm() {
   if (!isFromStepButton) {
     currentStep++
@@ -790,7 +789,7 @@ function renderConfirmationForm(photoURL) {
   const submitButton = document.createElement('button')
   submitButton.classList.add('register-confirm-button', 'button')
   submitButton.textContent = 'Submit data to PIBSS'
-  submitButton.addEventListener('click', () => submitData(photoURL))
+  submitButton.addEventListener('click', () => checkData(photoURL))
   form.appendChild(card) 
   form.appendChild(submitButton)
 }
@@ -799,7 +798,6 @@ async function submitData(photoURL) {
   // delete the URL from memory to save RAM
   URL.revokeObjectURL(photoURL)
   showLoadingScreen('Submitting your data to PIBSS...')
-  // send data to supabase
   const { error } = await supabase
     .from('database')
     .insert({ 
@@ -814,6 +812,24 @@ async function submitData(photoURL) {
     showErrorScreen("PIBSS registeration has failed! Please try again, or contact the Ministry of Technology for help if this error persists.")
   } else {
     showSuccessScreen("You've been successfully registered in PIBSS! Welcome to the Plushie Kingdom, " + formData.plushieName + '!')
+  }
+}
+
+function checkData(photoURL) {
+  if (formData.plushieName === '' || formData.plushieName === undefined) {
+    alert('Plushie name is empty or invalid! Please ensure you have inputted a unique name!')
+  } else if (formData.plushieType === '' || formData.plushieType === undefined) {
+    alert('Plushie type is empty or invalid! Please ensure you have chosen an existing option or entered a new type!')
+  } else if (formData.plushieOriginCountry === '' || formData.plushieOriginCountry === undefined) {
+    alert('Plushie origin country is empty or invalid! Please choose an option from the list of countries provided!')
+  } else if (formData.plushieDateJoined === '' || formData.plushieDateJoined === undefined) {
+    alert('Date of arrival for plushie is invalid! Please ensure you have inputted a valid date!')
+  } else if (formData.plushieLocation === '' || formData.plushieLocation === undefined) {
+    alert('Plushie location is empty or invalid! Please choose a valid location option!')
+  } else if (formData.plushiePhoto === '' || formData.plushiePhoto === undefined) {
+    alert('Plushie photo is invalid! Please retake the photo!')
+  } else {
+    submitData(photoURL)
   }
 }
 
