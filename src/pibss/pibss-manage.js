@@ -133,7 +133,7 @@ function beginRegister() {
   totalSteps = 6
   formData = {
     name: 'Register a new plushie',
-    formSteps: [renderNameForm, renderTypeForm, renderCountryForm, renderLocationForm, renderPhotoForm], // fill this in when steps are done!!!
+    formSteps: [renderNameForm, renderTypeForm, renderCountryForm, renderLocationForm, renderPhotoForm, renderConfirmationForm],
     plushieName: undefined,
     plushieDateJoined: getDate(),
     plushieType: undefined,
@@ -456,7 +456,7 @@ function renderPhotoForm() {
   instruction.classList.add('instruction')
   instruction.textContent = "Now, we need a photo of you."
   form.appendChild(instruction)
-  // create hidden inputs for receiving photos
+  // create hidden input for receiving photo
   const photoInput = document.createElement('input')
   photoInput.type = 'file'
   photoInput.id = 'photo'
@@ -464,6 +464,13 @@ function renderPhotoForm() {
   photoInput.setAttribute('capture', 'environment')
   photoInput.classList.add('hidden')
   form.appendChild(photoInput)
+  if (formData.plushiePhoto !== undefined) {
+    // if photo already exists, it is already compressed, so show the photo straight away
+    renderPhoto(formData.plushiePhoto)
+    updateFormStepButtons(true)
+    // stop before creating elements which are not supposed to be visible in the preview
+    return 
+  }
   const photoWrapper = document.createElement('div')
   photoWrapper.classList.add('register-photo-wrapper')
   const photoButton = document.createElement('button')
@@ -559,9 +566,13 @@ async function processPhoto(photo) {
 function renderPhoto(photo) {
   const form = document.querySelector('.form')
   const photoWrapper = document.querySelector('.register-photo-wrapper')
-  photoWrapper.remove()
+  if (photoWrapper !== null) {
+    photoWrapper.remove()
+  }
   const note = document.querySelector('.note')
-  note.remove()
+  if (note !== null) {
+    note.remove()
+  }
   const photoContainer = document.createElement('div')
   photoContainer.classList.add('register-photo-container')
   const photoURL = URL.createObjectURL(photo);
