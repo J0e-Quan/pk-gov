@@ -149,11 +149,11 @@ function renderSplashScreen() {
   splashScreen.classList.add('register-splash-screen')
   const introTitle = document.createElement('h2')
   introTitle.classList.add('register-intro-title')
-  introTitle.textContent = "Welcome to the Plushie Kingdom"
+  introTitle.textContent = "Register yourself in the Plushie Immigration and Biodata Storage Service (PIBSS)"
   splashScreen.appendChild(introTitle)
   const introText = document.createElement('p')
   introText.classList.add('register-intro-text')
-  introText.textContent = "Let's get you registered in PIBSS. To start, we'll need some basic details about you."
+  introText.textContent = "Let's get you registered in PIBSS to obtain your Plushie Kingdom citizenship. We just need some basic details about you."
   splashScreen.appendChild(introText)
   const startButton = document.createElement('button')
   startButton.type = 'button'
