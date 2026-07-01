@@ -491,16 +491,12 @@ async function autoCropTo34(file) {
     img.onload = () => {
       // Clean up the object URL from memory immediately after loading
       URL.revokeObjectURL(img.src);
-
       const canvas = document.createElement('canvas');
       const ctx = canvas.getContext('2d');
-
       // 1. Precise aspect ratio bounding calculations
-      const targetAspect = 3 / 4; // 0.75
+      const targetAspect = 3 / 4; 
       const imageAspect = img.width / img.height;
-
       let targetWidth, targetHeight, sourceX, sourceY;
-
       if (imageAspect > targetAspect) {
         // Image is wider than 3:4 (e.g., Landscape, Square)
         targetHeight = img.height;
@@ -514,18 +510,15 @@ async function autoCropTo34(file) {
         sourceX = 0;
         sourceY = (img.height - targetHeight) / 2;
       }
-
       // 2. Adjust canvas size to match our targeted 3:4 resolution crop box
       canvas.width = targetWidth;
       canvas.height = targetHeight;
-
       // 3. Perform the crop
       ctx.drawImage(
         img,
         sourceX, sourceY, targetWidth, targetHeight, // Crop source coords
         0, 0, targetWidth, targetHeight             // Draw destination coords
       );
-
       // 4. Safely pipe back into your compression pipeline
       canvas.toBlob((blob) => {
         if (blob) {
@@ -533,7 +526,7 @@ async function autoCropTo34(file) {
         } else {
           reject(new Error("Canvas conversion to Blob failed."));
         }
-      }, file.type || 'image/jpeg', 0.95);
+      }, file.type || 'image/webp', 0.95);
     };
 
     img.onerror = (err) => {
@@ -552,7 +545,12 @@ async function processPhoto(photo) {
   }
   try {
     const compressedPhoto = await imageCompression(croppedPhoto, options)
-    renderPhoto(compressedPhoto)
+    const photoElement = document.querySelector('.register-photo-preview')
+    if (photoElement === null) {
+      renderPhoto(compressedPhoto)
+    } else {
+      reRenderPhoto(compressedPhoto)
+    }
   } catch (error) {
     console.error(error)
   }
@@ -599,6 +597,10 @@ function renderPhoto(photo) {
     formData.plushiePhoto = photo
     renderConfirmationForm(photoURL)
   })
+}
+
+function reRenderPhoto(photo) {
+
 }
 
 function renderConfirmationForm(photoURL) {
