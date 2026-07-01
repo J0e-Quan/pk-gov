@@ -371,6 +371,9 @@ async function renderCountryForm() {
   submitButton.textContent = '→'
   countryWrapper.appendChild(submitButton)
   form.appendChild(countryWrapper)
+  countrySelect.addEventListener('change', () => {
+    formData.plushieOriginCountry = countrySelect.value
+  })
   submitButton.addEventListener('click', submitCountry)
 }
 
