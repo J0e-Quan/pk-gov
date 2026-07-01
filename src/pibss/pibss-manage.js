@@ -383,7 +383,7 @@ async function getCountries() {
 function submitCountry() {
   const countrySelect = document.querySelector('.register-country-select')
   formData.plushieOriginCountry = countrySelect.value
-  renderLocationForm()
+  renderDateForm()
 }
 
 // ADD FORM STEP ASKING FOR DATE, CAN USE RADIO BUTTONS AND DATE OBJECT FOR "OTHERS"
@@ -400,15 +400,98 @@ function renderDateForm() {
   instruction.classList.add('instruction')
   instruction.textContent = "When did you arrive at the Plushie Kingdom?"
   form.appendChild(instruction)
+  const dateWrapper = document.createElement('div')
+  dateWrapper.classList.add('register-type-wrapper')
+  const dateSelect = document.createElement('select')
+  dateSelect.classList.add('register-type-select')
+  const datesArray = ['Today', 'Yesterday', 'Other']
+  for (const date of datesArray) {
+    const dateOption = document.createElement('option')
+    dateOption.classList.add('register-type-option')
+    if (date === 'Today' || date === 'Yesterday') {
+      dateOption.value = getPresetDate(date)
+    } else if (date === 'Other') {
+      dateOption.value = date
+    }
+    dateOption.textContent = date
+    dateOption.id = date
+    dateSelect.appendChild(dateOption)
+  }
+  dateSelect.addEventListener('change', () => {
+  const other = document.getElementById('Other')
+    if (other.selected) {
+      const otherInput = document.getElementById('other-input')
+      formData.plushieDateJoined = otherInput.value
+    } else if (!other.selected) {
+      formData.plushieDateJoined = dateSelect.value
+    }
+    toggleOtherDateInput()
+  })
+  dateWrapper.appendChild(dateSelect)
+  const otherInput = document.createElement('input')
+  otherInput.type = 'date'
+  otherInput.classList.add('update-location-searchbar', 'hidden')
+  otherInput.id = 'other-input'
+  otherInput.addEventListener('change', () => {
+    formData.plushieDateJoined = otherInput.value
+  })
+  dateWrapper.appendChild(otherInput)
+  const submitButton = document.createElement('button')
+  submitButton.classList.add('register-submit-name-button', 'button')
+  submitButton.textContent = '→'
+  dateWrapper.appendChild(submitButton)
+  form.appendChild(dateWrapper)
+  if (formData.plushieDateJoined !== undefined) {
+    if (formData.plushieDateJoined === getPresetDate('Today') || formData.plushieDateJoined === getPresetDate('Yesterday')) {
+      dateSelect.value = formData.plushieDateJoined
+    } else {
+      dateSelect.value = 'Other'
+      const dateInput = document.getElementById('other-input')
+      dateInput.classList.remove('hidden')
+      dateInput.value = formData.plushieDateJoined
+    }
+    updateFormStepButtons(true)
+  }
+  submitButton.addEventListener('click', submitDate)
 }
 
-function getCurrentDate() {
+function getPresetDate(option) {
   // Date.now() isn't used because it gives the date in ms, this ensures the date matches the user's timezone
   const localDate = new Date();
-  const year = localDate.getFullYear();
+  if (option === 'Yesterday') {
+    localDate.setDate(localDate.getDate() - 1)
+  }
+  const year = localDate.getFullYear()
   const month = String(localDate.getMonth() + 1).padStart(2, '0') // Months are 0-indexed
   const day = String(localDate.getDate()).padStart(2, '0') // Days are 0-indexed
   return year + '-' + month + '-' + day
+}
+
+function toggleOtherDateInput() {
+  const other = document.getElementById('Other')
+  if (other.selected) {
+    const otherInput = document.getElementById('other-input')
+    otherInput.classList.remove('hidden')
+  } else {
+    const otherInput = document.getElementById('other-input')
+    otherInput.classList.add('hidden')
+  }
+}
+
+function submitDate() {
+  const other = document.getElementById('Other')
+  if (other.selected) {
+    const otherInput = document.getElementById('other-input')
+    if (otherInput.value === '') {
+      alert('Please input a date or choose from the existing options!')
+    } else {
+      formData.plushieDateJoined = otherInput.value
+    }
+  } else if (!other.selected) {
+    const dateSelect = document.querySelector('.register-type-select')
+    formData.plushieDateJoined = dateSelect.value
+  }
+  renderLocationForm()
 }
 
 function renderLocationForm() {
