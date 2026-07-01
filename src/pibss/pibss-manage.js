@@ -545,6 +545,9 @@ function renderLocationForm() {
   submitButton.textContent = '→'
   locationWrapper.appendChild(submitButton)
   form.appendChild(locationWrapper)
+  locationSelect.addEventListener('change', () => {
+    formData.plushieLocation = locationSelect.value
+  })
   submitButton.addEventListener('click', submitLocation)
   const note = document.createElement('p')
   note.classList.add('note')
