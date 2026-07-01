@@ -520,7 +520,7 @@ async function autoCropTo34(file) {
 }
 
 async function processPhoto(photo) {
-  const croppedPhoto = await autocropto34(photo)
+  const croppedPhoto = await autoCropTo34(photo)
   const options = {
     maxSizeMB: 0.5,
     useWebWorker: true,
