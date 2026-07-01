@@ -32,12 +32,12 @@ function changeReturnButton() {
   const returnButton = document.querySelector('.return')
   returnButton.textContent = 'Return to dashboard'
   returnButton.href = '/pibss/manage/'
-  // window.addEventListener('beforeunload', (event) => {
-  //   if (isFormDone === false) {
-  //     event.preventDefault()
-  //     event.returnValue = ''
-  //   }
-  // })
+  window.addEventListener('beforeunload', (event) => {
+    if (isFormDone === false) {
+      event.preventDefault()
+      event.returnValue = ''
+    }
+  })
 }
 
 function showProgressUI() {
@@ -125,9 +125,11 @@ function clearForm() {
   if (form !== null) {
     form.innerHTML = ''
   }
+  window.scrollTo({top: 0, left: 0})
 }
 
 function renderSplashScreen(title, text, buttonText, firstForm) {
+  window.scrollTo({top: 0, left: 0})
   const splashScreen = document.createElement('section')
   splashScreen.classList.add('register-splash-screen')
   const introTitle = document.createElement('h2')
