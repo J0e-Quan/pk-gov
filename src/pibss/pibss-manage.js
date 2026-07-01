@@ -210,15 +210,23 @@ function renderNameForm() {
   submitButton.textContent = '→'
   nameWrapper.appendChild(submitButton)
   form.appendChild(nameWrapper)
-  nameInput.addEventListener('change', () => {
-    formData.plushieName = nameInput.value
-  })
   submitButton.addEventListener('click', submitName)
+}
+function formatName(name) {
+  return name
+    .trim()
+    .toLowerCase()                  
+    .split(' ')
+    .map(word => {
+      if (!word) return ''
+      return word[0].toUpperCase() + word.slice(1)
+    })
+    .join(' ')
 }
 
 async function submitName() {
   const nameInput = document.getElementById('name')
-  const name = nameInput.value
+  const name = formatName(nameInput.value)
   if (name === '') {
     alert('Please enter a name!')
   } else {
