@@ -600,7 +600,10 @@ function renderPhoto(photo) {
 }
 
 function reRenderPhoto(photo) {
-
+  const photoElement = document.querySelector('.register-photo-preview')
+  const photoURL = URL.createObjectURL(photo);
+  photoElement.src = photoURL
+  photoElement.alt = 'Picture of the plushie'
 }
 
 function renderConfirmationForm(photoURL) {
