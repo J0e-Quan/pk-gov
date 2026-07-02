@@ -6,7 +6,6 @@ checkUserAuthentication()
 
 async function checkUserAuthentication() {
   const { data: { session }, error } = await supabase.auth.getSession();
-
   if (error || !session) {
     // No active session found, user is redirected the login page immediately
     window.location.href = '/pibss/login/'
@@ -598,7 +597,6 @@ function renderPhotoForm() {
   photoInput.type = 'file'
   photoInput.id = 'photo'
   photoInput.accept = 'image/*'
-  photoInput.setAttribute('capture', 'environment')
   photoInput.classList.add('hidden')
   form.appendChild(photoInput)
   if (formData.plushiePhoto !== undefined) {
