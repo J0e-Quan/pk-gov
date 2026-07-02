@@ -681,7 +681,7 @@ async function autoCropTo34(file) {
         } else {
           reject(new Error("Canvas conversion to Blob failed."));
         }
-      }, file.type || 'image/webp', 0.95);
+      }, file.type || 'image/webp', 0.8);
     };
 
     img.onerror = (err) => {
@@ -693,9 +693,9 @@ async function autoCropTo34(file) {
 async function processPhoto(photo) {
   const croppedPhoto = await autoCropTo34(photo)
   const options = {
-    maxSizeMB: 0.5,
+    maxSizeMB: 0.3,
     useWebWorker: true,
-    maxWidthOrHeight: 1020,
+    maxWidthOrHeight: 800,
     fileType: 'image/webp'
   }
   try {
