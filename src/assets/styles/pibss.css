@@ -293,6 +293,9 @@ section.form {
   align-items: flex-start;
   gap: 1rem;
 }
+.register-camera-button {
+  display: none;
+}
 .register-photo-text-container .note {
   margin-top: 0;
 }
@@ -469,6 +472,12 @@ button.update-location-submit-button {
     width: 100%;
     text-align: center;
     font-size: 1.5rem;
+  }
+  .register-camera-button {
+    display: inherit;
+  }
+  .register-photo-text-container {
+    align-items: center;
   }
   .register-photo-container {
     display: flex;

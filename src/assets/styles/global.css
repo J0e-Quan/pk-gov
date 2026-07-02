@@ -429,6 +429,7 @@ pagefind-searchbox::part(input) {
     font-size: 1rem;
   }
   .return, .share, .button {
+    padding: 1rem;
     font-size: 1.5rem;
     text-align: center;
   }

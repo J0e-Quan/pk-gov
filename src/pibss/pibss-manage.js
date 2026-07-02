@@ -31,12 +31,12 @@ function changeReturnButton() {
   const returnButton = document.querySelector('.return')
   returnButton.textContent = 'Return to dashboard'
   returnButton.href = '/pibss/manage/'
-  window.addEventListener('beforeunload', (event) => {
-    if (isFormDone === false) {
-      event.preventDefault()
-      event.returnValue = ''
-    }
-  })
+  // window.addEventListener('beforeunload', (event) => {
+  //   if (isFormDone === false) {
+  //     event.preventDefault()
+  //     event.returnValue = ''
+  //   }
+  // })
 }
 
 function showProgressUI() {
@@ -608,16 +608,25 @@ function renderPhotoForm() {
   }
   const photoWrapper = document.createElement('div')
   photoWrapper.classList.add('register-photo-wrapper')
-  const photoButton = document.createElement('button')
-  photoButton.classList.add('register-photo-form-button', 'button')
-  photoButton.textContent = 'Take or upload a photo'
-  photoWrapper.appendChild(photoButton)
+  const uploadButton = document.createElement('button')
+  uploadButton.classList.add('register-photo-form-button', 'button')
+  uploadButton.textContent = 'Upload a photo'
+  photoWrapper.appendChild(uploadButton)
+  const cameraButton = document.createElement('button')
+  cameraButton.classList.add('register-photo-form-button', 'button', 'register-camera-button')
+  cameraButton.textContent = 'Take a photo'
+  photoWrapper.appendChild(cameraButton)
   form.appendChild(photoWrapper)
   const note = document.createElement('p')
   note.classList.add('note', 'register-photo-note')
   note.textContent = "Please ensure the photo is in 3:4 aspect ratio (the photo will be cropped automatically if it isn't)"
   form.appendChild(note)
-  photoButton.addEventListener('click', () => {
+  uploadButton.addEventListener('click', () => {
+    photoInput.setAttribute('capture', 'environment')
+    photoInput.click()
+  })
+  cameraButton.addEventListener('click', () => {
+    photoInput.removeAttribute('capture')
     photoInput.click()
   })
   photoInput.addEventListener('change', (e) => processPhoto(e.target.files[0]))
@@ -723,10 +732,15 @@ function renderPhoto(photo) {
   confirmationText.classList.add('note')
   confirmationText.textContent = "This is your photo which will be stored in PIBSS. Happy with it?"
   textContainer.appendChild(confirmationText)
+  const reuploadButton = document.createElement('button')
+  reuploadButton.type = 'button'
+  reuploadButton.classList.add('register-photo-form-button', 'button')
+  reuploadButton.textContent = 'Upload another photo'
+  textContainer.appendChild(reuploadButton)
   const retakeButton = document.createElement('button')
   retakeButton.type = 'button'
-  retakeButton.classList.add('register-photo-form-button', 'button')
-  retakeButton.textContent = 'Use another photo'
+  retakeButton.classList.add('register-photo-form-button', 'button', 'register-camera-button')
+  retakeButton.textContent = 'Retake another photo'
   textContainer.appendChild(retakeButton)
   const submitButton = document.createElement('button')
   submitButton.type = 'button'
@@ -735,8 +749,15 @@ function renderPhoto(photo) {
   textContainer.appendChild(submitButton)
   photoContainer.appendChild(textContainer)
   form.appendChild(photoContainer)
+  reuploadButton.addEventListener('click', () => {
+    const photoInput = document.getElementById('photo')
+    photoInput.removeAttributeNS('capture', 'environment')
+    photoInput.click()
+    photoInput.addEventListener('change', (e) => processPhoto(e.target.files[0]))
+  })
   retakeButton.addEventListener('click', () => {
     const photoInput = document.getElementById('photo')
+    photoInput.setAttribute('capture', 'environment')
     photoInput.click()
     photoInput.addEventListener('change', (e) => processPhoto(e.target.files[0]))
   })
