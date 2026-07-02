@@ -622,11 +622,11 @@ function renderPhotoForm() {
   note.textContent = "Please ensure the photo is in 3:4 aspect ratio (the photo will be cropped automatically if it isn't)"
   form.appendChild(note)
   uploadButton.addEventListener('click', () => {
-    photoInput.setAttribute('capture', 'environment')
+    photoInput.removeAttribute('capture')
     photoInput.click()
   })
   cameraButton.addEventListener('click', () => {
-    photoInput.removeAttribute('capture')
+    photoInput.setAttribute('capture', 'environment')
     photoInput.click()
   })
   photoInput.addEventListener('change', (e) => processPhoto(e.target.files[0]))
@@ -751,7 +751,7 @@ function renderPhoto(photo) {
   form.appendChild(photoContainer)
   reuploadButton.addEventListener('click', () => {
     const photoInput = document.getElementById('photo')
-    photoInput.removeAttributeNS('capture', 'environment')
+    photoInput.removeAttribute('capture', 'environment')
     photoInput.click()
     photoInput.addEventListener('change', (e) => processPhoto(e.target.files[0]))
   })
