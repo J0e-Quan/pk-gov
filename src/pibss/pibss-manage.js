@@ -31,12 +31,12 @@ function changeReturnButton() {
   const returnButton = document.querySelector('.return')
   returnButton.textContent = 'Return to dashboard'
   returnButton.href = '/pibss/manage/'
-  // window.addEventListener('beforeunload', (event) => {
-  //   if (isFormDone === false) {
-  //     event.preventDefault()
-  //     event.returnValue = ''
-  //   }
-  // })
+  window.addEventListener('beforeunload', (event) => {
+    if (isFormDone === false) {
+      event.preventDefault()
+      event.returnValue = ''
+    }
+  })
 }
 
 function showProgressUI() {
@@ -130,18 +130,18 @@ function clearForm() {
 function renderSplashScreen(title, text, buttonText, firstForm) {
   window.scrollTo({top: 0, left: 0})
   const splashScreen = document.createElement('section')
-  splashScreen.classList.add('register-splash-screen')
+  splashScreen.classList.add('splash-screen')
   const introTitle = document.createElement('h2')
-  introTitle.classList.add('register-intro-title')
+  introTitle.classList.add('splash-screen-title')
   introTitle.textContent = title
   splashScreen.appendChild(introTitle)
   const introText = document.createElement('p')
-  introText.classList.add('register-intro-text')
+  introText.classList.add('splash-screen-text')
   introText.textContent = text
   splashScreen.appendChild(introText)
   const startButton = document.createElement('button')
   startButton.type = 'button'
-  startButton.classList.add('register-start-button', 'button')
+  startButton.classList.add('splash-screen-start-button', 'button')
   startButton.textContent = buttonText
   startButton.addEventListener('click', () => {
     content.innerHTML = ''
@@ -213,6 +213,7 @@ function renderNameForm() {
   form.appendChild(nameWrapper)
   submitButton.addEventListener('click', submitName)
 }
+
 function formatName(name) {
   return name
     .trim()
