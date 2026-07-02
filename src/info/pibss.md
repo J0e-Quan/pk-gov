@@ -3,7 +3,7 @@ tags: info
 layout: content-page.njk
 title: Plushie Immigration and Biodata Storage Service (PIBSS)
 excerpt: |
-  View information and statistics on all Plushie Kingdom residents, or register a new plushie into the PIBSS database here. Powered by
+  Get open access to accurate information and statistics on all Plushie Kingdom residents from the PIBSS database here. Powered by
   <a class='link' href='https://supabase.com/' target='_blank' rel='noreferrer'>Supabase</a>.
 thumbnail:
 ---
@@ -18,7 +18,7 @@ thumbnail:
 
 ---
 
-The Plushie Immigration and Biodata Storage Service, or PIBSS for short, is a database containing information about all Plushie Kingdom residents. It is used to ensure easier access to Government services and keep track of citizens' wellbeing. We promote open access to information, which is why all data in PIBSS is publicly available for anyone to view.
+The Plushie Immigration and Biodata Storage Service or PIBSS for short, is a database containing information about all Plushie Kingdom residents. It is used to ensure easier access to Government services and keep track of citizens' wellbeing. We promote open access to information, which is why all data in PIBSS is publicly available for anyone to view.
 
 ## What does PIBSS have to do with me?
 
@@ -33,7 +33,7 @@ If you are an existing Plushie Kingdom citizen,
 
 - PIBSS provides easier and more personalised access to Government services and benefits
 - It is used to provide Kingdom-wide statistics and data
-- PIBSS strengthens security by keeping track of all plushies in the Kingdom
+- PIBSS strengthens security by keeping track of the whereabouts of all plushies in the Kingdom
 
 ## Updating information stored in PIBSS
 
