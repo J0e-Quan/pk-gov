@@ -14,7 +14,7 @@ thumbnail:
   <a class='button' href='/pibss/login/'>Manage PIBSS data</a>
 </div>
 
-## What is PIBSS?
+## What is this service?
 
 ---
 
