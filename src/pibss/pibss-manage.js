@@ -995,11 +995,11 @@ function renderSearchResults(data) {
   const container = document.createElement('div')
   container.classList.add('entries')
   if (data.length === 0) {
+    instruction.remove()
     const emptyMessage = document.createElement('h3')
     emptyMessage.classList.add('pibss-empty-message')
-    emptyMessage.textContent = "We couldn't find any plushies matching your filtering options."
+    emptyMessage.textContent = "We couldn't find any plushies matching your search query. Please return to the previous step and try again."
     container.appendChild(emptyMessage)
-    return 
   }
   for (const entry of data) {
     const card = document.createElement('button')
