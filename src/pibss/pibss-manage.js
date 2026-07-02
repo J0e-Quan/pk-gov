@@ -865,6 +865,7 @@ async function submitData(photoURL) {
     .insert({ 
       name: formData.plushieName,
       type: formData.plushieType,
+      date_joined: formData.plushieDateJoined,
       photo_url: publicUrl,
       country_of_origin: formData.plushieOriginCountry,
       location: formData.plushieLocation,
