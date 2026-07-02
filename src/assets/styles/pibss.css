@@ -35,7 +35,7 @@ select option {
 .entries {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  /* justify-content: center; */
   gap: 1rem;
   width: 100%;
 }
@@ -45,6 +45,8 @@ select option {
   display: flex;
   gap: 1rem;
   min-width: 540px;
+  max-width: calc(50% - 0.5rem);
+  margin-right: auto;
 }
 
 .pibss-picture {
