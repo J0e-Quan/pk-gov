@@ -269,6 +269,7 @@ async function renderTypeForm() {
   const typeSelect = document.createElement('select')
   typeSelect.classList.add('register-type-select')
   const typesArray = await getUniqueTypes()
+  console.log(typesArray)
   for (const type of typesArray) {
     const typeOption = document.createElement('option')
     typeOption.classList.add('register-type-option')
@@ -327,10 +328,8 @@ async function getUniqueTypes() {
   if (error) {
     return console.error('Error fetching data:', error.message)
   }
-
   // converts array of objects into an array for easier looping
-  const dataArray = data.map(item => item.type)
-  return dataArray.sort((a, b) => a.localeCompare(b.name))
+  return data.map(item => item.type)
 }
 
 function toggleOtherTypeInput() {
