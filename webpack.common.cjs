@@ -49,7 +49,7 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: './src/pibss/statistics.html',
-      filename: 'pibss/statistics.html',
+      filename: 'pibss/statistics/index.html',
       chunks: ['pibss-common', 'pibss-statistics']
     }),
     new HtmlWebpackPlugin({
