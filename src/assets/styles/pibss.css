@@ -399,6 +399,7 @@ button.update-location-submit-button {
   .pibss-card, .register-pibss-card {
     gap: 0.5rem;
     min-width: 0;
+    max-width: none;
   }
   .pibss-picture {
     flex-shrink: 1;
