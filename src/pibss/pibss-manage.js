@@ -648,6 +648,8 @@ async function autoCropTo34(file) {
       URL.revokeObjectURL(img.src);
       const canvas = document.createElement('canvas');
       const ctx = canvas.getContext('2d');
+      ctx.imageSmoothingEnabled = true;
+      ctx.imageSmoothingQuality = 'high'; 
       // 1. Precise aspect ratio bounding calculations
       const targetAspect = 3 / 4; 
       const imageAspect = img.width / img.height;
