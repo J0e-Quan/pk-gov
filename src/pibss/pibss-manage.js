@@ -315,11 +315,11 @@ async function renderTypeForm() {
     if (typeSelect.value !== 'Other') {
       formData.plushieType = typeSelect.value
     } else if (typeSelect.value === 'Other') {
-      formData.plushieType = otherInput.value
+      formData.plushieType = otherInput.value.trim()
     }
   })
   otherInput.addEventListener('change', () => {
-    formData.plushieType = otherInput.value
+    formData.plushieType = otherInput.value.trim()
   })
   submitButton.addEventListener('click', submitType)
 }
@@ -355,7 +355,7 @@ function submitType() {
       alert('Please input a type or choose from the existing options!')
       return
     } else {
-      formData.plushieType = otherInput.value
+      formData.plushieType = otherInput.value.trim()
     }
   } else if (!other.selected) {
     const typeSelect = document.querySelector('.register-type-select')
