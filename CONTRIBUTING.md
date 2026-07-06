@@ -2,9 +2,9 @@ This is where to find information on contributing to pk-gov. For information abo
 
 ## npm scripts
 
-(NOTE: there are some other npm scripts in this project not listed here, those are leftover from the template repo this repo was created from!)
+These are the main scripts that are used in development (though other scripts do exist):
 
-- `npm run start` starts the dev server (opens on port 3000 by default)
+- `npm run dev` starts the dev server (opens on port 3000 by default)
 - `npm run cleanup` runs ESLint and Prettier
 - `npm run test` runs jest tests (currently there are no tests)
 - `npm run build` builds the website to dist/ (this is the script used for deploying to Render)
