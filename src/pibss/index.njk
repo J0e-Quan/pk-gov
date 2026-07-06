@@ -1,0 +1,60 @@
+---
+tags: service
+layout: service.njk
+cssPath: '/assets/styles/pibss-display.css'
+jsPath: 
+  - '/pibss-common.js'
+  - '/pibss-display.js'
+---
+<section class="content" data-pagefind-body>
+  <section class="hero">
+    <h1 class="hero-title">Access the PIBSS database</h1>
+    <p class="hero-text">Find information on all Plushie Kingdom residents here.</p>
+  </section>
+  <section class="filters">
+    <h2 class="heading">Refine your search</h2>
+    <div class="section-divider"></div>
+    <div class="filters-inputs">
+      <div class="filters-order">
+        <label for="order" class="filters-order title">Sort order:</h3>
+        <select id="order">
+          <option value="A to Z">A-Z</option>
+          <option value="Z to A">Z-A</option>
+          <option value="Newest to Oldest">Newest to Oldest</option>
+          <option value="Oldest to Newest">Oldest to Newest</option>
+        </select>
+      </div>
+      <div class="filters-location">
+        <label for="location" class="filters-location title">Filter by location:</label>
+        <select id="location">
+          <option value="">All</option>
+          <option value="Big Tent Plains">Big Tent Plains</option>
+          <option value="Big Tent Stacks">Big Tent Stacks</option>
+          <option value="The Studio">The Studio</option>
+          <option value="The Bedroom">The Bedroom</option>
+          <option value="The Sofa">The Sofa</option>
+        </select>
+      </div>
+      <div class="filters-type">
+        <label for="type" class="filters-type title">Filter by type:</label>
+        <select id="type">
+          <option value="">Any type</option>
+          <!-- this is dynamically filled in by getPlushieTypes() -->
+        </select>
+      </div>
+      <div class="pibss-search">
+        <label for="search" class="search title">Search by name:</label>
+        <input type="text" id="search" class="search-input" placeholder="Search PIBSS...">
+      </div>
+      <button type="button" class="filters-submit button">Apply filters</button>
+    </div>
+  </section>
+  <section class="pibss">
+    <h2 class="heading pibss-category">Showing all plushies from A to Z</h2>
+    <div class="section-divider"></div>
+    <div class="entries">
+      <img class=" loader" src="../assets/icons/loading.svg" alt=''>
+    </div>
+  </section>
+</section>
+<div class="end-buttons"><a class="return" href="/info/pibss/">Return to service page</a></div>

@@ -68,6 +68,10 @@
         </div>
       </section>
     </footer>
-    <script src={{ jsPath | url}} defer></script>
+    {% if jsPath %}
+      {% for file in jsPath %}
+        <script src="{{ file | url }}" defer></script>
+      {% endfor %}
+    {% endif %}
   </body>
 </html>

@@ -1,0 +1,50 @@
+---
+tags: service
+layout: service.njk
+cssPath: '/assets/styles/pibss-statistics.css'
+jsPath: 
+  - '/pibss-common.js'
+  - '/pibss-statistics.js'
+---
+
+<section class="content" data-pagefind-body>
+  <section class="hero">
+    <h1 class="hero-title">View PIBSS statistics</h1>
+    <p class="hero-text">Get open access to detailed insights on Plushie Kingdom citizens based on data from PIBSS. Charts powered by <a class="link" href="https://www.chartjs.org/" target="_blank" rel="noreferrer">Chart.js</a>.</p>
+  </section>
+  <section class="statistics">
+      <h2 class="heading">Overall statistics</h2>
+      <div class="section-divider"></div>
+      <div class="numbers">
+      <h3 class="total-citizens value">???</h3>
+      <p class="total-citizens text">total citizens in the Plushie Kingdom</p>
+      <h3 class="new-citizens value">???</h3>
+      <p class="new-citizens text">new citizens joined the Plushie Kingdom this year</p>
+      <h3 class="largest-type value">?????</h3>
+      <p class="largest-type text">are the most populous type of plushie in the Plushie Kingdom</p>
+      <h3 class="largest-location value">???????????????</h3>
+      <p class="largest-location text">is the most populated area in the Plushie Kingdom</p>
+    </div>
+    <h2 class="heading">Charts</h2>
+    <div class="section-divider"></div>
+      <div class="charts">
+        <div class="location-distribution">
+          <h3 class="chart title">Distribution of plushies by location</h3>
+          <canvas id="location-distribution"></canvas>
+        </div>
+        <div class="type-distribution">
+          <h3 class="chart title">Distribution of plushies by type</h3>
+          <canvas id="type-distribution"></canvas>
+        </div>
+        <div class="yearly-new-citizens">
+          <h3 class="chart title">New citizens by year (2013 onwards)</h3>
+          <canvas id="yearly-new-citizens"></canvas>
+        </div>
+        <div class="population-history">
+          <h3 class="chart title">Population history (2013 onwards)</h3>
+          <canvas id="population-history"></canvas>
+        </div>
+      </div>
+  </section>
+</section>
+<div class="end-buttons"><a class="return" href="/info/pibss/">Return to service page</a></div>

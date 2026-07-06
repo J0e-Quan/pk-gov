@@ -32,26 +32,6 @@ module.exports = {
       filename: 'index.html',
       chunks: ['home']
     }),
-    new HtmlWebpackPlugin({
-      template: './src/pibss/index.html',
-      filename: 'pibss/index.html',
-      chunks: ['pibss-common', 'pibss-display']
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/pibss/manage.html',
-      filename: 'pibss/manage.html',
-      chunks: ['pibss-common', 'pibss-manage']
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/pibss/statistics.html',
-      filename: 'pibss/statistics/index.html',
-      chunks: ['pibss-common', 'pibss-statistics']
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/pibss/login.html',
-      filename: 'pibss/login.html',
-      chunks: ['pibss-common', 'pibss-login']
-    })
   ],
   module: {
     rules: [
