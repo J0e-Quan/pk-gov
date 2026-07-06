@@ -315,11 +315,11 @@ async function renderTypeForm() {
     if (typeSelect.value !== 'Other') {
       formData.plushieType = typeSelect.value
     } else if (typeSelect.value === 'Other') {
-      formData.plushieType = otherInput.value
+      formData.plushieType = otherInput.value.trim()
     }
   })
   otherInput.addEventListener('change', () => {
-    formData.plushieType = otherInput.value
+    formData.plushieType = otherInput.value.trim()
   })
   submitButton.addEventListener('click', submitType)
 }
@@ -355,7 +355,7 @@ function submitType() {
       alert('Please input a type or choose from the existing options!')
       return
     } else {
-      formData.plushieType = otherInput.value
+      formData.plushieType = otherInput.value.trim()
     }
   } else if (!other.selected) {
     const typeSelect = document.querySelector('.register-type-select')
@@ -648,6 +648,8 @@ async function autoCropTo34(file) {
       URL.revokeObjectURL(img.src);
       const canvas = document.createElement('canvas');
       const ctx = canvas.getContext('2d');
+      ctx.imageSmoothingEnabled = true;
+      ctx.imageSmoothingQuality = 'high'; 
       // 1. Precise aspect ratio bounding calculations
       const targetAspect = 3 / 4; 
       const imageAspect = img.width / img.height;
@@ -681,7 +683,7 @@ async function autoCropTo34(file) {
         } else {
           reject(new Error("Canvas conversion to Blob failed."));
         }
-      }, file.type || 'image/webp', 0.8);
+      }, file.type || 'image/webp', 1.0);
     };
 
     img.onerror = (err) => {
@@ -693,9 +695,9 @@ async function autoCropTo34(file) {
 async function processPhoto(photo) {
   const croppedPhoto = await autoCropTo34(photo)
   const options = {
-    maxSizeMB: 0.3,
+    maxSizeMB: 0.2,
     useWebWorker: true,
-    maxWidthOrHeight: 800,
+    maxWidthOrHeight: 1020,
     fileType: 'image/webp'
   }
   try {
