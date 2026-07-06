@@ -71,11 +71,12 @@ eleventyConfig.addTransform("injectNestedToc", function(content) {
   eleventyConfig.addWatchTarget('./dist/*.js')
   eleventyConfig.addWatchTarget('./dist/*.css')
 
-  eleventyConfig.addPassthroughCopy("./src/assets/favicons/generic.svg");
+  eleventyConfig.addPassthroughCopy("./src/assets/favicons/generic.svg")
+  eleventyConfig.addPassthroughCopy("src/assets/icons")
   eleventyConfig.addPassthroughCopy("./src/assets/downloadable")
 
   // tells eleventy to ignore everything except news, _includes, info, about and ministries
-  eleventyConfig.ignores.add('src/!(news|_includes|info|about|ministries)/**')
+  eleventyConfig.ignores.add('src/!(news|_includes|info|about|ministries|weather)/**')
   // tells eleventy to ignore all .md files beginning with _
   eleventyConfig.ignores.add('src/**/_*.md')
   eleventyConfig.ignores.delete('dist/**')

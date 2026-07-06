@@ -14,7 +14,7 @@ module.exports = {
     'pibss-display': './src/pibss/pibss-display.js',
     'pibss-manage': './src/pibss/pibss-manage.js',
     'pibss-statistics': './src/pibss/pibss-statistics.js',
-    'pibss-login': './src/pibss/pibss-login.js'
+    'pibss-login': './src/pibss/pibss-login.js',
   },
   externals: {
     '/pagefind/pagefind-component-ui.js': 'module /pagefind/pagefind-component-ui.js',
@@ -31,11 +31,6 @@ module.exports = {
       template: './src/index.html',
       filename: 'index.html',
       chunks: ['home']
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/weather/weather.html',
-      filename: 'weather/index.html',
-      chunks: ['weather']
     }),
     new HtmlWebpackPlugin({
       template: './src/pibss/index.html',
