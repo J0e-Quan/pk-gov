@@ -4,7 +4,7 @@ Fictional government website project for the Plushie Kingdom.
 
 Read [CONTRIBUTING.md](CONTRIBUTING.md) to know how to contribute to pk-gov, and [CODEBASE.md](CODEBASE.md) for learning more about the codebase of pk-gov.
 
-Live demo link: https://pk-gov.onrender.com/
+Live link: https://pk-gov.onrender.com/
 
 ## Technologies used:
 
@@ -14,12 +14,14 @@ Live demo link: https://pk-gov.onrender.com/
 - 11ty for static page generation from templates
 - npm and webpack for managing and bundling code modules
 - Git for version control
+- Other packages and tools used can be found in [CODEBASE.md](CODEBASE.md)
 
 ## Key features:
 
 - Attractive design improves readability and ease-of-use
 - Website is responsive for easier navigation on mobile
 - Animations indicate interactable buttons and links
+- Services provide useful dynamic content
 
 ## Credits:
 

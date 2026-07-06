@@ -8,7 +8,9 @@ This contains information about the pk-gov codebase, such as what technologies w
 - Webpack is used to minify code 
 - ESLint and Prettier are in use to ensure code style remains consistent
 - lottie-web is used for the ministry animations (all other animations are made using only CSS)
-- We use the open-meteo and supabase APIs for handling the weather and PIBSS services respectively
+- Open-Meteo API is used to provide the weather service
+- Supabase and its API are used for PIBSS
+- browser-image-compression is used to compress plushie images before being uploaded to Supabase
 - Chart.js is used to generate charts in the PIBSS statistics page
 
 ## Structure of this website
@@ -16,7 +18,7 @@ The general file structure and structure of the webiste will be listed here. In 
 
 ### _includes/
 
-This is where 11ty templates which are used more than once (such as info pages and news articles) are located. `about-page.njk` is used by the about pk-gov and gov identity guidelines pages. `content-page.njk` is used by about pages and news articles. `ministry.njk` is used by all ministry pages.
+This is where 11ty templates which are used more than once (such as info pages and news articles) are located. `about-page.njk` is used by the about pk-gov and gov identity guidelines pages. `content-page.njk` is used by about pages and news articles. `ministry.njk` is used by all ministry pages. `service.njk` is used by all services (the actual service itself, not the introductory service page).
 
 ### about/
 
@@ -29,11 +31,11 @@ This is where 'universal' assets like fonts and `global.css`, as well as assets 
 - `downloadable/` is where the downloadable gov assets are located (they are stored as .zip files)
 - `favicons/` is where all favicons are located, pages without their own favicon use `generic.svg`
 - `fonts/` is where the font files are stored
+- `icons` contains several generic icons used throughout pk-gov, such as the loading animation used by the weather page
 - `lottie/` is where the lottie animations used by the ministry pages are stored
 - `pictures/` is where all pictures used by vanilla HTML files are stored. Currently, only minister pictures are here, but they are kept in a `ministers/` folder in preparation for any other categories
 - `styles/` is where all .css files are stored, including `global.css`, which loads the custom fonts from `fonts/`, resets some default css styling and contains some styles commonly used throughout pk-gov
 - `weather-icons/` is where all weather icons used in the weather page are obtained
-- `root (assets/)` contains several generic icons used throughout pk-gov, such as the loading animation used by the weather page
 
 ### info/
 
