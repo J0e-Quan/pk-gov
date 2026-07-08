@@ -10,7 +10,7 @@ thumbnail: ./news-media/introducing-the-plushie-immigration-and-biodata-storage-
 
 (NOTE: The press conference announcing PIBSS is available on <a class='link' href='https://www.youtube.com/watch?v=3nKP7c9rNBo' target='_blank' rel='noreferrer'>our YouTube channel</a>)
 
-Today, we're extremely proud to unveil the Government's largest initiative yet. The Plushie Immigration and Biodata Storage Service or PIBSS for short is our biggest update to pk-gov, containing over 150 commits! This introduction will be going over what PIBSS is, how to use it and when its rollout will be completed.
+Today, we're extremely proud to unveil the Government's largest initiative yet. The Plushie Immigration and Biodata Storage Service or PIBSS for short is our biggest update to pk-gov, containing over 160 commits! This introduction will be going over what PIBSS is, how to use it and when its rollout will be completed.
 
 ## What this service is
 
