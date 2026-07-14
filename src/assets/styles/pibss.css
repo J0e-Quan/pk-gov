@@ -347,7 +347,7 @@ section.form {
 .form .pibss-picture {
   animation: none;
 }
-.form .pibss-name::before, .pibss-type::before, .pibss-country::before, .pibss-date::before, .pibss-location::before {
+.form .pibss-name::before,.form .pibss-type::before,.form .pibss-country::before,.form .pibss-date::before,.form .pibss-location::before {
   display: none;
 }
 .form .pibss-card {
