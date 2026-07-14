@@ -8,6 +8,8 @@ This contains information about the pk-gov codebase, such as what technologies w
 - Webpack is used to minify code 
 - ESLint and Prettier are in use to ensure code style remains consistent
 - lottie-web is used for the ministry animations (all other animations are made using only CSS)
+- We use the open-meteo and supabase APIs for handling the weather and PIBSS services respectively
+- Chart.js is used to generate charts in the PIBSS statistics page
 
 ## Structure of this website
 The general file structure and structure of the webiste will be listed here. In most cases, you should only be touching stuff in the `src/` folder. Everything outside of that is for dependencies and other dev tools. For all pages (unless specified!), the .html files are located together with their .js files, while ALL CSS files are located in `assets/styles/` (This may be confusing, we know. It may be simplified/fixed in the future). In consideration of this, whenever we mention where 'pages' are located, their corresponding .js files will be located at the same place too!
@@ -29,7 +31,9 @@ This is where 'universal' assets like fonts and `global.css`, as well as assets 
 - `fonts/` is where the font files are stored
 - `lottie/` is where the lottie animations used by the ministry pages are stored
 - `pictures/` is where all pictures used by vanilla HTML files are stored. Currently, only minister pictures are here, but they are kept in a `ministers/` folder in preparation for any other categories
-- `styles/` is where all .css files are stored, including `global.css`, which loads the custom fonts from `fonts/`, resets some default css styling and contains some styles commonly used throughout pk-gov.
+- `styles/` is where all .css files are stored, including `global.css`, which loads the custom fonts from `fonts/`, resets some default css styling and contains some styles commonly used throughout pk-gov
+- `weather-icons/` is where all weather icons used in the weather page are obtained
+- `root (assets/)` contains several generic icons used throughout pk-gov, such as the loading animation used by the weather page
 
 ### info/
 
@@ -42,6 +46,14 @@ This is where all the ministry pages (the icons in the homepage) are located. An
 ### news/
 
 This is where the 'government news' pages are located. Any assets they use (such as photos) are taken from `news-media/`, located within this folder. Within `news-media/`, there should be a folder for each news article that uses media, named the same name as their corresponding .md file. All thumbnails MUST be named `thumbnail`, any extension is fine (but we recommend .webp). All pages are generated with 11ty, so there is a template file provided. 
+
+### pibss/
+
+This contains all PIBSS pages that can be accessed from its service page. These pages DO NOT use 11ty. All 4 pages share the  `pibss-common.js` file which creates a supabase client, the other .js files are used by their respective html files.
+
+### weather/
+
+This contains the weather service's html and js file. It DOES NOT use 11ty. Weather icons are obtained from `assets/weather-icons/`.
 
 ### root (src/)
 
@@ -75,7 +87,15 @@ h3 elements are used for smaller/sub-titles, such as different categories/points
 
 ### Regular text (p)
 
-Regular text or text without any special elements are used for the content of the article and any attributions. They automatically have margin-bottom applied to them to separate paragraphs
+Regular text or text without any special elements are used for the content of the article and any attributions. They automatically have margin-bottom applied to them to separate paragraphs.
+
+### \- (Unordered list/ul)
+
+Unordered lists are used when multiple things have to be listed and the order is not important, such as requirements to use a service. Styles such as margins are automatically handled.
+
+### 1. 2. 3. ... (Ordered list/ol)
+
+Ordered lists are used when multiple things have to be listed in a specific order, such as steps to use a service. Styles such as margins are automatically handled.
 
 ### \![alt text](link to img) (image/img)
 

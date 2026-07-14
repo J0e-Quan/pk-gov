@@ -27,7 +27,7 @@
     <link rel="icon" href="../assets/favicons/generic.svg" />
     <link href="/pagefind/pagefind-component-ui.css" rel="stylesheet">
     <script src="/pagefind/pagefind-component-ui.js" type="module"></script>
-    <title>Plushie Kingdom weather</title>
+    <title>PIBSS Statistics</title>
   </head>
   <body>
     <div class="header-scrollable-area">
@@ -53,34 +53,45 @@
       </header>
       <section class="content" data-pagefind-body>
         <section class="hero">
-          <h1 class="hero-title">Plushie Kingdom weather</h1>
-          <p class="hero-text">
-            Get the latest updates on weather information in the Kingdom and the surrounding George Town area here. Powered by <a class="link" href="https://open-meteo.com/" target="_blank" rel="noreferrer">Open-Meteo</a>.
-          </p>
+          <h1 class="hero-title">View PIBSS statistics</h1>
+          <p class="hero-text">Get open access to detailed insights on Plushie Kingdom citizens based on data from PIBSS. Charts powered by <a class="link" href="https://www.chartjs.org/" target="_blank" rel="noreferrer">Chart.js</a>.</p>
         </section>
-        <section class="current-weather">
-          <h2 class="current-weather heading">Current weather</h2>
-          <div class="section-divider"></div>
-          <div class="current-weather content">
-            <img class="current-weather loader" src="../assets/icons/loading.svg">
+        <section class="statistics">
+           <h2 class="heading">Overall statistics</h2>
+           <div class="section-divider"></div>
+           <div class="numbers">
+            <h3 class="total-citizens value">???</h3>
+            <p class="total-citizens text">total citizens in the Plushie Kingdom</p>
+            <h3 class="new-citizens value">???</h3>
+            <p class="new-citizens text">new citizens joined the Plushie Kingdom this year</p>
+            <h3 class="largest-type value">?????</h3>
+            <p class="largest-type text">are the most populous type of plushie in the Plushie Kingdom</p>
+            <h3 class="largest-location value">???????????????</h3>
+            <p class="largest-location text">is the most populated area in the Plushie Kingdom</p>
           </div>
-        </section>
-        <section class="forecast-today">
-          <h2 class="forecast-today heading">24-hour Forecast</h2>
+          <h2 class="heading">Charts</h2>
           <div class="section-divider"></div>
-          <div class="forecast-today content">
-            <img class="forecast-today loader" src="../assets/icons/loading.svg">
-          </div>
-        </section>
-        <section class="forecast-week">
-          <h2 class="forecast-week heading">7-day Forecast</h2>
-          <div class="section-divider"></div>
-          <div class="forecast-week content">
-            <img class="forecast-week loader" src="../assets/icons/loading.svg">
-          </div>
+            <div class="charts">
+              <div class="location-distribution">
+                <h3 class="chart title">Distribution of plushies by location</h3>
+                <canvas id="location-distribution"></canvas>
+              </div>
+              <div class="type-distribution">
+                <h3 class="chart title">Distribution of plushies by type</h3>
+                <canvas id="type-distribution"></canvas>
+              </div>
+              <div class="yearly-new-citizens">
+                <h3 class="chart title">New citizens by year (2013 onwards)</h3>
+                <canvas id="yearly-new-citizens"></canvas>
+              </div>
+              <div class="population-history">
+                <h3 class="chart title">Population history (2013 onwards)</h3>
+                <canvas id="population-history"></canvas>
+              </div>
+            </div>
         </section>
       </section>
-      <div class="end-buttons"><a class="return" href="/">Return to homepage</a></div>
+      <div class="end-buttons"><a class="return" href="/info/pibss/">Return to Start Page</a></div>
     </div>
     <footer class="footer">
       <section class="footer-ministries">

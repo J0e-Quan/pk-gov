@@ -18,7 +18,7 @@
         </a>
         <pagefind-searchbox class="search-desktop" shortcut="none" hide-shortcut placeholder="Search pk-gov..." show-sub-results=true></pagefind-searchbox>
         <div class="search-mobile">
-          <img class="search-icon" src="../assets/search.svg" alt="search icon">
+          <img class="search-icon" src="../assets/icons/search.svg" alt="search icon">
           <pagefind-modal class="mobile-modal">
             <pagefind-modal-header>
               <pagefind-input placeholder="Search pk-gov..."></pagefind-input>
@@ -37,7 +37,7 @@
             <p class="hero-date">{{ date | postDate }}, by {{ author }}</p>
           {% endif %}
           <h1 class="hero-title">{{ title }}</h1>
-          <h3 class="hero-excerpt">{{ excerpt }}</p>
+          <h3 class="hero-excerpt">{{ excerpt | safe }}</p>
           {% if thumbnail %}
             <img class="hero-thumbnail" src="{{ thumbnail }}", alt="{{ thumbnail-alt }}">
           {% endif %}
@@ -82,7 +82,8 @@
         <div class="footer-resources links">
           <a class="footer link" href="/info/">Life in the Plushie Kingdom</a>
           <a class="footer link" href="/news/">Government news</a>      
-          <a class="footer link" href="/weather/">Plushie Kingdom weather</a>    
+          <a class="footer link" href="/info/pibss">PIBSS</a>
+          <a class="footer link" href="/weather/">Plushie Kingdom weather</a>  
         </div>
       </section>
       <section class="footer-about">

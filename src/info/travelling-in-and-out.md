@@ -22,7 +22,8 @@ If you do fufill those conditions, here's what you need to do:
 1. Arrive outside the Plushie Kingdom
 2. Let any staff member from the Ministry of Immigration know that you want to apply for Plushie Kingdom citizenship
 3. Go through our biosecurity measures
-4. And that's it! You've become a citizen of the Plushie Kingdom!
+4. Register yourself in <a class='link' href="/info/pibss">PIBSS</a>
+5. And that's it! You've become a citizen of the Plushie Kingdom!
 
 ## Entering the Plushie Kingdom (for existing citizens)
 
@@ -70,4 +71,4 @@ If you're ever feeling homesick, or just want to stay informed on the latest hap
 
 ---
 
-If you ever want to renounce (give up) your Plushie Kingdom citizenship (we'll be sad to see you go!), contact any staff member of the Ministry of Immigration to go through any required processes.
+If you ever want to renounce (give up) your Plushie Kingdom citizenship (we'll be sad to see you go!), contact any staff member of the Ministry of Immigration to have your information removed from PIBSS and go through any other required processes.
