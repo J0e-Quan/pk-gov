@@ -5,7 +5,7 @@ date: 2026-05-16
 author: Deputy Technology Minister Kodee
 title: Open-sourcing pk-gov for an open Government
 excerpt: Here's why we made pk-gov open source, why we'll keep it that way, and how to get involved in its development.
-thumbnail: ./news-media/open-sourcing-pk-gov-for-an-open-government/thumbnail.webp
+thumbnail: /assets/news-media/open-sourcing-pk-gov-for-an-open-government/thumbnail.webp
 ---
 
 When we started building pk-gov, we knew it had to be intuitive, informative and effective at giving you what you want from us: Government information and services. With this in mind, we made sure pk-gov is fast and easy to use, whether you're learning more about our Kingdom or looking for help. Besides that, we also had to consider the long-term maintainability of pk-gov. That's why we've decided to make pk-gov open source on <a class="link" href="https://github.com/J0e-Quan/pk-gov" target="_blank" rel="noreferrer">GitHub</a>.
