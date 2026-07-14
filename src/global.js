@@ -2,29 +2,44 @@ import './assets/styles/global.css'
 
 // code for opening pagefind modal for search-mobile
 document.addEventListener('DOMContentLoaded', () => {
-  const searchIcon = document.querySelector('.search-icon');
-  const modalElement = document.querySelector('.mobile-modal');
+  const searchIcon = document.querySelector('.search-icon')
+  const modalElement = document.querySelector('.mobile-modal')
 
   if (searchIcon && modalElement) {
     searchIcon.addEventListener('click', () => {
       // This fires the exact open routine Pagefind calls internally
       if (typeof modalElement.open === 'function') {
-        modalElement.open();
+        modalElement.open()
       } else {
         // Fallback if the component wrapper hasn't fully registered its method yet
-        modalElement.setAttribute('open', '');
+        modalElement.setAttribute('open', '')
       }
-    });
+    })
   }
-});
-
-// code for clearing # after using table of contents or redirect
-window.addEventListener('hashchange', () => {
-  // the first arg is for temporary data e.g. scroll position, second null is conventional
-  history.replaceState(null, null, window.location.pathname)
 })
-// clear # on page load in case the eventListener misses it
-history.replaceState(null, null, window.location.pathname)
+
+document.addEventListener('click', (e) => {
+  // Check if the clicked element (or its parent) is a link
+  const anchor = e.target.closest('a')
+  if (!anchor) return
+  // ignore the # at the start so that getElementById works
+  const hash = anchor.hash.slice(1)
+  // Check if it's a local page anchor
+  if (anchor.hostname === window.location.hostname && anchor.pathname === window.location.pathname) {
+    const targetElement = document.getElementById(hash)
+    if (targetElement) {
+      // Prevent the default browser history push
+      e.preventDefault()
+      targetElement.scrollIntoView()
+      // Remove the # after scrolling
+      history.replaceState(null, null, window.location.pathname)
+    }
+  }
+})
+// clear # immediately on page load (removes # from redirects by other pages)
+window.addEventListener('scrollend', () => {
+  history.replaceState(null, null, window.location.pathname)
+}, {once: true})
 
 // code for handling share button
 const shareButton = document.querySelector('.share')
