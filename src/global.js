@@ -1,5 +1,4 @@
 import './assets/styles/global.css'
-// import './assets/styles/content-page.css'
 
 // code for opening pagefind modal for search-mobile
 document.addEventListener('DOMContentLoaded', () => {

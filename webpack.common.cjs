@@ -4,12 +4,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
   entry: {
     home: './src/home.js',
+    global: './src/global.js',
     ministries: './src/ministries/ministries.js',
-    info: './src/info/info.js',
-    news: './src/news/news.js',
     weather: './src/weather/weather.js',
-    'content-page': './src/content-page.js',
-    'about-page': './src/about/about-page.js',
     'pibss-common': './src/pibss/pibss-common.js',
     'pibss-display': './src/pibss/pibss-display.js',
     'pibss-manage': './src/pibss/pibss-manage.js',
@@ -30,7 +27,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html',
       filename: 'index.html',
-      chunks: ['home']
+      chunks: ['home', 'global']
     }),
   ],
   module: {
