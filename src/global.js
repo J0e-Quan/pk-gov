@@ -1,3 +1,5 @@
+import './assets/styles/global.css'
+
 // code for opening pagefind modal for search-mobile
 document.addEventListener('DOMContentLoaded', () => {
   const searchIcon = document.querySelector('.search-icon')

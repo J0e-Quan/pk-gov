@@ -2,6 +2,7 @@ import { eleventyImageTransformPlugin } from '@11ty/eleventy-img'
 import { IdAttributePlugin } from "@11ty/eleventy";
 import EleventyVite from '@11ty/eleventy-plugin-vite';
 import * as cheerio from "cheerio";
+import path from "path";
 
 export default async function (eleventyConfig) {
   eleventyConfig.setServerOptions({
@@ -15,6 +16,12 @@ export default async function (eleventyConfig) {
     
     viteOptions: {
       clearScreen: false,
+      resolve: {
+        alias: {
+          // Allow references to `node_modules` folder directly
+          "/node_modules": path.resolve(".", "node_modules"),
+        },
+      },
       build: {
         mode: "production",
         rolldownOptions: {
@@ -91,7 +98,9 @@ eleventyConfig.addTransform("injectNestedToc", function(content) {
 
   eleventyConfig.addWatchTarget('./dist/*.js')
   eleventyConfig.addWatchTarget('./dist/*.css')
-  eleventyConfig.addPassthroughCopy("/src/assets/")
+  eleventyConfig.addPassthroughCopy("src/**/*.js")
+  // eleventyConfig.addPassthroughCopy("src/**/*.css")
+  eleventyConfig.addPassthroughCopy("src/assets/")
 
   // tells eleventy to ignore all .md files beginning with _
   eleventyConfig.ignores.add('src/**/_*.md')
