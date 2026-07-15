@@ -108,10 +108,8 @@ function getLargestLocation(locations) {
 function animateStatistics(element, value) {
   element.classList.add('animate-shrink-grow')
   element.addEventListener('animationiteration', () => {
-    console.log('before:' + element + "'s text is " + value)
     element.textContent = value
   }, {once: true})
-  console.log('after:' + element + "'s text is now " + value)
   element.addEventListener('animationend', () => {
     element.classList.remove('animate-shrink-grow')
   }, {once: true})

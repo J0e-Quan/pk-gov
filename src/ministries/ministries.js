@@ -7,10 +7,8 @@ getAnimation()
 async function getAnimation() {
   const animationContainer = document.querySelector('html')
   const animationName = animationContainer.classList.value
-  console.log('../assets/lottie/' + animationName + '.json')
   try {
     const logo = await import('../assets/lottie/' + animationName + '.json')
-    console.log(logo.default)
     showAnimation(logo.default)
   } catch (error) {
     console.error(error)

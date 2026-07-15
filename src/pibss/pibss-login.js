@@ -16,7 +16,7 @@ function getLoginDetails() {
 }
 
 async function signIn(emailAddress, pw) {
-  const { data, error } = await supabase.auth.signInWithPassword({
+  const { error } = await supabase.auth.signInWithPassword({
     email: emailAddress,
     password: pw,
   })

@@ -1,13 +1,11 @@
-import '../assets/styles/global.css'
-import '../assets/styles/weather.css'
-import sunny from '../assets/weather-icons/sunny.svg'
-import night from '../assets/weather-icons/night.svg'
-import cloudy from '../assets/weather-icons/cloudy.svg'
-import sunnyCloudy from '../assets/weather-icons/sunny-cloudy.svg'
-import nightCloudy from '../assets/weather-icons/night-cloudy.svg'
-import rain from '../assets/weather-icons/rain.svg'
-import thunderstorm from '../assets/weather-icons/thunderstorm.svg'
-import generic from '../assets/weather-icons/generic.svg'
+const sunny = '../assets/weather-icons/sunny.svg'
+const night = '../assets/weather-icons/night.svg'
+const cloudy = '../assets/weather-icons/cloudy.svg'
+const sunnyCloudy = '../assets/weather-icons/sunny-cloudy.svg'
+const nightCloudy = '../assets/weather-icons/night-cloudy.svg'
+const rain = '../assets/weather-icons/rain.svg'
+const thunderstorm = '../assets/weather-icons/thunderstorm.svg'
+const generic = '../assets/weather-icons/generic.svg'
 
 // code for opening pagefind modal for search-mobile
 document.addEventListener('DOMContentLoaded', () => {
