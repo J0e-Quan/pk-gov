@@ -1,12 +1,3 @@
-// const sunny = '../assets/weather-icons/sunny.svg'
-// const night = '../assets/weather-icons/night.svg'
-// const cloudy = '../assets/weather-icons/cloudy.svg'
-// const sunnyCloudy = '../assets/weather-icons/sunny-cloudy.svg'
-// const nightCloudy = '../assets/weather-icons/night-cloudy.svg'
-// const rain = '../assets/weather-icons/rain.svg'
-// const thunderstorm = '../assets/weather-icons/thunderstorm.svg'
-// const generic = '../assets/weather-icons/generic.svg'
-
 import sunny from '../assets/weather-icons/sunny.svg?url'
 import night from '../assets/weather-icons/night.svg?url'
 import cloudy from '../assets/weather-icons/cloudy.svg?url'

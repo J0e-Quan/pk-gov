@@ -99,7 +99,6 @@ eleventyConfig.addTransform("injectNestedToc", function(content) {
   eleventyConfig.addWatchTarget('./dist/*.js')
   eleventyConfig.addWatchTarget('./dist/*.css')
   eleventyConfig.addPassthroughCopy("src/**/*.js")
-  // eleventyConfig.addPassthroughCopy("src/**/*.css")
   eleventyConfig.addPassthroughCopy("src/assets/")
 
   // tells eleventy to ignore all .md files beginning with _
