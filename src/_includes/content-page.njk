@@ -53,12 +53,15 @@
         </section>
       </section>
       <div class="end-buttons">
-        <button type="button" class="share">Share this</button>
-        {# if there's a date, its a news article. If not, its an info page. #}
-        {% if date %}
+        {% if tags != 'about' %}
+          <button type="button" class="share">Share this</button>
+        {% endif %}
+        {% if tags == 'news' %}
           <a class="return" href="/news/">Return to news list</a>
-        {% else %}
+        {% elif tags == 'info' %}
           <a class="return" href="/info/">Return to information list</a>
+        {% elif tags == 'about' %}
+          <a class="return" href="/">Return to homepage</a>
         {% endif %}
       </div>
    </div>
