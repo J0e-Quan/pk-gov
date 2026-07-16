@@ -1,4 +1,4 @@
-section:not(.content, footer section, .page section) {
+section:not(.content, footer section) {
   padding: 2rem 5rem;
 }
 
@@ -104,10 +104,6 @@ section:not(.content, footer section, .page section) {
   margin-right: 0;
 }
 
-/* HEY! HERE'S WHAT YOU NEED TO DO NEXT
-MOST OF THE STYLES HAVE ALREADY BEEN MOVED OVER, JUST MAKE SURE EVERYTHING IS OK (COMPARE WITH PRODUCTION)
-CURRENTLY THE MAIN ISSUE IS PADDING ON NON-ABOUT PAGES */
-
 a.return, button.share, .button {
   margin-left: 2rem;
   margin-right: 2rem;
@@ -204,7 +200,7 @@ a.return, button.share, .button {
 /* MEDIA QUERIES BELOW */
 @media (max-width: 600px) {
   .header,
-  section:not(.content, .page, footer section) {
+  .content section:not(.content, footer section) {
     padding: 1rem 2rem;
   }
   .hero-date {
