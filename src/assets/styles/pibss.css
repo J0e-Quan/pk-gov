@@ -412,7 +412,7 @@ button.update-location-submit-button {
   .pibss-type, .pibss-country, .pibss-date, .pibss-location {
     font-size: 1rem;
   }
-  .filters-submit {
+  button.filters-submit {
     margin: 1rem 0 0 0;
   }
   .value {

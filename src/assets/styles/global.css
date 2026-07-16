@@ -206,7 +206,7 @@ a {
   align-items: baseline;
   flex-wrap: wrap;
   gap: 2rem;
-  margin-bottom: 4rem;
+  padding-bottom: 4rem;
 }
 
 .return, .share, .button, select{
