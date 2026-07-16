@@ -22,7 +22,7 @@ label {
   font-weight: 700;
 }
 
-.filters-inputs select {
+.filters-inputs select, .update-location-new-location-select {
   margin: 0;
   font-size: 1.5rem;
   padding: 0.5rem 1rem;
@@ -203,7 +203,7 @@ section.login-form {
 .splash-screen {
   min-height: 70vh;
 }
-section.form {
+.content section.form {
   padding-top: 0;
   min-height: 50vh;
 }
@@ -259,10 +259,10 @@ section.form {
   font-size: 2rem;
   margin-bottom: 2rem;
 }
-.splash-screen-start-button {
+button.splash-screen-start-button {
   margin: 0 auto;
 }
-.register-submit-name-button {
+button.register-submit-name-button {
   font-size: 3rem;
   margin: 0;
   padding: 0rem 1.5rem;
@@ -278,7 +278,7 @@ section.form {
   max-width: 1000px;
   height: 7rem;
 }
-.register-photo-form-button {
+button.register-photo-form-button {
   font-size: 2rem;
   margin: 0;
 }
@@ -299,13 +299,13 @@ section.form {
   align-items: flex-start;
   gap: 1rem;
 }
-.register-camera-button {
+button.register-camera-button {
   display: none;
 }
 .register-photo-text-container .note {
   margin-top: 0;
 }
-.register-photo-text-container .register-photo-form-button {
+.register-photo-text-container button.register-photo-form-button {
   margin: 0;
 }
 .register-pibss-card {
@@ -316,7 +316,7 @@ section.form {
 .register-confirm-note {
   margin: -1rem 0 2rem;
 }
-.register-confirm-button {
+button.register-confirm-button {
   margin: 0 auto;
 }
 .update-location-search-wrapper, .register-type-wrapper {
@@ -333,9 +333,10 @@ section.form {
   min-width: 0;
   height: 100%;
   margin-right: -16px;
+  margin-top: 0;
   flex-grow: 1;
 }
-.update-location-search-button {
+button.update-location-search-button {
   margin: 0;
   display: flex;
   justify-content: center;
@@ -451,7 +452,7 @@ button.update-location-submit-button {
   .note {
     font-size: 1rem;
   }
-  .register-submit-name-button {
+  button.register-submit-name-button {
     font-size: 1.5rem;
   }
   .update-location-search-wrapper {
@@ -461,7 +462,7 @@ button.update-location-submit-button {
     height: auto;
     flex-wrap: wrap;
   }
-  .update-location-search-button, .update-location-searchbar, .register-type-select, .register-country-select, .register-location-select {
+  button.update-location-search-button, .update-location-searchbar, .register-type-select, .register-country-select, .register-location-select {
     font-size: 1rem;
     padding: 0.5rem 1rem;
   }
@@ -477,8 +478,8 @@ button.update-location-submit-button {
     text-align: center;
     font-size: 1.5rem;
   }
-  .register-camera-button {
-    display: inherit;
+  button.register-camera-button {
+    display: flex;
   }
   .register-photo-text-container {
     align-items: center;
@@ -489,7 +490,7 @@ button.update-location-submit-button {
     align-items: center;
     gap: 1rem;
   }
-  .register-confirm-button {
+  button.register-confirm-button {
     max-width: none;
     width: 100%;
     display: flex;
@@ -506,7 +507,7 @@ button.update-location-submit-button {
     font-size: 1rem;
   }
   .update-location-wrapper {
-    gap: 0;
+    gap: 0.5rem;
   }
   .update-location-label {
     font-size: 1.5rem;
