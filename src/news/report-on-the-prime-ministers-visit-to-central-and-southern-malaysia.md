@@ -48,3 +48,16 @@ This legendary shopping street was the plushies' first stop in Melaka. The vario
 ![Second picture showing Pink Bear Bear at the Jonker Street area](/assets/news-media/report-on-the-prime-ministers-visit-to-central-and-southern-malaysia/jonker-2.webp)
 ![Third picture showing Pink Bear Bear at the Jonker Street area](/assets/news-media/report-on-the-prime-ministers-visit-to-central-and-southern-malaysia/jonker-3.webp)
 
+### Encore Melaka
+
+The next day, the plushies went to watch an entertaining theatre performance at the Encore Melaka venue, marvelling at the impressive stage design and effects, learning a lot about historical Melaka culture and taking some more photos along the way.
+
+![Picture of Pink Bear Bear outside Encore Melaka](/assets/news-media/report-on-the-prime-ministers-visit-to-central-and-southern-malaysia/encore-outside.webp)
+![Picture of Pink Bear Bear inside Encore Melaka](/assets/news-media/report-on-the-prime-ministers-visit-to-central-and-southern-malaysia/encore-inside.webp)
+
+### Jonker Street (again)
+
+On their second visit to Jonker Street, the plushies got to try out Melaka's unique chicken rice balls for dinner. After that, they also visited the Mamee House at Jonker Street, where they ended up bringing 2 more plushies with them!
+
+![Picture of Pink Bear Bear trying chicken rice balls](/assets/news-media/report-on-the-prime-ministers-visit-to-central-and-southern-malaysia/rice-ball.webp)
+![Picture of Pink Bear Bear visiting Mamee House](/assets/news-media/report-on-the-prime-ministers-visit-to-central-and-southern-malaysia/mamee.webp)
