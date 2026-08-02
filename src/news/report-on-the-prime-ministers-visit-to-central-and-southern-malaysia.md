@@ -61,3 +61,4 @@ On their second visit to Jonker Street, the plushies got to try out Melaka's uni
 
 ![Picture of Pink Bear Bear trying chicken rice balls](/assets/news-media/report-on-the-prime-ministers-visit-to-central-and-southern-malaysia/rice-ball.webp)
 ![Picture of Pink Bear Bear visiting Mamee House](/assets/news-media/report-on-the-prime-ministers-visit-to-central-and-southern-malaysia/mamee.webp)
+![Picture of the 3 plushies and their 2 new friends](/assets/news-media/report-on-the-prime-ministers-visit-to-central-and-southern-malaysia/new-friends.webp)
