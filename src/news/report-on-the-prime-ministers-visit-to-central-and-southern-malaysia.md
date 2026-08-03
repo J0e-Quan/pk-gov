@@ -62,3 +62,18 @@ On their second visit to Jonker Street, the plushies got to try out Melaka's uni
 ![Picture of Pink Bear Bear trying chicken rice balls](/assets/news-media/report-on-the-prime-ministers-visit-to-central-and-southern-malaysia/rice-ball.webp)
 ![Picture of Pink Bear Bear visiting Mamee House](/assets/news-media/report-on-the-prime-ministers-visit-to-central-and-southern-malaysia/mamee.webp)
 ![Picture of the 3 plushies and their 2 new friends](/assets/news-media/report-on-the-prime-ministers-visit-to-central-and-southern-malaysia/new-friends.webp)
+
+## Port Dickson
+
+---
+
+This famous tourist spot was the next place the plushies visited. After departing from Melaka, they arrived at their hotel to take a quick break before continuing on their trip.
+
+![Picture of the plushies at their hotel in Port Dickson](/assets/news-media/report-on-the-prime-ministers-visit-to-central-and-southern-malaysia/pd-hotel.webp)
+
+### PD Waterfront
+
+The plushies explored the area's waterfront, enjoying a nice dinner (and ice cream!) while taking in the beautiful seaview and lovely atmosphere there.
+
+![Picture of the plushies at PD Waterfront](/assets/news-media/report-on-the-prime-ministers-visit-to-central-and-southern-malaysia/beach.webp)
+![Picture of Pink Bear Bear with a PD Waterfront sign](/assets/news-media/report-on-the-prime-ministers-visit-to-central-and-southern-malaysia/waterfront.webp)
