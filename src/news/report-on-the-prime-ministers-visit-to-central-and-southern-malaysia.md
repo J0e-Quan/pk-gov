@@ -77,3 +77,17 @@ The plushies explored the area's waterfront, enjoying a nice dinner (and ice cre
 
 ![Picture of the plushies at PD Waterfront](/assets/news-media/report-on-the-prime-ministers-visit-to-central-and-southern-malaysia/beach.webp)
 ![Picture of Pink Bear Bear with a PD Waterfront sign](/assets/news-media/report-on-the-prime-ministers-visit-to-central-and-southern-malaysia/waterfront.webp)
+
+## Kuala Selangor
+
+---
+
+Next, the plushies made a visit to this lovely fishing village. As a change of pace from visiting so many spots, the plushies took some time to rest and relax here, taking a quick snack break courtesy of their new friends!
+
+![Picture of the plushies at their hotel in Kuala Selangor](/assets/news-media/report-on-the-prime-ministers-visit-to-central-and-southern-malaysia/ks-hotel.webp)
+![Picture of the plushies having a snack break](/assets/news-media/report-on-the-prime-ministers-visit-to-central-and-southern-malaysia/snack-break.webp)
+
+## Sekinchan
+
+---
+
