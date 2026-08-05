@@ -4,11 +4,11 @@ layout: content-page.njk
 date: 2026-08-06
 author: Foreign Affairs Minister Paddington
 title: Report on the Prime Minister's visit to Central and Southern Malaysia
-excerpt: In his second official visit, the Prime Minister focuses on several key locations further down from the Kingdom, being Melaka, Port Dickson, Kuala Selangor and Sekinchan. Two Plushie Kingdom citizens also accompanied him on the trip.
+excerpt: In his second official visit, the Prime Minister focused on several key locations further down from the Kingdom, being Melaka, Port Dickson, Kuala Selangor and Sekinchan. Two Plushie Kingdom citizens also accompanied him on the trip.
 thumbnail: /assets/news-media/report-on-the-prime-ministers-visit-to-central-and-southern-malaysia/thumbnail.webp
 ---
 
-Today, the Prime Minister has concluded an official visit to Central and Southern Malaysia. This report contains details on what happened during the visit.
+Today, the Prime Minister has concluded an official visit to several locations in Central and Southern Malaysia. This report contains details on what happened during the visit.
 
 ## The more the merrier
 
@@ -57,7 +57,7 @@ The next day, the plushies went to watch an entertaining theatre performance at 
 
 ### Jonker Street (again)
 
-On their second visit to Jonker Street, the plushies got to try out Melaka's unique chicken rice balls for dinner. After that, they also visited the Mamee House at Jonker Street, where they ended up bringing 2 more plushies with them!
+On their second visit to Jonker Street, the plushies got to try out Melaka's unique chicken rice balls for dinner. After that, they also visited the Mamee House at Jonker Street, where they ended up bringing 2 new friends with them!
 
 ![Picture of Pink Bear Bear trying chicken rice balls](/assets/news-media/report-on-the-prime-ministers-visit-to-central-and-southern-malaysia/rice-ball.webp)
 ![Picture of Pink Bear Bear visiting Mamee House](/assets/news-media/report-on-the-prime-ministers-visit-to-central-and-southern-malaysia/mamee.webp)
@@ -91,3 +91,28 @@ Next, the plushies made a visit to this lovely fishing village. As a change of p
 
 ---
 
+As their last major stop for the visit, the plushies stopped by Sekinchan for lunch and to visit some places there before heading home.
+
+![Picture of the plushies with an 'I Love Sekinchan' sign](/assets/news-media/report-on-the-prime-ministers-visit-to-central-and-southern-malaysia/sekinchan.webp)
+
+### Wishing Tree
+
+The plushies went to visit the famous Wishing Tree, located near a large temple. Gaining popularity from being used as a filming site for some drama shows, the plushies took in the beautiful sights and atmosphere there. 
+
+![Picture of Pink Bear Bear with the Wishing Tree](/assets/news-media/report-on-the-prime-ministers-visit-to-central-and-southern-malaysia/temple.webp)
+
+### Terminal Sekinchan
+
+Next, the plushies went to visit this relatively new tourist spot. Though it was closed for weekdays, the plushies still managed to catch a glimpse of the signature Boeing 727 aircraft placed in the middle of the scenic paddy fields!
+
+![Picture of Pink Bear Bear at Terminal Sekinchan](/assets/news-media/report-on-the-prime-ministers-visit-to-central-and-southern-malaysia/terminal-sekinchan.webp)
+
+## Heading home
+
+---
+
+After several days of fun, the Prime Minister's second official visit had come to an end. The plushies made their way home to the Plushie Kingdom in Penang, happy to have visited various places and found new friends to bring home with them!
+
+![Picture of the plushies in the biosecurity chamber (washing machine)](/assets/news-media/report-on-the-prime-ministers-visit-to-central-and-southern-malaysia/biosecurity.webp)
+
+Following the Government's biosecurity procedures, all the plushies were subjected to a biosecurity check upon their return to the Kingdom. The first official visit with other plushies accompanying the Prime Minister was a great success, and we expect to see more trips like this in the future!
