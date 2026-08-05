@@ -1,7 +1,7 @@
 ---
 tags: news
 layout: content-page.njk
-date: 2026-08-10
+date: 2026-08-06
 author: Prime Minister Pink Bear Bear
 title: Introducing the Plushie Immigration and Biodata Storage Service
 excerpt: Real, meaningful change is here. Catch up on the reveal of PIBSS as the Prime Minister introduces the Government's largest update to pk-gov.
