@@ -1,7 +1,7 @@
 ---
 tags: news
 layout: content-page.njk
-date: 2026-08-06
+date: 2026-08-05
 author: Foreign Affairs Minister Paddington
 title: Report on the Prime Minister's visit to Central and Southern Malaysia
 excerpt: In his second official visit, the Prime Minister focused on several key locations further down from the Kingdom, being Melaka, Port Dickson, Kuala Selangor and Sekinchan. Two Plushie Kingdom citizens also accompanied him on the trip.
