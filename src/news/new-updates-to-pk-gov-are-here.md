@@ -5,7 +5,7 @@ date: 2026-06-02
 author: Technology Minister Android
 title: New updates to pk-gov are here
 excerpt: A new weather page and search makes pk-gov even more intuitive, informative and effective at giving you what you need from the Government.
-thumbnail: ./news-media/new-updates-to-pk-gov-are-here/thumbnail.webp
+thumbnail: /assets/news-media/new-updates-to-pk-gov-are-here/thumbnail.webp
 ---
 
 (NOTE: Video version of this announcement is available <a class='link' href='https://www.youtube.com/watch?v=3nKP7c9rNBo' target='_blank' rel='noreferrer'>here</a>)
@@ -16,7 +16,7 @@ Today, we're introducing two new features to pk-gov that make it an even better 
 
 ---
 
-![Picture showing weather page](./news-media/new-updates-to-pk-gov-are-here/weather.webp)
+![Picture showing weather page](/assets/news-media/new-updates-to-pk-gov-are-here/weather.webp)
 
 Powered by <a class='link' href='https://open-meteo.com/' target='_blank' rel='noreferrer'>Open-Meteo</a>, our new weather page lets you stay one step ahead of Mother Nature by providing weather updates for the Kingdom and the surrounding George Town area. We provide hourly forecasts for 24 hours, and daily forecasts for 7 days. The weather page can be accessed from the homepage and footer. Any weather alerts will be posted on our <a class="link" href="/news/">Government news</a> page.
 
@@ -24,7 +24,7 @@ Powered by <a class='link' href='https://open-meteo.com/' target='_blank' rel='n
 
 ---
 
-![Picture showing desktop and mobile search UI](./news-media/new-updates-to-pk-gov-are-here/search.webp)
+![Picture showing desktop and mobile search UI](/assets/news-media/new-updates-to-pk-gov-are-here/search.webp)
 
 As pk-gov continues to expand, it can get difficult to find exactly what you need by browsing through all the pages on the website. Now, you can use the new searchbar (or search icon on mobile) powered by <a class='link' href='https://pagefind.app/' target='_blank' rel='noreferrer'>Pagefind</a> to search for keywords directly. The search results will take you to the relevant section automatically, so you can find what you're looking for faster.
 

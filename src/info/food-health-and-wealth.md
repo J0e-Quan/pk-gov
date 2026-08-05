@@ -18,7 +18,7 @@ It may be tasteless, colourless and not smell nice, but it's available anywhere 
 
 The Plushie Kingdom has a large variety of dining options available, most of which are located in the Big Tent.
 
-![Picture of food options available in the Plushie Kingdom](./info-media/food-health-and-wealth/food-options.webp)
+![Picture of food options available in the Plushie Kingdom](/assets/info-media/food-health-and-wealth/food-options.webp)
 Meals are available from vendors such as Rooty and Bearista, who provide an all-in-one stop for both food and drinks. You can also pick from several individual food items like Sushi and Egg to create your own perfect breakfast, lunch, dinner, or anything else in between!
 
 ## Healthcare services
@@ -32,4 +32,4 @@ The Plushie Kingdom offers quality healthcare from sickness to recovery and beyo
 ---
 
 The Plushie Kingdom is home to world-class banking expertise, ensuring the financial health of all plushies remains secure. All financial activity, including investments, loans and bank accounts are handled and regulated by the Ministry of Finance. To access or learn more about these services, contact your nearest Ministry of Finance staff member.
-![Picture of all Ministry of Finance staff members](./info-media/business-and-commerce/mofinance-staff-members.webp)
+![Picture of all Ministry of Finance staff members](/assets/info-media/business-and-commerce/mofinance-staff-members.webp)

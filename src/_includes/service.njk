@@ -3,9 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href={{ "/assets/styles/about-page.css" | url }}>
+    <link rel="stylesheet" href="/assets/styles/global.css">
+    <link rel="stylesheet" href="/assets/styles/content-page.css">
+    <link rel="stylesheet" href={{ cssPath | url }}>
     <link rel="icon" href="/assets/favicons/generic.svg"/>
-    <link href="/pagefind/pagefind-component-ui.css" rel="stylesheet">
+    <link href="/pagefind/pagefind-component-ui.css" rel="stylesheet" vite-ignore>
     <script src="/pagefind/pagefind-component-ui.js" type="module"></script>
     <title>{{ title }}</title>
   </head>
@@ -18,7 +20,7 @@
         </a>
         <pagefind-searchbox class="search-desktop" shortcut="none" hide-shortcut placeholder="Search pk-gov..." show-sub-results=true></pagefind-searchbox>
         <div class="search-mobile">
-          <img class="search-icon" src="../assets/search.svg" alt="search icon">
+          <img class="search-icon" src="../assets/icons/search.svg" alt="search icon">
           <pagefind-modal class="mobile-modal">
             <pagefind-modal-header>
               <pagefind-input placeholder="Search pk-gov..."></pagefind-input>
@@ -31,21 +33,7 @@
           </pagefind-modal>
         </div>
       </header>
-      <section class="content" data-pagefind-body>
-        <section class="hero">
-          <h1 class="hero-title">{{ title }}</h1>
-          <h3 class="hero-excerpt">{{ excerpt }}</p>
-        </section>
-        <section data-pagefind-ignore='all' class='table-of-contents-container'>
-          <h2 class='table-of-contents-title'>In this page:</h2>
-          <div class='section-divider'></div>
-          <div class='table-of-contents'></div>
-        </section>
-        <section class="page">
-          {{ content | safe }}
-        </section>
-      </section>
-      <div class='end-buttons'><a class="return" href="/">Return to homepage</a></div>
+      {{ content | safe }}
    </div>
     <footer class="footer">
       <section class="footer-ministries">
@@ -68,7 +56,8 @@
         <div class="footer-resources links">
           <a class="footer link" href="/info/">Life in the Plushie Kingdom</a>
           <a class="footer link" href="/news/">Government news</a>      
-          <a class="footer link" href="/weather/">Plushie Kingdom weather</a>    
+          <a class="footer link" href="/info/pibss/">PIBSS</a>
+          <a class="footer link" href="/info/weather/">Plushie Kingdom weather</a>  
         </div>
       </section>
       <section class="footer-about">
@@ -81,6 +70,11 @@
         </div>
       </section>
     </footer>
-    <script src="/about-page.js">
+    <script type='module' src='/global.js'></script>
+    {% if jsPath %}
+      {% for file in jsPath %}
+        <script type='module' src="{{ file | url }}" defer></script>
+      {% endfor %}
+    {% endif %}
   </body>
 </html>
