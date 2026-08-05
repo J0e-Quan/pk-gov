@@ -82,8 +82,8 @@ In 2026, Pink Bear Bear, who had played a major role in leading the Kingdom alon
 
 ### August 2026: Introduction of the Plushie Immigration and Biodata Storage Service (PIBSS)
 
-![Picture of the Prime Minister unveiling PIBSS at a press release]()
-On (INSERT DATE HERE), the Government unveiled their largest project ever, a live database containing basic data about all Plushie Kingdom residents. This system ensured that no plushies were left out and enabled accurate recording of data such as date joined and type of each plushie. Besides viewing all data stored in the database, PIBSS also enabled the generation of detailed statistics about the Kingdom.
+![Picture of the Prime Minister unveiling PIBSS at a press release](/assets/info-media/who-we-are/pibss.webp)
+On 6 August 2026, the Government unveiled their largest project ever, a live database containing basic data about all Plushie Kingdom residents. This system ensured that no plushies were left out and enabled accurate recording of data such as date joined and type of each plushie. Besides viewing all data stored in the database, PIBSS also enabled the generation of detailed statistics about the Kingdom.
 
 ### Present Day
 
