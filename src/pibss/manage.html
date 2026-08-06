@@ -1,16 +1,36 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href={{ "/assets/styles/news.css" | url }}>
-  <link rel="icon" href="/assets/favicons/generic.svg"/>
-  <link href="/pagefind/pagefind-component-ui.css" rel="stylesheet">
-  <script src="/pagefind/pagefind-component-ui.js" type="module"></script>
-  <title>Government news</title>
-</head>
-<body>
-    <div class='header-scrollable-area'>
+  <head>
+    <link
+      rel="preload"
+      href="/src/assets/fonts/IBMPlexSans_Var-Roman.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/src/assets/fonts/IBMPlexSans_Var-Italic.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/src/assets/fonts/MonaSansVF[wdth,wght,opsz,ital].woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../assets/favicons/generic.svg" />
+    <link href="/pagefind/pagefind-component-ui.css" rel="stylesheet">
+    <script src="/pagefind/pagefind-component-ui.js" type="module"></script>
+    <title>Manage PIBSS data</title>
+  </head>
+  <body>
+    <div class="header-scrollable-area">
       <header class="header">
         <a class="logo-text" href="/">
           <h3 class="logo-text top">Plushie Kingdom</h3>
@@ -31,22 +51,20 @@
           </pagefind-modal>
         </div>
       </header>
-      <section class="content" data-pagefind-body>
+      <section class="content">
         <section class="hero">
-          <h1 class="hero-title">Government news</h1>
-          <p class="hero-text">Stay informed with the latest news from the Government. Video versions for major announcements are also available on our <a class="link" href="https://www.youtube.com/channel/UCL4Px1LLyD6WxcaDTm71ViQ" target="_blank" rel="noreferrer">YouTube channel</a>.</p>
+          <h1 class="hero-title">Manage PIBSS data</h1>
+          <p class="hero-text">Register a new plushie into the PIBSS database or update an existing citizen's location here.</p>
         </section>
-        <section class="articles">
-          {% for post in collections.news | reverse %}
-            <a class="article" href="{{ post.url }}">
-              <p class="article-date">{{ post.data.date | postDate}}, by {{ post.data.author }}</p>
-              <h2 class="article-title">{{ post.data.title }}</h2>
-              <h3 class="article-excerpt">{{ post.data.excerpt }}</h3>
-            </a>
-          {% endfor %}
+        <section class="options">
+          <button type="button" class="register-button button">Register a new plushie</button>
+          <button type="button" class="update-location-button button">Update an existing plushie's location</button>
+        </section>
+        <section class="disclaimer">
+          <p class="disclaimer-text">NOTE: Currently, this dashboard supports adding new plushies and updating an existing plushie's location. For other operations such as changing a plushie's origin country or date joined, please visit the Supabase dashboard.</p>
         </section>
       </section>
-      <div class='end-buttons'><a class="return" href="/">Return to homepage</a></div>
+      <div class="end-buttons"><a class="return" href="/info/pibss/">Return to Start Page</a></div>
     </div>
     <footer class="footer">
       <section class="footer-ministries">
@@ -68,9 +86,9 @@
         <div class="footer-divider"></div>
         <div class="footer-resources links">
           <a class="footer link" href="/info/">Life in the Plushie Kingdom</a>
-          <a class="footer link" href="/news/">Government news</a>    
+          <a class="footer link" href="/news/">Government news</a>
           <a class="footer link" href="/info/pibss">PIBSS</a>
-          <a class="footer link" href="/weather/">Plushie Kingdom weather</a>   
+          <a class="footer link" href="/weather/">Plushie Kingdom weather</a>
         </div>
       </section>
       <section class="footer-about">
@@ -78,11 +96,12 @@
         <div class="footer-divider"></div>
         <div class="footer-resources links">
           <a class="footer link" href="/about/pk-gov/">About the pk-gov website</a>
-          <a class="footer link" href="/info/who-we-are/#history-of-the-plushie-kingdom">History of the Plushie Kingdom</a>
-          <a class="footer link" href="/about/gov-identity/">Government identity guidelines</a>          
+          <a class="footer link" href="/info/who-we-are/#history-of-the-plushie-kingdom"
+            >History of the Plushie Kingdom</a
+          >
+          <a class="footer link" href="/about/gov-identity/">Government identity guidelines</a>
         </div>
       </section>
     </footer>
-  <script src="/news.js"></script>
-</body>
+  </body>
 </html>

@@ -1,0 +1,524 @@
+/* PIBSS DATABASE STYLES BELOW */
+section.filters {
+  padding-bottom: 0;
+}
+
+.filters-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.filters-inputs div {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-family: var(--plex-sans);
+  font-weight: 700;
+}
+
+select {
+  margin: 0;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+}
+
+select option {
+  color: black;
+}
+
+.entries {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: center; */
+  gap: 1rem;
+  width: 100%;
+}
+
+.pibss-card, .register-pibss-card {
+  flex: 1 1 calc(50% - 0.5rem);
+  display: flex;
+  gap: 1rem;
+  min-width: 540px;
+  max-width: calc(50% - 0.5rem);
+  margin-right: auto;
+}
+
+.pibss-picture {
+  min-width: 0;
+  flex-basis: 180px;
+  flex-shrink: 0;
+  height: auto;
+  animation: scale-out ease-out backwards;
+  animation-timeline: view();
+  animation-range-start: cover 10%;
+  animation-range-end: cover 30%;
+}
+
+@keyframes scale-out {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pibss-card-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  width: 100%;
+}
+
+.pibss-name {
+  line-height: 1.2;
+  font-size: 3rem;
+  position: relative;
+  overflow: clip;
+  display: inline-block;
+}
+
+.pibss-type, .pibss-country, .pibss-date, .pibss-location {
+  font-size: 1.5rem;
+  position: relative;
+  overflow: clip;
+  display: inline-block;
+}
+
+.pibss-type::before, .pibss-country::before, .pibss-date::before, .pibss-location::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  animation: wipe-up ease-out both;
+  animation-timeline: view();
+  animation-range-start: cover 10%;
+  animation-range-end: cover 50%;
+}
+
+.search-input {
+  padding: 0.5rem 1rem;
+  border: 16px solid var(--central-ministry-colour);
+  font-size: 1.5rem;
+  min-width: 0;
+  width: 80%;
+  height: 100%;
+}
+
+.filters-submit {
+  margin: 0 auto;
+  font-size: 1.5rem;
+}
+
+/* PIBSS DATABASE STYLES ABOVE */
+/* PIBSS STATISTICS STYLES BELOW */
+.value {
+  font-size: 10rem;
+  margin-bottom: -1rem;
+  line-height: 1.2;
+  display: inline-block;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+.animate-shrink-grow {
+  animation: shrink 0.3s ease-in-out 2 alternate;
+}
+@keyframes shrink {
+  0% { transform: scale(1); }
+  100% { transform: scale(0); }
+}
+.statistics .text {
+  font-size: 4rem;
+  margin-bottom: 4rem;
+}
+.charts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: max-content max-content;
+  gap: 2rem;
+  text-align: center;
+  align-items: start;
+}
+.charts div {
+  min-width: 0;
+  min-height: 15rem;
+  position: relative;
+}
+#yearly-new-citizens, #population-history {
+  height: 100%;
+}
+/* PIBSS STATISTICS STYLES ABOVE */
+/* PIBSS LOGIN STYLES BELOW */
+.notice-text {
+  font-size: 2rem;
+}
+section.login-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  padding-top: 0;
+}
+.login-item {
+  display: flex;
+  flex-direction: column;
+}
+.login-item label {
+  font-size: 3rem;
+}
+.login-item input {
+  padding: 0.5rem 1rem;
+  border: 16px solid var(--central-ministry-colour);
+  font-size: 2rem;
+  min-width: 0;
+}
+.login-form button {
+  margin: 0;
+  padding: 0.5rem 2rem;
+  height: fit-content;
+  align-self: flex-end;
+}
+/* PIBSS LOGIN STYLES ABOVE */
+/* PIBSS MANAGE STYLES BELOW */
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+.options button {
+  margin: 0;
+}
+.disclaimer-text {
+  font-size: 2rem;
+}
+.splash-screen {
+  min-height: 70vh;
+}
+section.form {
+  padding-top: 0;
+  min-height: 50vh;
+}
+.form-step-button-wrapper {
+  margin: -1rem 0 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.prev-step {
+  margin-right: auto;
+}
+.next-step {
+  margin-left: auto;
+}
+.form-step-button {
+  font-size: 2rem;
+  text-decoration: underline;
+}
+.form-step-button:hover {
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: 4px;
+  color: var(--central-ministry-colour);
+}
+.progress-title {
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+.progress-bar-wrapper {
+  width: 100%;
+  height: 10px;
+  border-radius: 2px;
+  overflow: hidden;
+}
+.progress-bar {
+  height: 100%;
+  width: 0%; 
+  background-color: var(--central-ministry-colour);
+  border-radius: 2px;
+  transition: width 0.5s ease-in-out;
+}
+.instruction {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+.note {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+.splash-screen-text {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.splash-screen-start-button {
+  margin: 0 auto;
+}
+.register-submit-name-button {
+  font-size: 3rem;
+  margin: 0;
+  padding: 0rem 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.register-photo-wrapper {
+  display: flex;
+  gap: 2rem;
+  justify-content: stretch;
+  width: 100%;
+  max-width: 1000px;
+  height: 7rem;
+}
+.register-photo-form-button {
+  font-size: 2rem;
+  margin: 0;
+}
+.register-photo-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto;
+  column-gap: 1rem;
+}
+.register-photo-preview {
+  min-width: 0;
+  width: 100%;
+}
+.register-photo-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.register-camera-button {
+  display: none;
+}
+.register-photo-text-container .note {
+  margin-top: 0;
+}
+.register-photo-text-container .register-photo-form-button {
+  margin: 0;
+}
+.register-pibss-card {
+  transition: none;
+  width: fit-content;
+  margin: 0 auto 1rem;
+}
+.register-confirm-note {
+  margin: -1rem 0 2rem;
+}
+.register-confirm-button {
+  margin: 0 auto;
+}
+.update-location-search-wrapper, .register-type-wrapper {
+  display: flex;
+  justify-content: stretch;
+  width: 100%;
+  max-width: 1000px;
+  height: 7rem;
+}
+.update-location-searchbar, .register-type-select, .register-country-select, .register-location-select {
+  padding: 1rem 2rem;
+  border: 16px solid var(--central-ministry-colour);
+  font-size: 2rem;
+  min-width: 0;
+  height: 100%;
+  margin-right: -16px;
+  flex-grow: 1;
+}
+.update-location-search-button {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hidden {
+  display: none;
+}
+.form .pibss-picture {
+  animation: none;
+}
+.form .pibss-name::before,.form .pibss-type::before,.form .pibss-country::before,.form .pibss-date::before,.form .pibss-location::before {
+  display: none;
+}
+.form .pibss-card {
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  text-align: start;
+}
+.form .pibss-card:hover {
+  background-color: var(--central-ministry-colour);
+  color: white;
+}
+.update-location-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+.update-location-label {
+  font-size: 3rem;
+}
+.update-location-old-location-text {
+  font-size: 3rem;
+}
+button.update-location-submit-button {
+  margin: 0;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+}
+.loading-circle {
+  width: 30vw;
+  height: auto;
+  margin: 2rem auto;
+  display: block;
+}
+.status-text {
+  text-align: center;
+  width: 100%;
+}
+.status-text::before {
+  display: none;
+}
+/* PIBSS MANAGE STYLES ABOVE */
+/* MEDIA QUERIES BELOW */
+@media (max-width: 600px) {
+  .entries {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+  }
+  .pibss-card, .register-pibss-card {
+    gap: 0.5rem;
+    min-width: 0;
+    max-width: none;
+  }
+  .pibss-picture {
+    flex-shrink: 1;
+  }
+  .pibss-name {
+    font-size: 1.5rem;
+  }
+  .pibss-type, .pibss-country, .pibss-date, .pibss-location {
+    font-size: 1rem;
+  }
+  .filters-submit {
+    margin: 1rem 0 0 0;
+  }
+  .value {
+    font-size: 4rem;
+    margin-bottom: -0.5rem;
+  }
+  .statistics .text {
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+  }
+  .charts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .notice .heading {
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+  .notice-text, .disclaimer-text {
+    font-size: 1rem;
+  }
+  .login-item label {
+    font-size: 1.5rem;
+  }
+  .login-item input {
+    width: 100%;
+    font-size: 1.5rem;
+  }
+  .splash-screen-title {
+    font-size: 2.5rem;
+  }
+  .splash-screen-text {
+    font-size: 1.25rem;
+  }
+  .note {
+    font-size: 1rem;
+  }
+  .register-submit-name-button {
+    font-size: 1.5rem;
+  }
+  .update-location-search-wrapper {
+    height: auto;
+  }
+  .register-type-wrapper {
+    height: auto;
+    flex-wrap: wrap;
+  }
+  .update-location-search-button, .update-location-searchbar, .register-type-select, .register-country-select, .register-location-select {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+  .register-photo-wrapper {
+    height: auto;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+  .register-photo-form-button {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  .register-camera-button {
+    display: inherit;
+  }
+  .register-photo-text-container {
+    align-items: center;
+  }
+  .register-photo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .register-confirm-button {
+    max-width: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+  }
+  .instruction {
+    font-size: 2rem;
+  }
+  .form-step-button-wrapper {
+    margin-bottom: 0.5rem;
+  }
+  .form-step-button {
+    font-size: 1rem;
+  }
+  .update-location-wrapper {
+    gap: 0;
+  }
+  .update-location-label {
+    font-size: 1.5rem;
+  }
+  .update-location-old-location-text {
+    font-size: 1.5rem;
+  }
+  .update-location-wrapper select {
+    margin-bottom: 1rem;
+  }
+  .loading-circle {
+    width: 100%;
+  }
+}
+/* MEDIA QUERIES ABOVE */
