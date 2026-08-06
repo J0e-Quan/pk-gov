@@ -1,7 +1,7 @@
 ---
 tags: news
 layout: content-page.njk
-date: 2026-08-07
+date: 2026-08-06
 author: Immigration Minister Pikachu
 title: New video demonstrates Plushie Kingdom immigration process
 excerpt: In an effort to introduce the new immigration process, the Ministry of Immigration has filmed a video designed to guide new citizens through the process of gaining Plushie Kingdom citizenship.
@@ -10,7 +10,7 @@ thumbnail: /assets/news-media/new-video-demonstrates-plushie-kingdom-immigration
 
 (NOTE: The video mentioned here is available on <a class='link' href='https://www.youtube.com/watch?v=C9tG6MtXyI4' target='_blank' rel='noreferrer'>our YouTube channel</a>)
 
-The process of gaining Plushie Kingdom citizenship is changing with the introduction of the Plushie Immigration and Biodata Storage Service (PIBSS). So, we've decided to guide new citizens through the new immigration process by filming a video!
+As mentioned in the PIBSS press release, the process of gaining Plushie Kingdom citizenship is changing with the introduction of the Plushie Immigration and Biodata Storage Service (PIBSS). So, we've decided to guide new citizens through the new immigration process by filming a video!
 
 ## Developing ideas
 
