@@ -273,7 +273,6 @@ async function renderTypeForm() {
   const typeSelect = document.createElement('select')
   typeSelect.classList.add('register-type-select')
   const typesArray = await getUniqueTypes()
-  console.log(typesArray)
   for (const type of typesArray) {
     const typeOption = document.createElement('option')
     typeOption.classList.add('register-type-option')

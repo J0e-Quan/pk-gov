@@ -5,7 +5,7 @@ date: 2026-05-23
 author: Prime Minister Pink Bear Bear
 title: Government assets are now downloadable
 excerpt: In support of the Government's mission to provide open access to information, some Government assets are now available for download on pk-gov.
-thumbnail: ./news-media/government-assets-are-now-downloadable/thumbnail.webp
+thumbnail: /assets/news-media/government-assets-are-now-downloadable/thumbnail.webp
 ---
 
 As promised last week by Kodee, we have made some Government assets available to be downloaded on our website. We continue to strive to provide open access to information for all plushies in the Kingdom, and that includes sharing our Government's bold and modern, yet warm and welcoming identity with everyone. 

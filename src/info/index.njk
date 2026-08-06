@@ -3,9 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/styles/global.css">
     <link rel="stylesheet" href={{ "/assets/styles/info.css" | url }}>
     <link rel="icon" href="/assets/favicons/generic.svg"/>
-    <link href="/pagefind/pagefind-component-ui.css" rel="stylesheet">
+    <link href="/pagefind/pagefind-component-ui.css" rel="stylesheet" vite-ignore>
     <script src="/pagefind/pagefind-component-ui.js" type="module"></script>
     <title>Life in the Plushie Kingdom</title>
   </head>
@@ -68,10 +69,18 @@
               <a class="directory cta" href="/info/food-health-and-wealth/">View information</a>
             </div>
             <div class="directory-item">
+              <h2 class="directory title">Plushie Kingdom weather</h2>
+              <p class="directory text">Get the latest updates on weather information in the Kingdom and the surrounding George Town area here.</p>
+              <a class="directory cta" href="/info/weather/">View information</a>
+            </div>
+          </div>
+          <div class='directory-row'>
+            <div class="directory-item">
               <h2 class="directory title">Business and Commerce</h2>
               <p class="directory text">Thinking about doing business here? Here's all you need to know in one place.</p>
               <a class="directory cta" href="/info/business-and-commerce/">View information</a>
             </div>
+            <div class='directory-item'></div>
           </div>
         </section>
       </section>
@@ -98,8 +107,8 @@
         <div class="footer-resources links">
           <a class="footer link" href="/info/">Life in the Plushie Kingdom</a>
           <a class="footer link" href="/news/">Government news</a>    
-          <a class="footer link" href="/info/pibss">PIBSS</a>
-          <a class="footer link" href="/weather/">Plushie Kingdom weather</a>     
+          <a class="footer link" href="/info/pibss/">PIBSS</a>
+          <a class="footer link" href="/info/weather/">Plushie Kingdom weather</a>     
         </div>
       </section>
       <section class="footer-about">
@@ -112,6 +121,6 @@
         </div>
       </section>
     </footer>    
-    <script src="/info.js"></script>
+    <script type='module' src="/global.js"></script>
   </body>
 </html>

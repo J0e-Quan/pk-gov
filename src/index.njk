@@ -25,8 +25,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="./assets/favicons/generic.svg" />
-    <link href="/pagefind/pagefind-component-ui.css" rel="stylesheet">
-    <script src="/pagefind/pagefind-component-ui.js" type="module"></script>
+    <link href="/pagefind/pagefind-component-ui.css" rel="stylesheet" vite-ignore>
+    <script src="/pagefind/pagefind-component-ui.js" type="module" data-vite-no-bundle></script>
     <title>Plushie Kingdom Government</title>
   </head>
   <body>
@@ -383,7 +383,7 @@
           <div class="weather">
             <h2 class="weather title">Plushie Kingdom weather</h2>
             <p class="weather text">Get the latest weather updates here.</p>
-            <a class="weather cta" href="./weather/">View more</a>
+            <a class="weather cta" href="./info/weather/">View more</a>
           </div>
           <div class="pibss">
             <h2 class="pibss title">PIBSS</h2>
@@ -414,8 +414,8 @@
         <div class="footer-resources links">
           <a class="footer link" href="/info/">Life in the Plushie Kingdom</a>
           <a class="footer link" href="/news/">Government news</a>
-          <a class="footer link" href="/info/pibss">PIBSS</a>
-          <a class="footer link" href="/weather/">Plushie Kingdom weather</a>
+          <a class="footer link" href="/info/pibss/">PIBSS</a>
+          <a class="footer link" href="/info/weather/">Plushie Kingdom weather</a>
         </div>
       </section>
       <section class="footer-about">
@@ -430,5 +430,9 @@
         </div>
       </section>
     </footer>
+    <script type='module' src="/global.js"></script>
+    <script type='module'>
+      import './assets/styles/home.css'
+    </script>
   </body>
 </html>

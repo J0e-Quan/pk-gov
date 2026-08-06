@@ -24,7 +24,7 @@ Once you have confirmed that your business fufills the criteria above, you can b
 ### Tax and Finances
 
 All financial matters are handled by the Ministry of Finance. For funding, only standard business loans are available for foreign businesses. Before starting business operations in the Kingdom, you MUST register with the Ministry of Finance to set up tax payments. For detailed information, such as tax rates and where to submit the tax payments, contact your nearest Ministry of Finance staff member.
-![Picture of all Ministry of Finance staff members](./info-media/business-and-commerce/mofinance-staff-members.webp)
+![Picture of all Ministry of Finance staff members](/assets/info-media/business-and-commerce/mofinance-staff-members.webp)
 
 <h2 id='starting-a-business-in-the-plushie-kingdom'>Starting a business in the Plushie Kingdom</h2>
 

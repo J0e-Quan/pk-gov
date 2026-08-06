@@ -5,7 +5,7 @@ date: 2026-06-25
 author: Prime Minister Pink Bear Bear
 title: The future of plushie citizen management is coming soon
 excerpt: We're working behind the scenes to revolutionise plushie citizen management. Stay tuned for real, meaningful change that ensures no plushie gets left out.
-thumbnail: ./news-media/the-future-of-plushie-citizen-management-is-coming-soon/thumbnail.webp
+thumbnail: /assets/news-media/the-future-of-plushie-citizen-management-is-coming-soon/thumbnail.webp
 ---
 
 Recently, you may have noticed that there's a new 'Coming soon' category in the 'Life in the Plushie Kingdom' section. This is where the Government's next major service will be, and I'll provide some early details about it today.
