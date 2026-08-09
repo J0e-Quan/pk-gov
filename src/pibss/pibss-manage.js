@@ -778,7 +778,7 @@ function reRenderPhoto(photo) {
   photoElement.alt = 'Picture of the plushie'
 }
 
-function renderConfirmationForm(photoURL) {
+function renderConfirmationForm() {
   if (!isFromStepButton) {
     currentStep++
   }
@@ -786,9 +786,7 @@ function renderConfirmationForm(photoURL) {
   clearForm()
   updateProgress()
   updateFormStepButtons(false)
-  if (!photoURL) {
-    photoURL = URL.createObjectURL(formData.plushiePhoto)
-  }
+  const photoURL = URL.createObjectURL(formData.plushiePhoto)
   const form = content.querySelector('.form')
   const instruction = document.createElement('h3')
   instruction.classList.add('instruction')
@@ -802,7 +800,6 @@ function renderConfirmationForm(photoURL) {
   card.classList.add('register-pibss-card')
   const picture = document.createElement('img')
   picture.classList.add('pibss-picture')
-  // photo from formData cannot be used, the URL from photo-preview is passed in here instead
   picture.src = photoURL
   card.appendChild(picture)
   const cardText = document.createElement('div')
