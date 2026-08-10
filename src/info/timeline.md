@@ -14,7 +14,7 @@ thumbnail:
 
 ---
 
-The Timeline service provides information on upcoming public holidays for the Plushie Kingdom. 
+The Timeline service provides information on upcoming public holidays for the Plushie Kingdom. The name and date of all public holidays for the current year are shown. The number of days left until the nearest public holiday is also shown, giving you something to look forward to!
 
 ## What holidays are used?
 
