@@ -26,4 +26,43 @@ async function getData(currentDate, endDate) {
   }
 }
 
-const data = await getData(getCurrentDate(), getEndDate())
+const apiResponse = await getData(getCurrentDate(), getEndDate())
+// 'data' used in code excludes the 'meta' object included in the API response as the 'meta' object is unused
+const data = apiResponse.data
+showNextHoliday()
+
+function showNextHoliday() {
+  const container = document.querySelector('.next-ph')
+  const loader = document.querySelector('.next-ph-loader')
+  loader.remove()
+  const holidayName = document.createElement('h3')
+  holidayName.classList.add('next-ph-name')
+  holidayName.textContent = data[0].name.en
+  container.appendChild(holidayName)
+  const holidayDate = document.createElement('p')
+  holidayDate.classList.add('next-ph-date')
+  const date = getHolidayDate(data[0].date)
+  const daysLeft = getDaysLeft(data[0].date)
+  holidayDate.textContent = "on " + date + " (" + daysLeft + " days from today)"
+  container.appendChild(holidayDate)
+}
+
+function getHolidayDate(inputDate) {
+  const date = new Date(inputDate)
+  return date.toLocaleDateString('en-GB', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric'
+  })
+}
+
+function getDaysLeft(inputDate) {
+  // holiday date and current date are converted to milliseconds, the difference is divided by MS_PER_DAY
+  // to get number of days between the two dates
+  const holidayDate = new Date(inputDate)
+  const currentDate = new Date
+  const MS_PER_DAY = 1000 * 60 * 60 * 24
+  // Math.abs() gives absolute value to avoid negative numbers
+  const msDiff = Math.abs(holidayDate - currentDate)
+  return Math.round(msDiff / MS_PER_DAY)
+}
