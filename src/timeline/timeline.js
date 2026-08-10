@@ -46,6 +46,17 @@ function showNextHoliday() {
   loader.remove()
   const holidayName = document.createElement('h3')
   holidayName.classList.add('next-ph-name')
+  // if data doesn't contain anything, there are no holidays left, a message is shown
+  if (data.length === 0 ) {
+    const currentDate = new Date
+    holidayName.textContent = "No more holidays for " + currentDate.getFullYear() + " :("
+    container.appendChild(holidayName)
+    const holidayDate = document.createElement('p')
+    holidayDate.classList.add('next-ph-date')
+    holidayDate.textContent = "Timeline will be updated with new information on the first day of " + (currentDate.getFullYear() + 1) + "!"
+    container.appendChild(holidayDate)
+    return
+  }
   holidayName.textContent = data[0].name.en
   container.appendChild(holidayName)
   const holidayDate = document.createElement('p')
@@ -80,5 +91,5 @@ function showAllHolidays() {
   const container = document.querySelector('.all-ph')
   const loader = document.querySelector('.all-ph-loader')
   loader.remove()
-  
+
 }
