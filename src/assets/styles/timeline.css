@@ -26,3 +26,21 @@
   font-size: 2rem;
   grid-column: 2;
 }
+
+@media (max-width: 600px) {
+  .next-ph-name {
+    font-size: 2.5rem;
+  }
+  .next-ph-date {
+    font-size: 1.5rem;
+  }
+  .all-ph-content {
+    grid-template-columns: 1fr 1fr;
+  }
+  .all-ph-name {
+    font-size: 1.5rem;
+  }
+  .all-ph-date {
+    font-size: 1rem;
+  }
+}
