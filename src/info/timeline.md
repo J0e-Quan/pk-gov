@@ -2,7 +2,7 @@
 tags: info
 layout: content-page.njk
 title: Timeline
-excerpt: Check for upcoming Plushie Kingdom (Penang) public holidays, long weekends and more to keep your plans on the right track. Powered by the <a class="link" href="https://mycal-web.pages.dev/" target="_blank" rel="noreferrer">Malaysia Calendar API</a>.
+excerpt: Check for upcoming Plushie Kingdom (Penang) public holidays to keep your plans on the right track. Powered by the <a class="link" href="https://mycal-web.pages.dev/" target="_blank" rel="noreferrer">Malaysia Calendar API</a>.
 thumbnail:
 ---
 
