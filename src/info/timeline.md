@@ -20,7 +20,7 @@ The Timeline service provides information on upcoming public holidays for the Pl
 
 ---
 
-As the Plushie Kingdom is located in the Malaysian state of Penang, we follow Penang's public holidays, including state-specific ones like George Town World Herritage Day. We also use Penang's Sat/Sun weekends.
+As the Plushie Kingdom is located in the Malaysian state of Penang, we follow Penang's public holidays, including state-specific ones like George Town World Heritage Day. We also use Penang's Sat/Sun weekends.
 
 ## Alternative sources for similar information
 
