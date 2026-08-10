@@ -1,3 +1,10 @@
+function displayCurrentYear() {
+  const allHolidayHeading = document.querySelector('.all-ph .heading')
+  const currentDate = new Date
+  const currentYear = currentDate.getFullYear()
+  allHolidayHeading.textContent += " (" + currentYear + ")"
+}
+
 function getCurrentDate() {
   const currentDate = new Date
   // en-CA region uses YYYY-MM-DD by default, which is the same format used by the calendar API
@@ -26,10 +33,12 @@ async function getData(currentDate, endDate) {
   }
 }
 
+displayCurrentYear()
 const apiResponse = await getData(getCurrentDate(), getEndDate())
 // 'data' used in code excludes the 'meta' object included in the API response as the 'meta' object is unused
 const data = apiResponse.data
 showNextHoliday()
+showAllHolidays()
 
 function showNextHoliday() {
   const container = document.querySelector('.next-ph')
@@ -65,4 +74,11 @@ function getDaysLeft(inputDate) {
   // Math.abs() gives absolute value to avoid negative numbers
   const msDiff = Math.abs(holidayDate - currentDate)
   return Math.round(msDiff / MS_PER_DAY)
+}
+
+function showAllHolidays() {
+  const container = document.querySelector('.all-ph')
+  const loader = document.querySelector('.all-ph-loader')
+  loader.remove()
+  
 }
