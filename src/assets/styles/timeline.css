@@ -5,3 +5,20 @@
 .next-ph-date {
   font-size: 3rem;
 }
+
+.all-ph-content {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  align-items: center;
+  gap: 1rem;
+}
+
+.all-ph-name {
+  font-size: 3.5rem;
+  grid-column: 1;
+}
+
+.all-ph-date {
+  font-size: 2rem;
+  grid-column: 2;
+}

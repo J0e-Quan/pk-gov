@@ -91,5 +91,31 @@ function showAllHolidays() {
   const container = document.querySelector('.all-ph')
   const loader = document.querySelector('.all-ph-loader')
   loader.remove()
-
+  // if data doesn't contain anything, there are no holidays left, a message is shown
+  if (data.length === 0 ) {
+    const currentDate = new Date
+    const noHolidayTitle = document.createElement('h3')
+    noHolidayTitle.classList.add('next-ph-name')
+    noHolidayTitle.textContent = "No more holidays for " + currentDate.getFullYear() + " :("
+    container.appendChild(noHolidayTitle)
+    const noHolidayText = document.createElement('p')
+    noHolidayText.classList.add('next-ph-date')
+    noHolidayText.textContent = "Timeline will be updated with new information on the first day of " + (currentDate.getFullYear() + 1) + "!"
+    container.appendChild(noHolidayText)
+    return
+  }
+  const allHolidays = document.createElement('div')
+  allHolidays.classList.add('all-ph-content')
+  for (let i = 0; i < data.length; i++) {
+    const holidayName = document.createElement('h3')
+    holidayName.classList.add('all-ph-name')
+    holidayName.textContent = data[i].name.en
+    allHolidays.appendChild(holidayName)
+    const holidayDate = document.createElement('p')
+    holidayDate.classList.add('all-ph-date')
+    const date = getHolidayDate(data[i].date)
+    holidayDate.textContent = date
+    allHolidays.appendChild(holidayDate)
+  }
+  container.appendChild(allHolidays)
 }
