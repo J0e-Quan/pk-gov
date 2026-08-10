@@ -9,8 +9,12 @@
 .all-ph-content {
   display: grid;
   grid-template-columns: 3fr 1fr;
+  grid-auto-rows: max-content;
   align-items: center;
   gap: 1rem;
+  border: 4px solid black;
+  column-rule: 4px solid black;
+  row-rule: 4px solid black;
 }
 
 .all-ph-name {
