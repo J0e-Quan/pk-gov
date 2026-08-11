@@ -304,8 +304,9 @@ async function renderTypeForm() {
       otherInput.value = formData.plushieType
     }
     updateFormStepButtons(true)
+  } else {
+    updateFormStepButtons(false)
   }
-  updateFormStepButtons(false)
   const submitButton = document.createElement('button')
   submitButton.classList.add('register-submit-name-button', 'button')
   submitButton.textContent = '→'
