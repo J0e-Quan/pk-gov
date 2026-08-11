@@ -127,8 +127,9 @@ function clearForm() {
   window.scrollTo({top: 0, left: 0})
 }
 
-function renderSplashScreen(title, text, buttonText, firstForm) {
+function renderSplashScreen(title, text, buttonText, firstForm, pageTitle) {
   window.scrollTo({top: 0, left: 0})
+  document.title = pageTitle
   const splashScreen = document.createElement('section')
   splashScreen.classList.add('splash-screen')
   const introTitle = document.createElement('h2')
@@ -169,7 +170,8 @@ function beginRegister() {
     'Register yourself in the Plushie Immigration and Biodata Storage Service (PIBSS)',
     "Let's get you registered in PIBSS to obtain your Plushie Kingdom citizenship. We just need some basic details about you.",
     'Begin registration',
-    renderNameForm
+    renderNameForm,
+    "Register a new plushie into PIBSS"
   )
 }
 
@@ -924,7 +926,8 @@ function beginUpdateLocation() {
     "Update the location of an existing plushie in PIBSS",
     "Keep a plushie's whereabouts in check by updating their location. Location data can ONLY be updated by the plushie themselves or the plushie's parents if they are a child.",
     'Update location',
-    renderPlushieSelectionForm
+    renderPlushieSelectionForm,
+    "Update plushie location in PIBSS"
   )
 }
 
