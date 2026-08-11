@@ -168,6 +168,20 @@ function displayTypeDistributionChart() {
           label: 'Plushies',
           data: sortedTypes.map(type => type.population),
         }]
+      },
+      options: {
+        plugins: {
+          legend: {
+            labels: {
+              boxWidth: 12,     // Shrinks color indicator box width
+              boxHeight: 8,     // Shrinks color indicator box height
+              padding: 6,       // Reduces vertical space between items
+              font: {
+                size: 14
+              }
+            }
+          }
+        }
       }
     }
   )
@@ -217,7 +231,7 @@ function displayPopulationHistoryChart() {
       options: {
         responsive: true,
         maintainAspectRatio: true,
-        aspectRatio: 1.25,
+        aspectRatio: 1.2,
         plugins: {
           legend: {
             // Disables the default toggle action on click
