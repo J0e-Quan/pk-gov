@@ -54,6 +54,10 @@ This is where the 'government news' pages are located. Any assets they use (such
 
 This contains all PIBSS pages that can be accessed from its service page. These pages are generated with 11ty using the `service.njk` template in `_includes/`. All 4 pages share the  `pibss-common.js` file which creates a supabase client, the other .js files are used by their respective njk files.
 
+### timeline/
+
+This contains the Timeline service's njk and js file. These pages are generated with 11ty using the `service.njk` template in `_includes/`.
+
 ### weather/
 
 This contains the weather service's njk and js file. These pages are generated with 11ty using the `service.njk` template in `_includes/`. Weather icons are obtained from `assets/weather-icons/`.
