@@ -215,7 +215,7 @@ function renderNameForm() {
   note.classList.add('note')
   note.textContent = "Your name must be unique, we'll check in the PIBSS database if your name is already taken!"
   form.appendChild(note)
-  submitButton.addEventListener('click', submitName)
+  submitButton.addEventListener('click', submitName, {once: true})
 }
 
 function formatName(name) {
