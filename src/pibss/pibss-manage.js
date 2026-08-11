@@ -88,7 +88,7 @@ function updateFormStepButtons(canSkipStep) {
   if (currentStep > 1) {
     const prev = document.querySelector('.previous-step')
     prev.classList.remove('hidden')
-    prev.addEventListener('click', previousStep)
+    prev.addEventListener('click', previousStep, {once: true})
   } else if (currentStep === 1) {
     const prev = document.querySelector('.previous-step')
     prev.classList.add('hidden') 
@@ -97,7 +97,7 @@ function updateFormStepButtons(canSkipStep) {
   if (canSkipStep) {
     const next = document.querySelector('.next-step')
     next.classList.remove('hidden')
-    next.addEventListener('click', nextStep)
+    next.addEventListener('click', nextStep, {once: true})
   } else if (!canSkipStep) {
     const next = document.querySelector('.next-step')
     next.classList.add('hidden') 
@@ -262,7 +262,6 @@ async function renderTypeForm() {
   isFromStepButton = false
   clearForm()
   updateProgress()
-  updateFormStepButtons(false)
   const form = content.querySelector('.form')
   const instruction = document.createElement('h3')
   instruction.classList.add('instruction')
@@ -306,6 +305,7 @@ async function renderTypeForm() {
     }
     updateFormStepButtons(true)
   }
+  updateFormStepButtons(false)
   const submitButton = document.createElement('button')
   submitButton.classList.add('register-submit-name-button', 'button')
   submitButton.textContent = '→'
