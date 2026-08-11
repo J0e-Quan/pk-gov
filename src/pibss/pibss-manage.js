@@ -273,6 +273,7 @@ async function renderTypeForm() {
   const typeSelect = document.createElement('select')
   typeSelect.classList.add('register-type-select')
   const typesArray = await getUniqueTypes()
+  console.log(typesArray)
   for (const type of typesArray) {
     const typeOption = document.createElement('option')
     typeOption.classList.add('register-type-option')
@@ -327,7 +328,8 @@ async function getUniqueTypes() {
   const { data, error } = await supabase
     .from('unique_types')                  // 1. Target 'unique_types' view
     .select('*')                           // 2. Get all unique values from it
-
+    .order( 'type', {ascending: true})    // 3. Sort types alphabetically
+  console.log(data)
   if (error) {
     return console.error('Error fetching data:', error.message)
   }

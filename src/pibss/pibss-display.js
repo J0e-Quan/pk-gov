@@ -97,7 +97,7 @@ async function getPlushieTypes() {
   const { data, error } = await supabase
     .from('unique_types')                  // 1. Target 'unique_types' view
     .select('*')                           // 2. Get all unique values from it
-    .order( 'type', {ascending: false})    // 3. Sort types alphabetically
+    .order( 'type', {ascending: true})    // 3. Sort types alphabetically
 
   if (error) {
     return console.error('Error fetching data:', error.message)
@@ -105,7 +105,7 @@ async function getPlushieTypes() {
 
   // converts array of objects into an array for easier looping
   const dataArray = data.map(item => item.type)
-  populateTypes(dataArray.sort((a, b) => a.localeCompare(b.name)))
+  populateTypes(dataArray)
 }
 
 function populateTypes(data) {
