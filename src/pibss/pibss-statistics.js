@@ -190,6 +190,12 @@ function displayYearlyNewCitizensChart() {
         aspectRatio: 1.5,
         animation: {
           delay: (context) => {}
+        },
+        plugins: {
+          legend: {
+            // Disables the default toggle action on click
+            onClick: null 
+          }
         }
       }
     }
@@ -211,7 +217,13 @@ function displayPopulationHistoryChart() {
       options: {
         responsive: true,
         maintainAspectRatio: true,
-        aspectRatio: 1.25
+        aspectRatio: 1.25,
+        plugins: {
+          legend: {
+            // Disables the default toggle action on click
+            onClick: null 
+          }
+        }
       }
     }
   )
