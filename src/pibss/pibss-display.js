@@ -97,6 +97,7 @@ async function getPlushieTypes() {
   const { data, error } = await supabase
     .from('unique_types')                  // 1. Target 'unique_types' view
     .select('*')                           // 2. Get all unique values from it
+    .order( 'type', {ascending: false})    // 3. Sort types alphabetically
 
   if (error) {
     return console.error('Error fetching data:', error.message)
