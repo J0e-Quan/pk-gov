@@ -231,6 +231,14 @@ function formatName(name) {
 }
 
 async function submitName() {
+  const next = document.querySelector('.next-step')
+  let canSkipStep
+  if (next.classList.contains('hidden')) {
+    canSkipStep = false
+  } else {
+    canSkipStep = true
+  }
+  next.classList.add('hidden')
   const nameInput = document.getElementById('name')
   const name = formatName(nameInput.value)
   if (name === '') {
@@ -247,6 +255,9 @@ async function submitName() {
     const namesArray = data.map(entry => entry.name.toLowerCase())
     if (namesArray.includes(name.toLowerCase())) {
       alert("Name cannot be a duplicate of an existing plushie's name!")
+      if (canSkipStep === true) {
+        next.classList.remove('hidden')
+      }
       nameInput.value = ''
     } else {
       formData.plushieName = name
