@@ -1,7 +1,7 @@
 ---
 tags: news
 layout: content-page.njk
-date: 2026-08-10
+date: 2026-08-13
 author: Prime Minister Pink Bear Bear
 title: New Big Tent upgrades to improve living conditions are here
 excerpt: The completion of the latest upgrades to the Big Tent increases available living space and improves its structural integrity, providing better comfort for all Big Tent residents.
@@ -28,7 +28,7 @@ After the residents had been moved out, it was time to begin upgrading the Big T
 
 ### The end result
 
-In the end, the Big Tent looked largely the same, but now slightly more spacious and much more stable, perfect for the most populated area in the Kingdom!
+In the end, the Big Tent looked largely the same, but now slightly more spacious and much more stable, perfect for the most populated area in the Kingdom! The Big Tent Stacks were also changed from two separate structures on the left and right ends of the tent to become a single double-storey structure at the far end of the tent.
 
 ![completed big tent](/assets/news-media/new-big-tent-upgrades-to-improve-living-conditions-are-here/new-tent.webp)
 
@@ -36,4 +36,5 @@ In the end, the Big Tent looked largely the same, but now slightly more spacious
 
 ---
 
-After that, it was time to move all the Big Tent residents back in. Taking advantage of the foot traffic, the Ministry of Technology decided to register the Big Tent residents into PIBSS as they moved in, accelerating the rollout of PIBSS!
+After that, it was time to move all the Big Tent residents back in. Taking advantage of the foot traffic, the Ministry of Technology decided to register the Big Tent residents into PIBSS as they moved in, greatly accelerating the rollout of PIBSS! The whole process took around 4 days of coordinated efforts, as some plushies were reassigned new locations to maximise use of the space.
+
