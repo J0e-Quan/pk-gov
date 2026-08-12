@@ -153,8 +153,8 @@ a svg {
     height: 35vw;
     width: 35vw;
   }
-  .other-resources {
-    padding: 1rem;
+  section.other-resources {
+    padding: 1rem 0;
   }
   .other-resources .title {
     font-size: 2rem;
