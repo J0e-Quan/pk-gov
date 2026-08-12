@@ -1,14 +1,14 @@
 ---
 tags: news
 layout: content-page.njk
-date: 2026-08-15
+date: 2026-08-13
 author: Technology Minister Android
 title: Introducing the Timeline service
 excerpt: "Read the Technology Minister's introduction to pk-gov's newest service: Timeline, a public holiday tracker for the Plushie Kingdom to keep your plans on the right track."
 thumbnail: /assets/news-media/introducing-the-timeline-service/thumbnail.webp
 ---
 
-It's been a few days since the revolutionary launch of PIBSS, and we've started registering even more Plushie Kingdom citizens into the database. In the meantime, the Ministry of Technology has continued to work on the pk-gov website, fixing bugs and adding more features. This work has led to the development of our newest service, called Timeline.
+It's been a few days since the revolutionary launch of PIBSS, and we've already nearly completed its rollout for all existing Plushie Kingdom citizens, significantly ahead of schedule! In the meantime, the Ministry of Technology has continued to work on the pk-gov website, fixing bugs and adding more features. This work has led to the development of our newest service, called Timeline.
 
 ## What is Timeline?
 
