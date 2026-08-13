@@ -21,8 +21,8 @@ h2.title::before {
 
 .ministries {
   display: grid;
-  grid-template-columns: 20vw 20vw 20vw 20vw;
-  grid-template-rows: fit-content fit-content fit-content;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 20vw));
+  grid-auto-rows: auto;
   place-content: center;
   padding: 0rem 5rem;
 }
@@ -142,7 +142,7 @@ a svg {
     font-size: 1.5rem;
   }
   .ministries {
-    grid-template-columns: 40vw 40vw;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 40vw));
     grid-auto-rows: 40vw;
   }
   .ministries a {
