@@ -1,0 +1,28 @@
+---
+tags: service
+layout: service.njk
+cssPath: '/assets/styles/timeline.css'
+jsPath: 
+  - '/timeline/timeline.js'
+---
+<section class="content" data-pagefind-body>
+  <section class="hero">
+    <h1 class="hero-title">Timeline</h1>
+    <p class="hero-text">
+      Check for upcoming Plushie Kingdom (Penang) public holidays to keep your plans on the right track. Powered by the <a class="link" href="https://mycal-web.pages.dev/" target="_blank" rel="noreferrer">Malaysia Calendar API</a>.
+    </p>
+  </section>
+  <section class="next-ph">
+    <h2 class="heading">Next public holiday:</h2>
+    <div class="section-divider"></div>
+    <img class="next-ph-loader" src="/assets/icons/loading.svg" alt='' eleventy:ignore>
+  </section>
+  <section class="all-ph">
+    <h2 class="heading">All upcoming public holidays</h2>
+    <div class="section-divider"></div>
+    <img class="all-ph-loader" src="/assets/icons/loading.svg" alt='' eleventy:ignore>
+  </section>
+</section>
+<div class="end-buttons">
+  <a class="return" href="/info/timeline/">Return to Start Page</a>
+</div>
