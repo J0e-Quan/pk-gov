@@ -177,7 +177,7 @@ function displayTypeDistributionChart() {
               boxHeight: 8,     // Shrinks color indicator box height
               padding: 6,       // Reduces vertical space between items
               font: {
-                size: 14
+                size: 12
               }
             }
           }
