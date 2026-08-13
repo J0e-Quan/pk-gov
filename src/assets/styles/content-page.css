@@ -113,6 +113,7 @@ a.return, button.share, .button {
   display: flex;
   justify-content: stretch;
   flex-wrap: wrap;
+  margin-bottom: 2rem;
 }
 
 .colours-list.row {
