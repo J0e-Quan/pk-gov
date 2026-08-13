@@ -65,6 +65,16 @@ a {
   text-decoration: none;
 }
 
+/* IMPLEMENTS MAX-WIDTH FOR BETTER ULTRAWIDE SUPPORT */
+body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2000px) minmax(0, 1fr);
+}
+
+body > * {
+  grid-column: 2;
+}
+
 .header {
   background-color: var(--theme, var(--central-ministry-colour));
   padding: 1rem 5rem;
