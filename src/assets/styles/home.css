@@ -1,9 +1,3 @@
-.hero {
-  background-color: var(--central-ministry-colour);
-  color: white;
-  padding: 1rem 5rem;
-}
-
 .hero-title {
   font-size: 5rem;
   line-height: 1.2;
@@ -21,8 +15,8 @@ h2.title::before {
 
 .ministries {
   display: grid;
-  grid-template-columns: 20vw 20vw 20vw 20vw;
-  grid-template-rows: fit-content fit-content fit-content;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 20vw));
+  grid-auto-rows: auto;
   place-content: center;
   padding: 0rem 5rem;
 }
@@ -79,8 +73,8 @@ a svg {
 
 .other-resources {
   padding: 0rem 5rem 4rem 5rem;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(40rem, 1fr));
   justify-content: center;
 }
 
@@ -142,7 +136,7 @@ a svg {
     font-size: 1.5rem;
   }
   .ministries {
-    grid-template-columns: 40vw 40vw;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 40vw));
     grid-auto-rows: 40vw;
   }
   .ministries a {
@@ -154,6 +148,8 @@ a svg {
     width: 35vw;
   }
   section.other-resources {
+    display: flex;
+    flex-direction: column;
     padding: 1rem 0;
   }
   .other-resources .title {

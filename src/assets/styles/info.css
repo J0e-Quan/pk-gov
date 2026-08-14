@@ -1,4 +1,4 @@
-section:not(.content, footer section) {
+section:not(.hero, .content, footer section) {
   padding: 2rem 5rem;
 }
 
@@ -7,17 +7,16 @@ section:not(.content, footer section) {
   margin-bottom: 2rem;
 }
 
-.directory-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+section.directory {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr));
   margin-bottom: 2rem;
-  gap: 2rem;
+  justify-content: center;
+  column-gap: calc(50px + 2rem);
+  row-gap: 2rem;
 }
 
 .directory-item {
-  flex-grow: 0;
-  flex-basis: 40vw;
   padding: 1rem 0rem;
   display: flex;
   flex-direction: column;
@@ -39,6 +38,7 @@ section:not(.content, footer section) {
 }
 
 .directory.cta {
+  margin-top: auto;
   width: fit-content;
   padding: 1rem 2rem;
   font-size: 2rem;
@@ -76,6 +76,9 @@ section:not(.content, footer section) {
   }
   .directory {
     margin-bottom: 0;
+  }
+  section.directory {
+    grid-template-columns: repeat(auto-fill, 100%);
   }
   .directory.cta {
     font-size: 1.5rem;

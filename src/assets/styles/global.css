@@ -65,7 +65,25 @@ a {
   text-decoration: none;
 }
 
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* IMPLEMENTS MAX-WIDTH FOR BETTER ULTRAWIDE SUPPORT */
+.header-scrollable-area {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2000px) minmax(0, 1fr);
+}
+
+.header-scrollable-area > * {
+  grid-column: 2;
+  flex: 1;
+}
+
 .header {
+  grid-column: 1 / -1;
   background-color: var(--theme, var(--central-ministry-colour));
   padding: 1rem 5rem;
   display: flex;
@@ -74,6 +92,7 @@ a {
   position: sticky;
   top: 0;
   z-index: 99999;
+  padding-inline: max(5rem, calc((100vw - 2000px) / 2 + 5rem));
 }
 
 .logo-text {
@@ -87,9 +106,22 @@ a {
   font-weight: 400;
 }
 
+.content {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: subgrid;
+}
+
+.content > * {
+  grid-column: 2;
+}
+
 .hero {
+  grid-column: 1 / -1;
   background-color: var(--theme, var(--central-ministry-colour));
   color: var(--theme-accent, white);
+  padding: 2rem 0;
+  padding-inline: max(5rem, calc((100vw - 2000px) / 2 + 5rem));
 }
 
 .hero-title {
@@ -240,6 +272,8 @@ footer {
   flex-wrap: wrap;
   gap: 2rem;
   margin-bottom: -5px;
+  padding-inline: max(5rem, calc((100vw - 2000px) / 2 + 5rem));
+  margin-top: auto;
 }
 
 .footer-title {
@@ -259,7 +293,7 @@ footer {
   animation: wipe-up ease-out both;
   animation-timeline: view();
   animation-range-start: cover 5%;
-  animation-range-end: cover 35%;
+  animation-range-end: cover 20%;
 }
 
 .footer-divider {
@@ -271,7 +305,7 @@ footer {
   animation: wipe-right ease-in both;
   animation-timeline: view();
   animation-range-start: cover 0%;
-  animation-range-end: cover 15%;
+  animation-range-end: cover 10%;
 }
 
 .footer-ministries.links {
@@ -378,16 +412,20 @@ pagefind-searchbox::part(input) {
   padding-bottom: 0px;
 }
 
-@media (max-width: 600px) {
-  .header,
-  section:not(.content, footer section) {
-    padding: 1rem 2rem;
-  }
+/* DESKTOP/MOBILE SEARCHBAR MEDIA QUERY */
+@media (max-width: 50rem) {
   .search-mobile {
     display: flex;
   }
   .search-desktop {
     display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .header,
+  section:not(.content, footer section) {
+    padding: 1rem 2rem;
   }
   .hero-title {
     font-size: 2.5rem;
@@ -422,9 +460,9 @@ pagefind-searchbox::part(input) {
     flex-wrap: nowrap;
     padding: 2rem 3rem 3rem 3rem;
   }
-  .footer-divider {
-    animation-range-start: cover 0%;
-    animation-range-end: cover 10%;
+  .footer-title::before {
+    animation-range-start: cover 5%;
+    animation-range-end: cover 35%;
   }
   footer .link {
     font-size: 1rem;

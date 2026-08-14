@@ -57,7 +57,7 @@
   filter: invert(0)
 }
 
-section:not(.content, footer section) {
+section:not(.hero, .content, footer section) {
   padding: 2rem 5rem;
 }
 
