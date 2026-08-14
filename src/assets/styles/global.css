@@ -460,9 +460,9 @@ pagefind-searchbox::part(input) {
     flex-wrap: nowrap;
     padding: 2rem 3rem 3rem 3rem;
   }
-  .footer-divider {
-    animation-range-start: cover 0%;
-    animation-range-end: cover 10%;
+  .footer-title::before {
+    animation-range-start: cover 5%;
+    animation-range-end: cover 35%;
   }
   footer .link {
     font-size: 1rem;
