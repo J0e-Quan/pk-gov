@@ -64,3 +64,11 @@ async function share() {
     shareButton.textContent = 'Page details copied!'
   }
 }
+
+// code for handling print button
+const printButton = document.querySelector('.print')
+if (printButton !== null) {
+  printButton.addEventListener('click', () => {
+    window.print()
+  })
+}
