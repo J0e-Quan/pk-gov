@@ -293,7 +293,7 @@ footer {
   animation: wipe-up ease-out both;
   animation-timeline: view();
   animation-range-start: cover 5%;
-  animation-range-end: cover 35%;
+  animation-range-end: cover 20%;
 }
 
 .footer-divider {
@@ -305,7 +305,7 @@ footer {
   animation: wipe-right ease-in both;
   animation-timeline: view();
   animation-range-start: cover 0%;
-  animation-range-end: cover 15%;
+  animation-range-end: cover 10%;
 }
 
 .footer-ministries.links {
