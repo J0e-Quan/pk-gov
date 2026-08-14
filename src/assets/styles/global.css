@@ -477,3 +477,54 @@ pagefind-searchbox::part(input) {
     text-align: center;
   }
 }
+
+@media print {
+  @page {
+    margin: 18mm;
+  }
+  * {
+    /* forces background images and other elements to show */
+    print-color-adjust: exact;
+  }
+  section {
+    padding: 1rem 0;
+  }
+  section.content, section.page {
+    padding: 0;
+    width: 100%;
+  }
+  .header {
+    padding: 1rem;
+    position: static;
+  }
+  .hero {
+    padding: 0.5rem;
+    color: black;
+    width: 100%;
+    background-color: transparent;
+    border: 10px solid var(--central-ministry-colour);
+    border-top: none;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    break-after: avoid;
+  }
+  p, li {
+    /* If less than 3 lines fit at the bottom or top, move the block smoothly */
+    orphans: 3;
+    widows: 3;
+  }
+  a {
+    color: black;
+  }
+  .table-of-contents-container * {
+    display: none;
+  }
+  img {
+    animation: none;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .search-desktop, .search-icon, footer, hr, .hero-thumbnail, .end-buttons, h2::before, .section-divider, .download-buttons {
+    display: none;
+  }
+}
