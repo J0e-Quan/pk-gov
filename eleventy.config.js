@@ -3,6 +3,7 @@ import { IdAttributePlugin } from "@11ty/eleventy";
 import EleventyVite from '@11ty/eleventy-plugin-vite';
 import * as cheerio from "cheerio";
 import path from "path";
+import EleventyRSS from '@11ty/eleventy-plugin-rss'
 
 export default async function (eleventyConfig) {
   eleventyConfig.setServerOptions({
@@ -10,6 +11,7 @@ export default async function (eleventyConfig) {
     dir: 'dist'
   })
   eleventyConfig.addPlugin(IdAttributePlugin);
+  eleventyConfig.addPlugin(EleventyRSS)
 
   eleventyConfig.addPlugin(EleventyVite, {
     tempFolderName: ".11ty-vite",
