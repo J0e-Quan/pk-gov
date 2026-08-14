@@ -72,7 +72,7 @@ a svg {
 }
 
 .other-resources {
-  padding: 0rem 5rem 4rem 5rem;
+  padding: 0rem 3rem 4rem 3rem;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(40rem, 1fr));
   justify-content: center;
