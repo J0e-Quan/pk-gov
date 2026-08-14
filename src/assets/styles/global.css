@@ -120,7 +120,7 @@ body {
   grid-column: 1 / -1;
   background-color: var(--theme, var(--central-ministry-colour));
   color: var(--theme-accent, white);
-  padding: 1rem 0;
+  padding: 2rem 0;
   padding-inline: max(5rem, calc((100vw - 2000px) / 2 + 5rem));
 }
 
