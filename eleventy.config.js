@@ -102,6 +102,7 @@ eleventyConfig.addTransform("injectNestedToc", function(content) {
   eleventyConfig.addWatchTarget('./dist/*.css')
   eleventyConfig.addPassthroughCopy("src/**/*.js")
   eleventyConfig.addPassthroughCopy("src/assets/")
+  eleventyConfig.addPassthroughCopy({ "src/OneSignalSDKWorker.js": "OneSignalSDKWorker.js" });
 
   // tells eleventy to ignore all .md files beginning with _
   eleventyConfig.ignores.add('src/**/_*.md')
