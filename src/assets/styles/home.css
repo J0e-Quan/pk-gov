@@ -73,8 +73,8 @@ a svg {
 
 .other-resources {
   padding: 0rem 5rem 4rem 5rem;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(40rem, 1fr));
   justify-content: center;
 }
 
@@ -148,6 +148,8 @@ a svg {
     width: 35vw;
   }
   section.other-resources {
+    display: flex;
+    flex-direction: column;
     padding: 1rem 0;
   }
   .other-resources .title {
