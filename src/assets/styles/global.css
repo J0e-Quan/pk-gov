@@ -65,6 +65,12 @@ a {
   text-decoration: none;
 }
 
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 /* IMPLEMENTS MAX-WIDTH FOR BETTER ULTRAWIDE SUPPORT */
 .header-scrollable-area {
   display: grid;
@@ -73,6 +79,7 @@ a {
 
 .header-scrollable-area > * {
   grid-column: 2;
+  flex: 1;
 }
 
 .header {
@@ -266,6 +273,7 @@ footer {
   gap: 2rem;
   margin-bottom: -5px;
   padding-inline: max(5rem, calc((100vw - 2000px) / 2 + 5rem));
+  margin-top: auto;
 }
 
 .footer-title {
