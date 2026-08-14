@@ -66,16 +66,17 @@ a {
 }
 
 /* IMPLEMENTS MAX-WIDTH FOR BETTER ULTRAWIDE SUPPORT */
-body {
+.header-scrollable-area {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 2000px) minmax(0, 1fr);
 }
 
-body > * {
+.header-scrollable-area > * {
   grid-column: 2;
 }
 
 .header {
+  grid-column: 1 / -1;
   background-color: var(--theme, var(--central-ministry-colour));
   padding: 1rem 5rem;
   display: flex;
@@ -84,6 +85,7 @@ body > * {
   position: sticky;
   top: 0;
   z-index: 99999;
+  padding-inline: max(5rem, calc((100vw - 2000px) / 2 + 5rem));
 }
 
 .logo-text {
@@ -97,9 +99,22 @@ body > * {
   font-weight: 400;
 }
 
+.content {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: subgrid;
+}
+
+.content > * {
+  grid-column: 2;
+}
+
 .hero {
+  grid-column: 1 / -1;
   background-color: var(--theme, var(--central-ministry-colour));
   color: var(--theme-accent, white);
+  padding: 1rem 0;
+  padding-inline: max(5rem, calc((100vw - 2000px) / 2 + 5rem));
 }
 
 .hero-title {
@@ -250,6 +265,7 @@ footer {
   flex-wrap: wrap;
   gap: 2rem;
   margin-bottom: -5px;
+  padding-inline: max(5rem, calc((100vw - 2000px) / 2 + 5rem));
 }
 
 .footer-title {
