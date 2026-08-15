@@ -103,7 +103,7 @@ if (rssButton !== null) {
 }
 
 function getRSS() {
-  const feedURL = 'https://pk-gov.onrender.com/feed.xml'
+  const feedURL = window.location.origin + '/feed.xml'
   const rssButton = document.querySelector('.button.rss')
   navigator.clipboard.writeText(feedURL).then(() => {
     rssButton.textContent = 'URL copied!'
@@ -116,6 +116,7 @@ function getRSS() {
 // code for handling push notifications
 // eslint-disable-next-line no-undef
 window.OneSignalDeferred = window.OneSignalDeferred || [];
+// eslint-disable-next-line no-undef
 OneSignalDeferred.push(async function (OneSignal) { 
   const pushButton = document.querySelector('.button.push')
   const notificationTitle = document.querySelector('.notifications-title')
