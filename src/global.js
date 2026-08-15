@@ -73,13 +73,23 @@ if (printButton !== null) {
   })
 }
 
-// code for handling push notifications
+// code for opening/closing notification-modal
 const notificationsButton = document.querySelector('.notifications-button')
 if (notificationsButton !== null) {
   notificationsButton.addEventListener('click', showNotificationsModal)
 }
 
+const closeButton = document.querySelector('.button.close')
+if (closeButton !== null) {
+  closeButton.addEventListener('click', closeNotificationsModal)
+}
+
 function showNotificationsModal() {
   const notificationsModal = document.querySelector('.notifications-modal')
   notificationsModal.showModal()
+}
+
+function closeNotificationsModal() {
+  const notificationsModal = document.querySelector('.notifications-modal')
+  notificationsModal.close()
 }
