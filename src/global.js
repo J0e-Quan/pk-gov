@@ -93,3 +93,21 @@ function closeNotificationsModal() {
   const notificationsModal = document.querySelector('.notifications-modal')
   notificationsModal.close()
 }
+
+// code for getting rss feed url
+const rssButton = document.querySelector('.button.rss')
+if (rssButton !== null) {
+  rssButton.addEventListener('click', getRSS)
+}
+
+function getRSS() {
+  const feedURL = 'https://pk-gov.onrender.com/feed.xml'
+  const rssButton = document.querySelector('.button.rss')
+  navigator.clipboard.writeText(feedURL).then(() => {
+    rssButton.textContent = 'URL copied!'
+    const THREE_SECONDS = 3000
+    setTimeout(() => {
+      rssButton.textContent = 'Copy RSS Feed URL'
+    }, THREE_SECONDS)
+  })
+}
