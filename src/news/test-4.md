@@ -1,11 +1,11 @@
 ---
 tags: news
 layout: content-page.njk
-date: 2026-08-15
+date: 2026-08-18
 author: Technology Minister Android
-title: test test
-excerpt: nothing to see here... just testing out push notifications
+title: test 4
+excerpt: testing onesignal notification excerpt handling
 thumbnail: /assets/news-media/new-updates-to-pk-gov-are-here/thumbnail.webp
 ---
 
-If you get notified, good job!
+YOU SHOULDNT SEE THIS!!!!
