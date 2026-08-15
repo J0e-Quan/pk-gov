@@ -1,22 +1,22 @@
-const fs = require("fs");
-const path = require("path");
+import { existsSync, readFileSync, writeFileSync } from "fs";
+import { join } from "path";
 
 async function sendPush() {
   const historyFile = ".sent-posts.json";
-  const feedPath = path.join("dist", "feed.xml");
+  const feedPath = join("dist", "feed.xml");
 
   // 1. Check history
   let sentPosts = [];
-  if (fs.existsSync(historyFile)) {
-    sentPosts = JSON.parse(fs.readFileSync(historyFile, "utf8"));
+  if (existsSync(historyFile)) {
+    sentPosts = JSON.parse(readFileSync(historyFile, "utf8"));
   }
 
   // 2. Read feed
-  if (!fs.existsSync(feedPath)) {
+  if (!existsSync(feedPath)) {
     console.log("feed.xml not found in dist/");
     return;
   }
-  const xmlText = fs.readFileSync(feedPath, "utf8");
+  const xmlText = readFileSync(feedPath, "utf8");
 
   // 3. Match <entry>
   const entryMatch = xmlText.match(/<entry[\s\S]*?>([\s\S]*?)<\/entry>/i);
@@ -66,7 +66,7 @@ async function sendPush() {
 
   // 6. Update history
   sentPosts.push(url);
-  fs.writeFileSync(historyFile, JSON.stringify(sentPosts, null, 2));
+  writeFileSync(historyFile, JSON.stringify(sentPosts, null, 2));
 }
 
 sendPush();
