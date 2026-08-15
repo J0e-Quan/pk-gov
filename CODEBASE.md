@@ -12,6 +12,7 @@ This contains information about the pk-gov codebase, such as what technologies w
 - browser-image-compression is used to compress plushie images before being uploaded to Supabase
 - Chart.js is used to generate charts in the PIBSS statistics page
 - Malaysia Calendar API (MyCal) is used to provide public holiday information for the Timeline service
+- OneSignal is used to provide push notifications
 
 ## Structure of this website
 The general file structure and structure of the webiste will be listed here. In most cases, you should only be touching stuff in the `src/` folder. Everything outside of that is for dependencies and other dev tools. All pages use the `global.js` file (though some may use additional .js files for specialised functions), while all CSS files are located in `assets/styles/`.
@@ -65,7 +66,7 @@ This contains the weather service's njk and js file. These pages are generated w
 
 ### root (src/)
 
-In the root of `src/`, `index.njk` is the file for the homepage The homepage's CSS file is also named `home.css`. Any assets it uses are taken directly from `assets/`. `global.js` is also located here, as it is used by all pages for general tasks such as importing `global.css` and the share button.
+In the root of `src/`, `index.njk` is the file for the homepage The homepage's CSS file is also named `home.css`. Any assets it uses are taken directly from `assets/`. `global.js` is also located here, as it is used by all pages for general tasks such as importing `global.css` and the share button. `feed.njk` is the template used to generate pk-gov's RSS feed.
 
 ## Using 11ty
 
