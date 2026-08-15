@@ -72,3 +72,14 @@ if (printButton !== null) {
     window.print()
   })
 }
+
+// code for handling push notifications
+const notificationsButton = document.querySelector('.notifications-button')
+if (notificationsButton !== null) {
+  notificationsButton.addEventListener('click', showNotificationsModal)
+}
+
+function showNotificationsModal() {
+  const notificationsModal = document.querySelector('.notifications-modal')
+  notificationsModal.showModal()
+}

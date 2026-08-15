@@ -41,6 +41,24 @@
           </pagefind-modal>
         </div>
       </header>
+      {# MODAL FOR MANAGING NOTIFICATION PREFERENCES #}
+      <dialog class="notifications-modal">
+        <h2 class="notifications-modal-title">How would you like to stay informed?</h2>
+        <div class="notification-modal-buttons">
+          <div class="notification-modal-option">
+            <h3 class="notification-modal-option-title">Push Notifications</h3>
+            <p class="notification-modal-option-text">Get notifications on your device whenever a new article is published.</p>
+            <button type='button' class='button push'>Receive notifications</button>
+          </div>
+          <div class="notification-modal-option">
+            <h3 class="notification-modal-option-title">RSS Feed (Advanced)</h3>
+            <p class="notification-modal-option-text">Use our RSS feed to read Government news articles with your favourite reader app.</p>           
+            <button type='button' class='button rss'>Copy RSS Feed URL</button>
+          </div>
+        </div>
+        <button type='button' class='button close'>Close menu</button>
+      </dialog>
+      {# END MODAL #}
       <section class="content" data-pagefind-body>
         <section class="hero">
           <h1 class="hero-title">Government news</h1>
