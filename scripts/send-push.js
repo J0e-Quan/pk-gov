@@ -28,6 +28,9 @@ async function sendPush() {
   const entryXml = entryMatch[1];
   const titleMatch = entryXml.match(/<title[^>]*>([\s\S]*?)<\/title>/i);
   const linkMatch = entryXml.match(/<link[^>]+href=["']([^"']+)["']/i);
+  
+  // Extract summary or content tag from Atom feed
+  const summaryMatch = entryXml.match(/<(?:summary|content)[^>]*>([\s\S]*?)<\/(?:summary|content)>/i);
 
   if (!titleMatch || !linkMatch) {
     console.log("Could not parse title or link from entry.");
@@ -36,6 +39,12 @@ async function sendPush() {
 
   const title = titleMatch[1].trim();
   const url = linkMatch[1].trim();
+
+  // Strip HTML tags if summary contains markup, fallback if empty
+  let description = summaryMatch ? summaryMatch[1].replace(/<[^>]*>?/gm, "").trim() : "";
+  if (!description) {
+    description = "Click to read the latest updates.";
+  }
 
   // 4. Duplicate check
   if (sentPosts.includes(url)) {
@@ -55,8 +64,8 @@ async function sendPush() {
     body: JSON.stringify({
       app_id: process.env.ONESIGNAL_APP_ID,
       included_segments: ["Total Subscriptions"],
-      headings: { en: "New Post Published!" },
-      contents: { en: title },
+      headings: { en: title },
+      contents: { en: description },
       url: url
     })
   });

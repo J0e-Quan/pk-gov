@@ -1,7 +1,7 @@
 ---
 tags: news
 layout: content-page.njk
-date: 2026-08-15
+date: 2026-08-17
 author: Technology Minister Android
 title: test 3
 excerpt: third test for onesignal notifications
