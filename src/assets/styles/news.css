@@ -124,6 +124,31 @@ h2.article-title::before {
   section:not(.content, footer section) {
     padding: 1rem 2rem;
   }
+  .notifications {
+    gap: 0;
+  }
+  .notifications-title {
+    font-size: 1.5rem;
+  }
+  .notifications-modal-title {
+    font-size: 2.5rem;
+  }
+  .notification-modal-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .notification-modal-option-title {
+    font-size: 2rem;
+  }
+  .notification-modal-option-text {
+    font-size: 1rem;
+  }
+  button.push, button.rss {
+    min-width: 100%;
+    align-self: stretch;
+    justify-content: center;
+  }
   .articles {
     margin-bottom: 4rem;
   }
