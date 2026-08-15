@@ -115,6 +115,7 @@ function getRSS() {
 
 // code for handling push notifications
 // eslint-disable-next-line no-undef
+window.OneSignalDeferred = window.OneSignalDeferred || [];
 OneSignalDeferred.push(async function (OneSignal) { 
   const pushButton = document.querySelector('.button.push')
   const notificationTitle = document.querySelector('.notifications-title')
