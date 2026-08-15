@@ -18,6 +18,7 @@ export default async function (eleventyConfig) {
     
     viteOptions: {
       clearScreen: false,
+      assetsInclude: ['**/*.xml'], // Tell Vite to include XML files in the dist build
       resolve: {
         alias: {
           // Allow references to `node_modules` folder directly
