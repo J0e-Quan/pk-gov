@@ -27,6 +27,9 @@ jobs:
       - name: Build Eleventy Site
         run: npm run build
 
+      - name: Debug Output Directory
+        run: ls -la dist/
+
       - name: Send OneSignal Push
         env:
           ONESIGNAL_APP_ID: ${{ secrets.ONESIGNAL_APP_ID }}
