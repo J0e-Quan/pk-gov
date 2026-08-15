@@ -1,5 +1,7 @@
 import './assets/styles/global.css'
 
+const THREE_SECONDS = 3000
+
 // code for opening pagefind modal for search-mobile
 document.addEventListener('DOMContentLoaded', () => {
   const searchIcon = document.querySelector('.search-icon')
@@ -105,9 +107,44 @@ function getRSS() {
   const rssButton = document.querySelector('.button.rss')
   navigator.clipboard.writeText(feedURL).then(() => {
     rssButton.textContent = 'URL copied!'
-    const THREE_SECONDS = 3000
     setTimeout(() => {
       rssButton.textContent = 'Copy RSS Feed URL'
     }, THREE_SECONDS)
   })
 }
+
+// code for handling push notifications
+// eslint-disable-next-line no-undef
+OneSignalDeferred.push(async function (OneSignal) { 
+  const pushButton = document.querySelector('.button.push')
+  const notificationTitle = document.querySelector('.notifications-title')
+  if (pushButton !== null) {
+    if (OneSignal.User.PushSubscription.optedIn === true) {
+      pushButton.textContent = 'Opt out of notifications'
+      notificationTitle.textContent = "You've opted in to receiving push notifications for new articles."
+      pushButton.addEventListener('click', optOut, {once: true})
+    } else {
+      pushButton.addEventListener('click', optIn, {once: true})
+    }
+  }
+
+  function optOut() {
+    OneSignal.User.PushSubscription.optOut()
+    pushButton.textContent = 'Successfully opted out!'
+    notificationTitle.textContent = "Stay in the loop with notifications whenever a new article is posted here."
+    setTimeout(() => {
+      pushButton.textContent = 'Enable notifications'
+      pushButton.addEventListener('click', optIn, {once: true})
+    }, THREE_SECONDS);
+  }
+
+    function optIn() {
+    OneSignal.User.PushSubscription.optIn()
+    pushButton.textContent = "Notifications enabled!"
+    notificationTitle.textContent = "You've opted in to receiving push notifications for new articles."
+    setTimeout(() => {
+      pushButton.textContent = 'Opt out of notifications'
+      pushButton.addEventListener('click', optOut, {once: true})
+    }, THREE_SECONDS);
+  }
+})
