@@ -22,7 +22,7 @@ jobs:
         run: npm ci
 
       - name: Build Eleventy Site
-        run: npx @11ty/eleventy
+        run: npm run build
 
       - name: Send OneSignal Push
         env:
