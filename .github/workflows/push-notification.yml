@@ -6,6 +6,9 @@ on:
       - main
       - news-article-updates
 
+permissions:
+  contents: write
+
 jobs:
   notify:
     runs-on: ubuntu-latest
