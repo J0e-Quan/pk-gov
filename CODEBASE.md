@@ -11,6 +11,7 @@ This contains information about the pk-gov codebase, such as what technologies w
 - Supabase and its API are used for PIBSS
 - browser-image-compression is used to compress plushie images before being uploaded to Supabase
 - Chart.js is used to generate charts in the PIBSS statistics page
+- Malaysia Calendar API (MyCal) is used to provide public holiday information for the Timeline service
 
 ## Structure of this website
 The general file structure and structure of the webiste will be listed here. In most cases, you should only be touching stuff in the `src/` folder. Everything outside of that is for dependencies and other dev tools. All pages use the `global.js` file (though some may use additional .js files for specialised functions), while all CSS files are located in `assets/styles/`.

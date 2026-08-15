@@ -8,7 +8,7 @@ Live link: https://pk-gov.onrender.com/
 
 ## Technologies used:
 
-- HTML for basic page layout
+- HTML, Nunjucks and Markdown for basic page layout
 - CSS for styling page elements and responsive design
 - JavaScript for loading lottie animations and handling imports
 - 11ty for static page generation from templates
