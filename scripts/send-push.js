@@ -54,7 +54,7 @@ async function sendPush() {
     },
     body: JSON.stringify({
       app_id: process.env.ONESIGNAL_APP_ID,
-      included_segments: ["Subscribed Users"],
+      included_segments: ["Total Subscriptions"],
       headings: { en: "New Post Published!" },
       contents: { en: title },
       url: url
