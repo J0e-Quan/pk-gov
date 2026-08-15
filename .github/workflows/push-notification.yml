@@ -22,67 +22,7 @@ jobs:
         env:
           ONESIGNAL_APP_ID: ${{ secrets.ONESIGNAL_APP_ID }}
           ONESIGNAL_REST_API_KEY: ${{ secrets.ONESIGNAL_REST_API_KEY }}
-        run: |
-          node -e '
-          const fs = require("fs");
-
-          async function sendPush() {
-            const historyFile = ".sent-posts.json";
-            
-            // 1. Load sent history
-            let sentPosts = [];
-            if (fs.existsSync(historyFile)) {
-              sentPosts = JSON.parse(fs.readFileSync(historyFile, "utf8"));
-            }
-
-            // 2. Fetch live RSS feed
-            const response = await fetch("https://pk-gov-beta.onrender.com/feed.xml");
-            const xmlText = await response.text();
-
-            const titleMatch = xmlText.match(/<entry>[\s\S]*?<title>(.*?)<\/title>/);
-            const linkMatch = xmlText.match(/<entry>[\s\S]*?<link href="(.*?)"/);
-
-            if (!titleMatch || !linkMatch) {
-              console.log("No feed items found.");
-              return;
-            }
-
-            const title = titleMatch[1];
-            const url = linkMatch[1];
-
-            // 3. Skip if this URL was already notified
-            if (sentPosts.includes(url)) {
-              console.log("Post already notified:", url);
-              return;
-            }
-
-            console.log("New article detected! Sending notification for:", title);
-
-            // 4. Send OneSignal API Request
-            const res = await fetch("https://onesignal.com/api/v1/notifications", {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json; charset=utf-8",
-                "Authorization": `Basic ${process.env.ONESIGNAL_REST_API_KEY}`
-              },
-              body: JSON.stringify({
-                app_id: process.env.ONESIGNAL_APP_ID,
-                included_segments: ["Subscribed Users"],
-                headings: { en: "New Post Published!" },
-                contents: { en: title },
-                url: url
-              })
-            });
-
-            console.log(await res.json());
-
-            // 5. Update history file
-            sentPosts.push(url);
-            fs.writeFileSync(historyFile, JSON.stringify(sentPosts, null, 2));
-          }
-
-          sendPush();
-          '
+        run: node scripts/send-push.js
 
       # Commit the updated history file back to the repo so GitHub remembers
       - name: Save notification history
