@@ -133,7 +133,7 @@ OneSignalDeferred.push(async function (OneSignal) {
   function optOut() {
     OneSignal.User.PushSubscription.optOut()
     pushButton.textContent = 'Successfully opted out!'
-    notificationTitle.textContent = "Stay in the loop with notifications whenever a new article is posted here."
+    notificationTitle.textContent = "Get notified whenever a new article is posted here. Click the 'Manage preferences' button to enable push notifications."
     setTimeout(() => {
       pushButton.textContent = 'Enable notifications'
       pushButton.addEventListener('click', optIn, {once: true})
