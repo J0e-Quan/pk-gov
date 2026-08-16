@@ -141,8 +141,8 @@ OneSignalDeferred.push(async function (OneSignal) {
   }
 
   async function optIn() {
-    const permission = await Notification.requestPermission();
-    if (permission === 'granted') {
+    await OneSignal.Notifications.requestPermission();
+    if (OneSignal.Notifications.permission) {
       OneSignal.User.PushSubscription.optIn();
     } else {
       alert("Notification permission blocked! Please enable notification permissions for this website.")
