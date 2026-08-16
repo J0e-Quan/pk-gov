@@ -8,8 +8,11 @@ SITEMAP_FILE="public/sitemap.xml"
 echo "==> Step 1: Discovering page URLs..."
 # Crawl site, extract URLs, and filter out static assets
 wget --spider --recursive --no-verbose --domains="${DOMAIN_NAME}" "$TARGET_DOMAIN" 2>&1 \
-  | grep -oE 'https?://[a-zA-Z0-9./_-]+' \
-  | grep -vE '\.(png|jpg|jpeg|gif|svg|ico|webp|zip|css|js|woff|woff2|ttf|eot|pdf|json|xml)$' \
+| grep -oE 'https?://[a-zA-Z0-9./_-]+' \
+  | grep -vE '\.(png|jpg|jpeg|gif|svg|webp|ico|css|js|woff|woff2|ttf|eot|pdf|json|xml|zip)$' \
+  | sed -E 's/#.*$//' \                # Remove URL anchor fragments (#team)
+  | sed -E 's|/index\.html$|/|' \      # Convert /index.html to /
+  | sed -E 's|/+$|/|' \               # Normalize trailing slashes to a single /
   | sort -u > urls.txt
 
 echo "Found $(wc -l < urls.txt) page URLs."
