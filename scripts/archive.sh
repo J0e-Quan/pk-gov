@@ -9,7 +9,7 @@ echo "==> Step 1: Discovering page URLs..."
 # Crawl site, extract URLs, and filter out static assets
 wget --spider --recursive --no-verbose --domains="${DOMAIN_NAME}" "$TARGET_DOMAIN" 2>&1 \
   | grep -oE 'https?://[a-zA-Z0-9./_-]+' \
-  | grep -vE '\.(png|jpg|jpeg|gif|svg|ico|webp|css|js|woff|woff2|ttf|eot|pdf|json|xml)$' \
+  | grep -vE '\.(png|jpg|jpeg|gif|svg|ico|webp|zip|css|js|woff|woff2|ttf|eot|pdf|json|xml)$' \
   | sort -u > urls.txt
 
 echo "Found $(wc -l < urls.txt) page URLs."
@@ -33,7 +33,7 @@ while read -r url; do
   echo "Archiving: $url"
   status=$(curl -s -o /dev/null -w "%{http_code}" "https://web.archive.org/save/$url")
   
-  if [ "$status" -eq 200 ]; then
+  if [ "$status" -eq 200 ] || [ "$status" -eq 302 ]; then
     echo "  [SUCCESS] Status $status"
   else
     echo "  [FAILED] Status $status"
