@@ -27,7 +27,7 @@ export default async function (eleventyConfig) {
       },
       build: {
         mode: "production",
-        rolldownOptions: {
+        rollupOptions: {
           // Explicitly tells Vite's bundler that the pagefind assets are external 
           // and should be left alone
           external: [

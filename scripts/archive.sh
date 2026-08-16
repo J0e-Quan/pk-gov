@@ -20,14 +20,21 @@ while read -r url; do
   echo "Archiving: $url"
   status=$(curl -s -o /dev/null -w "%{http_code}" "https://web.archive.org/save/$url")
   
+  # If hit by a 429, wait 30 seconds for the IP rate limit window to clear, then retry once
+  if [ "$status" -eq 429 ]; then
+    echo "  [RATE LIMITED] Status 429 - Waiting 30s before retrying..."
+    sleep 30
+    status=$(curl -s -o /dev/null -w "%{http_code}" "https://web.archive.org/save/$url")
+  fi
+
   if [ "$status" -eq 200 ] || [ "$status" -eq 302 ]; then
     echo "  [SUCCESS] Status $status"
   else
     echo "  [FAILED] Status $status"
   fi
 
-  # 6-second pause to prevent hitting rate limits
-  sleep 6
+  # Safe delay between requests
+  sleep 8
 done < urls.txt
 
 echo "==> Done!"
