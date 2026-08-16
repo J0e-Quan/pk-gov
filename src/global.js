@@ -1,5 +1,7 @@
 import './assets/styles/global.css'
 
+const THREE_SECONDS = 3000
+
 // code for opening pagefind modal for search-mobile
 document.addEventListener('DOMContentLoaded', () => {
   const searchIcon = document.querySelector('.search-icon')
@@ -64,3 +66,87 @@ async function share() {
     shareButton.textContent = 'Page details copied!'
   }
 }
+
+// code for handling print button
+const printButton = document.querySelector('.print')
+if (printButton !== null) {
+  printButton.addEventListener('click', () => {
+    window.print()
+  })
+}
+
+// code for opening/closing notification-modal
+const notificationsButton = document.querySelector('.notifications-button')
+if (notificationsButton !== null) {
+  notificationsButton.addEventListener('click', showNotificationsModal)
+}
+
+const closeButton = document.querySelector('.button.close')
+if (closeButton !== null) {
+  closeButton.addEventListener('click', closeNotificationsModal)
+}
+
+function showNotificationsModal() {
+  const notificationsModal = document.querySelector('.notifications-modal')
+  notificationsModal.showModal()
+}
+
+function closeNotificationsModal() {
+  const notificationsModal = document.querySelector('.notifications-modal')
+  notificationsModal.close()
+}
+
+// code for getting rss feed url
+const rssButton = document.querySelector('.button.rss')
+if (rssButton !== null) {
+  rssButton.addEventListener('click', getRSS)
+}
+
+function getRSS() {
+  const feedURL = window.location.origin + '/feed.xml'
+  const rssButton = document.querySelector('.button.rss')
+  navigator.clipboard.writeText(feedURL).then(() => {
+    rssButton.textContent = 'URL copied!'
+    setTimeout(() => {
+      rssButton.textContent = 'Copy RSS Feed URL'
+    }, THREE_SECONDS)
+  })
+}
+
+// code for handling push notifications
+// eslint-disable-next-line no-undef
+window.OneSignalDeferred = window.OneSignalDeferred || [];
+// eslint-disable-next-line no-undef
+OneSignalDeferred.push(async function (OneSignal) { 
+  const pushButton = document.querySelector('.button.push')
+  const notificationTitle = document.querySelector('.notifications-title')
+  if (pushButton !== null) {
+    if (OneSignal.User.PushSubscription.optedIn === true) {
+      pushButton.textContent = 'Opt out of notifications'
+      notificationTitle.textContent = "You've opted in to receiving push notifications for new articles."
+      pushButton.addEventListener('click', optOut, {once: true})
+    } else {
+      pushButton.addEventListener('click', optIn, {once: true})
+    }
+  }
+
+  function optOut() {
+    OneSignal.User.PushSubscription.optOut()
+    pushButton.textContent = 'Successfully opted out!'
+    notificationTitle.textContent = "Get notified whenever a new article is posted here. Click the 'Manage preferences' button to enable push notifications."
+    setTimeout(() => {
+      pushButton.textContent = 'Enable notifications'
+      pushButton.addEventListener('click', optIn, {once: true})
+    }, THREE_SECONDS);
+  }
+
+    function optIn() {
+    OneSignal.User.PushSubscription.optIn()
+    pushButton.textContent = "Notifications enabled!"
+    notificationTitle.textContent = "You've opted in to receiving push notifications for new articles."
+    setTimeout(() => {
+      pushButton.textContent = 'Opt out of notifications'
+      pushButton.addEventListener('click', optOut, {once: true})
+    }, THREE_SECONDS);
+  }
+})

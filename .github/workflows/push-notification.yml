@@ -1,0 +1,44 @@
+name: Send OneSignal Push Notification
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'lts/*'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Eleventy Site
+        run: npm run build
+
+      - name: Send OneSignal Push
+        env:
+          ONESIGNAL_APP_ID: ${{ secrets.ONESIGNAL_APP_ID }}
+          ONESIGNAL_REST_API_KEY: ${{ secrets.ONESIGNAL_REST_API_KEY }}
+        run: node scripts/send-push.js
+
+      # Commit the updated history file back to the repo so GitHub remembers
+      - name: Save notification history
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          if [ -f .sent-posts.json ]; then
+                git add .sent-posts.json
+                git diff-index --quiet HEAD || git commit -m "chore: update push notification history [skip ci]"
+                git push
+          fi

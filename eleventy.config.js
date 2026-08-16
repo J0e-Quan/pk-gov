@@ -3,6 +3,7 @@ import { IdAttributePlugin } from "@11ty/eleventy";
 import EleventyVite from '@11ty/eleventy-plugin-vite';
 import * as cheerio from "cheerio";
 import path from "path";
+import EleventyRSS from '@11ty/eleventy-plugin-rss'
 
 export default async function (eleventyConfig) {
   eleventyConfig.setServerOptions({
@@ -10,12 +11,14 @@ export default async function (eleventyConfig) {
     dir: 'dist'
   })
   eleventyConfig.addPlugin(IdAttributePlugin);
+  eleventyConfig.addPlugin(EleventyRSS)
 
   eleventyConfig.addPlugin(EleventyVite, {
     tempFolderName: ".11ty-vite",
     
     viteOptions: {
       clearScreen: false,
+      assetsInclude: ['**/*.xml'], // Tell Vite to include XML files in the dist build
       resolve: {
         alias: {
           // Allow references to `node_modules` folder directly
@@ -100,6 +103,7 @@ eleventyConfig.addTransform("injectNestedToc", function(content) {
   eleventyConfig.addWatchTarget('./dist/*.css')
   eleventyConfig.addPassthroughCopy("src/**/*.js")
   eleventyConfig.addPassthroughCopy("src/assets/")
+  eleventyConfig.addPassthroughCopy({ "src/OneSignalSDKWorker.js": "OneSignalSDKWorker.js" });
 
   // tells eleventy to ignore all .md files beginning with _
   eleventyConfig.ignores.add('src/**/_*.md')

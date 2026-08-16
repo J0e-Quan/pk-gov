@@ -9,6 +9,20 @@
   <link href="/pagefind/pagefind-component-ui.css" rel="stylesheet" vite-ignore>
   <script src="/pagefind/pagefind-component-ui.js" type="module"></script>
   <title>Government news</title>
+  <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+  <script>
+    window.OneSignalDeferred = window.OneSignalDeferred || [];
+    OneSignalDeferred.push(async function(OneSignal) {
+      await OneSignal.init({
+        appId: "515ca5f1-885e-4301-a81f-b163de533990",
+        promptOptions: {
+        slidedown: {
+          enabled: false
+          }
+        }
+      });
+    });
+  </script>
 </head>
 <body>
     <div class='header-scrollable-area'>
@@ -32,10 +46,32 @@
           </pagefind-modal>
         </div>
       </header>
+      {# MODAL FOR MANAGING NOTIFICATION PREFERENCES #}
+      <dialog class="notifications-modal">
+        <h2 class="notifications-modal-title">How would you like to stay informed?</h2>
+        <div class="notification-modal-buttons">
+          <div class="notification-modal-option">
+            <h3 class="notification-modal-option-title">Push Notifications</h3>
+            <p class="notification-modal-option-text">Get notifications on your device whenever a new article is published. (Ensure notifications are enabled in your browser)</p>
+            <button type='button' class='button push'>Enable notifications</button>
+          </div>
+          <div class="notification-modal-option">
+            <h3 class="notification-modal-option-title">RSS Feed (Advanced)</h3>
+            <p class="notification-modal-option-text">Use our RSS feed to read Government news articles with your favourite reader app.</p>           
+            <button type='button' class='button rss'>Copy RSS Feed URL</button>
+          </div>
+        </div>
+        <button type='button' class='button close'>Close menu</button>
+      </dialog>
+      {# END MODAL #}
       <section class="content" data-pagefind-body>
         <section class="hero">
           <h1 class="hero-title">Government news</h1>
           <p class="hero-text">Stay informed with the latest news from the Government. Video versions for major announcements are also available on our <a class="link" href="https://www.youtube.com/channel/UCL4Px1LLyD6WxcaDTm71ViQ" target="_blank" rel="noreferrer">YouTube channel</a>.</p>
+        </section>
+        <section class="notifications">
+          <h2 class="notifications-title">Get notified whenever a new article is posted here. Click the 'Manage preferences' button to enable push notifications.</h2>
+          <button type="button" class="notifications-button button">Manage preferences</button>
         </section>
         <section class="articles">
           {% for post in collections.news | reverse %}

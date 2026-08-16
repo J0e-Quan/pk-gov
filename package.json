@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/J0e-Quan/pk-gov#readme",
   "devDependencies": {
+    "@11ty/eleventy-plugin-rss": "^3.0.0",
     "@11ty/eleventy-plugin-vite": "^8.0.0",
     "eslint": "^8.57.1",
     "eslint-config-prettier": "^10.1.8",

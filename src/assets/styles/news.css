@@ -7,6 +7,71 @@ section:not(.hero, .content, footer section) {
   margin-bottom: 2rem;
 }
 
+.notifications {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.notifications-title {
+  font-size: 2rem;
+  flex: 2 1 26rem;
+  text-wrap: pretty;
+}
+
+.notifications-title::before {
+  display: none;
+}
+
+.notifications-button {
+  flex: 1 1 fit-content;
+}
+
+.notifications-modal {
+  background-color: white;
+  margin: auto;
+  padding: 1rem 2rem;
+}
+
+.notifications-modal-title {
+  font-size: 3.5rem;
+  margin-bottom: 2rem;
+}
+
+.notification-modal-buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  justify-content: center;
+  column-gap: 2rem;
+  row-gap: 1rem;
+}
+
+.notification-modal-option {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: fit-content;
+}
+
+.notification-modal-option-title {
+  font-size: 2.5rem;
+}
+
+.notification-modal-option-text {
+  font-size: 1.5rem;
+}
+
+button.push, button.rss {
+  margin-top: auto;
+}
+
+button.close {
+  margin-top: 2rem;
+  margin-inline: auto;
+}
+
 .articles {
   display: flex;
   flex-direction: column;
@@ -58,6 +123,31 @@ h2.article-title::before {
   .header,
   section:not(.content, footer section) {
     padding: 1rem 2rem;
+  }
+  .notifications {
+    gap: 0;
+  }
+  .notifications-title {
+    font-size: 1.5rem;
+  }
+  .notifications-modal-title {
+    font-size: 2.5rem;
+  }
+  .notification-modal-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .notification-modal-option-title {
+    font-size: 2rem;
+  }
+  .notification-modal-option-text {
+    font-size: 1rem;
+  }
+  button.push, button.rss {
+    min-width: 100%;
+    align-self: stretch;
+    justify-content: center;
   }
   .articles {
     margin-bottom: 4rem;

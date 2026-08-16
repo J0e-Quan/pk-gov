@@ -241,7 +241,7 @@ body {
   padding-bottom: 4rem;
 }
 
-.return, .share, .button, select{
+.return, .share, .print, .button, select{
   padding: 1rem 2rem;
   font-size: 2rem;
   font-family: var(--mona-sans);
@@ -258,7 +258,7 @@ body {
   will-change: box-shadow, color;
 }
 
-.return:hover, .share:hover, .button:hover {
+.return:hover, .share:hover, .print:hover, .button:hover {
   box-shadow: inset 0 0 0 400px var(--theme, var(--central-ministry-colour));
   color: var(--theme-accent, white);
 }
@@ -467,7 +467,7 @@ pagefind-searchbox::part(input) {
   footer .link {
     font-size: 1rem;
   }
-  .return, .share, .button {
+  .return, .share, .print, .button {
     padding: 1rem;
     font-size: 1.5rem;
     text-align: center;
@@ -475,5 +475,56 @@ pagefind-searchbox::part(input) {
   .select {
     font-size: 1rem;
     text-align: center;
+  }
+}
+
+@media print {
+  @page {
+    margin: 18mm;
+  }
+  * {
+    /* forces background images and other elements to show */
+    print-color-adjust: exact;
+  }
+  section {
+    padding: 0;
+  }
+  section.content, section.page {
+    padding: 0;
+    width: 100%;
+  }
+  .header {
+    padding: 1rem;
+    position: static;
+  }
+  .hero {
+    padding: 0.5rem;
+    color: black;
+    width: 100%;
+    background-color: transparent;
+    border: 10px solid var(--central-ministry-colour);
+    border-top: none;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    break-after: avoid;
+  }
+  p, li {
+    /* If less than 3 lines fit at the bottom or top, move the block smoothly */
+    orphans: 3;
+    widows: 3;
+  }
+  a {
+    color: black;
+  }
+  .table-of-contents-container * {
+    display: none;
+  }
+  img {
+    animation: none;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .search-desktop, .search-icon, footer, hr, .hero-thumbnail, .end-buttons, h2::before, .section-divider, .download-buttons {
+    display: none;
   }
 }
