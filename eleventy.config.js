@@ -34,7 +34,15 @@ export default async function (eleventyConfig) {
           '/pagefind/pagefind-component-ui.js',
           '/pagefind/pagefind-component-ui.css',
           /^\/pagefind\/.*$/
-          ]        
+          ],
+          output: {
+            // Remove hashes from JavaScript entry files (e.g. assets/main.js)
+            entryFileNames: 'assets/[name].js',
+            // Remove hashes from chunked/imported JS files
+            chunkFileNames: 'assets/[name].js',
+            // Remove hashes from all assets: CSS, images, fonts, etc. (e.g. assets/style.css)
+            assetFileNames: 'assets/[name][extname]',
+          },     
         }
       }
     }
