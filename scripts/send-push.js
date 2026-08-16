@@ -66,7 +66,10 @@ async function sendPush() {
       included_segments: ["Total Subscriptions"],
       headings: { en: title },
       contents: { en: description },
-      url: url
+      url: url,
+      chrome_web_icon: 'https://img.os-content.com/permanent/677898ed-458d-44ea-85b9-beed122350fc/zqyPGDpeQnyxlV81yfE1_yt%20icon.png',
+      chrome_web_badge: 'https://img.os-content.com/permanent/677898ed-458d-44ea-85b9-beed122350fc/zqyPGDpeQnyxlV81yfE1_yt%20icon.png',
+      firefox_icon: 'https://img.os-content.com/permanent/677898ed-458d-44ea-85b9-beed122350fc/zqyPGDpeQnyxlV81yfE1_yt%20icon.png',
     })
   });
 
