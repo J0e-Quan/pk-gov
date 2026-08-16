@@ -17,8 +17,12 @@
         appId: "515ca5f1-885e-4301-a81f-b163de533990",
         promptOptions: {
         slidedown: {
-          enabled: false
-          }
+          prompts: [
+            {
+              type: "push",
+              autoPrompt: false // Disables the automatic slidedown popup
+            }
+          ]
         }
       });
     });
