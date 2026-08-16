@@ -140,8 +140,13 @@ OneSignalDeferred.push(async function (OneSignal) {
     }, THREE_SECONDS);
   }
 
-    function optIn() {
-    OneSignal.User.PushSubscription.optIn()
+  async function optIn() {
+    const permission = await Notification.requestPermission();
+    if (permission === 'granted') {
+      OneSignal.User.PushSubscription.optIn();
+    } else {
+      alert("Notification permission blocked! Please enable notification permissions for this website.")
+    }
     pushButton.textContent = "Notifications enabled!"
     notificationTitle.textContent = "You've opted in to receiving push notifications for new articles."
     setTimeout(() => {
