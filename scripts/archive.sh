@@ -7,7 +7,7 @@ DOMAIN_NAME="${TARGET_DOMAIN#https://}"
 echo "==> Step 1: Discovering page URLs..."
 wget --spider --recursive --no-verbose --domains="${DOMAIN_NAME}" "$TARGET_DOMAIN" 2>&1 \
   | grep -oE 'https?://[a-zA-Z0-9./_-]+' \
-  | grep -vE '\.(png|jpg|jpeg|gif|svg|webp|ico|woff|woff2|ttf|eot|pdf|json|xml|zip)$' \
+  | grep -vE '\.(png|jpg|jpeg|gif|svg|webp|ico|ttf|eot|pdf|json|xml|zip)$' \
   | sed -E 's/#.*$//' \
   | sed -E 's|/index\.html$|/|' \
   | sed -E 's|/+$|/|' \
