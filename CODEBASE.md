@@ -7,11 +7,12 @@ This contains information about the pk-gov codebase, such as what technologies w
 - Vite is used to minify and bundle code 
 - ESLint and Prettier are in use to ensure code style remains consistent
 - lottie-web is used for the ministry animations (all other animations are made using only CSS)
-- Open-Meteo API is used to provide the weather service
-- Supabase and its API are used for PIBSS
+- <a class='link' href='https://pagefind.app/' target='_blank' rel='noreferrer'>Pagefind</a> provides search functionality 
+- <a class='link' href='https://open-meteo.com/' target='_blank' rel='noreferrer'>Open-Meteo API</a> is used to provide the weather service
+- <a class='link' href='https://supabase.com/' target='_blank' rel='noreferrer'>Supabase</a> and its API are used for PIBSS
 - browser-image-compression is used to compress plushie images before being uploaded to Supabase
-- Chart.js is used to generate charts in the PIBSS statistics page
-- Malaysia Calendar API (MyCal) is used to provide public holiday information for the Timeline service
+- <a class='link' href='https://www.chartjs.org/' target='_blank' rel='noreferrer'>Chart.js</a> is used to generate charts in the PIBSS statistics page
+- <a class='link' href='https://mycal-web.pages.dev/' target='_blank' rel='noreferrer'>Malaysia Calendar API (MyCal)</a> is used to provide public holiday information for the Timeline service
 
 ## Structure of this website
 The general file structure and structure of the webiste will be listed here. In most cases, you should only be touching stuff in the `src/` folder. Everything outside of that is for dependencies and other dev tools. All pages use the `global.js` file (though some may use additional .js files for specialised functions), while all CSS files are located in `assets/styles/`.
