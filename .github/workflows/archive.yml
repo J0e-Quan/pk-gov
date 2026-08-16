@@ -1,0 +1,20 @@
+name: Generate Sitemap & Archive
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    # Runs at 00:00 UTC on the 1st of every month
+    - cron: '0 0 1 * *'
+  workflow_dispatch: # Allows manual triggering from GitHub UI
+
+jobs:
+  build-sitemap-archive:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run Archive Script
+        run: scripts/archive.sh
