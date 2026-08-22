@@ -20,11 +20,11 @@ As the upgrades involved changes to the core structure of the Big Tent, all Big 
 ![plushies relocated to the sofa](/assets/news-media/new-big-tent-upgrades-to-improve-living-conditions-are-here/relocation-sofa.webp)
 ![plushies relocated to the bedroom](/assets/news-media/new-big-tent-upgrades-to-improve-living-conditions-are-here/relocation-bedroom.webp)
 
-## Tearing down the walls (and building them up again) 
+## Tearing down the walls (and building them up again)
 
 ---
 
-After the residents had been moved out, it was time to begin upgrading the Big Tent! First, the main pillars and structure of the Big Tent were completely removed. Then, the old foundation was swapped out for a thicker and larger one, providing more livable land area for the residents. The structure of the Big Tent was rebuilt from the ground up, ensuring that its structural integrity was greatly improved. 
+After the residents had been moved out, it was time to begin upgrading the Big Tent! First, the main pillars and structure of the Big Tent were completely removed. Then, the old foundation was swapped out for a thicker and larger one, providing more livable land area for the residents. The structure of the Big Tent was rebuilt from the ground up, ensuring that its structural integrity was greatly improved.
 
 ### The end result
 
@@ -40,7 +40,7 @@ After that, it was time to move all the Big Tent residents back in. Taking advan
 
 ![big tent filled up with its residents](/assets/news-media/new-big-tent-upgrades-to-improve-living-conditions-are-here/filled-up-tent.webp)
 
-## Looking ahead 
+## Looking ahead
 
 ---
 

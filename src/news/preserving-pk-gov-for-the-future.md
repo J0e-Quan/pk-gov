@@ -47,4 +47,4 @@ When browsing through the various timestamps available, some archives may appear
 
 ---
 
-At its core, pk-gov was built to be an important source for Plushie Kingdom history. The Government will continue to ensure that this history as well as archives of the website itself continue to be preserved, serving as a reminder of how far the Kingdom has come! 
+At its core, pk-gov was built to be an important source for Plushie Kingdom history. The Government will continue to ensure that this history as well as archives of the website itself continue to be preserved, serving as a reminder of how far the Kingdom has come!

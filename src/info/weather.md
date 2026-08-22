@@ -25,6 +25,3 @@ Although we strive to ensure that weather information provided by this service i
 - <a class='link' href='https://www.met.gov.my/forecast/weather/town/Tn013/' target="_blank" rel="noreferrer">Malaysian Meteorological Department</a>
 - <a class='link' href='https://www.accuweather.com/en/my/george-town/234975/weather-forecast/234975?type=locality&city=george%20town' target="_blank" rel="noreferrer">AccuWeather</a>
 - <a class='link' href='https://weather.my/weather/george-town/daily-forecast/today/?gid=1735106&language=english&country=malaysia' target="_blank" rel="noreferrer">freemeteo</a>
-
-
-

@@ -55,6 +55,7 @@ If you're an existing plushie, the Ministry of Technology and the Ministry of Im
 ![Screenshot of the PIBSS database](/assets/news-media/introducing-the-plushie-immigration-and-biodata-storage-service/database.webp)
 
 This option will take you to a page where you can view all data stored in the PIBSS database. To speed up navigation, there are various filter options and a searchbar, so you can quickly find information from the database. The exact data types stored in PIBSS are:
+
 - Name
 - Type
 - Origin Country

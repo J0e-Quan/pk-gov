@@ -63,7 +63,8 @@ section:not(.hero, .content, footer section) {
   font-size: 1.5rem;
 }
 
-button.push, button.rss {
+button.push,
+button.rss {
   margin-top: auto;
 }
 
@@ -108,7 +109,7 @@ button.close {
 }
 
 h2.article-title::before {
-  display: none
+  display: none;
 }
 
 .article-excerpt {
@@ -144,7 +145,8 @@ h2.article-title::before {
   .notification-modal-option-text {
     font-size: 1rem;
   }
-  button.push, button.rss {
+  button.push,
+  button.rss {
     min-width: 100%;
     align-self: stretch;
     justify-content: center;
