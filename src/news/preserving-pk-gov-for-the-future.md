@@ -39,3 +39,12 @@ To access the various archives of pk-gov, follow these steps:
 3. There will be a calender shown with dates and times where the website was archived (times shown are in UTC)
 4. Choose any of the given timestamp links to view what pk-gov looked like at that point!
 
+### Broken archives on some timestamps
+
+When browsing through the various timestamps available, some archives may appear broken or incomplete. This can due to previous experiments with archiving the pk-gov website, or certain files failing to get archived due to high sever loads or excessive requests. We will continue to improve the archiving process so that these issues are resolved in the future. In the meantime, you can take a look at our progress in our <a class="link" href="https://archive.org/" target="_blank" rel="noreferrer">Github repository</a>.
+
+## Reinforcing the foundations
+
+---
+
+At its core, pk-gov was built to be an important source for Plushie Kingdom history. The Government will continue to ensure that this history as well as archives of the website itself continues to be preserved, serving as a reminder of how far the Kingdom has come! 
