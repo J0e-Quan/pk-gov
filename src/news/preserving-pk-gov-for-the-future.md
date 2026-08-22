@@ -14,13 +14,13 @@ Since pk-gov was first launched in May 2026, there have been countless new updat
 
 ---
 
-Today, the Government is introducing an additional initiative to preserve the history of the pk-gov website. Although text descriptions of changes to the website will continue to be added as the website gets updated, we believe that it would be better for plushies to be able to "travel back in time" to view the history of pk-gov directly. So, all future updates to the <a class="link" href="https://github.com/J0e-Quan/pk-gov" target="_blank" rel="noreferrer">pk-gov Github repository</a> will now trigger a process of archiving the entire website into the <a class="link" href="https://archive.org/" target="_blank" rel="noreferrer">Internet Archive</a>.
+Today, the Government is introducing an additional initiative to preserve the history of the pk-gov website. Although text descriptions of changes to the website will continue to be added as the website gets updated, we believe that it would be better for plushies to be able to "travel back in time" to view the history of pk-gov directly. So, all future updates to the <a class="link" href="https://github.com/J0e-Quan/pk-gov" target="_blank" rel="noreferrer">pk-gov GitHub repository</a> will now trigger a process of archiving the entire website into the <a class="link" href="https://archive.org/" target="_blank" rel="noreferrer">Internet Archive</a>.
 
 ## What is the Internet Archive?
 
 ---
 
-The Internet Archive is a non-profit organisation that archives various forms of digital and physical media, including websites, books, and software. Archiving pk-gov on the Internet Archive ensures that all versions of pk-gov will be properly presevered for free!
+The Internet Archive is a non-profit organisation that archives various forms of digital and physical media, including websites, books, and software. Archiving pk-gov on the Internet Archive ensures that all versions of pk-gov will be properly preserved for free!
 
 ## Using the pk-gov archives
 
@@ -41,7 +41,7 @@ To access the various archives of pk-gov, follow these steps:
 
 ### Broken archives on some timestamps
 
-When browsing through the various timestamps available, some archives may appear broken or incomplete. This can be due to previous experiments with archiving the pk-gov website, or certain files failing to get archived due to high server loads or excessive requests. We will continue to improve the archiving process so that these issues are resolved in the future. In the meantime, you can take a look at our progress in our <a class="link" href="https://archive.org/" target="_blank" rel="noreferrer">Github repository</a>.
+When browsing through the various timestamps available, some archives may appear broken or incomplete. This can be due to previous experiments with archiving the pk-gov website, or certain files failing to get archived due to high server loads or excessive requests. We will continue to improve the archiving process so that these issues are resolved in the future. In the meantime, you can take a look at our progress in our <a class="link" href="https://github.com/J0e-Quan/pk-gov" target="_blank" rel="noreferrer">GitHub repository</a>.
 
 ## Reinforcing the foundations
 
