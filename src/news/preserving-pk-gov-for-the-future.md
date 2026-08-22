@@ -41,7 +41,7 @@ To access the various archives of pk-gov, follow these steps:
 
 ### Broken archives on some timestamps
 
-When browsing through the various timestamps available, some archives may appear broken or incomplete. This can be due to previous experiments with archiving the pk-gov website, or certain files failing to get archived due to high server loads or excessive requests. We will continue to improve the archiving process so that these issues are resolved in the future. In the meantime, you can take a look at our progress in our <a class="link" href="https://github.com/J0e-Quan/pk-gov" target="_blank" rel="noreferrer">GitHub repository</a>.
+When browsing through the various timestamps available, some archives may appear broken or incomplete. This can be due to previous experiments with archiving the pk-gov website, or certain files failing to get archived due to high server loads or excessive requests. We will continue to improve the archiving process so that these issues are resolved in the future. The archives may also simply need more time to be completed, as the Internet Archive has to crawl the webpages to obtain relevant files for page styling.
 
 ## Reinforcing the foundations
 
