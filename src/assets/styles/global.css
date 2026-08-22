@@ -239,6 +239,7 @@ body {
   flex-wrap: wrap;
   gap: 2rem;
   padding-bottom: 4rem;
+  margin-top: 3rem;
 }
 
 .return, .share, .print, .button, select{
@@ -249,7 +250,7 @@ body {
   background-color: transparent;
   display: flex;
   max-width: fit-content;
-  margin: 1rem 0 0 0;
+  /* margin: 1rem 0 0 0; */
   box-shadow: inset 0 0 0 0px var(--theme, var(--central-ministry-colour));
   border: 16px solid var(--theme, var(--central-ministry-colour));
   transition:
@@ -466,6 +467,9 @@ pagefind-searchbox::part(input) {
   }
   footer .link {
     font-size: 1rem;
+  }
+  .end-buttons {
+    margin-top: 0;
   }
   .return, .share, .print, .button {
     padding: 1rem;
