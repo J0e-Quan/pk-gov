@@ -470,6 +470,9 @@ pagefind-searchbox::part(input) {
     animation-range-start: cover 0%;
     animation-range-end: cover 20%;
   }
+  .link:not(.footer.link) {
+    text-underline-offset: 0.2rem;
+  }
   footer {
     flex-direction: column;
     flex-wrap: nowrap;
