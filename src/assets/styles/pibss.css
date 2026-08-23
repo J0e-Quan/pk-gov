@@ -51,6 +51,7 @@ select option {
 }
 
 .pibss-picture {
+  aspect-ratio: 3 / 4;
   min-width: 0;
   flex-basis: 180px;
   flex-shrink: 0;

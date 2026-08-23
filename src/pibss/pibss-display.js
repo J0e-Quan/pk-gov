@@ -59,6 +59,8 @@ function renderEntries(data) {
     card.classList.add('pibss-card')
     const picture = document.createElement('img')
     picture.classList.add('pibss-picture')
+    picture.loading = 'lazy'
+    picture.decoding = 'async'
     picture.src = entry.photo_url
     card.appendChild(picture)
     const cardText = document.createElement('div')
