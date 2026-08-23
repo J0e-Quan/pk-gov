@@ -227,6 +227,7 @@ button.share,
   }
   .start-buttons {
     gap: 1rem;
+    margin: 0 0 2rem
   }
 }
 /* MEDIA QUERIES ABOVE */
