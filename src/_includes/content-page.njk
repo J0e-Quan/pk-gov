@@ -38,7 +38,7 @@
             <p class="hero-date">{{ date | postDate }}, by {{ author }}</p>
           {% endif %}
           <h1 class="hero-title">{{ title }}</h1>
-          <h3 class="hero-excerpt">{{ excerpt | safe }}</p>
+          <p class="hero-excerpt">{{ excerpt | safe }}</p>
           {% if thumbnail %}
             <img class="hero-thumbnail" src="{{ thumbnail }}", alt="{{ thumbnail-alt }}">
           {% endif %}
