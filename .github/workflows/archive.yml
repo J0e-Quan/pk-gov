@@ -1,20 +1,102 @@
-name: Generate Sitemap & Archive
+name: Archive Website
 
 on:
   push:
     branches:
       - main
-  schedule:
-    # Runs at 00:00 UTC on the 1st of every month
-    - cron: '0 0 1 * *'
-  workflow_dispatch: # Allows manual triggering from GitHub UI
+  workflow_dispatch:
 
 jobs:
-  build-sitemap-archive:
+  archive:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Run Archive Script
-        run: scripts/archive.sh
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'lts/*'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build static site
+        run: npm run build 
+
+      - name: Wait for Render deploy to finish
+        run: sleep 60 # Wait 1 minute (60s) before archiving
+
+      - name: Archive pages to Internet Archive
+        env:
+          SITE_URL: "https://pk-gov.onrender.com" # Replace with your actual domain
+          IA_ACCESS_KEY: ${{ secrets.IA_ACCESS_KEY }}
+          IA_SECRET_KEY: ${{ secrets.IA_SECRET_KEY }}
+          DIST_DIR: "dist" # Replace if 11ty outputs elsewhere (e.g. dist)
+        run: |
+          cd "$DIST_DIR"
+
+          # 1. Collect all rendered HTML file paths
+          urls=()
+          while IFS= read -r file; do
+            clean_path="${file#.}"
+            
+            # Format canonical URLs for index files vs standard files
+            if [[ "$clean_path" == *"/index.html" ]]; then
+              clean_path="${clean_path%"index.html"}"
+            elif [[ "$clean_path" == "/index.html" ]]; then
+              clean_path="/"
+            fi
+            
+            urls+=("${SITE_URL}${clean_path}")
+          done < <(find . -type f -name "*.html" -not -path "*/.*")
+
+          echo "Found ${#urls[@]} page(s) to archive."
+
+          # Function to save a URL with retry logic
+          save_url() {
+            local target_url="$1"
+            local max_attempts=3
+            local attempt=1
+            local backoff=5
+
+            while [ $attempt -le $max_attempts ]; do
+              echo "Submitting (Attempt $attempt/$max_attempts): $target_url"
+
+              # Submit save request to API
+              response=$(curl -s -X POST "https://web.archive.org/save/" \
+                -H "Accept: application/json" \
+                -H "Authorization: LOW $IA_ACCESS_KEY:$IA_SECRET_KEY" \
+                -d "url=$target_url" \
+                -d "capture_outlinks=0" \
+                -d "capture_all=1" \
+                -d "js_behavior_timeout=5000")
+
+              # Check if job ID was returned or HTTP response was successful
+              if echo "$response" | grep -q '"job_id"'; then
+                echo "Successfully queued: $target_url"
+                return 0
+              else
+                echo "Save failed or hit rate limits for $target_url. Response: $response"
+                if [ $attempt -lt $max_attempts ]; then
+                  echo "Retrying in ${backoff}s..."
+                  sleep $backoff
+                  backoff=$((backoff * 2)) # Exponential backoff (5s, 10s...)
+                fi
+              fi
+
+              attempt=$((attempt + 1))
+            done
+
+            echo "Failed to archive $target_url after $max_attempts attempts."
+            return 1
+          }
+
+          # 2. Iterate and process each page
+          for url in "${urls[@]}"; do
+            save_url "$url"
+            
+            # Rate limit buffer between distinct pages
+            sleep 5
+          done
