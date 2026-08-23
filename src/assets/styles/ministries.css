@@ -211,7 +211,7 @@ section:not(.hero, .content, footer section) {
     animation-range-start: cover 35%;
     animation-range-end: cover 65%;
   }
-  .ministers .section-divider {
+  .ministers hr {
     animation-range-start: cover 25%;
     animation-range-end: cover 45%;
   }
