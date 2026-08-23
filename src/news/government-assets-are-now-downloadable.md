@@ -8,7 +8,7 @@ excerpt: In support of the Government's mission to provide open access to inform
 thumbnail: /assets/news-media/government-assets-are-now-downloadable/thumbnail.webp
 ---
 
-As promised last week by Kodee, we have made some Government assets available to be downloaded on our website. We continue to strive to provide open access to information for all plushies in the Kingdom, and that includes sharing our Government's bold and modern, yet warm and welcoming identity with everyone. 
+As promised last week by Kodee, we have made some Government assets available to be downloaded on our website. We continue to strive to provide open access to information for all plushies in the Kingdom, and that includes sharing our Government's bold and modern, yet warm and welcoming identity with everyone.
 
 ## Where are the assets?
 
@@ -21,6 +21,7 @@ The assets we have made available today, as well as any future additions, will b
 ---
 
 As of 23 May 2026, these are the assets available for download:
+
 - Fonts used by the Government
 - Photos of all Government staff
 - Ministry icons

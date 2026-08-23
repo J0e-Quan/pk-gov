@@ -22,7 +22,8 @@ label {
   font-weight: 700;
 }
 
-.filters-inputs select, .update-location-new-location-select {
+.filters-inputs select,
+.update-location-new-location-select {
   margin: 0;
   font-size: 1.5rem;
   padding: 0.5rem 1rem;
@@ -39,7 +40,8 @@ select option {
   width: 100%;
 }
 
-.pibss-card, .register-pibss-card {
+.pibss-card,
+.register-pibss-card {
   flex: 1 1 calc(50% - 0.5rem);
   display: flex;
   gap: 1rem;
@@ -83,14 +85,20 @@ select option {
   display: inline-block;
 }
 
-.pibss-type, .pibss-country, .pibss-date, .pibss-location {
+.pibss-type,
+.pibss-country,
+.pibss-date,
+.pibss-location {
   font-size: 1.5rem;
   position: relative;
   overflow: clip;
   display: inline-block;
 }
 
-.pibss-type::before, .pibss-country::before, .pibss-date::before, .pibss-location::before {
+.pibss-type::before,
+.pibss-country::before,
+.pibss-date::before,
+.pibss-location::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -131,8 +139,12 @@ button.filters-submit {
   animation: shrink 0.3s ease-in-out 2 alternate;
 }
 @keyframes shrink {
-  0% { transform: scale(1); }
-  100% { transform: scale(0); }
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
 }
 .statistics .text {
   font-size: 4rem;
@@ -151,7 +163,8 @@ button.filters-submit {
   min-height: 15rem;
   position: relative;
 }
-#yearly-new-citizens, #population-history {
+#yearly-new-citizens,
+#population-history {
   height: 100%;
 }
 /* PIBSS STATISTICS STYLES ABOVE */
@@ -164,7 +177,7 @@ section.login-form {
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
-  padding-top: 0 !important; 
+  padding-top: 0 !important;
 }
 .login-item {
   display: flex;
@@ -240,7 +253,7 @@ section.login-form {
 }
 .progress-bar {
   height: 100%;
-  width: 0%; 
+  width: 0%;
   background-color: var(--central-ministry-colour);
   border-radius: 2px;
   transition: width 0.5s ease-in-out;
@@ -318,14 +331,18 @@ button.register-camera-button {
 button.register-confirm-button {
   margin: 0 auto;
 }
-.update-location-search-wrapper, .register-type-wrapper {
+.update-location-search-wrapper,
+.register-type-wrapper {
   display: flex;
   justify-content: stretch;
   width: 100%;
   max-width: 1000px;
   height: 7rem;
 }
-.update-location-searchbar, .register-type-select, .register-country-select, .register-location-select {
+.update-location-searchbar,
+.register-type-select,
+.register-country-select,
+.register-location-select {
   padding: 1rem 2rem;
   border: 16px solid var(--central-ministry-colour);
   font-size: 2rem;
@@ -347,11 +364,17 @@ button.update-location-search-button {
 .form .pibss-picture {
   animation: none;
 }
-.form .pibss-name::before,.form .pibss-type::before,.form .pibss-country::before,.form .pibss-date::before,.form .pibss-location::before {
+.form .pibss-name::before,
+.form .pibss-type::before,
+.form .pibss-country::before,
+.form .pibss-date::before,
+.form .pibss-location::before {
   display: none;
 }
 .form .pibss-card {
-  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition:
+    background-color 0.2s ease-in-out,
+    color 0.2s ease-in-out;
   text-align: start;
 }
 .form .pibss-card:hover {
@@ -397,7 +420,8 @@ button.update-location-submit-button {
     flex-wrap: nowrap;
     align-items: stretch;
   }
-  .pibss-card, .register-pibss-card {
+  .pibss-card,
+  .register-pibss-card {
     gap: 0.5rem;
     min-width: 0;
     max-width: none;
@@ -408,7 +432,10 @@ button.update-location-submit-button {
   .pibss-name {
     font-size: 1.5rem;
   }
-  .pibss-type, .pibss-country, .pibss-date, .pibss-location {
+  .pibss-type,
+  .pibss-country,
+  .pibss-date,
+  .pibss-location {
     font-size: 1rem;
   }
   button.filters-submit {
@@ -432,7 +459,8 @@ button.update-location-submit-button {
     line-height: 1.2;
     margin-bottom: 0.5rem;
   }
-  .notice-text, .disclaimer-text {
+  .notice-text,
+  .disclaimer-text {
     font-size: 1rem;
   }
   .login-item label {
@@ -461,7 +489,11 @@ button.update-location-submit-button {
     height: auto;
     flex-wrap: wrap;
   }
-  button.update-location-search-button, .update-location-searchbar, .register-type-select, .register-country-select, .register-location-select {
+  button.update-location-search-button,
+  .update-location-searchbar,
+  .register-type-select,
+  .register-country-select,
+  .register-location-select {
     font-size: 1rem;
     padding: 0.5rem 1rem;
   }

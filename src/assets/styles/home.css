@@ -10,7 +10,7 @@
 }
 
 h2.title::before {
-  display: none
+  display: none;
 }
 
 .ministries {

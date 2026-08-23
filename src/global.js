@@ -27,7 +27,10 @@ document.addEventListener('click', (e) => {
   // ignore the # at the start so that getElementById works
   const hash = anchor.hash.slice(1)
   // Check if it's a local page anchor
-  if (anchor.hostname === window.location.hostname && anchor.pathname === window.location.pathname) {
+  if (
+    anchor.hostname === window.location.hostname &&
+    anchor.pathname === window.location.pathname
+  ) {
     const targetElement = document.getElementById(hash)
     if (targetElement) {
       // Prevent the default browser history push
@@ -39,9 +42,13 @@ document.addEventListener('click', (e) => {
   }
 })
 // clear # immediately on page load (removes # from redirects by other pages)
-window.addEventListener('scrollend', () => {
-  history.replaceState(null, null, window.location.pathname)
-}, {once: true})
+window.addEventListener(
+  'scrollend',
+  () => {
+    history.replaceState(null, null, window.location.pathname)
+  },
+  { once: true }
+)
 
 // code for handling share button
 const shareButton = document.querySelector('.share')
@@ -57,7 +64,7 @@ async function share() {
   const excerpt = document.querySelector('.hero-excerpt').textContent.trim()
   const shareContent = {
     text: title + '\n' + excerpt + '\n\n' + 'View this page on ' + url
-  } 
+  }
   const isValid = await navigator.canShare(shareContent)
   if (isValid === true) {
     navigator.share(shareContent)
@@ -115,43 +122,48 @@ function getRSS() {
 
 // code for handling push notifications
 // eslint-disable-next-line no-undef
-window.OneSignalDeferred = window.OneSignalDeferred || [];
+window.OneSignalDeferred = window.OneSignalDeferred || []
 // eslint-disable-next-line no-undef
-OneSignalDeferred.push(async function (OneSignal) { 
+OneSignalDeferred.push(async function (OneSignal) {
   const pushButton = document.querySelector('.button.push')
   const notificationTitle = document.querySelector('.notifications-title')
   if (pushButton !== null) {
     if (OneSignal.User.PushSubscription.optedIn === true) {
       pushButton.textContent = 'Opt out of notifications'
-      notificationTitle.textContent = "You've opted in to receiving push notifications for new articles."
-      pushButton.addEventListener('click', optOut, {once: true})
+      notificationTitle.textContent =
+        "You've opted in to receiving push notifications for new articles."
+      pushButton.addEventListener('click', optOut, { once: true })
     } else {
-      pushButton.addEventListener('click', optIn, {once: true})
+      pushButton.addEventListener('click', optIn, { once: true })
     }
   }
 
   function optOut() {
     OneSignal.User.PushSubscription.optOut()
     pushButton.textContent = 'Successfully opted out!'
-    notificationTitle.textContent = "Get notified whenever a new article is posted here. Click the 'Manage preferences' button to enable push notifications."
+    notificationTitle.textContent =
+      "Get notified whenever a new article is posted here. Click the 'Manage preferences' button to enable push notifications."
     setTimeout(() => {
       pushButton.textContent = 'Enable notifications'
-      pushButton.addEventListener('click', optIn, {once: true})
-    }, THREE_SECONDS);
+      pushButton.addEventListener('click', optIn, { once: true })
+    }, THREE_SECONDS)
   }
 
   async function optIn() {
-    await OneSignal.Notifications.requestPermission();
+    await OneSignal.Notifications.requestPermission()
     if (OneSignal.Notifications.permission) {
-      OneSignal.User.PushSubscription.optIn();
+      OneSignal.User.PushSubscription.optIn()
     } else {
-      alert("Notification permission blocked! Please enable notification permissions for this website.")
+      alert(
+        'Notification permission blocked! Please enable notification permissions for this website.'
+      )
     }
-    pushButton.textContent = "Notifications enabled!"
-    notificationTitle.textContent = "You've opted in to receiving push notifications for new articles."
+    pushButton.textContent = 'Notifications enabled!'
+    notificationTitle.textContent =
+      "You've opted in to receiving push notifications for new articles."
     setTimeout(() => {
       pushButton.textContent = 'Opt out of notifications'
-      pushButton.addEventListener('click', optOut, {once: true})
-    }, THREE_SECONDS);
+      pushButton.addEventListener('click', optOut, { once: true })
+    }, THREE_SECONDS)
   }
 })

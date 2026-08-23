@@ -79,7 +79,6 @@ By now, the Plushie Kingdom had grown significantly since its founding in 2017. 
 ![Picture of the founding ministers of the Plushie Kingdom Government](/assets/info-media/who-we-are/current-ministers.webp)
 In 2026, Pink Bear Bear, who had played a major role in leading the Kingdom alongside King Ah Bob as Prince would step up to take the Kingdom's next step forward. Over several months, he would gather a group of plushies to form what would be the Plushie Kingdom's very first Government. On 14 May 2026, this Government would be unveiled to the Plushie Kingdom, promising to deliver real, meaningful change. Pink Bear Bear would take on the role of being the Kingdom's first Prime Minister. Together with his wife as the Deputy Prime Minister, they would lead the Government's 7 other ministries in improving life in the Kingdom.
 
-
 ### August 2026: Introduction of the Plushie Immigration and Biodata Storage Service (PIBSS)
 
 ![Picture of the Prime Minister unveiling PIBSS at a press release](/assets/info-media/who-we-are/pibss.webp)

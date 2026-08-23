@@ -6,11 +6,13 @@ section:not(.hero, .content, footer section) {
   padding: 2rem 0;
 }
 
-#air-as-food::before, #foreign-businesses-in-the-plushie-kingdom::before {
+#air-as-food::before,
+#foreign-businesses-in-the-plushie-kingdom::before {
   display: none;
 }
 
-#air-as-food + hr, #foreign-businesses-in-the-plushie-kingdom + hr {
+#air-as-food + hr,
+#foreign-businesses-in-the-plushie-kingdom + hr {
   animation: none;
   transform: scaleX(1);
 }
@@ -104,7 +106,9 @@ section:not(.hero, .content, footer section) {
   margin-right: 0;
 }
 
-a.return, button.share, .button {
+a.return,
+button.share,
+.button {
   margin-left: 2rem;
   margin-right: 2rem;
 }
@@ -217,7 +221,8 @@ a.return, button.share, .button {
     font-size: 1rem;
     line-height: 1.5;
   }
-  .colour, .download {
+  .colour,
+  .download {
     font-size: 1.5rem;
   }
   .start-buttons {

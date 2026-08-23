@@ -43,7 +43,8 @@ section:not(.hero, .content, footer section) {
   grid-row: 2;
 }
 
-.forecast-today.content, .forecast-week.content {
+.forecast-today.content,
+.forecast-week.content {
   display: flex;
   overflow: auto;
 }
@@ -58,7 +59,8 @@ section:not(.hero, .content, footer section) {
   align-items: center;
 }
 
-.time, .day {
+.time,
+.day {
   font-size: 2.5rem;
 }
 
@@ -83,8 +85,9 @@ section:not(.hero, .content, footer section) {
   section:not(.content, footer section) {
     padding: 1rem 2rem;
   }
-  .forecast-today .section-divider, .forecast-today .heading::before {
-    animation: none
+  .forecast-today .section-divider,
+  .forecast-today .heading::before {
+    animation: none;
   }
   .forecast-today .heading::before {
     display: none;

@@ -29,7 +29,7 @@ section.directory {
 }
 
 .directory.title::before {
-  display: none
+  display: none;
 }
 
 .directory.text {

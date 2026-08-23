@@ -1,4 +1,4 @@
-import { supabase } from "./pibss-common.js";
+import { supabase } from './pibss-common.js'
 
 const loginButton = document.querySelector('.login-form button')
 loginButton.addEventListener('click', getLoginDetails)
@@ -18,7 +18,7 @@ function getLoginDetails() {
 async function signIn(emailAddress, pw) {
   const { error } = await supabase.auth.signInWithPassword({
     email: emailAddress,
-    password: pw,
+    password: pw
   })
   if (error) {
     console.error(error)

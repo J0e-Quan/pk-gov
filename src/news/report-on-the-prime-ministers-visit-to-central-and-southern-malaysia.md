@@ -97,7 +97,7 @@ As their last major stop for the visit, the plushies stopped by Sekinchan for lu
 
 ### Wishing Tree
 
-The plushies went to visit the famous Wishing Tree, located near a large temple. Gaining popularity from being used as a filming site for some drama shows, the plushies took in the beautiful sights and atmosphere there. 
+The plushies went to visit the famous Wishing Tree, located near a large temple. Gaining popularity from being used as a filming site for some drama shows, the plushies took in the beautiful sights and atmosphere there.
 
 ![Picture of Pink Bear Bear with the Wishing Tree](/assets/news-media/report-on-the-prime-ministers-visit-to-central-and-southern-malaysia/temple.webp)
 

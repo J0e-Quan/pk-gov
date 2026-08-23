@@ -30,6 +30,3 @@ Although we strive to ensure that public holiday information provided by this se
 
 - <a class='link' href='https://www.kabinet.gov.my/hari-kelepasan-am/' target="_blank" rel="noreferrer">Prime Minister's Department Malaysia - Public Holidays (in Malay)</a>
 - <a class='link' href='https://www.penang.gov.my/index.php/component/sppagebuilder/page/50' target="_blank" rel="noreferrer">Penang Official State Holidays (in Malay)</a>
-
-
-

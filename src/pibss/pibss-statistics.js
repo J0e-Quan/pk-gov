@@ -1,13 +1,38 @@
-import { supabase } from "./pibss-common.js";
-import { Chart, Colors, PieController, ArcElement, Tooltip, Legend, BarController, BarElement, CategoryScale, LinearScale, LineController, LineElement, PointElement } from "chart.js";
-Chart.register(Colors, PieController, ArcElement, Tooltip, Legend, BarController, BarElement, CategoryScale, LinearScale, LineController, LineElement, PointElement);
-Chart.defaults.font.family = "'Mona Sans', serif";
-Chart.defaults.font.size = 24;
+import { supabase } from './pibss-common.js'
+import {
+  Chart,
+  Colors,
+  PieController,
+  ArcElement,
+  Tooltip,
+  Legend,
+  BarController,
+  BarElement,
+  CategoryScale,
+  LinearScale,
+  LineController,
+  LineElement,
+  PointElement
+} from 'chart.js'
+Chart.register(
+  Colors,
+  PieController,
+  ArcElement,
+  Tooltip,
+  Legend,
+  BarController,
+  BarElement,
+  CategoryScale,
+  LinearScale,
+  LineController,
+  LineElement,
+  PointElement
+)
+Chart.defaults.font.family = "'Mona Sans', serif"
+Chart.defaults.font.size = 24
 
 async function getData() {
-  const { data, error } = await supabase
-      .from('database')
-      .select('*')
+  const { data, error } = await supabase.from('database').select('*')
 
   if (error) {
     return console.error('Error fetching data:', error.message)
@@ -22,18 +47,21 @@ function getTotalCitizens() {
 
 function getNewCitizens() {
   const currentYearStart = new Date().getFullYear()
-  const newCitizensArray = data.filter((plushie) => new Date(plushie.date_joined).getFullYear() === currentYearStart)
+  const newCitizensArray = data.filter(
+    (plushie) => new Date(plushie.date_joined).getFullYear() === currentYearStart
+  )
   return newCitizensArray.length
 }
 
 function sortType() {
   // Set automatically removes all duplicates
   const typesArray = Array.from(new Set(data.map((plushie) => plushie.type)))
-  const types = typesArray.map(type => {
+  const types = typesArray.map((type) => {
     return {
       name: type,
       population: undefined
-    }})
+    }
+  })
   for (let i = 0; i < types.length; i++) {
     const typePopulation = data.filter((plushie) => plushie.type === types[i].name)
     types[i].population = typePopulation.length
@@ -55,17 +83,20 @@ function generateYearsArray() {
     yearsArray.push(i)
   }
   return yearsArray
-} 
+}
 
 function getYearlyNewCitizens() {
   const yearsArray = generateYearsArray()
-  const yearsPopulationArray = yearsArray.map(year => {
+  const yearsPopulationArray = yearsArray.map((year) => {
     return {
       name: year,
       population: undefined
-    }})
+    }
+  })
   for (let i = 0; i < yearsArray.length; i++) {
-    const yearPopulation = data.filter((plushie) => new Date(plushie.date_joined).getFullYear() === yearsArray[i]).length
+    const yearPopulation = data.filter(
+      (plushie) => new Date(plushie.date_joined).getFullYear() === yearsArray[i]
+    ).length
     yearsPopulationArray[i].population = yearPopulation
   }
   return yearsPopulationArray
@@ -73,13 +104,16 @@ function getYearlyNewCitizens() {
 
 function getTotalPopulation() {
   const yearsArray = generateYearsArray()
-  const populationTotalArray = yearsArray.map(year => {
+  const populationTotalArray = yearsArray.map((year) => {
     return {
       name: year,
       population: undefined
-    }})
+    }
+  })
   for (let i = 0; i < yearsArray.length; i++) {
-    const yearPopulation = data.filter((plushie) => new Date(plushie.date_joined).getFullYear() <= yearsArray[i]).length
+    const yearPopulation = data.filter(
+      (plushie) => new Date(plushie.date_joined).getFullYear() <= yearsArray[i]
+    ).length
     populationTotalArray[i].population = yearPopulation
   }
   return populationTotalArray
@@ -87,11 +121,11 @@ function getTotalPopulation() {
 
 function sortLocation() {
   const locations = [
-    {name: 'Big Tent Plains', population: undefined}, 
-    {name: 'Big Tent Stacks', population: undefined}, 
-    {name: 'The Studio', population: undefined}, 
-    {name: 'The Bedroom', population: undefined}, 
-    {name: 'The Sofa', population: undefined}, 
+    { name: 'Big Tent Plains', population: undefined },
+    { name: 'Big Tent Stacks', population: undefined },
+    { name: 'The Studio', population: undefined },
+    { name: 'The Bedroom', population: undefined },
+    { name: 'The Sofa', population: undefined }
   ]
   for (let i = 0; i < locations.length; i++) {
     const locationPopulation = data.filter((plushie) => plushie.location === locations[i].name)
@@ -107,12 +141,20 @@ function getLargestLocation(locations) {
 
 function animateStatistics(element, value) {
   element.classList.add('animate-shrink-grow')
-  element.addEventListener('animationiteration', () => {
-    element.textContent = value
-  }, {once: true})
-  element.addEventListener('animationend', () => {
-    element.classList.remove('animate-shrink-grow')
-  }, {once: true})
+  element.addEventListener(
+    'animationiteration',
+    () => {
+      element.textContent = value
+    },
+    { once: true }
+  )
+  element.addEventListener(
+    'animationend',
+    () => {
+      element.classList.remove('animate-shrink-grow')
+    },
+    { once: true }
+  )
 }
 
 function displayStatistics() {
@@ -135,112 +177,112 @@ function displayStatistics() {
 }
 
 function displayCharts() {
- displayLocationDistributionChart()
- displayTypeDistributionChart()
- displayYearlyNewCitizensChart()
- displayPopulationHistoryChart()
+  displayLocationDistributionChart()
+  displayTypeDistributionChart()
+  displayYearlyNewCitizensChart()
+  displayPopulationHistoryChart()
 }
 
 function displayLocationDistributionChart() {
-  return new Chart(
-    document.getElementById('location-distribution'), 
-    {
-      type: 'pie',
-      data: {
-        labels: sortedLocations.filter(location => location.population > 0).map(location => location.name),
-        datasets: [{
+  return new Chart(document.getElementById('location-distribution'), {
+    type: 'pie',
+    data: {
+      labels: sortedLocations
+        .filter((location) => location.population > 0)
+        .map((location) => location.name),
+      datasets: [
+        {
           label: 'Residents',
-          data: sortedLocations.filter(location => location.population > 0).map(location => location.population),
-        }]
-      }
+          data: sortedLocations
+            .filter((location) => location.population > 0)
+            .map((location) => location.population)
+        }
+      ]
     }
-  )
+  })
 }
 
 function displayTypeDistributionChart() {
-  return new Chart(
-    document.getElementById('type-distribution'), 
-    {
-      type: 'pie',
-      data: {
-        labels: sortedTypes.map(type => type.name),
-        datasets: [{
+  return new Chart(document.getElementById('type-distribution'), {
+    type: 'pie',
+    data: {
+      labels: sortedTypes.map((type) => type.name),
+      datasets: [
+        {
           label: 'Plushies',
-          data: sortedTypes.map(type => type.population),
-        }]
-      },
-      options: {
-        plugins: {
-          legend: {
-            labels: {
-              boxWidth: 12,     // Shrinks color indicator box width
-              boxHeight: 8,     // Shrinks color indicator box height
-              padding: 6,       // Reduces vertical space between items
-              font: {
-                size: 12
-              }
+          data: sortedTypes.map((type) => type.population)
+        }
+      ]
+    },
+    options: {
+      plugins: {
+        legend: {
+          labels: {
+            boxWidth: 12, // Shrinks color indicator box width
+            boxHeight: 8, // Shrinks color indicator box height
+            padding: 6, // Reduces vertical space between items
+            font: {
+              size: 12
             }
           }
         }
       }
     }
-  )
+  })
 }
 
 function displayYearlyNewCitizensChart() {
-  return new Chart(
-    document.getElementById('yearly-new-citizens'), 
-    {
-      type: 'bar',
-      data: {
-        labels: yearlyNewCitizens.map(year => year.name),
-        datasets: [{
+  return new Chart(document.getElementById('yearly-new-citizens'), {
+    type: 'bar',
+    data: {
+      labels: yearlyNewCitizens.map((year) => year.name),
+      datasets: [
+        {
           label: 'New citizens',
-          data: yearlyNewCitizens.map(year => year.population),
-        }]
+          data: yearlyNewCitizens.map((year) => year.population)
+        }
+      ]
+    },
+    options: {
+      maintainAspectRatio: true,
+      aspectRatio: 1.5,
+      animation: {
+        delay: (context) => {}
       },
-      options: {
-        maintainAspectRatio: true,
-        aspectRatio: 1.5,
-        animation: {
-          delay: (context) => {}
-        },
-        plugins: {
-          legend: {
-            // Disables the default toggle action on click
-            onClick: null 
-          }
+      plugins: {
+        legend: {
+          // Disables the default toggle action on click
+          onClick: null
         }
       }
     }
-  )
+  })
 }
 
 function displayPopulationHistoryChart() {
-  return new Chart(
-    document.getElementById('population-history'), 
-    {
-      type: 'line',
-      data: {
-        labels: totalPopulation.map(year => year.name),
-        datasets: [{
+  return new Chart(document.getElementById('population-history'), {
+    type: 'line',
+    data: {
+      labels: totalPopulation.map((year) => year.name),
+      datasets: [
+        {
           label: 'Total citizens',
-          data: totalPopulation.map(year => year.population),
-        }]
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: true,
-        aspectRatio: 1.2,
-        plugins: {
-          legend: {
-            // Disables the default toggle action on click
-            onClick: null 
-          }
+          data: totalPopulation.map((year) => year.population)
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: true,
+      aspectRatio: 1.2,
+      plugins: {
+        legend: {
+          // Disables the default toggle action on click
+          onClick: null
         }
       }
     }
-  )
+  })
 }
 
 const data = await getData()

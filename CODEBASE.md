@@ -1,13 +1,13 @@
 This contains information about the pk-gov codebase, such as what technologies we use and how files are organised. For information on how to contribute to pk-gov, refer to [CONTRIBUTING.md](CONTRIBUTING.md)
 
-## pk-gov Tech Stack 
+## pk-gov Tech Stack
 
 - Vanilla JS and CSS are used, no frameworks or anything (for now)
 - 11ty is used to generate all pages on this website (but some pages still use regular html for the actual content), for more information refer to the 'Using 11ty' section below
-- Vite is used to minify and bundle code 
+- Vite is used to minify and bundle code
 - ESLint and Prettier are in use to ensure code style remains consistent
 - lottie-web is used for the ministry animations (all other animations are made using only CSS)
-- [Pagefind](https://pagefind.app/) provides search functionality 
+- [Pagefind](https://pagefind.app/) provides search functionality
 - [Open-Meteo API](https://open-meteo.com/) is used to provide the weather service
 - [Supabase](https://supabase.com/) and its API are used for PIBSS
 - browser-image-compression is used to compress plushie images before being uploaded to Supabase
@@ -15,6 +15,7 @@ This contains information about the pk-gov codebase, such as what technologies w
 - [Malaysia Calendar API (MyCal)](https://mycal-web.pages.dev/) is used to provide public holiday information for the Timeline service
 
 ## Structure of this website
+
 The general file structure and structure of the webiste will be listed here. In most cases, you should only be touching stuff in the `src/` folder. Everything outside of that is for dependencies and other dev tools. All pages use the `global.js` file (though some may use additional .js files for specialised functions), while all CSS files are located in `assets/styles/`.
 
 ### _includes/
@@ -42,7 +43,7 @@ This is where assets like fonts, pictures and CSS files are located.
 
 ### info/
 
-This is where the 'life in the plushie kingdom' pages are located. Any assets they use (such as photos) are taken from `info-media/`. Within `info-media/`, there should be a folder for each info page that uses media, named the same name as their corresponding .md file. All pages are generated with 11ty, so there is a template file provided. 
+This is where the 'life in the plushie kingdom' pages are located. Any assets they use (such as photos) are taken from `info-media/`. Within `info-media/`, there should be a folder for each info page that uses media, named the same name as their corresponding .md file. All pages are generated with 11ty, so there is a template file provided.
 
 ### ministries/
 
@@ -50,11 +51,11 @@ This is where all the ministry pages (the icons in the homepage) are located. An
 
 ### news/
 
-This is where the 'government news' pages are located. Any assets they use (such as photos) are taken from `news-media/`. Within `news-media/`, there should be a folder for each news article that uses media, named the same name as their corresponding .md file. All thumbnails MUST be named `thumbnail`, any extension is fine (but we recommend .webp). All pages are generated with 11ty, so there is a template file provided. 
+This is where the 'government news' pages are located. Any assets they use (such as photos) are taken from `news-media/`. Within `news-media/`, there should be a folder for each news article that uses media, named the same name as their corresponding .md file. All thumbnails MUST be named `thumbnail`, any extension is fine (but we recommend .webp). All pages are generated with 11ty, so there is a template file provided.
 
 ### pibss/
 
-This contains all PIBSS pages that can be accessed from its service page. These pages are generated with 11ty using the `service.njk` template in `_includes/`. All 4 pages share the  `pibss-common.js` file which creates a supabase client, the other .js files are used by their respective njk files.
+This contains all PIBSS pages that can be accessed from its service page. These pages are generated with 11ty using the `service.njk` template in `_includes/`. All 4 pages share the `pibss-common.js` file which creates a supabase client, the other .js files are used by their respective njk files.
 
 ### timeline/
 
