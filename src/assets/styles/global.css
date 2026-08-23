@@ -436,7 +436,7 @@ pagefind-searchbox::part(input) {
 
 @media (max-width: 600px) {
   .header,
-  section:not(footer section) {
+  .header-scrollable-area section:not(footer section) {
     padding: 1rem 2rem;
   }
   .hero-title {
