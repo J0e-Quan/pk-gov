@@ -307,7 +307,7 @@ footer {
   animation-range-end: cover 20%;
 }
 
-.footer-divider {
+footer hr {
   width: 100%;
   height: 10px;
   background-color: var(--theme-accent, white);
