@@ -55,6 +55,7 @@ function renderEntries(data) {
     return
   }
   for (const entry of data) {
+    const TWO_SECONDS = 2000
     const card = document.createElement('div')
     card.classList.add('pibss-card')
     const picture = document.createElement('img')
@@ -62,6 +63,12 @@ function renderEntries(data) {
     picture.loading = 'lazy'
     picture.decoding = 'async'
     picture.src = entry.photo_url
+    // if loading picture fails, retry after two seconds
+    picture.addEventListener('error', () => {
+      setTimeout(() => {
+        picture.src = entry.photo_url
+      }, TWO_SECONDS);
+    })
     card.appendChild(picture)
     const cardText = document.createElement('div')
     cardText.classList.add('pibss-card-text')
