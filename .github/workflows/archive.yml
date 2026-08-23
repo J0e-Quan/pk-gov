@@ -30,13 +30,11 @@ jobs:
 
       - name: Archive pages to Internet Archive
         env:
-          SITE_URL: "https://pk-gov.onrender.com"
+          SITE_URL: "https://pk-gov.onrender.com" 
           IA_ACCESS_KEY: ${{ secrets.IA_ACCESS_KEY }}
           IA_SECRET_KEY: ${{ secrets.IA_SECRET_KEY }}
           DIST_DIR: "dist"
         run: |
-          set +e # Prevent step execution from halting on command errors
-
           cd "$DIST_DIR"
 
           # 1. Collect all rendered HTML file paths
@@ -44,6 +42,7 @@ jobs:
           while IFS= read -r file; do
             clean_path="${file#.}"
             
+            # Format canonical URLs for index files vs standard files
             if [[ "$clean_path" == *"/index.html" ]]; then
               clean_path="${clean_path%"index.html"}"
             elif [[ "$clean_path" == "/index.html" ]]; then
@@ -55,14 +54,12 @@ jobs:
 
           echo "Found ${#urls[@]} page(s) to archive."
 
-          failed_urls=()
-
-          # Function to save a URL with retry logic
+          # Function to save a URL with enhanced retry/backoff logic
           save_url() {
             local target_url="$1"
             local max_attempts=5
             local attempt=1
-            local backoff=5
+            local backoff=60 # Start with a 60s wait when rate/session limited
 
             while [ $attempt -le $max_attempts ]; do
               echo "Submitting (Attempt $attempt/$max_attempts): $target_url"
@@ -79,11 +76,11 @@ jobs:
                 echo "Successfully queued: $target_url"
                 return 0
               else
-                echo "Save failed or hit rate limits for $target_url. Response: $response"
+                echo "API Error for $target_url: $response"
                 if [ $attempt -lt $max_attempts ]; then
-                  echo "Retrying in ${backoff}s..."
+                  echo "Session/Rate limit reached. Waiting ${backoff}s before retrying..."
                   sleep $backoff
-                  backoff=$((backoff * 2))
+                  backoff=$((backoff * 2)) # Exponential increase (60s, 120s, 240s)
                 fi
               fi
 
@@ -94,27 +91,12 @@ jobs:
             return 1
           }
 
-          # 2. Process all pages continuously
+          # 2. Process pages with a safer delay to allow active sessions to finish
           for url in "${urls[@]}"; do
             if ! save_url "$url"; then
               failed_urls+=("$url")
             fi
             
-            sleep 5
+            # Wait 15 seconds between distinct page requests to prevent session overlap
+            sleep 15
           done
-
-          # 3. Report final summary
-          echo "=========================================="
-          if [ ${#failed_urls[@]} -eq 0 ]; then
-            echo "All ${#urls[@]} page(s) were successfully submitted!"
-          else
-            echo "Archiving complete with errors."
-            echo "The following ${#failed_urls[@]} URL(s) failed to save:"
-            for failed in "${failed_urls[@]}"; do
-              echo "  - $failed"
-            done
-          fi
-          echo "=========================================="
-
-          # Exit successfully so the overall workflow step passes
-          exit 0
