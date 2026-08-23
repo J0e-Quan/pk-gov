@@ -371,6 +371,7 @@ footer .link:hover {
 .link:not(.footer.link) {
   text-decoration: underline;
   text-decoration-thickness: 2px;
+  text-underline-offset: 0.3rem;
 }
 
 .link:hover:not(.footer.link) {
