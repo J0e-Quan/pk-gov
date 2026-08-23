@@ -1,4 +1,4 @@
-section:not(.hero, .content, footer section) {
+section:not(.hero, footer section) {
   padding: 2rem 5rem;
 }
 
@@ -61,7 +61,7 @@ section.directory {
 /* MEDIA QUERIES BELOW */
 @media (max-width: 600px) {
   .header,
-  section:not(.content, footer section) {
+  section:not(footer section) {
     padding: 1rem 2rem;
   }
   .directory-item {

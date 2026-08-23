@@ -77,11 +77,6 @@ body {
   grid-template-columns: minmax(0, 1fr) minmax(0, 2000px) minmax(0, 1fr);
 }
 
-.header-scrollable-area > * {
-  grid-column: 2;
-  flex: 1;
-}
-
 .header {
   grid-column: 1 / -1;
   background-color: var(--theme, var(--central-ministry-colour));
@@ -106,18 +101,19 @@ body {
   font-weight: 400;
 }
 
-.content {
+main {
   display: grid;
   grid-column: 1 / -1;
   grid-template-columns: subgrid;
 }
 
-.content > * {
+main > * {
   grid-column: 2;
 }
 
 .hero {
   grid-column: 1 / -1;
+  grid-template-columns: subgrid;
   background-color: var(--theme, var(--central-ministry-colour));
   color: var(--theme-accent, white);
   padding: 2rem 0;
@@ -237,7 +233,8 @@ hr {
   }
 }
 
-.end-buttons {
+.end-buttons {  
+  grid-column: 2;
   display: flex;
   justify-content: center;
   align-items: baseline;
@@ -439,7 +436,7 @@ pagefind-searchbox::part(input) {
 
 @media (max-width: 600px) {
   .header,
-  section:not(.content, footer section) {
+  section:not(footer section) {
     padding: 1rem 2rem;
   }
   .hero-title {
@@ -510,7 +507,7 @@ pagefind-searchbox::part(input) {
   section {
     padding: 0;
   }
-  section.content,
+  main,
   section.page {
     padding: 0;
     width: 100%;

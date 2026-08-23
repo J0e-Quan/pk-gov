@@ -32,7 +32,7 @@
           </pagefind-modal>
         </div>
       </header>
-      <section class="content" data-pagefind-body>
+      <main data-pagefind-body>
         <section class="hero">
           {% if date %}
             <p class="hero-date">{{ date | postDate }}, by {{ author }}</p>
@@ -51,7 +51,7 @@
         <section class="page">
           {{ content | safe }}
         </section>
-      </section>
+      </main>
       <div class="end-buttons">
         {% if tags != 'about' %}
           <button type="button" class="share">Share page</button>

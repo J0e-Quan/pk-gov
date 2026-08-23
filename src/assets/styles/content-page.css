@@ -1,4 +1,4 @@
-section:not(.hero, .content, footer section) {
+section:not(.hero, footer section) {
   padding: 2rem 5rem;
 }
 
@@ -205,7 +205,7 @@ button.share,
 /* MEDIA QUERIES BELOW */
 @media (max-width: 600px) {
   .header,
-  .content section:not(.content, footer section) {
+  main section:not(footer section) {
     padding: 1rem 2rem;
   }
   .hero-date {
