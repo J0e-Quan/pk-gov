@@ -196,10 +196,6 @@ section:not(.hero, footer section) {
 
 /* MEDIA QUERIES BELOW */
 @media (max-width: 600px) {
-  .header,
-  section:not(footer section) {
-    padding: 1rem 2rem;
-  }
   .logo-frame {
     padding: 0;
     aspect-ratio: 3 / 1;
