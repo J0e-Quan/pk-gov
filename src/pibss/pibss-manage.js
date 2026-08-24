@@ -19,7 +19,7 @@ async function checkUserAuthentication() {
 
 const registerButton = document.querySelector('.register-button')
 const updateLocationButton = document.querySelector('.update-location-button')
-const content = document.querySelector('.content')
+const content = document.querySelector('main')
 // initially, form is done because there is no form to begin with
 let isFormDone = true
 let currentStep = 0
