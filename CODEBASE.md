@@ -142,4 +142,4 @@ Contains scripts used by GitHub actions, currently only `push-notification.yml` 
 ### Other files
 
 -`.gitignore`, `.prettierignore`, `.prettierrc`, `eleventy.config.js`, `eslint.config.js`, `package-lock.json` and `package.json`  are config files for various dev tools used in this repo
-`sent-posts.json` keeps track of existing news articles, used by the `push-notification.yml` action
+- `sent-posts.json` keeps track of existing news articles, used by the `push-notification.yml` action
