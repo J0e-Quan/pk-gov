@@ -138,32 +138,46 @@ OneSignalDeferred.push(async function (OneSignal) {
     }
   }
 
-  function optOut() {
-    OneSignal.User.PushSubscription.optOut()
-    pushButton.textContent = 'Successfully opted out!'
-    notificationTitle.textContent =
-      "Get notified whenever a new article is posted here. Click the 'Manage preferences' button to enable push notifications."
-    setTimeout(() => {
-      pushButton.textContent = 'Enable notifications'
-      pushButton.addEventListener('click', optIn, { once: true })
-    }, THREE_SECONDS)
+  async function optOut() {
+    try {
+      pushButton.textContent = 'Opting out...'
+      await OneSignal.User.PushSubscription.optOut()
+      pushButton.textContent = 'Successfully opted out!'
+      notificationTitle.textContent = "Get notified whenever a new article is posted here. Click the 'Manage preferences' button to enable push notifications."
+      setTimeout(() => {
+        pushButton.textContent = 'Enable notifications'
+        pushButton.addEventListener('click', optIn, { once: true })
+      }, THREE_SECONDS)
+    } catch (error) {
+      console.error(error)
+      alert("Opt out unsuccessful! Please try again, or contact the Ministry of Technology for help if this error persists.")
+      pushButton.textContent = 'Opt out of notifications'
+      pushButton.addEventListener('click', optOut, { once: true })
+    }
   }
 
   async function optIn() {
     await OneSignal.Notifications.requestPermission()
     if (OneSignal.Notifications.permission) {
-      OneSignal.User.PushSubscription.optIn()
+      try {
+        pushButton.textContent = 'Opting in...'
+        await OneSignal.User.PushSubscription.optIn()
+        pushButton.textContent = 'Notifications enabled!'
+        notificationTitle.textContent = "You've opted in to receiving push notifications for new articles."
+        setTimeout(() => {
+          pushButton.textContent = 'Opt out of notifications'
+          pushButton.addEventListener('click', optOut, { once: true })
+        }, THREE_SECONDS)
+      } catch (error) {
+        console.error(error)
+        alert("Opt in unsuccessful! Please try again, or contact the Ministry of Technology for help if this error persists.")
+        pushButton.textContent = 'Enable notifications'
+        pushButton.addEventListener('click', optIn, { once: true })
+      }
     } else {
-      alert(
-        'Notification permission blocked! Please enable notification permissions for this website.'
-      )
+      alert('Notification permission blocked! Please enable notification permissions for this website.')
+      pushButton.textContent = 'Enable notifications'
+      pushButton.addEventListener('click', optIn, { once: true })
     }
-    pushButton.textContent = 'Notifications enabled!'
-    notificationTitle.textContent =
-      "You've opted in to receiving push notifications for new articles."
-    setTimeout(() => {
-      pushButton.textContent = 'Opt out of notifications'
-      pushButton.addEventListener('click', optOut, { once: true })
-    }, THREE_SECONDS)
   }
 })
