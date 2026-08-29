@@ -218,7 +218,9 @@ section.login-form {
 }
 main section.form {
   padding-top: 0;
-  min-height: 50vh;
+}
+main:has(.form) + .end-buttons {
+  padding-bottom: 25vh;
 }
 .form-step-button-wrapper {
   margin: -1rem 0 1rem;
