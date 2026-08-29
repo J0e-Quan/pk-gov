@@ -16,7 +16,7 @@ This contains information about the pk-gov codebase, such as what technologies w
 
 ## Structure of this website
 
-The general file structure and structure of the webiste will be listed here. In most cases, you should only be touching stuff in the `src/` folder. Everything outside of that is for dependencies and other dev tools. All pages use the `global.js` file (though some may use additional .js files for specialised functions), while all CSS files are located in `assets/styles/`.
+The general file structure and structure of the webiste will be listed here. In most cases, you should only be touching stuff in the `src/` folder. Everything outside of that is for dependencies and other dev tools (for more information about this, see the 'outside src/' section below). All pages use the `global.js` file (though some may use additional .js files for specialised functions), while all CSS files are located in `assets/styles/`.
 
 ### _includes/
 
@@ -114,3 +114,32 @@ Image elements are used for placing images in content. Use an absolute path (beg
 ### links (`<a>`)
 
 For links, please use the actual HTML syntax: `<a href='link to stuff' class='link'>LINK TEXT HERE</a>`, as CSS classes cannot be added on to .md elements. Links without class='link' have their text-decoration (underline) removed, making them indistinguishable from regular text (this may be changed in the future, so that regular .md links can be used). For links to external content such as other websites, add `target='_blank' rel='noreferrer'` inside the `<a>` tag.
+
+## Outside `src/`
+
+Most files outside of `src/` are background/config tools that aren't commonly used in development.
+
+### .github/workflows/
+
+this folder contains files related to GitHub actions.
+
+- `archive.yml` is the script that archives the entire site to the Internet Archive on each push to main
+- `push-notification.yml` is the script that sends a push notification if a new article is detected. Uses the `send-push.js` script in `scripts/`
+- `supabase-keep-alive.yaml` is a cron job (scheduled script) that runs a few times a week, pinging PIBSS (supabase) to prevent the database from getting put to sleep
+
+### public/
+
+Contains files to be copied over by Vite. Currently only has One signal's service worker file. 
+
+### readme-assets/
+
+Contains screenshots used in [README.md](/README.md).
+
+### scripts/
+
+Contains scripts used by GitHub actions, currently only `push-notification.yml` uses the `send-push.js` script here. 
+
+### Other files
+
+-`.gitignore`, `.prettierignore`, `.prettierrc`, `eleventy.config.js`, `eslint.config.js`, `package-lock.json` and `package.json`  are config files for various dev tools used in this repo
+- `sent-posts.json` keeps track of existing news articles, used by the `push-notification.yml` action
