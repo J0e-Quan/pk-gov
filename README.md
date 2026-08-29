@@ -29,8 +29,8 @@ Live link: https://pk-gov.onrender.com/
 
 ## Gallery:
 
-![picture showing desktop version of the website's homepage](./readme-assets/homepage-desktop.webp)
-![picture showing mobile version of the website's homepage](./readme-assets/homepage-mobile.webp)
+![picture showing desktop version of the website's homepage](./readme-assets/homepage-desktop.jpeg)
+![picture showing mobile version of the website's homepage](./readme-assets/homepage-mobile.png)
 
 ## Getting started:
 
