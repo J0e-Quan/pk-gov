@@ -275,7 +275,7 @@ main section.form {
 button.splash-screen-start-button {
   margin: 0 auto;
 }
-button.register-submit-name-button {
+button.register-submit-button {
   font-size: 3rem;
   margin: 0;
   padding: 0rem 1.5rem;
@@ -332,16 +332,16 @@ button.register-camera-button {
 button.register-confirm-button {
   margin: 0 auto;
 }
-.update-location-search-wrapper,
-.register-type-wrapper {
+.form-input-wrapper,
+.form-dropdown-wrapper {
   display: flex;
   justify-content: stretch;
   width: 100%;
   max-width: 1000px;
   height: 7rem;
 }
-.update-location-searchbar,
-.register-type-select,
+.form-input,
+.form-select,
 .register-country-select,
 .register-location-select {
   padding: 1rem 2rem;
@@ -480,19 +480,19 @@ button.update-location-submit-button {
   .note {
     font-size: 1rem;
   }
-  button.register-submit-name-button {
+  button.register-submit-button {
     font-size: 1.5rem;
   }
-  .update-location-search-wrapper {
+  .form-input-wrapper {
     height: auto;
   }
-  .register-type-wrapper {
+  .form-dropdown-wrapper {
     height: auto;
     flex-wrap: wrap;
   }
   button.update-location-search-button,
-  .update-location-searchbar,
-  .register-type-select,
+  .form-input,
+  .form-select,
   .register-country-select,
   .register-location-select {
     font-size: 1rem;

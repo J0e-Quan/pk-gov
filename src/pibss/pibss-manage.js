@@ -212,11 +212,11 @@ function renderNameForm() {
   instruction.textContent = 'What is your name?'
   form.appendChild(instruction)
   const nameWrapper = document.createElement('div')
-  nameWrapper.classList.add('update-location-search-wrapper')
+  nameWrapper.classList.add('form-input-wrapper')
   const nameInput = document.createElement('input')
   nameInput.type = 'text'
   nameInput.placeholder = 'Enter a name here...'
-  nameInput.classList.add('update-location-searchbar')
+  nameInput.classList.add('form-input')
   nameInput.id = 'name'
   if (formData.plushieName !== undefined) {
     nameInput.value = formData.plushieName
@@ -224,7 +224,7 @@ function renderNameForm() {
   }
   nameWrapper.appendChild(nameInput)
   const submitButton = document.createElement('button')
-  submitButton.classList.add('register-submit-name-button', 'button')
+  submitButton.classList.add('register-submit-button', 'button')
   submitButton.textContent = '→'
   nameWrapper.appendChild(submitButton)
   form.appendChild(nameWrapper)
@@ -249,7 +249,7 @@ function formatName(name) {
 }
 
 async function submitName() {
-  const submitButton = document.querySelector('.register-submit-name-button')
+  const submitButton = document.querySelector('.register-submit-button')
   const instruction = document.querySelector('.instruction')
   instruction.textContent = 'Checking if your name is unique...'
   const next = document.querySelector('.next-step')
@@ -302,9 +302,9 @@ async function renderTypeForm() {
   instruction.textContent = 'What type of plushie are you?'
   form.appendChild(instruction)
   const typeWrapper = document.createElement('div')
-  typeWrapper.classList.add('register-type-wrapper')
+  typeWrapper.classList.add('form-dropdown-wrapper')
   const typeSelect = document.createElement('select')
-  typeSelect.classList.add('register-type-select')
+  typeSelect.classList.add('form-select')
   const typesArray = await getUniqueTypes()
   for (const type of typesArray) {
     const typeOption = document.createElement('option')
@@ -324,7 +324,7 @@ async function renderTypeForm() {
   const otherInput = document.createElement('input')
   otherInput.type = 'text'
   otherInput.placeholder = 'Enter a type here...'
-  otherInput.classList.add('update-location-searchbar', 'hidden')
+  otherInput.classList.add('form-input', 'hidden')
   otherInput.id = 'other-input'
   typeWrapper.appendChild(otherInput)
   if (formData.plushieType !== undefined) {
@@ -341,7 +341,7 @@ async function renderTypeForm() {
     updateFormStepButtons(false)
   }
   const submitButton = document.createElement('button')
-  submitButton.classList.add('register-submit-name-button', 'button')
+  submitButton.classList.add('register-submit-button', 'button')
   submitButton.textContent = '→'
   typeWrapper.appendChild(submitButton)
   form.appendChild(typeWrapper)
@@ -392,7 +392,7 @@ function submitType() {
       formData.plushieType = otherInput.value.trim()
     }
   } else if (!other.selected) {
-    const typeSelect = document.querySelector('.register-type-select')
+    const typeSelect = document.querySelector('.form-select')
     formData.plushieType = typeSelect.value
   }
   renderCountryForm()
@@ -412,7 +412,7 @@ async function renderCountryForm() {
   instruction.textContent = 'Which country are you from?'
   form.appendChild(instruction)
   const countryWrapper = document.createElement('div')
-  countryWrapper.classList.add('update-location-search-wrapper')
+  countryWrapper.classList.add('form-input-wrapper')
   const countrySelect = document.createElement('select')
   countrySelect.classList.add('register-country-select')
   const countries = await getCountries()
@@ -432,7 +432,7 @@ async function renderCountryForm() {
   }
   countryWrapper.appendChild(countrySelect)
   const submitButton = document.createElement('button')
-  submitButton.classList.add('register-submit-name-button', 'button')
+  submitButton.classList.add('register-submit-button', 'button')
   submitButton.textContent = '→'
   countryWrapper.appendChild(submitButton)
   form.appendChild(countryWrapper)
@@ -470,9 +470,9 @@ function renderDateForm() {
   instruction.textContent = 'When did you arrive at the Plushie Kingdom?'
   form.appendChild(instruction)
   const dateWrapper = document.createElement('div')
-  dateWrapper.classList.add('register-type-wrapper')
+  dateWrapper.classList.add('form-dropdown-wrapper')
   const dateSelect = document.createElement('select')
-  dateSelect.classList.add('register-type-select')
+  dateSelect.classList.add('form-select')
   const datesArray = ['Today', 'Yesterday', 'Other']
   for (const date of datesArray) {
     const dateOption = document.createElement('option')
@@ -499,14 +499,14 @@ function renderDateForm() {
   dateWrapper.appendChild(dateSelect)
   const otherInput = document.createElement('input')
   otherInput.type = 'date'
-  otherInput.classList.add('update-location-searchbar', 'hidden')
+  otherInput.classList.add('form-input', 'hidden')
   otherInput.id = 'other-input'
   otherInput.addEventListener('change', () => {
     formData.plushieDateJoined = otherInput.value
   })
   dateWrapper.appendChild(otherInput)
   const submitButton = document.createElement('button')
-  submitButton.classList.add('register-submit-name-button', 'button')
+  submitButton.classList.add('register-submit-button', 'button')
   submitButton.textContent = '→'
   dateWrapper.appendChild(submitButton)
   form.appendChild(dateWrapper)
@@ -564,7 +564,7 @@ function submitDate() {
       formData.plushieDateJoined = otherInput.value
     }
   } else if (!other.selected) {
-    const dateSelect = document.querySelector('.register-type-select')
+    const dateSelect = document.querySelector('.form-select')
     formData.plushieDateJoined = dateSelect.value
   }
   renderLocationForm()
@@ -584,7 +584,7 @@ function renderLocationForm() {
   instruction.textContent = 'Where are you going to stay?'
   form.appendChild(instruction)
   const locationWrapper = document.createElement('div')
-  locationWrapper.classList.add('update-location-search-wrapper')
+  locationWrapper.classList.add('form-input-wrapper')
   const locationSelect = document.createElement('select')
   locationSelect.classList.add('register-location-select')
   const locations = ['Big Tent Plains', 'Big Tent Stacks', 'The Studio', 'The Bedroom', 'The Sofa']
@@ -601,7 +601,7 @@ function renderLocationForm() {
   }
   locationWrapper.appendChild(locationSelect)
   const submitButton = document.createElement('button')
-  submitButton.classList.add('register-submit-name-button', 'button')
+  submitButton.classList.add('register-submit-button', 'button')
   submitButton.textContent = '→'
   locationWrapper.appendChild(submitButton)
   form.appendChild(locationWrapper)
@@ -1003,11 +1003,11 @@ function renderPlushieSelectionForm() {
   instruction.textContent = "Please search for an existing plushie's name"
   form.appendChild(instruction)
   const searchWrapper = document.createElement('div')
-  searchWrapper.classList.add('update-location-search-wrapper')
+  searchWrapper.classList.add('form-input-wrapper')
   const searchBar = document.createElement('input')
   searchBar.type = 'text'
   searchBar.placeholder = 'Enter a name here...'
-  searchBar.classList.add('update-location-searchbar')
+  searchBar.classList.add('form-input')
   searchBar.id = 'search'
   if (formData.searchValue !== undefined) {
     searchBar.value = formData.searchValue
@@ -1022,7 +1022,7 @@ function renderPlushieSelectionForm() {
 }
 
 async function searchPlushies() {
-  const searchBar = document.querySelector('.update-location-searchbar')
+  const searchBar = document.querySelector('.form-input')
   if (searchBar !== null && searchBar.value !== '') {
     formData.searchValue = searchBar.value
   } else if (searchBar !== null && searchBar.value === '') {
