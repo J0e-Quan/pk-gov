@@ -249,6 +249,9 @@ function formatName(name) {
 }
 
 async function submitName() {
+  const submitButton = document.querySelector('.register-submit-name-button')
+  const instruction = document.querySelector('.instruction')
+  instruction.textContent = 'Checking if your name is unique...'
   const next = document.querySelector('.next-step')
   let canSkipStep
   if (next.classList.contains('hidden')) {
@@ -261,6 +264,8 @@ async function submitName() {
   const name = formatName(nameInput.value)
   if (name === '') {
     alert('Please enter a name!')
+    instruction.textContent = 'What is your name?'
+    submitButton.addEventListener('click', submitName, { once: true })
   } else {
     const { data, error } = await supabase.from('database').select('name')
 
@@ -270,11 +275,13 @@ async function submitName() {
     // data returns an array of objects by default, we just need array of names (case-insensitive)
     const namesArray = data.map((entry) => entry.name.toLowerCase())
     if (namesArray.includes(name.toLowerCase())) {
+      instruction.textContent = 'What is your name?'
       alert("Name cannot be a duplicate of an existing plushie's name!")
       if (canSkipStep === true) {
         next.classList.remove('hidden')
       }
       nameInput.value = ''
+      submitButton.addEventListener('click', submitName, { once: true })
     } else {
       formData.plushieName = name
       renderTypeForm()
@@ -930,7 +937,7 @@ async function submitData(photoURL) {
 }
 
 function checkData(photoURL) {
-  // this checks all fields to ensure they are not empty or skipped, this is just a band-aid, please do a proper check on input validity AT THE RELEVANT PAGE instead of at the end
+  // this checks all fields to ensure they are not empty or skipped
   if (formData.plushieName === '' || formData.plushieName === undefined) {
     alert('Plushie name is empty or invalid! Please ensure you have inputted a unique name!')
   } else if (formData.plushieType === '' || formData.plushieType === undefined) {
