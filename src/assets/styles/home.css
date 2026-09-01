@@ -61,22 +61,5 @@ section:not(footer section) {
   .hero-text {
     font-size: 1.5rem;
   }
-  .ministries {
-    grid-template-columns: repeat(auto-fit, minmax(100px, 40vw));
-    grid-auto-rows: 40vw;
-  }
-  .ministries a {
-    height: 40vw;
-    width: 40vw;
-  }
-  a svg {
-    height: 35vw;
-    width: 35vw;
-  }
-  section.other-resources {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem 0;
-  }
 }
 /* MEDIA QUERIES ABOVE */
