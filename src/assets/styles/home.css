@@ -74,7 +74,7 @@ a svg {
 .other-resources {
   padding: 0rem 3rem 4rem 3rem;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(40rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
   justify-content: center;
 }
 
