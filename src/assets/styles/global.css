@@ -422,6 +422,80 @@ pagefind-searchbox::part(input) {
   padding-bottom: 0px;
 }
 
+
+
+
+
+
+/* TEST FOR NEW CARD DESIGN */
+.card {
+  display: flex;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  position: relative;
+  border: 16px solid var(--central-ministry-colour);
+  box-shadow: inset 0 0 0 0px var(--central-ministry-colour);
+  transition:
+    box-shadow 0.4s ease-in-out,
+    color 0.4s ease-in-out;
+  will-change: box-shadow, color;
+}
+
+.card-title {
+  line-height: 1.1 !important;
+  margin-bottom: 0.5rem;
+}
+
+.card:hover {
+  box-shadow: inset 1000px 0 var(--central-ministry-colour);
+  color: white;
+}
+
+.card-text {
+  display: block !important;
+  flex: 1 0 80%;
+}
+
+.card-link {
+  color: inherit;
+  font-size: 3rem;
+  font-family: var(--plex-sans);
+}
+
+.card-link::after {
+  position: absolute;
+  inset: 0;
+}
+
+.card-description {
+  font-size: 1.5rem;
+}
+
+.card-button {
+  text-align: center;
+  font-family: var(--plex-sans);
+  width: 100%;
+  height: 100%;
+  font-size: 5rem;
+  padding: 0 !important;
+  flex-basis: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* DESKTOP/MOBILE SEARCHBAR MEDIA QUERY */
 @media (max-width: 50rem) {
   .search-mobile {
