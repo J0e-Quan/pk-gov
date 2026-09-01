@@ -368,13 +368,14 @@ footer .link:hover {
 .link:not(.footer.link) {
   text-decoration: underline;
   text-decoration-thickness: 2px;
-  text-underline-offset: 0.3rem;
+  text-underline-offset: 0.2em;
 }
 
 .link:hover:not(.footer.link) {
   text-decoration: underline;
   text-decoration-skip-ink: none;
-  text-decoration-thickness: 4px;
+  text-underline-offset: 0.1em;
+  text-decoration-thickness: 6px;
 }
 
 @keyframes wipe-up {
@@ -470,8 +471,8 @@ pagefind-searchbox::part(input) {
     animation-range-start: cover 0%;
     animation-range-end: cover 20%;
   }
-  .link:not(.footer.link) {
-    text-underline-offset: 0.2rem;
+  .link:hover:not(.footer.link) {
+    text-underline-offset: 0.15em;
   }
   footer {
     flex-direction: column;
