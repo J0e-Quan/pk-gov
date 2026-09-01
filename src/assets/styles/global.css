@@ -338,6 +338,7 @@ footer .link {
   position: relative;
   overflow: hidden;
   isolation: isolate;
+  text-decoration: underline;
 }
 
 footer .link::before {
@@ -359,10 +360,6 @@ footer .link:hover::before {
 
 footer .link:hover {
   color: var(--theme-accent-alt, black);
-}
-
-.footer.link {
-  text-decoration: underline;
 }
 
 .link:not(.footer.link) {
