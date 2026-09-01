@@ -78,41 +78,6 @@ a svg {
   justify-content: center;
 }
 
-.other-resources div {
-  flex-grow: 1;
-  padding: 1rem 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.other-resources .title {
-  font-size: 3rem;
-}
-
-.other-resources .text {
-  font-size: 1.5rem;
-}
-
-.other-resources .cta {
-  width: fit-content;
-  padding: 1rem 2rem;
-  font-size: 2rem;
-  font-family: var(--mona-sans);
-  color: black;
-  box-shadow: inset 0 0 0 0px var(--central-ministry-colour);
-  border: 16px solid var(--central-ministry-colour);
-  transition:
-    box-shadow 0.4s ease-in-out,
-    color 0.4s ease-in-out;
-  will-change: box-shadow, color;
-}
-
-.other-resources .cta:hover {
-  box-shadow: inset 0 0 0 400px var(--central-ministry-colour);
-  color: white;
-}
-
 .logo-frame {
   height: 300px;
   overflow: hidden;
