@@ -13,62 +13,36 @@ h2.title::before {
   display: none;
 }
 
-/* .ministries {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 20vw));
-  grid-auto-rows: auto;
-  place-content: center;
-  padding: 0rem 5rem;
-} */
-
-/* .ministries a {
-  background-color: white;
-  place-self: center;
-  height: 20vw;
-  width: 20vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid white;
-  transition: border 0.2s;
-  will-change: border;
-} */
-
-/* a svg {
-  height: 15vw;
-  width: 15vw;
-} */
-
-.ministries a:hover.central-ministry {
-  border: 16px solid var(--central-ministry-colour);
+.ministry.central.card:hover {
+  box-shadow: inset 0 0 0 16px var(--central-ministry-colour);
 }
 
-.ministries a:hover.ministry-of-food {
-  border: 16px solid var(--ministry-of-food-colour);
+.ministry.food.card:hover {
+  box-shadow: inset 0 0 0 16px var(--ministry-of-food-colour);
 }
 
-.ministries a:hover.ministry-of-foreign-affairs {
-  border: 16px solid var(--ministry-of-foreign-affairs-colour);
+.ministry.foreign-affairs.card:hover {
+  box-shadow: inset 0 0 0 16px var(--ministry-of-foreign-affairs-colour);
 }
 
-.ministries a:hover.ministry-of-health {
-  border: 16px solid var(--ministry-of-health-colour);
+.ministry.health.card:hover {
+  box-shadow: inset 0 0 0 16px var(--ministry-of-health-colour);
 }
 
-.ministries a:hover.ministry-of-finance {
-  border: 16px solid var(--ministry-of-finance-colour);
+.ministry.finance.card:hover {
+  box-shadow: inset 0 0 0 16px var(--ministry-of-finance-colour);
 }
 
-.ministries a:hover.ministry-of-immigration {
-  border: 16px solid var(--ministry-of-immigration-colour);
+.ministry.immigration.card:hover {
+  box-shadow: inset 0 0 0 16px var(--ministry-of-immigration-colour);
 }
 
-.ministries a:hover.ministry-of-technology {
-  border: 16px solid var(--ministry-of-technology-colour);
+.ministry.technology.card:hover {
+  box-shadow: inset 0 0 0 16px var(--ministry-of-technology-colour);
 }
 
-.ministries a:hover.ministry-of-defence {
-  border: 16px solid var(--ministry-of-defence-colour);
+.ministry.defence.card:hover {
+  box-shadow: inset 0 0 0 16px var(--ministry-of-defence-colour);
 }
 
 section:not(footer section) {
