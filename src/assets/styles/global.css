@@ -233,6 +233,12 @@ hr {
   }
 }
 
+.all-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  justify-content: center;
+}
+
 .card {
   display: flex;
   flex-direction: row;
@@ -250,6 +256,10 @@ hr {
   line-height: 1.1;
   margin-bottom: 0.5rem;
   position: inherit;
+}
+
+.ministry .card-title {
+  margin-bottom: 0;
 }
 
 .card-title::before {
@@ -282,6 +292,11 @@ hr {
 
 .card-description {
   font-size: 1.5rem;
+}
+
+.ministry .card-description {
+  font-family: var(--plex-sans);
+  font-size: 2.5rem;
 }
 
 .card-arrow {

@@ -13,15 +13,15 @@ h2.title::before {
   display: none;
 }
 
-.ministries {
+/* .ministries {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 20vw));
   grid-auto-rows: auto;
   place-content: center;
   padding: 0rem 5rem;
-}
+} */
 
-.ministries a {
+/* .ministries a {
   background-color: white;
   place-self: center;
   height: 20vw;
@@ -32,12 +32,12 @@ h2.title::before {
   border: 1px solid white;
   transition: border 0.2s;
   will-change: border;
-}
+} */
 
-a svg {
+/* a svg {
   height: 15vw;
   width: 15vw;
-}
+} */
 
 .ministries a:hover.central-ministry {
   border: 16px solid var(--central-ministry-colour);
@@ -71,21 +71,8 @@ a svg {
   border: 16px solid var(--ministry-of-defence-colour);
 }
 
-.other-resources {
-  padding: 0rem 3rem 4rem 3rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
-  justify-content: center;
-}
-
-.logo-frame {
-  height: 300px;
-  overflow: hidden;
-  position: relative;
-}
-
-.logo-lottie {
-  transform: translateY(-25%);
+section:not(footer section) {
+  padding: 48px 64px;
 }
 
 /* MEDIA QUERIES BELOW */
@@ -116,15 +103,6 @@ a svg {
     display: flex;
     flex-direction: column;
     padding: 1rem 0;
-  }
-  .other-resources .title {
-    font-size: 2rem;
-  }
-  .other-resources .text {
-    font-size: 1rem;
-  }
-  .other-resources .cta {
-    font-size: 1.5rem;
   }
 }
 /* MEDIA QUERIES ABOVE */
