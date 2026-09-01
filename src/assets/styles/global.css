@@ -436,19 +436,19 @@ pagefind-searchbox::part(input) {
   border: 16px solid var(--central-ministry-colour);
   box-shadow: inset 0 0 0 0px var(--central-ministry-colour);
   transition:
-    box-shadow 0.4s ease-in-out,
-    color 0.4s ease-in-out;
-  will-change: box-shadow, color;
+    box-shadow 0.4s ease-in-out;
+  will-change: box-shadow;
+  padding: 0 1rem 0.5rem;
 }
 
 .card-title {
   line-height: 1.1 !important;
   margin-bottom: 0.5rem;
+  position: inherit;
 }
 
 .card:hover {
-  box-shadow: inset 1000px 0 var(--central-ministry-colour);
-  color: white;
+  box-shadow: inset 0 0 0 24px var(--central-ministry-colour);
 }
 
 .card-text {
@@ -463,8 +463,12 @@ pagefind-searchbox::part(input) {
 }
 
 .card-link::after {
+  content: '';
   position: absolute;
-  inset: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .card-description {
@@ -473,7 +477,6 @@ pagefind-searchbox::part(input) {
 
 .card-button {
   text-align: center;
-  font-family: var(--plex-sans);
   width: 100%;
   height: 100%;
   font-size: 5rem;
@@ -481,9 +484,15 @@ pagefind-searchbox::part(input) {
   flex-basis: auto;
   justify-content: center;
   align-items: center;
+  transform: scaleY(1);
+  transition: 0.4s transform;
+  position: inherit;
+  pointer-events: none;
 }
 
-
+.card:hover .card-button {
+  transform: scaleY(3) scaleX(1.5);
+}
 
 
 
