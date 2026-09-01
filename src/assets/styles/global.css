@@ -556,11 +556,17 @@ pagefind-searchbox::part(input) {
     animation-range-start: cover 0%;
     animation-range-end: cover 20%;
   } 
+  .all-cards {
+    display: flex;
+    flex-direction: column;
+  }
   .card {
     padding: 16px 24px;
+    max-width: 100%;
   }
   .card-text {
     flex-shrink: 1;
+    flex-basis: auto;
   }
   .card-description {
     font-size: 1rem;
