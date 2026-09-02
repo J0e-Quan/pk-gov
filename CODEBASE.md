@@ -16,15 +16,15 @@ This contains information about the pk-gov codebase, such as what technologies w
 
 ## Structure of this website
 
-The general file structure and structure of the webiste will be listed here. In most cases, you should only be touching stuff in the `src/` folder. Everything outside of that is for dependencies and other dev tools (for more information about this, see the 'outside src/' section below). All pages use the `global.js` file (though some may use additional .js files for specialised functions), while all CSS files are located in `assets/styles/`.
+The general file structure and structure of the webiste will be listed here. In most cases, you should only be touching stuff in the `src/` folder. Everything outside of that is for dependencies and other dev tools (for more information about this, see the 'outside src/' section below). All pages use the `global.js` file (though some may use additional .js files for specialised functions), while all CSS files are located in `assets/styles/`. All pages use `global.css` for common styles, though most pages also use additional CSS files such as `content-page.css` for page-specific styles.
 
 ### _includes/
 
-This is where 11ty templates which are used more than once (such as info pages and news articles) are located. `content-page.njk` is used by most pages such as about pages and news articles. `ministry.njk` is used by all ministry pages. `service.njk` is used by all services (the actual service itself, not the introductory service page).
+This is where 11ty templates which are used more than once (such as info pages and news articles) are located. `content-page.njk` is used by most pages such as about pages and news articles. `ministry.njk` is used by all ministry pages. `service.njk` is used by all services (the actual service itself, not the introductory Start Page).
 
 ### about/
 
-This is where the 'about pk-gov' and 'government identity guidelines pages are located. The pages here are generated with 11ty.
+This is where the 'about pk-gov' and 'government identity guidelines' pages are located. The pages here are generated with 11ty.
 
 ### assets/
 
@@ -36,7 +36,8 @@ This is where assets like fonts, pictures and CSS files are located.
 - `icons` contains several generic icons used throughout pk-gov, such as the loading animation used by the weather page
 - `info-media` is where all media such as images used by 'info pages' are stored. They are grouped into folders which have the same name as the page that uses them
 - `lottie/` is where the lottie animations used by the ministry pages are stored
-- `news-media` is where all media such as images used by news articles are stored. They are grouped into folders which have the same name as the page that uses them
+- `ministry-icons/` is where SVGs of the ministry icons are located
+- `news-media/` is where all media such as images used by news articles are stored. They are grouped into folders which have the same name as the page that uses them
 - `pictures/` is where all pictures used by other pages are stored. Currently, only minister pictures are here, but they are kept in a `ministers/` folder in case other types of pictures are added in the future
 - `styles/` is where all .css files are stored, including `global.css`, which loads the custom fonts from `fonts/`, resets some default css styling and contains some styles commonly used throughout pk-gov
 - `weather-icons/` is where all weather icons used in the weather page are obtained
@@ -47,15 +48,15 @@ This is where the 'life in the plushie kingdom' pages are located. Any assets th
 
 ### ministries/
 
-This is where all the ministry pages (the icons in the homepage) are located. Any assets they use are taken directly from `assets/`. All pages are generated with 11ty, the template file is in `_includes`. All ministry pages share the `ministries.js` file.
+This is where all the ministry pages are located. Any assets they use are taken directly from `assets/`. All pages are generated with 11ty using the `ministry.njk` template file in `_includes`. All ministry pages share the `ministries.js` file.
 
 ### news/
 
-This is where the 'government news' pages are located. Any assets they use (such as photos) are taken from `news-media/`. Within `news-media/`, there should be a folder for each news article that uses media, named the same name as their corresponding .md file. All thumbnails MUST be named `thumbnail`, any extension is fine (but we recommend .webp). All pages are generated with 11ty, so there is a template file provided.
+This is where the 'government news' pages are located. Any assets they use (such as photos) are taken from `news-media/`. Within `news-media/`, there should be a folder for each news article that uses media, named the same name as their corresponding .md file. All thumbnails MUST be named `thumbnail.webp`. All pages are generated with 11ty, so there is a template file provided.
 
 ### pibss/
 
-This contains all PIBSS pages that can be accessed from its service page. These pages are generated with 11ty using the `service.njk` template in `_includes/`. All 4 pages share the `pibss-common.js` file which creates a supabase client, the other .js files are used by their respective njk files.
+This contains all PIBSS pages that can be accessed from its Start Page. These pages are generated with 11ty using the `service.njk` template in `_includes/`. All 4 pages share the `pibss-common.js` file which creates a supabase client, the other .js files are used by their respective njk files.
 
 ### timeline/
 
@@ -129,7 +130,7 @@ this folder contains files related to GitHub actions.
 
 ### public/
 
-Contains files to be copied over by Vite. Currently only has One signal's service worker file. 
+Contains files to be copied over by Vite. Currently only has OneSignal's service worker file. 
 
 ### readme-assets/
 
