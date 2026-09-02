@@ -55,7 +55,7 @@ Home to the largest population of plushies in the Kingdom, the Big Tent Plains m
 
 ### The Big Tent Stacks
 
-Located at the left and right ends of the Big Tent, the Big Tent Stacks are made up of two multi-storey structures, capable of housing many plushies. Built to handle the increased number of residents after The Great Reunification, these residential areas provide easy access to the various amenities in the Big Tent Plains, making this a desirable location for plushies in high spirits! (Due to their higher-density nature, only smaller-sized plushies are allowed to live in the Big Tent Stacks.)
+Located at the back end of the Big Tent, this large multi-storey structure is capable of housing many plushies. Built to handle the increased number of residents after The Great Reunification, this residential area provides easy access to the various amenities in the Big Tent Plains, making this a desirable location for plushies in high spirits! (Due to their higher-density nature, only smaller-sized plushies are allowed to live in the Big Tent Stacks.)
 
 ### The Bedroom
 

@@ -19,7 +19,7 @@ Once you have confirmed that your business fufills the criteria above, you can b
 
 - We use Ringgit Malaysia (RM) as our currency
 - We are home to plushies from various countries and cultures, but use the Metric System for measurements and mainly speak British English for communication
-- For holidays, we follow the public holidays of Malaysia
+- For holidays, we follow the public holidays of the state of Penang in Malaysia
 
 ### Tax and Finances
 
