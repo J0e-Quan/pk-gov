@@ -40,6 +40,15 @@ export default async function (eleventyConfig) {
     }
   })
 
+  // Custom filter to flatten arrays/strings and remove duplicates
+  eleventyConfig.addFilter("combineAssets", function(...args) {
+    const assets = args.flatMap(item => {
+      if (!item) return [];
+      return Array.isArray(item) ? item : [item];
+    });
+    return [...new Set(assets)];
+  });
+
   // code for generating table of contents
   eleventyConfig.addTransform('injectNestedToc', function (content) {
     if (this.page.outputPath && this.page.outputPath.endsWith('.html')) {

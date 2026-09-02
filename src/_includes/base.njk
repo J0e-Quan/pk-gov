@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/styles/global.css">
+    {# Dynamic CSS processing #}
+    {% set allStyles = layoutCss | combineAssets(cssPath) %}
+    {% for file in allStyles %}
+      <link rel="stylesheet" href="{{ file | url }}">
+    {% endfor %}
+    <link rel="stylesheet" href={{ cssPath | url }}>
+    <link rel="icon" href="/assets/favicons/generic.svg"/>
+    <link href="/pagefind/pagefind-component-ui.css" rel="stylesheet" vite-ignore>
+    <script src="/pagefind/pagefind-component-ui.js" type="module"></script>
+    <title>{{ title }}</title>
+  </head>
+  <body>
+   <div class='header-scrollable-area'>
+     <header class="header">
+        <a class="logo-text" href="/">
+          <h3 class="logo-text top">Plushie Kingdom</h3>
+          <h3 class="logo-text bottom">Government</h3>
+        </a>
+        <pagefind-searchbox class="search-desktop" shortcut="none" hide-shortcut placeholder="Search pk-gov..." show-sub-results=true></pagefind-searchbox>
+        <div class="search-mobile">
+          <img class="search-icon" src="../../assets/icons/search.svg" alt="search icon">
+          <pagefind-modal class="mobile-modal">
+            <pagefind-modal-header>
+              <pagefind-input placeholder="Search pk-gov..."></pagefind-input>
+            </pagefind-modal-header>
+     
+            <pagefind-modal-body>
+              <pagefind-summary></pagefind-summary>
+              <pagefind-results></pagefind-results>
+            </pagefind-modal-body>
+          </pagefind-modal>
+        </div>
+      </header>
+      {{ content | safe }}
+   </div>
+    <footer class="footer">
+      <section>
+        <h3 class="footer-title">Ministries</h3>
+        <hr>
+        <div class="footer-links-list">
+          <a class="footer link" href="/ministries/central/">Central Ministry</a>
+          <a class="footer link" href="/ministries/food/">Ministry of Food</a>
+          <a class="footer link" href="/ministries/foreign-affairs/">Ministry of Foreign Affairs</a>
+          <a class="footer link" href="/ministries/health/">Ministry of Health</a>
+          <a class="footer link" href="/ministries/finance/">Ministry of Finance</a>
+          <a class="footer link" href="/ministries/immigration/">Ministry of Immigration</a>
+          <a class="footer link" href="/ministries/technology/">Ministry of Technology</a>
+          <a class="footer link" href="/ministries/defence/">Ministry of Defence</a>
+        </div>
+      </section>
+      <section>
+        <h3 class="footer-title">Information</h3>
+        <hr>
+        <div class="footer-links-list">
+          <a class="footer link" href="/info/who-we-are/">Who we are</a>
+          <a class="footer link" href="/info/travelling-in-and-out/">Travelling in and out</a>
+          <a class="footer link" href="/news/">Government news</a>
+          <a class="footer link" href="/info/safety-and-residency/">Safety and Residency</a>
+          <a class="footer link" href="/info/food-health-and-wealth/">Food, Health and Wealth</a>
+          <a class="footer link" href="/info/business-and-commerce/">Business and Commerce</a>
+        </div>
+      </section>
+      <section>
+        <h3 class="footer-title">Services</h3>
+        <hr>
+        <div class="footer-links-list">
+          <a class="footer link" href="/start/pibss/">PIBSS</a>
+          <a class="footer link" href="/start/weather/">Plushie Kingdom weather</a>
+          <a class="footer link" href="/start/timeline/">Timeline</a>
+        </div>
+      </section>
+      <section>
+        <h3 class="footer-title">About us</h3>
+        <hr>
+        <div class="footer-links-list">
+          <a class="footer link" href="/about/pk-gov/">About the pk-gov website</a>
+          <a class="footer link" href="/info/who-we-are/#history-of-the-plushie-kingdom"
+            >History of the Plushie Kingdom</a
+          >
+          <a class="footer link" href="/about/gov-identity/">Government identity guidelines</a>
+        </div>
+      </section>
+    </footer>
+    <script type='module' src='/global.js'></script>
+    {# Dynamic JS processing #}
+    {% set allScripts = layoutJs | combineAssets(jsPath) %}
+    {% for file in allScripts %}
+      <script type="module" src="{{ file | url }}" defer></script>
+    {% endfor %}
+  </body>
+</html>
