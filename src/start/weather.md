@@ -7,7 +7,7 @@ thumbnail:
 ---
 
 <div class='start-buttons'>
-  <a class='button' href='/weather/'>Get weather information</a>
+  <a class='button' href='/services/weather/'>Get weather information</a>
 </div>
 
 ## What is this service?
