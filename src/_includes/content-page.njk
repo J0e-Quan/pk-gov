@@ -59,9 +59,7 @@
         <button type="button" class="print">Print page</button>
         {% if tags == 'news' %}
           <a class="return" href="/news/">Return to news list</a>
-        {% elif tags == 'info' %}
-          <a class="return" href="/info/">Return to information list</a>
-        {% elif tags == 'about' %}
+        {% elif tags == 'info' or tags == 'about' %}
           <a class="return" href="/">Return to homepage</a>
         {% endif %}
       </div>
