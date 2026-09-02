@@ -239,6 +239,10 @@ hr {
   justify-content: center;
 }
 
+.all-cards:has(.ministry) {
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+}
+
 .card {
   display: flex;
   flex-direction: row;
