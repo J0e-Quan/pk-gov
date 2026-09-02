@@ -13,6 +13,8 @@
     <link rel="icon" href="/assets/favicons/generic.svg"/>
     <link href="/pagefind/pagefind-component-ui.css" rel="stylesheet" vite-ignore>
     <script src="/pagefind/pagefind-component-ui.js" type="module"></script>
+    {# Slot for custom page-level head elements #}
+    {% block head %}{% endblock %}
     <title>{{ title }}</title>
   </head>
   <body>
