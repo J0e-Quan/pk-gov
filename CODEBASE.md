@@ -20,7 +20,7 @@ The general file structure and structure of the webiste will be listed here. In 
 
 ### _includes/
 
-This is where 11ty templates which are used more than once (such as info pages and news articles) are located. `content-page.njk` is used by most pages such as about pages and news articles. `ministry.njk` is used by all ministry pages. `service.njk` is used by all services (the actual service itself, not the introductory Start Page).
+This is where 11ty templates which are used more than once (such as info pages and news articles) are located. ALL pages are based on `base.njk`, which contains the header and footer. `content-page.njk` is used by most pages such as about pages and news articles. `ministry.njk` is used by all ministry pages. `service.njk` is used by all services (the actual service itself, not the introductory Start Page).
 
 ### about/
 
