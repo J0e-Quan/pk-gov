@@ -25,6 +25,12 @@ export default async function (eleventyConfig) {
           '/node_modules': path.resolve('.', 'node_modules')
         }
       },
+      publicDir: "src/assets", // Adjust to your actual source assets folder
+      server: {
+        fs: {
+          allow: ["."]
+        }
+      },
       build: {
         mode: 'production',
         rollupOptions: {
@@ -44,7 +50,12 @@ export default async function (eleventyConfig) {
   eleventyConfig.addFilter("combineAssets", function(...args) {
     const assets = args.flatMap(item => {
       if (!item) return [];
-      return Array.isArray(item) ? item : [item];
+      const list = Array.isArray(item) ? item : [item];
+      return list.filter(path => {
+        if (typeof path !== 'string') return false;
+        const cleanPath = path.trim();
+        return cleanPath !== '' && cleanPath !== '.' && cleanPath !== '/';
+      });
     });
     return [...new Set(assets)];
   });

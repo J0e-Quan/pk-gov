@@ -1,5 +1,3 @@
-import './assets/styles/global.css'
-
 const THREE_SECONDS = 3000
 
 // code for opening pagefind modal for search-mobile

@@ -1,11 +1,13 @@
-import sunny from '../../assets/weather-icons/sunny.svg?url'
-import night from '../../assets/weather-icons/night.svg?url'
-import cloudy from '../../assets/weather-icons/cloudy.svg?url'
-import sunnyCloudy from '../../assets/weather-icons/sunny-cloudy.svg?url'
-import nightCloudy from '../../assets/weather-icons/night-cloudy.svg?url'
-import rain from '../../assets/weather-icons/rain.svg?url'
-import thunderstorm from '../../assets/weather-icons/thunderstorm.svg?url'
-import generic from '../../assets/weather-icons/generic.svg?url'
+const weatherIcons = {
+  sunny: '/weather-icons/sunny.svg',
+  night:  '/weather-icons/night.svg?url',
+  cloudy:  '/weather-icons/cloudy.svg?url',
+  sunnyCloudy: '/weather-icons/sunny-cloudy.svg?url',
+  nightCloudy:  '/weather-icons/night-cloudy.svg?url',
+  rain:  '/weather-icons/rain.svg?url',
+  thunderstorm:  '/weather-icons/thunderstorm.svg?url',
+  generic: '/weather-icons/generic.svg?url'
+}
 
 // code for opening pagefind modal for search-mobile
 document.addEventListener('DOMContentLoaded', () => {
@@ -56,28 +58,28 @@ function checkData(data) {
 
 function determineWeather(weatherCode, isDay, precipitation, precipitationThreshold) {
   const weather = {
-    icon: generic,
+    icon: weatherIcons.generic,
     condition: 'Unable to get weather information'
   }
   // clear sky
   if ((weatherCode === 0 || weatherCode === 1) && isDay) {
-    weather.icon = sunny
+    weather.icon = weatherIcons.sunny
     weather.condition = 'Clear sky'
   } else if ((weatherCode === 0 || weatherCode === 1) && !isDay) {
-    weather.icon = night
+    weather.icon = weatherIcons.night
     weather.condition = 'Clear sky'
   }
   // partly cloudy
   if (weatherCode === 2 && isDay) {
-    weather.icon = sunnyCloudy
+    weather.icon = weatherIcons.sunnyCloudy
     weather.condition = 'Partly cloudy'
   } else if (weatherCode === 2 && !isDay) {
-    weather.icon = nightCloudy
+    weather.icon = weatherIcons.nightCloudy
     weather.condition = 'Partly cloudy'
   }
   // cloudy
   if (weatherCode === 3 || weatherCode === 45 || weatherCode === 48) {
-    weather.icon = cloudy
+    weather.icon = weatherIcons.cloudy
     weather.condition = 'Cloudy'
   }
   // check if precipitation is high enough for rain / thunderstorm (if not, show partly cloudy instead)
@@ -104,10 +106,10 @@ function determineWeather(weatherCode, isDay, precipitation, precipitationThresh
     }
     if (precipitation <= minPrecipitation) {
       if (isDay) {
-        weather.icon = sunnyCloudy
+        weather.icon = weatherIcons.sunnyCloudy
         weather.condition = 'Partly cloudy'
       } else if (!isDay) {
-        weather.icon = nightCloudy
+        weather.icon = weatherIcons.nightCloudy
         weather.condition = 'Partly cloudy'
       }
     } else if (precipitation > minPrecipitation) {
@@ -122,12 +124,12 @@ function determineWeather(weatherCode, isDay, precipitation, precipitationThresh
         weatherCode === 80 ||
         weatherCode === 81
       ) {
-        weather.icon = rain
+        weather.icon = weatherIcons.rain
         weather.condition = 'Raining'
       }
       // thunderstorm
       if (weatherCode === 82 || weatherCode === 95 || weatherCode === 96 || weatherCode === 99) {
-        weather.icon = thunderstorm
+        weather.icon = weatherIcons.thunderstorm
         weather.condition = 'Thunderstorms'
       }
     }

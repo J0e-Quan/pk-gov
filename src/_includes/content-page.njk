@@ -1,7 +1,7 @@
 ---
 layout: base.njk
 layoutCss:
-  - /assets/styles/content-page.css
+  - "/assets/styles/content-page.css"
 ---
 <main data-pagefind-body>
   <section class="hero">
@@ -10,8 +10,8 @@ layoutCss:
     {% endif %}
     <h1 class="hero-title">{{ title }}</h1>
     <p class="hero-excerpt">{{ excerpt | safe }}</p>
-    {% if thumbnail %}
-      <img class="hero-thumbnail" src="{{ thumbnail }}", alt="{{ thumbnail-alt }}">
+    {% if thumbnail and thumbnail | trim %}
+      <img class="hero-thumbnail" src="{{ thumbnail }}" alt="{{ thumbnail-alt }}">
     {% endif %}
   </section>
   <section data-pagefind-ignore='all' class='table-of-contents-container'>
