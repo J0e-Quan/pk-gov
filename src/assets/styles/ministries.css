@@ -156,15 +156,6 @@ section:not(.hero, footer section) {
   animation-range-end: cover 25%;
 }
 
-@keyframes wipe-down {
-  0% {
-    clip-path: inset(0 0 100% 0);
-  }
-  100% {
-    clip-path: inset(0 0 0 0);
-  }
-}
-
 .minister.name {
   font-size: 3rem;
   scroll-margin-top: 45rem;

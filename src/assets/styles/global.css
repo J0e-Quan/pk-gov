@@ -498,6 +498,15 @@ pagefind-searchbox::part(input) {
 /* ALL KEYFRAME ANIMATIONS */
 
 
+@keyframes wipe-down {
+  0% {
+    clip-path: inset(0 0 100% 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
 @keyframes scale-out {
   0% {
     transform: scale(0);
