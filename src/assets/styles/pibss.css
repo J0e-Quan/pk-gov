@@ -130,14 +130,6 @@ button.filters-submit {
 .animate-shrink-grow {
   animation: shrink 0.3s ease-in-out 2 alternate;
 }
-@keyframes shrink {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(0);
-  }
-}
 .statistics .text {
   font-size: 4rem;
   margin-bottom: 4rem;

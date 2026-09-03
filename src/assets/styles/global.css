@@ -516,6 +516,15 @@ pagefind-searchbox::part(input) {
   }
 }
 
+@keyframes shrink {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
 /* DESKTOP/MOBILE SEARCHBAR MEDIA QUERY */
 @media (max-width: 50rem) {
   .search-mobile {
