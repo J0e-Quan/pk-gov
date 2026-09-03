@@ -43,7 +43,7 @@ This is where assets like fonts, pictures and CSS files are located.
 
 ### info/
 
-This is where the 'life in the plushie kingdom' pages are located. Any assets they use (such as photos) are taken from `info-media/`. Within `info-media/`, there should be a folder for each info page that uses media, named the same name as their corresponding .md file. All pages are generated with 11ty, so there is a template file provided.
+This is where the 'information' pages are located. Any assets they use (such as photos) are taken from `info-media/`. Within `info-media/`, there should be a folder for each info page that uses media, named the same name as their corresponding .md file. All pages are generated with 11ty, so there is a template file provided.
 
 ### ministries/
 
