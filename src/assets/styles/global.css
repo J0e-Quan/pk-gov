@@ -195,15 +195,6 @@ h2::before {
   animation-range-end: cover 50%;
 }
 
-@keyframes wipe-up {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(200%);
-  }
-}
-
 .title,
 h3 {
   font-size: 2.5rem;
