@@ -24,7 +24,7 @@ As Timeline is much smaller in scale and complexity compared to PIBSS, we've mad
 
 ### Accessing Timeline
 
-You can find Timeline's Start Page in the 'Life in the Plushie Kingdom' section of pk-gov, or by searching for it using the searchbar in the header. As usual, the Start Page contains basic information about the service such as its function and alternative sources for similar information, as well as a button that takes you to the service. Clicking 'Access Timeline' will take you to the Timeline page.
+You can find Timeline's Start Page in the homepage of pk-gov, or by searching for it using the searchbar in the header. As usual, the Start Page contains basic information about the service such as its function and alternative sources for similar information, as well as a button that takes you to the service. Clicking 'Access Timeline' will take you to the Timeline page.
 
 ### Information available in Timeline
 
