@@ -495,6 +495,18 @@ pagefind-searchbox::part(input) {
   padding-bottom: 0px;
 }
 
+/* ALL KEYFRAME ANIMATIONS */
+
+
+@keyframes scale-out {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 /* DESKTOP/MOBILE SEARCHBAR MEDIA QUERY */
 @media (max-width: 50rem) {
   .search-mobile {

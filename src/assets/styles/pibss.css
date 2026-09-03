@@ -62,15 +62,6 @@ select option {
   animation-range-end: cover 30%;
 }
 
-@keyframes scale-out {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
 .pibss-card-text {
   display: flex;
   flex-direction: column;

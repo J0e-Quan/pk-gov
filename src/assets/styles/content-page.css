@@ -50,15 +50,6 @@ section:not(.hero, footer section) {
   animation-range-end: cover 40%;
 }
 
-@keyframes scale-out {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
 .side-by-side {
   display: flex;
   flex-wrap: wrap;
