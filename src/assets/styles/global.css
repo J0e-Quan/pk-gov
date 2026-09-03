@@ -215,15 +215,6 @@ hr {
   border: none;
 }
 
-@keyframes wipe-right {
-  0% {
-    transform: scaleX(0);
-  }
-  100% {
-    transform: scaleX(1);
-  }
-}
-
 .all-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
@@ -448,15 +439,6 @@ footer .link:hover {
   text-decoration-thickness: 6px;
 }
 
-@keyframes wipe-up {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(200%);
-  }
-}
-
 .search-mobile {
   display: none;
 }
@@ -496,7 +478,23 @@ pagefind-searchbox::part(input) {
 }
 
 /* ALL KEYFRAME ANIMATIONS */
+@keyframes wipe-right {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
 
+@keyframes wipe-up {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(200%);
+  }
+}
 
 @keyframes wipe-down {
   0% {
@@ -684,6 +682,25 @@ pagefind-searchbox::part(input) {
   .end-buttons,
   h2::before,
   .download-buttons {
+    display: none;
+  }
+}
+
+/* DISABLES ALL ANIMATIONS AND MOTION FOR PEOPLE WHO PREFER REDUCED MOTION */
+@media (prefers-reduced-motion) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+    animation-timeline: auto !important;
+    transition: none;
+    animation: none;
+  }
+  .card-arrow {
+    transform: none !important;
+  }
+  .logo-frame {
     display: none;
   }
 }
