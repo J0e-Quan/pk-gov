@@ -80,6 +80,14 @@ if (printButton !== null) {
   })
 }
 
+// code for randomising bad guy outfit
+const path = '/assets/info-media/safety-and-residency/bad-guy-' + Math.floor(Math.random() * 6 ) + '.webp'
+console.log(path)
+const photoElement = document.querySelector('#bad-guy')
+if (photoElement !== null) {
+  photoElement.src = path
+}
+
 // code for opening/closing notification-modal
 const notificationsButton = document.querySelector('.notifications-button')
 if (notificationsButton !== null) {
