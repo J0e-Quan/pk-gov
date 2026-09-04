@@ -56,10 +56,15 @@ select option {
   flex-basis: 180px;
   flex-shrink: 0;
   height: auto;
-  animation: scale-out ease-out backwards;
-  animation-timeline: view();
-  animation-range-start: cover 10%;
-  animation-range-end: cover 30%;
+  animation-name: scale-out;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: backwards;
+  animation-play-state: paused;
+}
+
+.pibss-picture.show {
+  animation-play-state: running;
 }
 
 .pibss-card-text {
@@ -97,10 +102,18 @@ select option {
   width: 100%;
   height: 100%;
   background-color: white;
-  animation: wipe-up ease-out both;
-  animation-timeline: view();
-  animation-range-start: cover 10%;
-  animation-range-end: cover 50%;
+  animation-name: wipe-up;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
+  animation-play-state: paused;
+}
+
+.pibss-type.show::before,
+.pibss-country.show::before,
+.pibss-date.show::before,
+.pibss-location.show::before {
+  animation-play-state: running;
 }
 
 .search-input {

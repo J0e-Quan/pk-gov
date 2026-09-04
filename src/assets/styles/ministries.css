@@ -81,10 +81,15 @@ section:not(.hero, footer section) {
   background-size: contain;
   width: 600px;
   height: 800px;
-  animation: scale-out ease-out backwards;
-  animation-timeline: view();
-  animation-range-start: cover 10%;
-  animation-range-end: cover 40%;
+  animation-name: scale-out;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: backwards;
+  animation-play-state: paused;
+}
+
+.minister.picture.show {
+  animation-play-state: running;
 }
 
 /* MINISTER PHOTOS BEGIN */
@@ -150,11 +155,17 @@ section:not(.hero, footer section) {
   clip-path: inset(0 0 100% 0);
   border: 10px solid var(--theme);
   border-top: none;
-  animation: wipe-down ease both;
-  animation-timeline: view();
-  animation-range-start: cover 0%;
-  animation-range-end: cover 25%;
+  animation-name: wipe-down;
+  animation-duration: 0.3s;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+  animation-play-state: paused;
 }
+
+.minister.info-box.show::before {
+  animation-play-state: running;
+}
+
 
 .minister.name {
   font-size: 3rem;

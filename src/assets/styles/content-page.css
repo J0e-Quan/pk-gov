@@ -6,17 +6,6 @@ section:not(.hero, footer section) {
   padding: 2rem 0;
 }
 
-#air-as-food::before,
-#foreign-businesses-in-the-plushie-kingdom::before {
-  display: none;
-}
-
-#air-as-food + hr,
-#foreign-businesses-in-the-plushie-kingdom + hr {
-  animation: none;
-  transform: scaleX(1);
-}
-
 .page p {
   font-size: 1.5rem;
   margin-bottom: 2rem;
@@ -44,10 +33,15 @@ section:not(.hero, footer section) {
   width: 100%;
   height: auto;
   margin: 0rem 0;
-  animation: scale-out ease-out backwards;
-  animation-timeline: view();
-  animation-range-start: cover 10%;
-  animation-range-end: cover 40%;
+  animation-name: scale-out;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: backwards;
+  animation-play-state: paused;
+}
+
+.page img.show {
+  animation-play-state: running;
 }
 
 .side-by-side {
