@@ -18,6 +18,25 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 })
 
+// code for scroll-triggered animations
+const observerCallback = (entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show')
+      // this causes the animation to only play once
+      observer.unobserve(entry.target)
+    }
+  })
+}
+const observer = new IntersectionObserver(observerCallback, {
+  root: null,        // Uses the browser viewport
+  rootMargin: '0px', // Margin around the root
+  threshold: 0.2     // Trigger when 20% of the element is visible
+})
+document.querySelectorAll('.animate-on-scroll').forEach(el => {
+  observer.observe(el)
+})
+
 document.addEventListener('click', (e) => {
   // Check if the clicked element (or its parent) is a link
   const anchor = e.target.closest('a')
