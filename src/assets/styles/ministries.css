@@ -196,14 +196,6 @@ section:not(.hero, footer section) {
   .heading {
     font-size: 2rem;
   }
-  .ministers.heading::before {
-    animation-range-start: cover 35%;
-    animation-range-end: cover 65%;
-  }
-  .ministers hr {
-    animation-range-start: cover 25%;
-    animation-range-end: cover 45%;
-  }
   .minister {
     width: 100%;
   }
@@ -214,10 +206,6 @@ section:not(.hero, footer section) {
   }
   .minister.info-box {
     padding: 0 1rem;
-  }
-  .minister.info-box::before {
-    animation-range-start: cover 0%;
-    animation-range-end: cover 20%;
   }
   .minister.name {
     font-size: 1.5rem;

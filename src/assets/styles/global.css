@@ -588,8 +588,6 @@ pagefind-searchbox::part(input) {
   }
   hr {
     margin-bottom: 1rem;
-    animation-range-start: cover 0%;
-    animation-range-end: cover 20%;
   } 
   .all-cards {
     display: flex;
@@ -620,10 +618,6 @@ pagefind-searchbox::part(input) {
     flex-direction: column;
     flex-wrap: nowrap;
     padding: 2rem 3rem 3rem 3rem;
-  }
-  .footer-title::before {
-    animation-range-start: cover 5%;
-    animation-range-end: cover 35%;
   }
   footer .link {
     font-size: 1rem;
