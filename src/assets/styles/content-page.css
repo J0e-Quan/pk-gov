@@ -108,6 +108,8 @@ button.share,
   animation-timing-function: ease-out;
   animation-fill-mode: backwards;
   animation-play-state: paused;
+  /* fallback image if js is disabled or doesn't work */
+  background-image: url('/assets/info-media/safety-and-residency/bad-guy-0.webp');
 }
 
 .bad-guy.show {
