@@ -1,3 +1,12 @@
+const badGuyImages = [
+  '/assets/info-media/safety-and-residency/bad-guy-0.webp?url',
+  '/assets/info-media/safety-and-residency/bad-guy-1.webp?url',
+  '/assets/info-media/safety-and-residency/bad-guy-2.webp?url',
+  '/assets/info-media/safety-and-residency/bad-guy-3.webp?url',
+  '/assets/info-media/safety-and-residency/bad-guy-4.webp?url',
+  '/assets/info-media/safety-and-residency/bad-guy-5.webp?url',
+]
+
 const THREE_SECONDS = 3000
 
 // code for opening pagefind modal for search-mobile
@@ -102,11 +111,9 @@ if (printButton !== null) {
 }
 
 // code for randomising bad guy outfit
-const path = '/assets/info-media/safety-and-residency/bad-guy-' + Math.floor(Math.random() * 6 ) + '.webp'
-console.log(path)
 const photoElement = document.querySelector('#bad-guy')
 if (photoElement !== null) {
-  photoElement.src = path
+  photoElement.src = badGuyImages[Math.floor(Math.random() * 6 )]
 }
 
 // code for opening/closing notification-modal
