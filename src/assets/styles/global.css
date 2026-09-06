@@ -544,6 +544,31 @@ pagefind-searchbox::part(input) {
   }
 }
 
+/* DISABLES ALL ANIMATIONS AND MOTION FOR PEOPLE WHO PREFER REDUCED MOTION */
+@media (prefers-reduced-motion) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+    animation-timeline: auto !important;
+    transition: none;
+    animation: none;
+  }
+  .card-arrow {
+    transform: none !important;
+  }
+  .logo-frame {
+    display: none;
+  }
+  .heading::before, h2::before {
+    display: none;
+  }
+  img, .minister.picture, .bad-guy {
+    transform: scale(1) !important;
+  }
+}
+
 /* DESKTOP/MOBILE SEARCHBAR MEDIA QUERY */
 @media (max-width: 50rem) {
   .search-mobile {
@@ -698,30 +723,5 @@ pagefind-searchbox::part(input) {
   h2::before,
   .download-buttons {
     display: none;
-  }
-}
-
-/* DISABLES ALL ANIMATIONS AND MOTION FOR PEOPLE WHO PREFER REDUCED MOTION */
-@media (prefers-reduced-motion) {
-  *, ::before, ::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-    animation-timeline: auto !important;
-    transition: none;
-    animation: none;
-  }
-  .card-arrow {
-    transform: none !important;
-  }
-  .logo-frame {
-    display: none;
-  }
-  .heading::before, h2::before {
-    display: none;
-  }
-  img, .minister.picture {
-    transform: scale(1) !important;
   }
 }
