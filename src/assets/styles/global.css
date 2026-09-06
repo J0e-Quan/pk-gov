@@ -718,4 +718,10 @@ pagefind-searchbox::part(input) {
   .logo-frame {
     display: none;
   }
+  .heading::before, h2::before {
+    display: none;
+  }
+  img, .minister.picture {
+    transform: scale(1) !important;
+  }
 }
