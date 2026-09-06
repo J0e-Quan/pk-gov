@@ -103,6 +103,15 @@ button.share,
   background-position: center;
   background-repeat: no-repeat;
   aspect-ratio: 9 / 14;
+  animation-name: scale-out;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: backwards;
+  animation-play-state: paused;
+}
+
+.bad-guy.show {
+  animation-play-state: running;
 }
 
 #bad-guy-0 {

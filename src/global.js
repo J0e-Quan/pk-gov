@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // code for scroll-triggered animations
 // pibss elements are not included here because they are created dynamically, not on page load!
-const elementsToAnimate = '.heading, h2, hr, img, .minister.picture, .minister.info-box, .footer-title, footer hr'
+const elementsToAnimate = '.heading, h2, hr, img, .minister.picture, .minister.info-box, .bad-guy, .footer-title, footer hr'
 const observerCallback = (entries, observer) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
