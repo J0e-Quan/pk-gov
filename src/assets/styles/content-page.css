@@ -56,7 +56,7 @@ section:not(.hero, footer section) {
   flex-basis: 600px;
 }
 
-.side-by-side img {
+.side-by-side img, .side-by-side .bad-guy {
   flex-grow: 1;
   flex-basis: 300px;
   min-width: 0;
@@ -96,6 +96,37 @@ button.share,
 .button {
   margin-left: 2rem;
   margin-right: 2rem;
+}
+
+.bad-guy {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 9 / 14;
+}
+
+#bad-guy-0 {
+  background-image: url('/assets/info-media/safety-and-residency/bad-guy-0.webp');
+}
+
+#bad-guy-1 {
+  background-image: url('/assets/info-media/safety-and-residency/bad-guy-1.webp');
+}
+
+#bad-guy-2 {
+  background-image: url('/assets/info-media/safety-and-residency/bad-guy-2.webp');
+}
+
+#bad-guy-3 {
+  background-image: url('/assets/info-media/safety-and-residency/bad-guy-3.webp');
+}
+
+#bad-guy-4 {
+  background-image: url('/assets/info-media/safety-and-residency/bad-guy-4.webp');
+}
+
+#bad-guy-5 {
+  background-image: url('/assets/info-media/safety-and-residency/bad-guy-5.webp');
 }
 
 .colours-list {

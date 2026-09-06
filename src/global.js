@@ -1,12 +1,3 @@
-const badGuyImages = [
-  '/bad-guy-pics/bad-guy-0.webp',
-  '/bad-guy-pics/bad-guy-1.webp',
-  '/bad-guy-pics/bad-guy-2.webp',
-  '/bad-guy-pics/bad-guy-3.webp',
-  '/bad-guy-pics/bad-guy-4.webp',
-  '/bad-guy-pics/bad-guy-5.webp',
-]
-
 const THREE_SECONDS = 3000
 
 // code for opening pagefind modal for search-mobile
@@ -111,9 +102,9 @@ if (printButton !== null) {
 }
 
 // code for randomising bad guy outfit
-const photoElement = document.querySelector('#bad-guy')
+const photoElement = document.querySelector('.bad-guy')
 if (photoElement !== null) {
-  photoElement.src = badGuyImages[Math.floor(Math.random() * 6 )]
+  photoElement.id = 'bad-guy-' + Math.floor(Math.random() * 6 )
 }
 
 // code for opening/closing notification-modal
