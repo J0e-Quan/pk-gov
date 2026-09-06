@@ -1,5 +1,5 @@
 const weatherIcons = {
-  sunny: '/weather-icons/sunny.svg',
+  sunny: '/weather-icons/sunny.svg?url',
   night:  '/weather-icons/night.svg?url',
   cloudy:  '/weather-icons/cloudy.svg?url',
   sunnyCloudy: '/weather-icons/sunny-cloudy.svg?url',

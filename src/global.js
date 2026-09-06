@@ -1,10 +1,10 @@
 const badGuyImages = [
-  '/assets/info-media/safety-and-residency/bad-guy-0.webp?url',
-  '/assets/info-media/safety-and-residency/bad-guy-1.webp?url',
-  '/assets/info-media/safety-and-residency/bad-guy-2.webp?url',
-  '/assets/info-media/safety-and-residency/bad-guy-3.webp?url',
-  '/assets/info-media/safety-and-residency/bad-guy-4.webp?url',
-  '/assets/info-media/safety-and-residency/bad-guy-5.webp?url',
+  '/bad-guy-pics/bad-guy-0.webp',
+  '/bad-guy-pics/bad-guy-1.webp',
+  '/bad-guy-pics/bad-guy-2.webp',
+  '/bad-guy-pics/bad-guy-3.webp',
+  '/bad-guy-pics/bad-guy-4.webp',
+  '/bad-guy-pics/bad-guy-5.webp',
 ]
 
 const THREE_SECONDS = 3000

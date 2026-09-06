@@ -122,7 +122,8 @@ export default async function (eleventyConfig) {
   eleventyConfig.addWatchTarget('./dist/*.js')
   eleventyConfig.addWatchTarget('./dist/*.css')
   eleventyConfig.addPassthroughCopy('src/**/*.js')
-  eleventyConfig.addPassthroughCopy('src/assets/*')
+  eleventyConfig.addPassthroughCopy('src/assets/**/*')
+  eleventyConfig.addPassthroughCopy({ "public": "/" });
   eleventyConfig.addPassthroughCopy({ 'src/OneSignalSDKWorker.js': 'OneSignalSDKWorker.js' })
 
   // tells eleventy to ignore all .md files beginning with _

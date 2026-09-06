@@ -29,7 +29,7 @@ If you are unfortunately involved in a dangerous or risky scenario, don't try to
 
 <div class='side-by-side three'>
   <p>If you are sure you've seen the Bad Guy near the Plushie Kingdom, and believe he's up to no good, inform your nearest Ministry of Defence staff member as soon as possible. (For new citizens, here's a sketch of his appearance. His outfit may change from time to time but his overall physique and weight probably won't) </p>
-  <img id='bad-guy' src='/assets/info-media/safety-and-residency/bad-guy-0.webp' alt='Sketch of Bad Guy'>
+  <img id='bad-guy' src='' alt='Sketch of Bad Guy'>
 </div>
 
 ## Temporary shelters
