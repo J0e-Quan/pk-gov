@@ -71,7 +71,7 @@ function showNextHoliday() {
   const holidayDate = document.createElement('p')
   holidayDate.classList.add('next-ph-date')
   const date = getHolidayDate(data[0].date)
-  const dateDetails = getDaysLeft(data[0].date)
+  const dateDetails = getDateDetails(data[0].date)
   if (dateDetails.isToday === true) {
     holidayDate.textContent = dateDetails.holidayDayName + ', ' + date + " (It's today!)"
   } else if (dateDetails.daysLeft !== 1) {
@@ -91,7 +91,7 @@ function getHolidayDate(inputDate) {
   })
 }
 
-function getDaysLeft(inputDate) {
+function getDateDetails(inputDate) {
   // holiday date and current date are converted to milliseconds, the difference is divided by MS_PER_DAY
   // to get number of days between the two dates
   const holidayDate = new Date(inputDate)
