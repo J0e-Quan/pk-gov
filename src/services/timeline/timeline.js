@@ -90,10 +90,13 @@ function getDaysLeft(inputDate) {
   // to get number of days between the two dates
   const holidayDate = new Date(inputDate)
   const currentDate = new Date()
+  // standardise both to local time midnight to prevent time zones causing incorrect day counts
+  const holidayMidnight = new Date(holidayDate.getFullYear(), holidayDate.getMonth(), holidayDate.getDate())
+  const currentMidnight = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate())
   const MS_PER_DAY = 1000 * 60 * 60 * 24
   // Math.abs() gives absolute value to avoid negative numbers
-  const msDiff = Math.abs(holidayDate - currentDate)
-  return Math.round(msDiff / MS_PER_DAY)
+  const msDiff = Math.abs(holidayMidnight - currentMidnight)
+  return Math.ceil(msDiff / MS_PER_DAY)
 }
 
 function showAllHolidays() {
