@@ -74,8 +74,10 @@ function showNextHoliday() {
   const daysLeft = getDaysLeft(data[0].date)
   if (daysLeft === "It's today!") {
     holidayDate.textContent = 'on ' + date + ' (' + daysLeft + ')'
-  } else {
+  } else if (daysLeft !== 1) {
     holidayDate.textContent = 'on ' + date + ' (' + daysLeft + ' days from today)'
+  } else {
+    holidayDate.textContent = 'on ' + date + ' (' + daysLeft + ' day from today)'
   }
   container.appendChild(holidayDate)
 }
