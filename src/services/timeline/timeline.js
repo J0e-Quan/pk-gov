@@ -71,13 +71,13 @@ function showNextHoliday() {
   const holidayDate = document.createElement('p')
   holidayDate.classList.add('next-ph-date')
   const date = getHolidayDate(data[0].date)
-  const daysLeft = getDaysLeft(data[0].date)
-  if (daysLeft === "It's today!") {
-    holidayDate.textContent = 'on ' + date + ' (' + daysLeft + ')'
-  } else if (daysLeft !== 1) {
-    holidayDate.textContent = 'on ' + date + ' (' + daysLeft + ' days from today)'
+  const dateDetails = getDaysLeft(data[0].date)
+  if (dateDetails.isToday === true) {
+    holidayDate.textContent = dateDetails.holidayDayName + ', ' + date + " (It's today!)"
+  } else if (dateDetails.daysLeft !== 1) {
+    holidayDate.textContent = dateDetails.holidayDayName + ', ' + date + ' (' + dateDetails.daysLeft + ' days from today)'
   } else {
-    holidayDate.textContent = 'on ' + date + ' (' + daysLeft + ' day from today)'
+    holidayDate.textContent = dateDetails.holidayDayName + ', ' + date + ' (' + dateDetails.daysLeft + ' day from today)'
   }
   container.appendChild(holidayDate)
 }
@@ -102,10 +102,21 @@ function getDaysLeft(inputDate) {
   const MS_PER_DAY = 1000 * 60 * 60 * 24
   // Math.abs() gives absolute value to avoid negative numbers
   const msDiff = Math.abs(holidayMidnight - currentMidnight)
+  const daysLeft = Math.ceil(msDiff / MS_PER_DAY)
+  const DAY_NAMES = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+  const holidayDayName = DAY_NAMES[holidayDate.getDay()]
   if (msDiff !== 0) {
-    return Math.ceil(msDiff / MS_PER_DAY)
+    return {
+      daysLeft,
+      holidayDayName,
+      isToday: false
+    }
   } else {
-    return "It's today!"
+    return {
+      daysLeft,
+      holidayDayName,
+      isToday: true
+    }
   }
 }
 
