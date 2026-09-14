@@ -8,6 +8,8 @@ excerpt: A new look arrives for the homepage and footer to streamline navigation
 thumbnail: /assets/news-media/step-forward-with-the-new-revamp-of-pk-gov/thumbnail.webp
 ---
 
+(NOTE: The video event for this set of updates is available on <a class='link' href='https://www.youtube.com/watch?v=IBzQkPiUDcY' target='_blank' rel='noreferrer'>our YouTube channel</a>)
+
 As pk-gov expands from a simple informational site into a sprawling Government resource filled with helpful information and services, navigation of the website has become more difficult. Simple actions required scrolling and clicking through several layers of pages before finally landing on the desired page. Today, we're introducing another set of updates that aim to improve the navigation of pk-gov, among other improvements to the website.
 
 ## Revamped look
