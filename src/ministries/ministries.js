@@ -7,8 +7,8 @@ const lottieFiles = import.meta.glob('../assets/lottie/*.json')
 getAnimation()
 
 async function getAnimation() {
-  const animationContainer = document.querySelector('html')
-  const animationName = animationContainer.classList.value
+  const animationContainer = document.querySelector('main')
+  const animationName = animationContainer.dataset.lottie
   const path = `../assets/lottie/${animationName}.json`
   try {
     const logo = await lottieFiles[path]()

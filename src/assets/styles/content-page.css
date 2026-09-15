@@ -6,17 +6,6 @@ section:not(.hero, footer section) {
   padding: 2rem 0;
 }
 
-#air-as-food::before,
-#foreign-businesses-in-the-plushie-kingdom::before {
-  display: none;
-}
-
-#air-as-food + hr,
-#foreign-businesses-in-the-plushie-kingdom + hr {
-  animation: none;
-  transform: scaleX(1);
-}
-
 .page p {
   font-size: 1.5rem;
   margin-bottom: 2rem;
@@ -44,19 +33,15 @@ section:not(.hero, footer section) {
   width: 100%;
   height: auto;
   margin: 0rem 0;
-  animation: scale-out ease-out backwards;
-  animation-timeline: view();
-  animation-range-start: cover 10%;
-  animation-range-end: cover 40%;
+  animation-name: scale-out;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: backwards;
+  animation-play-state: paused;
 }
 
-@keyframes scale-out {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
+.page img.show {
+  animation-play-state: running;
 }
 
 .side-by-side {
@@ -71,7 +56,7 @@ section:not(.hero, footer section) {
   flex-basis: 600px;
 }
 
-.side-by-side img {
+.side-by-side img, .side-by-side .bad-guy {
   flex-grow: 1;
   flex-basis: 300px;
   min-width: 0;
@@ -111,6 +96,48 @@ button.share,
 .button {
   margin-left: 2rem;
   margin-right: 2rem;
+}
+
+.bad-guy {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 9 / 14;
+  animation-name: scale-out;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: backwards;
+  animation-play-state: paused;
+  /* fallback image if js is disabled or doesn't work */
+  background-image: url('/assets/info-media/safety-and-residency/bad-guy-0.webp');
+}
+
+.bad-guy.show {
+  animation-play-state: running;
+}
+
+#bad-guy-0 {
+  background-image: url('/assets/info-media/safety-and-residency/bad-guy-0.webp');
+}
+
+#bad-guy-1 {
+  background-image: url('/assets/info-media/safety-and-residency/bad-guy-1.webp');
+}
+
+#bad-guy-2 {
+  background-image: url('/assets/info-media/safety-and-residency/bad-guy-2.webp');
+}
+
+#bad-guy-3 {
+  background-image: url('/assets/info-media/safety-and-residency/bad-guy-3.webp');
+}
+
+#bad-guy-4 {
+  background-image: url('/assets/info-media/safety-and-residency/bad-guy-4.webp');
+}
+
+#bad-guy-5 {
+  background-image: url('/assets/info-media/safety-and-residency/bad-guy-5.webp');
 }
 
 .colours-list {

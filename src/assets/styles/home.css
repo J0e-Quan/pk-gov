@@ -13,114 +13,46 @@ h2.title::before {
   display: none;
 }
 
-.ministries {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 20vw));
-  grid-auto-rows: auto;
-  place-content: center;
-  padding: 0rem 5rem;
+.ministry-icon {
+  flex-shrink: 1;
+  min-width: 0;
+  height: auto;
 }
 
-.ministries a {
-  background-color: white;
-  place-self: center;
-  height: 20vw;
-  width: 20vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid white;
-  transition: border 0.2s;
-  will-change: border;
+.ministry.central.card:hover {
+  box-shadow: inset 0 0 0 16px var(--central-ministry-colour);
 }
 
-a svg {
-  height: 15vw;
-  width: 15vw;
+.ministry.food.card:hover {
+  box-shadow: inset 0 0 0 16px var(--ministry-of-food-colour);
 }
 
-.ministries a:hover.central-ministry {
-  border: 16px solid var(--central-ministry-colour);
+.ministry.foreign-affairs.card:hover {
+  box-shadow: inset 0 0 0 16px var(--ministry-of-foreign-affairs-colour);
 }
 
-.ministries a:hover.ministry-of-food {
-  border: 16px solid var(--ministry-of-food-colour);
+.ministry.health.card:hover {
+  box-shadow: inset 0 0 0 16px var(--ministry-of-health-colour);
 }
 
-.ministries a:hover.ministry-of-foreign-affairs {
-  border: 16px solid var(--ministry-of-foreign-affairs-colour);
+.ministry.finance.card:hover {
+  box-shadow: inset 0 0 0 16px var(--ministry-of-finance-colour);
 }
 
-.ministries a:hover.ministry-of-health {
-  border: 16px solid var(--ministry-of-health-colour);
+.ministry.immigration.card:hover {
+  box-shadow: inset 0 0 0 16px var(--ministry-of-immigration-colour);
 }
 
-.ministries a:hover.ministry-of-finance {
-  border: 16px solid var(--ministry-of-finance-colour);
+.ministry.technology.card:hover {
+  box-shadow: inset 0 0 0 16px var(--ministry-of-technology-colour);
 }
 
-.ministries a:hover.ministry-of-immigration {
-  border: 16px solid var(--ministry-of-immigration-colour);
+.ministry.defence.card:hover {
+  box-shadow: inset 0 0 0 16px var(--ministry-of-defence-colour);
 }
 
-.ministries a:hover.ministry-of-technology {
-  border: 16px solid var(--ministry-of-technology-colour);
-}
-
-.ministries a:hover.ministry-of-defence {
-  border: 16px solid var(--ministry-of-defence-colour);
-}
-
-.other-resources {
-  padding: 0rem 3rem 4rem 3rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(40rem, 1fr));
-  justify-content: center;
-}
-
-.other-resources div {
-  flex-grow: 1;
-  padding: 1rem 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.other-resources .title {
-  font-size: 3rem;
-}
-
-.other-resources .text {
-  font-size: 1.5rem;
-}
-
-.other-resources .cta {
-  width: fit-content;
-  padding: 1rem 2rem;
-  font-size: 2rem;
-  font-family: var(--mona-sans);
-  color: black;
-  box-shadow: inset 0 0 0 0px var(--central-ministry-colour);
-  border: 16px solid var(--central-ministry-colour);
-  transition:
-    box-shadow 0.4s ease-in-out,
-    color 0.4s ease-in-out;
-  will-change: box-shadow, color;
-}
-
-.other-resources .cta:hover {
-  box-shadow: inset 0 0 0 400px var(--central-ministry-colour);
-  color: white;
-}
-
-.logo-frame {
-  height: 300px;
-  overflow: hidden;
-  position: relative;
-}
-
-.logo-lottie {
-  transform: translateY(-25%);
+section:not(footer section) {
+  padding: 48px 64px;
 }
 
 /* MEDIA QUERIES BELOW */
@@ -133,32 +65,6 @@ a svg {
     font-size: 2.5rem;
   }
   .hero-text {
-    font-size: 1.5rem;
-  }
-  .ministries {
-    grid-template-columns: repeat(auto-fit, minmax(100px, 40vw));
-    grid-auto-rows: 40vw;
-  }
-  .ministries a {
-    height: 40vw;
-    width: 40vw;
-  }
-  a svg {
-    height: 35vw;
-    width: 35vw;
-  }
-  section.other-resources {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem 0;
-  }
-  .other-resources .title {
-    font-size: 2rem;
-  }
-  .other-resources .text {
-    font-size: 1rem;
-  }
-  .other-resources .cta {
     font-size: 1.5rem;
   }
 }

@@ -7,7 +7,7 @@ thumbnail:
 ---
 
 <div class='start-buttons'>
-  <a class='button' href='/timeline/'>Access Timeline</a>
+  <a class='button' href='/services/timeline/'>Access Timeline</a>
 </div>
 
 ## What is this service?

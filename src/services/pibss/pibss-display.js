@@ -40,6 +40,21 @@ function updateResultsText() {
   }
 }
 
+const observerCallback = (entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show')
+      // this causes the animation to only play once
+      observer.unobserve(entry.target)
+    }
+  })
+}
+const observer = new IntersectionObserver(observerCallback, {
+  root: null,        // Uses the browser viewport
+  rootMargin: '0px', // Margin around the root
+  threshold: 0.3     // Trigger when 30% of the element is visible
+})
+
 function renderEntries(data) {
   clearEntries()
   if (data === null) {
@@ -101,6 +116,9 @@ function renderEntries(data) {
     card.appendChild(cardText)
     container.appendChild(card)
   }
+  document.querySelectorAll('.pibss-picture, .pibss-name, .pibss-type, .pibss-date, .pibss-country, .pibss-location').forEach(el => {
+    observer.observe(el)
+  })
 }
 
 async function getPlushieTypes() {

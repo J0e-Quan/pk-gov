@@ -189,19 +189,16 @@ h2::before {
   width: 100%;
   height: 100%;
   background-color: white;
-  animation: wipe-up ease-out both;
-  animation-timeline: view();
-  animation-range-start: cover 10%;
-  animation-range-end: cover 50%;
+  animation-name: wipe-up;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
+  animation-play-state: paused;
 }
 
-@keyframes wipe-up {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(200%);
-  }
+.heading.show::before,
+h2.show::before {
+  animation-play-state: running;
 }
 
 .title,
@@ -217,20 +214,107 @@ hr {
   background-color: var(--theme, var(--central-ministry-colour));
   margin-bottom: 2rem;
   transform-origin: left;
-  animation: wipe-right ease-in both;
-  animation-timeline: view();
-  animation-range-start: cover 0%;
-  animation-range-end: cover 30%;
   border: none;
+  animation-name: wipe-right;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: both;
+  animation-play-state: paused;
 }
 
-@keyframes wipe-right {
-  0% {
-    transform: scaleX(0);
-  }
-  100% {
-    transform: scaleX(1);
-  }
+hr.show {
+  animation-play-state: running;
+}
+
+.all-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+  justify-content: center;
+}
+
+.all-cards:has(.ministry) {
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  position: relative;
+  box-shadow: inset 0 0 0 0px var(--central-ministry-colour);
+  transition: box-shadow 0.3s;
+  will-change: box-shadow;
+  padding: 24px 32px 40px;
+}
+
+.card-title {
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+  position: inherit;
+}
+
+.ministry .card-title {
+  margin-bottom: 0;
+}
+
+.card-title::before {
+  display: none;
+}
+
+.card:hover {
+  box-shadow: inset 0 0 0 16px var(--central-ministry-colour);
+}
+
+.card-text {
+  display: block;
+  flex: 1 0 80%;
+}
+
+.ministry .card-text {
+  flex: 1 0 60%;
+}
+
+.card-link {
+  color: inherit;
+  font-size: 3rem;
+  font-family: var(--plex-sans);
+}
+
+.card-link::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.card-description {
+  font-size: 1.5rem;
+}
+
+.ministry .card-description {
+  font-family: var(--plex-sans);
+  font-size: 2rem;
+}
+
+.card-arrow {
+  text-align: center;
+  font-size: 80px;
+  padding: 0;
+  flex-basis: auto;
+  justify-content: center;
+  align-items: center;
+  transform: scaleY(1);
+  transition: 0.3s transform;
+  position: inherit;
+  pointer-events: none;
+}
+
+.card:hover .card-arrow {
+  transform: scaleY(3) scaleX(1.5);
 }
 
 .end-buttons {  
@@ -299,10 +383,15 @@ footer {
   width: 100%;
   height: 100%;
   background-color: var(--theme, var(--central-ministry-colour));
-  animation: wipe-up ease-out both;
-  animation-timeline: view();
-  animation-range-start: cover 5%;
-  animation-range-end: cover 20%;
+  animation-name: wipe-up;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
+  animation-play-state: paused;
+}
+
+.footer-title.show::before {
+  animation-play-state: running;
 }
 
 footer hr {
@@ -311,22 +400,18 @@ footer hr {
   background-color: var(--theme-accent, white);
   margin-bottom: 1rem;
   transform-origin: left;
-  animation: wipe-right ease-in both;
-  animation-timeline: view();
-  animation-range-start: cover 0%;
-  animation-range-end: cover 10%;
+  animation-name: wipe-right;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: both;
+  animation-play-state: paused;
 }
 
-.footer-ministries.links {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-auto-rows: fit-content;
-  row-gap: 0.5rem;
-  column-gap: 1rem;
+footer hr.show {
+  animation-play-state: running;
 }
 
-.footer-resources.links,
-.footer-about.links {
+.footer-links-list {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -375,15 +460,6 @@ footer .link:hover {
   text-decoration-thickness: 6px;
 }
 
-@keyframes wipe-up {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(200%);
-  }
-}
-
 .search-mobile {
   display: none;
 }
@@ -422,6 +498,77 @@ pagefind-searchbox::part(input) {
   padding-bottom: 0px;
 }
 
+/* ALL KEYFRAME ANIMATIONS */
+@keyframes wipe-right {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes wipe-up {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(200%);
+  }
+}
+
+@keyframes wipe-down {
+  0% {
+    clip-path: inset(0 0 100% 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes scale-out {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes shrink {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+/* DISABLES ALL ANIMATIONS AND MOTION FOR PEOPLE WHO PREFER REDUCED MOTION */
+@media (prefers-reduced-motion) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+    animation-timeline: auto !important;
+    transition: none;
+    animation: none;
+  }
+  .card-arrow {
+    transform: none !important;
+  }
+  .logo-frame {
+    display: none;
+  }
+  .heading::before, h2::before {
+    display: none;
+  }
+  img, .minister.picture, .bad-guy {
+    transform: scale(1) !important;
+  }
+}
+
 /* DESKTOP/MOBILE SEARCHBAR MEDIA QUERY */
 @media (max-width: 50rem) {
   .search-mobile {
@@ -446,7 +593,8 @@ pagefind-searchbox::part(input) {
   }
   .heading,
   h2,
-  .table-of-contents-title {
+  .table-of-contents-title,
+  .card-link {
     font-size: 2rem;
   }
   .toc-item-h2 {
@@ -465,8 +613,28 @@ pagefind-searchbox::part(input) {
   }
   hr {
     margin-bottom: 1rem;
-    animation-range-start: cover 0%;
-    animation-range-end: cover 20%;
+  } 
+  .all-cards {
+    display: flex;
+    flex-direction: column;
+  }
+  .card {
+    padding: 16px 24px;
+    max-width: 100%;
+  }
+  .card-text {
+    flex-shrink: 1;
+    flex-basis: auto;
+  }
+  .ministry .card-link {
+    font-size: 1.5rem;
+  }
+  .card-description, .ministry .card-description {
+    font-size: 1rem;
+  }
+  .card-arrow {
+    font-size: 48px;
+    flex-shrink: 0;
   }
   .link:hover:not(.footer.link) {
     text-underline-offset: 0.15em;
@@ -475,10 +643,6 @@ pagefind-searchbox::part(input) {
     flex-direction: column;
     flex-wrap: nowrap;
     padding: 2rem 3rem 3rem 3rem;
-  }
-  .footer-title::before {
-    animation-range-start: cover 5%;
-    animation-range-end: cover 35%;
   }
   footer .link {
     font-size: 1rem;

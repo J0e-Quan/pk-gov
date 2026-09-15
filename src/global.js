@@ -1,5 +1,3 @@
-import './assets/styles/global.css'
-
 const THREE_SECONDS = 3000
 
 // code for opening pagefind modal for search-mobile
@@ -18,6 +16,27 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     })
   }
+})
+
+// code for scroll-triggered animations
+// pibss elements are not included here because they are created dynamically, not on page load!
+const elementsToAnimate = '.heading, h2, hr, img, .minister.picture, .minister.info-box, .bad-guy, .footer-title, footer hr'
+const observerCallback = (entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show')
+      // this causes the animation to only play once
+      observer.unobserve(entry.target)
+    }
+  })
+}
+const observer = new IntersectionObserver(observerCallback, {
+  root: null,        // Uses the browser viewport
+  rootMargin: '0px', // Margin around the root
+  threshold: 0.3     // Trigger when 30% of the element is visible
+})
+document.querySelectorAll(elementsToAnimate).forEach(el => {
+  observer.observe(el)
 })
 
 document.addEventListener('click', (e) => {
@@ -80,6 +99,12 @@ if (printButton !== null) {
   printButton.addEventListener('click', () => {
     window.print()
   })
+}
+
+// code for randomising bad guy outfit
+const photoElement = document.querySelector('.bad-guy')
+if (photoElement !== null) {
+  photoElement.id = 'bad-guy-' + Math.floor(Math.random() * 6 )
 }
 
 // code for opening/closing notification-modal

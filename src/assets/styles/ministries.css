@@ -81,68 +81,64 @@ section:not(.hero, footer section) {
   background-size: contain;
   width: 600px;
   height: 800px;
-  animation: scale-out ease-out backwards;
-  animation-timeline: view();
-  animation-range-start: cover 10%;
-  animation-range-end: cover 40%;
+  animation-name: scale-out;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: backwards;
+  animation-play-state: paused;
 }
 
-@keyframes scale-out {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
+.minister.picture.show {
+  animation-play-state: running;
 }
 
 /* MINISTER PHOTOS BEGIN */
 #pbb {
-  background-image: url('../pictures/ministers/pbb.webp');
+  background-image: url('/assets/pictures/ministers/pbb.webp');
 }
 
 #apb {
-  background-image: url('../pictures/ministers/apb.webp');
+  background-image: url('/assets/pictures/ministers/apb.webp');
 }
 
 #capybara {
-  background-image: url('../pictures/ministers/capybara.webp');
+  background-image: url('/assets/pictures/ministers/capybara.webp');
 }
 
 #paddington {
-  background-image: url('../pictures/ministers/paddington.webp');
+  background-image: url('/assets/pictures/ministers/paddington.webp');
 }
 
 #som-ting-wong {
-  background-image: url('../pictures/ministers/som-ting-wong.webp');
+  background-image: url('/assets/pictures/ministers/som-ting-wong.webp');
 }
 
 #ho-lee-fook {
-  background-image: url('../pictures/ministers/ho-lee-fook.webp');
+  background-image: url('/assets/pictures/ministers/ho-lee-fook.webp');
 }
 
 #cimb-octo {
-  background-image: url('../pictures/ministers/cimb-octo.webp');
+  background-image: url('/assets/pictures/ministers/cimb-octo.webp');
 }
 
 #pikachu {
-  background-image: url('../pictures/ministers/pikachu.webp');
+  background-image: url('/assets/pictures/ministers/pikachu.webp');
 }
 
 #blinky {
-  background-image: url('../pictures/ministers/blinky.webp');
+  background-image: url('/assets/pictures/ministers/blinky.webp');
 }
 
 #android {
-  background-image: url('../pictures/ministers/android.webp');
+  background-image: url('/assets/pictures/ministers/android.webp');
 }
 
 #kodee {
-  background-image: url('../pictures/ministers/kodee.webp');
+  background-image: url('/assets/pictures/ministers/kodee.webp');
 }
 
 #stitch {
-  background-image: url('../pictures/ministers/stitch.webp');
+  background-image: url('/assets/pictures/ministers/stitch.webp');
 }
 /* MINISTER PHOTOS END */
 
@@ -159,20 +155,17 @@ section:not(.hero, footer section) {
   clip-path: inset(0 0 100% 0);
   border: 10px solid var(--theme);
   border-top: none;
-  animation: wipe-down ease both;
-  animation-timeline: view();
-  animation-range-start: cover 0%;
-  animation-range-end: cover 25%;
+  animation-name: wipe-down;
+  animation-duration: 0.3s;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+  animation-play-state: paused;
 }
 
-@keyframes wipe-down {
-  0% {
-    clip-path: inset(0 0 100% 0);
-  }
-  100% {
-    clip-path: inset(0 0 0 0);
-  }
+.minister.info-box.show::before {
+  animation-play-state: running;
 }
+
 
 .minister.name {
   font-size: 3rem;
@@ -203,14 +196,6 @@ section:not(.hero, footer section) {
   .heading {
     font-size: 2rem;
   }
-  .ministers.heading::before {
-    animation-range-start: cover 35%;
-    animation-range-end: cover 65%;
-  }
-  .ministers hr {
-    animation-range-start: cover 25%;
-    animation-range-end: cover 45%;
-  }
   .minister {
     width: 100%;
   }
@@ -221,10 +206,6 @@ section:not(.hero, footer section) {
   }
   .minister.info-box {
     padding: 0 1rem;
-  }
-  .minister.info-box::before {
-    animation-range-start: cover 0%;
-    animation-range-end: cover 20%;
   }
   .minister.name {
     font-size: 1.5rem;
