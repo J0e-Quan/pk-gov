@@ -71,8 +71,14 @@ function showNextHoliday() {
   const holidayDate = document.createElement('p')
   holidayDate.classList.add('next-ph-date')
   const date = getHolidayDate(data[0].date)
-  const daysLeft = getDaysLeft(data[0].date)
-  holidayDate.textContent = 'on ' + date + ' (' + daysLeft + ' days from today)'
+  const dateDetails = getDateDetails(data[0].date)
+  if (dateDetails.isToday === true) {
+    holidayDate.textContent = dateDetails.holidayDayName + ', ' + date + " (It's today!)"
+  } else if (dateDetails.daysLeft !== 1) {
+    holidayDate.textContent = dateDetails.holidayDayName + ', ' + date + ' (' + dateDetails.daysLeft + ' days from today)'
+  } else {
+    holidayDate.textContent = dateDetails.holidayDayName + ', ' + date + ' (' + dateDetails.daysLeft + ' day from today)'
+  }
   container.appendChild(holidayDate)
 }
 
@@ -85,15 +91,33 @@ function getHolidayDate(inputDate) {
   })
 }
 
-function getDaysLeft(inputDate) {
+function getDateDetails(inputDate) {
   // holiday date and current date are converted to milliseconds, the difference is divided by MS_PER_DAY
   // to get number of days between the two dates
   const holidayDate = new Date(inputDate)
   const currentDate = new Date()
+  // standardise both to local time midnight to prevent time zones causing incorrect day counts
+  const holidayMidnight = new Date(holidayDate.getFullYear(), holidayDate.getMonth(), holidayDate.getDate())
+  const currentMidnight = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate())
   const MS_PER_DAY = 1000 * 60 * 60 * 24
   // Math.abs() gives absolute value to avoid negative numbers
-  const msDiff = Math.abs(holidayDate - currentDate)
-  return Math.round(msDiff / MS_PER_DAY)
+  const msDiff = Math.abs(holidayMidnight - currentMidnight)
+  const daysLeft = Math.ceil(msDiff / MS_PER_DAY)
+  const DAY_NAMES = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+  const holidayDayName = DAY_NAMES[holidayDate.getDay()]
+  if (msDiff !== 0) {
+    return {
+      daysLeft,
+      holidayDayName,
+      isToday: false
+    }
+  } else {
+    return {
+      daysLeft,
+      holidayDayName,
+      isToday: true
+    }
+  }
 }
 
 function showAllHolidays() {
