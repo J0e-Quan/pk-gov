@@ -24,8 +24,12 @@
 }
 
 :root {
+  /* TYPOGRAPHY */
   --plex-sans: 'IBM Plex Sans', sans-serif;
   --mona-sans: 'Mona Sans', serif;
+  --bold: 700;
+  --normal: 400;
+  /* MINISTRY COLOURS */
   --central-ministry-colour: rgb(104, 160, 255);
   --ministry-of-food-colour: rgb(255, 220, 0);
   --ministry-of-foreign-affairs-colour: rgb(54, 83, 255);
@@ -50,7 +54,7 @@ h4,
 h5,
 h6 {
   font-family: var(--plex-sans);
-  font-weight: 700;
+  font-weight: var(--bold);
 }
 
 input,
@@ -98,7 +102,7 @@ header {
 
 .logo-text.bottom {
   margin-top: -0.2rem;
-  font-weight: 400;
+  font-weight: var(--normal);
 }
 
 main {
@@ -134,7 +138,7 @@ main > * {
 .table-of-contents-title {
   font-family: var(--plex-sans);
   font-size: 4rem;
-  font-weight: 700;
+  font-weight: var(--bold);
 }
 
 .table-of-contents-title::before {
