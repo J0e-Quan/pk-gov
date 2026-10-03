@@ -1,12 +1,12 @@
 const weatherIcons = {
-  sunny: '/assets/weather-icons/sunny.svg',
-  night:  '/assets/weather-icons/night.svg',
-  cloudy:  '/assets/weather-icons/cloudy.svg',
-  sunnyCloudy: '/assets/weather-icons/sunny-cloudy.svg',
-  nightCloudy:  '/assets/weather-icons/night-cloudy.svg',
-  rain:  '/assets/weather-icons/rain.svg',
-  thunderstorm:  '/assets/weather-icons/thunderstorm.svg',
-  generic: '/assets/weather-icons/generic.svg'
+  sunny: new URL('../../assets/weather-icons/sunny.svg', import.meta.url).href,
+  night: new URL('../../assets/weather-icons/night.svg', import.meta.url).href,
+  cloudy: new URL('../../assets/weather-icons/cloudy.svg', import.meta.url).href,
+  sunnyCloudy: new URL('../../assets/weather-icons/sunny-cloudy.svg', import.meta.url).href,
+  nightCloudy: new URL('../../assets/weather-icons/night-cloudy.svg', import.meta.url).href,
+  rain: new URL('../../assets/weather-icons/rain.svg', import.meta.url).href,
+  thunderstorm: new URL('../../assets/weather-icons/thunderstorm.svg', import.meta.url).href,
+  generic: new URL('../../assets/weather-icons/generic.svg', import.meta.url).href
 }
 
 async function getData() {
