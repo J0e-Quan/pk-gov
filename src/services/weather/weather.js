@@ -1,31 +1,13 @@
 const weatherIcons = {
-  sunny: '/weather-icons/sunny.svg?url',
-  night:  '/weather-icons/night.svg?url',
-  cloudy:  '/weather-icons/cloudy.svg?url',
-  sunnyCloudy: '/weather-icons/sunny-cloudy.svg?url',
-  nightCloudy:  '/weather-icons/night-cloudy.svg?url',
-  rain:  '/weather-icons/rain.svg?url',
-  thunderstorm:  '/weather-icons/thunderstorm.svg?url',
-  generic: '/weather-icons/generic.svg?url'
+  sunny: '/assets/weather-icons/sunny.svg',
+  night:  '/assets/weather-icons/night.svg',
+  cloudy:  '/assets/weather-icons/cloudy.svg',
+  sunnyCloudy: '/assets/weather-icons/sunny-cloudy.svg',
+  nightCloudy:  '/assets/weather-icons/night-cloudy.svg',
+  rain:  '/assets/weather-icons/rain.svg',
+  thunderstorm:  '/assets/weather-icons/thunderstorm.svg',
+  generic: '/assets/weather-icons/generic.svg'
 }
-
-// code for opening pagefind modal for search-mobile
-document.addEventListener('DOMContentLoaded', () => {
-  const searchIcon = document.querySelector('.search-icon')
-  const modalElement = document.querySelector('.mobile-modal')
-
-  if (searchIcon && modalElement) {
-    searchIcon.addEventListener('click', () => {
-      // This fires the exact open routine Pagefind calls internally
-      if (typeof modalElement.open === 'function') {
-        modalElement.open()
-      } else {
-        // Fallback if the component wrapper hasn't fully registered its method yet
-        modalElement.setAttribute('open', '')
-      }
-    })
-  }
-})
 
 async function getData() {
   try {
