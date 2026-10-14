@@ -29,6 +29,8 @@
   --mona-sans: 'Mona Sans', serif;
   --bold: 700;
   --normal: 400;
+  --condensed: 1.2;
+  --relaxed: 1.5;
   /* MINISTRY COLOURS */
   --central-ministry-colour: rgb(104, 160, 255);
   --ministry-of-food-colour: rgb(255, 220, 0);
@@ -128,7 +130,7 @@ main > * {
   font-size: 4rem;
   margin-bottom: 1rem;
   scroll-margin-top: 10rem;
-  line-height: 1.2;
+  line-height: var(--condensed);
 }
 
 .hero-text {
@@ -254,7 +256,7 @@ hr.show {
 }
 
 .card-title {
-  line-height: 1.2;
+  line-height: var(--condensed);
   margin-bottom: 0.5rem;
   position: inherit;
 }

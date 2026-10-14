@@ -9,14 +9,14 @@ section:not(.hero, footer section) {
 .page p {
   font-size: 1.5rem;
   margin-bottom: 2rem;
-  line-height: 1.5;
+  line-height: var(--relaxed);
 }
 
 .page ul,
 .page ol {
   font-size: 1.5rem;
   margin: -1rem 0 2rem 0;
-  line-height: 1.5;
+  line-height: var(--relaxed);
   padding: 0 2rem;
 }
 

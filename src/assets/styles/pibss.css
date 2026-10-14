@@ -75,7 +75,7 @@ select option {
 }
 
 .pibss-name {
-  line-height: 1.2;
+  line-height: var(--condensed);
   font-size: 3rem;
   position: relative;
   overflow: clip;
@@ -135,7 +135,7 @@ button.filters-submit {
 .value {
   font-size: 10rem;
   margin-bottom: -1rem;
-  line-height: 1.2;
+  line-height: var(--condensed);
   display: inline-block;
   overflow: hidden;
   transition: transform 0.3s ease-in-out;
@@ -241,7 +241,7 @@ main:has(.form) + .end-buttons {
   color: var(--central-ministry-colour);
 }
 .progress-title {
-  line-height: 1.2;
+  line-height: var(--condensed);
   margin-bottom: 1rem;
 }
 .progress-bar-wrapper {
@@ -259,7 +259,7 @@ main:has(.form) + .end-buttons {
 }
 .instruction {
   font-size: 3rem;
-  line-height: 1.2;
+  line-height: var(--condensed);
   margin-bottom: 1rem;
 }
 .note {
@@ -455,7 +455,7 @@ button.update-location-submit-button {
     justify-content: center;
   }
   .notice .heading {
-    line-height: 1.2;
+    line-height: var(--condensed);
     margin-bottom: 0.5rem;
   }
   .notice-text,
