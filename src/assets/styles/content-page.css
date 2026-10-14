@@ -68,7 +68,7 @@ section:not(.hero, footer section) {
 
 .hero-excerpt {
   font-size: 2rem;
-  font-weight: var(--normal);
+  font-weight: var(--font-weight-normal);
   font-family: var(--mona-sans);
   scroll-margin-top: 10rem;
 }

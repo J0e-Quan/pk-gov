@@ -174,7 +174,7 @@ section:not(.hero, footer section) {
 
 .minister.job-title {
   font-size: 2rem;
-  font-weight: var(--normal);
+  font-weight: var(--font-weight-normal);
   margin-bottom: 0.5rem;
 }
 

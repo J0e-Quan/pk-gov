@@ -114,7 +114,7 @@ h2.article-title::before {
 
 .article-excerpt {
   font-size: 1.5rem;
-  font-weight: var(--normal);
+  font-weight: var(--font-weight-normal);
   font-family: var(--mona-sans);
   scroll-margin-top: 10rem;
   line-height: var(--line-height-relaxed)

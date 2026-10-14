@@ -27,8 +27,8 @@
   /* TYPOGRAPHY */
   --plex-sans: 'IBM Plex Sans', sans-serif;
   --mona-sans: 'Mona Sans', serif;
-  --bold: 700;
-  --normal: 400;
+  --font-weight-bold: 700;
+  --font-weight-normal: 400;
   --line-height-condensed: 1.2;
   --line-height-relaxed: 1.5;
   /* MINISTRY COLOURS */
@@ -56,7 +56,7 @@ h4,
 h5,
 h6 {
   font-family: var(--plex-sans);
-  font-weight: var(--bold);
+  font-weight: var(--font-weight-bold);
 }
 
 input,
@@ -104,7 +104,7 @@ header {
 
 .logo-text.bottom {
   margin-top: -0.2rem;
-  font-weight: var(--normal);
+  font-weight: var(--font-weight-normal);
 }
 
 main {
@@ -140,7 +140,7 @@ main > * {
 .table-of-contents-title {
   font-family: var(--plex-sans);
   font-size: 4rem;
-  font-weight: var(--bold);
+  font-weight: var(--font-weight-bold);
 }
 
 .table-of-contents-title::before {

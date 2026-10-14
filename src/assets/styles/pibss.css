@@ -19,7 +19,7 @@ section.filters {
 
 label {
   font-family: var(--plex-sans);
-  font-weight: var(--bold);
+  font-weight: var(--font-weight-bold);
 }
 
 .filters-inputs select,
