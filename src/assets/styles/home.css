@@ -1,6 +1,6 @@
 .hero-title {
   font-size: 5rem;
-  line-height: var(--condensed);
+  line-height: var(--line-height-condensed);
 }
 
 .hero-text {

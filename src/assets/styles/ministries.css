@@ -181,7 +181,7 @@ section:not(.hero, footer section) {
 .text {
   font-size: 1.5rem;
   margin-bottom: 2rem;
-  line-height: var(--relaxed);
+  line-height: var(--line-height-relaxed);
 }
 
 .small-text {
