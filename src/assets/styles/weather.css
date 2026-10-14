@@ -5,6 +5,7 @@ section:not(.hero, footer section) {
 .text {
   font-size: 1.5rem;
   margin-bottom: 2rem;
+  line-height: 1.5;
 }
 
 .loader {
@@ -97,7 +98,6 @@ section:not(.hero, footer section) {
   }
   .text {
     font-size: 1rem;
-    line-height: 1.5;
   }
   .current-weather.content {
     grid-template-columns: fit-content 1fr;

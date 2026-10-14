@@ -181,6 +181,7 @@ section:not(.hero, footer section) {
 .text {
   font-size: 1.5rem;
   margin-bottom: 2rem;
+  line-height: 1.5;
 }
 
 .small-text {
@@ -216,7 +217,6 @@ section:not(.hero, footer section) {
   }
   .text {
     font-size: 1rem;
-    line-height: 1.5;
   }
   .small-text {
     font-size: 0.5rem;
