@@ -70,7 +70,7 @@ section:not(.hero, footer section) {
   font-size: var(--font-size-m);
   font-weight: var(--font-weight-normal);
   font-family: var(--mona-sans);
-  scroll-margin-top: 10rem;
+  scroll-margin-top: var(--pagefind-search-buffer);
 }
 
 .hero-thumbnail {
@@ -157,7 +157,7 @@ button.share,
 .colour {
   flex-grow: 1;
   height: 10rem;
-  font-size: var(--font-size-m);
+  font-size: 2rem;
   color: white;
   padding: 1rem 1rem;
   display: flex;

@@ -40,6 +40,8 @@
   --font-size-xxl: 4rem;
   --font-size-xxxl: 5rem;
   --font-size-pibss-value: 10rem;
+  /* SPACING */
+  --pagefind-search-buffer: 10rem;
   /* MINISTRY COLOURS */
   --central-ministry-colour: rgb(104, 160, 255);
   --ministry-of-food-colour: rgb(255, 220, 0);

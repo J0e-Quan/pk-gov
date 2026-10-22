@@ -85,7 +85,7 @@ main > * {
 .hero-title {
   font-size: var(--font-size-xxl);
   margin-bottom: 1rem;
-  scroll-margin-top: 10rem;
+  scroll-margin-top: var(--pagefind-search-buffer);
   line-height: var(--line-height-condensed);
 }
 
@@ -140,7 +140,7 @@ h2 {
   position: relative;
   overflow: clip;
   display: inline-block;
-  scroll-margin-top: 10rem;
+  scroll-margin-top: var(--pagefind-search-buffer);
 }
 
 .heading::before,
@@ -166,7 +166,7 @@ h2.show::before {
 .title,
 h3 {
   font-size: var(--font-size-l);
-  scroll-margin-top: 10rem;
+  scroll-margin-top: var(--pagefind-search-buffer);
 }
 
 hr {

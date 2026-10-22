@@ -109,7 +109,7 @@ button.close {
   text-decoration-thickness: 2px;
   font-size: var(--font-size-l);
   line-height: var(--line-height-condensed);
-  scroll-margin-top: 10rem;
+  scroll-margin-top: var(--pagefind-search-buffer);
 }
 
 h2.article-title::before {
@@ -120,7 +120,7 @@ h2.article-title::before {
   font-size: var(--font-size-s);
   font-weight: var(--font-weight-normal);
   font-family: var(--mona-sans);
-  scroll-margin-top: 10rem;
+  scroll-margin-top: var(--pagefind-search-buffer);
   line-height: var(--line-height-relaxed)
 }
 
