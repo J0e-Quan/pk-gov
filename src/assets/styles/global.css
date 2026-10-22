@@ -381,7 +381,7 @@ footer hr.show {
 
 footer .link {
   color: var(--theme-accent, white);
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   position: relative;
   overflow: hidden;
   isolation: isolate;
