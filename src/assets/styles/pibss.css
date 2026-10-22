@@ -266,6 +266,9 @@ main:has(.form) + .end-buttons {
   margin-top: 1rem;
   font-size: 1.5rem;
 }
+.splash-screen-title::before {
+  display: none;
+}
 .splash-screen-text {
   font-size: 2rem;
   margin-bottom: 2rem;
