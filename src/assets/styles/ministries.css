@@ -185,7 +185,7 @@ section:not(.hero, footer section) {
 }
 
 .small-text {
-  font-size: 1rem;
+  font-size: 0.75rem;
 }
 
 /* MEDIA QUERIES BELOW */
