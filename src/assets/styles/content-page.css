@@ -7,14 +7,14 @@ section:not(.hero, footer section) {
 }
 
 .page p {
-  font-size: 1.5rem;
+  font-size: var(--font-size-s);
   margin-bottom: 2rem;
   line-height: var(--line-height-relaxed);
 }
 
 .page ul,
 .page ol {
-  font-size: 1.5rem;
+  font-size: var(--font-size-s);
   margin: -1rem 0 2rem 0;
   line-height: var(--line-height-relaxed);
   padding: 0 2rem;
@@ -63,11 +63,11 @@ section:not(.hero, footer section) {
 }
 
 .hero-date {
-  font-size: 2rem;
+  font-size: var(--font-size-m);
 }
 
 .hero-excerpt {
-  font-size: 2rem;
+  font-size: var(--font-size-m);
   font-weight: var(--font-weight-normal);
   font-family: var(--mona-sans);
   scroll-margin-top: 10rem;
@@ -157,7 +157,7 @@ button.share,
 .colour {
   flex-grow: 1;
   height: 10rem;
-  font-size: 2rem;
+  font-size: var(--font-size-m);
   color: white;
   padding: 1rem 1rem;
   display: flex;
@@ -203,7 +203,7 @@ button.share,
 
 .download {
   padding: 1rem 2rem;
-  font-size: 2rem;
+  font-size: var(--font-size-m);
   font-family: var(--mona-sans);
   color: black;
   display: flex;
@@ -236,20 +236,20 @@ button.share,
     padding: 1rem 2rem;
   }
   .hero-date {
-    font-size: 1rem;
+    font-size: var(--font-size-xs);
   }
   .hero-excerpt {
-    font-size: 1.5rem;
+    font-size: var(--font-size-s);
     margin-bottom: 2rem;
   }
   .page p,
   .page ul,
   .page ol {
-    font-size: 1rem;
+    font-size: var(--font-size-xs);
   }
   .colour,
   .download {
-    font-size: 1.5rem;
+    font-size: var(--font-size-s);
   }
   .start-buttons {
     gap: 1rem;

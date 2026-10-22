@@ -3,7 +3,7 @@ section:not(.hero, footer section) {
 }
 
 .text {
-  font-size: 1.5rem;
+  font-size: var(--font-size-s);
   margin-bottom: 2rem;
 }
 
@@ -16,7 +16,7 @@ section:not(.hero, footer section) {
 }
 
 .notifications-title {
-  font-size: 2rem;
+  font-size: var(--font-size-m);
   flex: 2 1 26rem;
   text-wrap: pretty;
 }
@@ -36,7 +36,7 @@ section:not(.hero, footer section) {
 }
 
 .notifications-modal-title {
-  font-size: 4rem;
+  font-size: var(--font-size-xxl);
   margin-bottom: 2rem;
 }
 
@@ -60,11 +60,11 @@ section:not(.hero, footer section) {
 }
 
 .notification-modal-option-title {
-  font-size: 2.5rem;
+  font-size: var(--font-size-l);
 }
 
 .notification-modal-option-text {
-  font-size: 1.5rem;
+  font-size: var(--font-size-s);
 }
 
 button.push,
@@ -101,13 +101,13 @@ button.close {
 }
 
 .article-date {
-  font-size: 1rem;
+  font-size: var(--font-size-xs);
 }
 
 .article-title {
   text-decoration: underline;
   text-decoration-thickness: 2px;
-  font-size: 2.5rem;
+  font-size: var(--font-size-l);
   line-height: var(--line-height-condensed);
   scroll-margin-top: 10rem;
 }
@@ -117,7 +117,7 @@ h2.article-title::before {
 }
 
 .article-excerpt {
-  font-size: 1.5rem;
+  font-size: var(--font-size-s);
   font-weight: var(--font-weight-normal);
   font-family: var(--mona-sans);
   scroll-margin-top: 10rem;
@@ -134,10 +134,10 @@ h2.article-title::before {
     gap: 0;
   }
   .notifications-title {
-    font-size: 1.5rem;
+    font-size: var(--font-size-s);
   }
   .notifications-modal-title {
-    font-size: 2.5rem;
+    font-size: var(--font-size-l);
   }
   .notification-modal-buttons {
     display: flex;
@@ -145,10 +145,10 @@ h2.article-title::before {
     gap: 2rem;
   }
   .notification-modal-option-title {
-    font-size: 2rem;
+    font-size: var(--font-size-m);
   }
   .notification-modal-option-text {
-    font-size: 1rem;
+    font-size: var(--font-size-xs);
   }
   button.push,
   button.rss {
@@ -160,16 +160,16 @@ h2.article-title::before {
     margin-bottom: 4rem;
   }
   .article-title {
-    font-size: 2rem;
+    font-size: var(--font-size-m);
   }
   .article-title::before {
     display: none;
   }
   .article-date {
-    font-size: 1rem;
+    font-size: var(--font-size-xs);
   }
   .article-excerpt {
-    font-size: 1rem;
+    font-size: var(--font-size-xs);
   }
 }
 /* MEDIA QUERIES ABOVE */

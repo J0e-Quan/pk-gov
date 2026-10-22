@@ -25,7 +25,7 @@ label {
 .filters-inputs select,
 .update-location-new-location-select {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: var(--font-size-s);
   padding: 0.5rem 1rem;
 }
 
@@ -76,7 +76,7 @@ select option {
 
 .pibss-name {
   line-height: var(--line-height-condensed);
-  font-size: 3rem;
+  font-size: var(--font-size-xl);
   position: relative;
   overflow: clip;
   display: inline-block;
@@ -86,7 +86,7 @@ select option {
 .pibss-country,
 .pibss-date,
 .pibss-location {
-  font-size: 1.5rem;
+  font-size: var(--font-size-s);
   position: relative;
   overflow: clip;
   display: inline-block;
@@ -119,7 +119,7 @@ select option {
 .search-input {
   padding: 0.5rem 1rem;
   border: 16px solid var(--central-ministry-colour);
-  font-size: 1.5rem;
+  font-size: var(--font-size-s);
   min-width: 0;
   width: 80%;
   height: 100%;
@@ -127,13 +127,13 @@ select option {
 
 button.filters-submit {
   margin: 0 auto;
-  font-size: 1.5rem;
+  font-size: var(--font-size-s);
 }
 
 /* PIBSS DATABASE STYLES ABOVE */
 /* PIBSS STATISTICS STYLES BELOW */
 .value {
-  font-size: 10rem;
+  font-size: var(--font-size-pibss-value);
   margin-bottom: -1rem;
   line-height: var(--line-height-condensed);
   display: inline-block;
@@ -144,7 +144,7 @@ button.filters-submit {
   animation: shrink 0.3s ease-in-out 2 alternate;
 }
 .statistics .text {
-  font-size: 4rem;
+  font-size: var(--font-size-xxl);
   margin-bottom: 4rem;
 }
 .charts {
@@ -167,7 +167,7 @@ button.filters-submit {
 /* PIBSS STATISTICS STYLES ABOVE */
 /* PIBSS LOGIN STYLES BELOW */
 .notice-text {
-  font-size: 2rem;
+  font-size: var(--font-size-m);
 }
 section.login-form {
   display: flex;
@@ -181,12 +181,12 @@ section.login-form {
   flex-direction: column;
 }
 .login-item label {
-  font-size: 3rem;
+  font-size: var(--font-size-xl);
 }
 .login-item input {
   padding: 0.5rem 1rem;
   border: 16px solid var(--central-ministry-colour);
-  font-size: 2rem;
+  font-size: var(--font-size-m);
   min-width: 0;
 }
 .login-form button {
@@ -207,7 +207,7 @@ section.login-form {
   margin: 0;
 }
 .disclaimer-text {
-  font-size: 2rem;
+  font-size: var(--font-size-m);
 }
 .splash-screen {
   min-height: 70vh;
@@ -231,7 +231,7 @@ main:has(.form) + .end-buttons {
   margin-left: auto;
 }
 .form-step-button {
-  font-size: 2rem;
+  font-size: var(--font-size-m);
   text-decoration: underline;
 }
 .form-step-button:hover {
@@ -258,26 +258,26 @@ main:has(.form) + .end-buttons {
   transition: width 0.5s ease-in-out;
 }
 .instruction {
-  font-size: 3rem;
+  font-size: var(--font-size-xl);
   line-height: var(--line-height-condensed);
   margin-bottom: 1rem;
 }
 .note {
   margin-top: 1rem;
-  font-size: 1.5rem;
+  font-size: var(--font-size-s);
 }
 .splash-screen-title::before {
   display: none;
 }
 .splash-screen-text {
-  font-size: 2rem;
+  font-size: var(--font-size-m);
   margin-bottom: 2rem;
 }
 button.splash-screen-start-button {
   margin: 0 auto;
 }
 button.register-submit-button {
-  font-size: 3rem;
+  font-size: var(--font-size-xl);
   margin: 0;
   padding: 0rem 1.5rem;
   display: flex;
@@ -293,7 +293,7 @@ button.register-submit-button {
   height: 7rem;
 }
 button.register-photo-form-button {
-  font-size: 2rem;
+  font-size: var(--font-size-m);
   margin: 0;
 }
 .register-photo-container {
@@ -347,7 +347,7 @@ button.register-confirm-button {
 .register-location-select {
   padding: 1rem 2rem;
   border: 16px solid var(--central-ministry-colour);
-  font-size: 2rem;
+  font-size: var(--font-size-m);
   min-width: 0;
   height: 100%;
   margin-right: -16px;
@@ -391,14 +391,14 @@ button.update-location-search-button {
   align-items: center;
 }
 .update-location-label {
-  font-size: 3rem;
+  font-size: var(--font-size-xl);
 }
 .update-location-old-location-text {
-  font-size: 3rem;
+  font-size: var(--font-size-xl);
 }
 button.update-location-submit-button {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: var(--font-size-s);
   padding: 0.5rem 1rem;
 }
 .loading-circle {
@@ -432,23 +432,23 @@ button.update-location-submit-button {
     flex-shrink: 1;
   }
   .pibss-name {
-    font-size: 1.5rem;
+    font-size: var(--font-size-s);
   }
   .pibss-type,
   .pibss-country,
   .pibss-date,
   .pibss-location {
-    font-size: 1rem;
+    font-size: var(--font-size-xs);
   }
   button.filters-submit {
     margin: 1rem 0 0 0;
   }
   .value {
-    font-size: 4rem;
+    font-size: var(--font-size-xxl);
     margin-bottom: -0.5rem;
   }
   .statistics .text {
-    font-size: 1.5rem;
+    font-size: var(--font-size-s);
     margin-bottom: 3rem;
   }
   .charts {
@@ -463,26 +463,26 @@ button.update-location-submit-button {
   }
   .notice-text,
   .disclaimer-text {
-    font-size: 1rem;
+    font-size: var(--font-size-xs);
   }
   .login-item label {
-    font-size: 1.5rem;
+    font-size: var(--font-size-s);
   }
   .login-item input {
     width: 100%;
-    font-size: 1.5rem;
+    font-size: var(--font-size-s);
   }
   .splash-screen-title {
-    font-size: 2.5rem;
+    font-size: var(--font-size-l);
   }
   .splash-screen-text {
-    font-size: 1.5rem;
+    font-size: var(--font-size-s);
   }
   .note {
-    font-size: 1rem;
+    font-size: var(--font-size-xs);
   }
   button.register-submit-button {
-    font-size: 1.5rem;
+    font-size: var(--font-size-s);
   }
   .form-input-wrapper {
     height: auto;
@@ -496,7 +496,7 @@ button.update-location-submit-button {
   .form-select,
   .register-country-select,
   .register-location-select {
-    font-size: 1rem;
+    font-size: var(--font-size-xs);
     padding: 0.5rem 1rem;
   }
   .register-photo-wrapper {
@@ -509,7 +509,7 @@ button.update-location-submit-button {
   .register-photo-form-button {
     width: 100%;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: var(--font-size-s);
   }
   button.register-camera-button {
     display: flex;
@@ -531,22 +531,22 @@ button.update-location-submit-button {
     padding: 1rem;
   }
   .instruction {
-    font-size: 2rem;
+    font-size: var(--font-size-m);
   }
   .form-step-button-wrapper {
     margin-bottom: 0.5rem;
   }
   .form-step-button {
-    font-size: 1rem;
+    font-size: var(--font-size-xs);
   }
   .update-location-wrapper {
     gap: 0.5rem;
   }
   .update-location-label {
-    font-size: 1.5rem;
+    font-size: var(--font-size-s);
   }
   .update-location-old-location-text {
-    font-size: 1.5rem;
+    font-size: var(--font-size-s);
   }
   .update-location-wrapper select {
     margin-bottom: 1rem;

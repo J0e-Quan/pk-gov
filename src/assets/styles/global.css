@@ -54,7 +54,7 @@ header {
 
 .logo-text {
   color: var(--theme-accent, white);
-  font-size: 1.5rem;
+  font-size: var(--font-size-s);
   text-decoration: none;
 }
 
@@ -83,19 +83,19 @@ main > * {
 }
 
 .hero-title {
-  font-size: 4rem;
+  font-size: var(--font-size-xxl);
   margin-bottom: 1rem;
   scroll-margin-top: 10rem;
   line-height: var(--line-height-condensed);
 }
 
 .hero-text {
-  font-size: 2rem;
+  font-size: var(--font-size-m);
 }
 
 .table-of-contents-title {
   font-family: var(--plex-sans);
-  font-size: 4rem;
+  font-size: var(--font-size-xxl);
   font-weight: var(--font-weight-bold);
 }
 
@@ -110,11 +110,11 @@ main > * {
 }
 
 .toc-item-h2 {
-  font-size: 1.5rem;
+  font-size: var(--font-size-s);
 }
 
 .toc-item-h3 {
-  font-size: 1rem;
+  font-size: var(--font-size-xs);
 }
 
 .toc-list,
@@ -136,7 +136,7 @@ main > * {
 
 .heading,
 h2 {
-  font-size: 4rem;
+  font-size: var(--font-size-xxl);
   position: relative;
   overflow: clip;
   display: inline-block;
@@ -165,7 +165,7 @@ h2.show::before {
 
 .title,
 h3 {
-  font-size: 2.5rem;
+  font-size: var(--font-size-l);
   scroll-margin-top: 10rem;
 }
 
@@ -240,7 +240,7 @@ hr.show {
 
 .card-link {
   color: inherit;
-  font-size: 3rem;
+  font-size: var(--font-size-xl);
   font-family: var(--plex-sans);
 }
 
@@ -254,12 +254,12 @@ hr.show {
 }
 
 .card-description {
-  font-size: 1.5rem;
+  font-size: var(--font-size-s);
 }
 
 .ministry .card-description {
   font-family: var(--plex-sans);
-  font-size: 2rem;
+  font-size: var(--font-size-m);
 }
 
 .card-arrow {
@@ -296,7 +296,7 @@ hr.show {
 .button,
 select {
   padding: 1rem 2rem;
-  font-size: 2rem;
+  font-size: var(--font-size-m);
   font-family: var(--mona-sans);
   color: black;
   background-color: transparent;
@@ -332,7 +332,7 @@ footer {
 }
 
 .footer-title {
-  font-size: 2.5rem;
+  font-size: var(--font-size-l);
   position: relative;
   overflow: clip;
   display: inline-block;
@@ -381,7 +381,7 @@ footer hr.show {
 
 footer .link {
   color: var(--theme-accent, white);
-  font-size: 1rem;
+  font-size: var(--font-size-xs);
   position: relative;
   overflow: hidden;
   isolation: isolate;
@@ -432,7 +432,7 @@ pagefind-modal {
   --pf-input-height: 3rem;
   --pf-border-radius: 0;
   --pf-font: var(--mona-sans);
-  --pf-input-font-size: 2rem;
+  --pf-input-font-size: var(--font-size-m);
   --pf-border: white;
   --pf-border-focus: black;
   --pf-outline-focus: black;
@@ -547,23 +547,23 @@ pagefind-searchbox::part(input) {
     padding: 1rem 2rem;
   }
   .hero-title {
-    font-size: 2.5rem;
+    font-size: var(--font-size-l);
   }
   .hero-text {
-    font-size: 1.5rem;
+    font-size: var(--font-size-s);
     margin-bottom: 2rem;
   }
   .heading,
   h2,
   .table-of-contents-title,
   .card-link {
-    font-size: 2rem;
+    font-size: var(--font-size-m);
   }
   .toc-item-h2 {
-    font-size: 1rem;
+    font-size: var(--font-size-xs);
   }
   .toc-item-h3 {
-    font-size: 0.75rem;
+    font-size: var(--font-size-xxs);
   }
   .toc-list,
   .toc-list ul {
@@ -571,7 +571,7 @@ pagefind-searchbox::part(input) {
   }
   .title,
   h3 {
-    font-size: 1.5rem;
+    font-size: var(--font-size-s);
   }
   hr {
     margin-bottom: 1rem;
@@ -589,10 +589,10 @@ pagefind-searchbox::part(input) {
     flex-basis: auto;
   }
   .ministry .card-link {
-    font-size: 1.5rem;
+    font-size: var(--font-size-s);
   }
   .card-description, .ministry .card-description {
-    font-size: 1rem;
+    font-size: var(--font-size-xs);
   }
   .card-arrow {
     font-size: 48px;
@@ -607,18 +607,18 @@ pagefind-searchbox::part(input) {
     padding: 2rem 3rem 3rem 3rem;
   }
   footer .link {
-    font-size: 1rem;
+    font-size: var(--font-size-xs);
   }
   .end-buttons {
     margin-top: 0;
   }
   .return, .share, .print, .button {
     padding: 1rem;
-    font-size: 1.5rem;
+    font-size: var(--font-size-s);
     text-align: center;
   }
   .select {
-    font-size: 1rem;
+    font-size: var(--font-size-xs);
     text-align: center;
   }
 }

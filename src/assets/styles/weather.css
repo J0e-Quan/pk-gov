@@ -3,7 +3,7 @@ section:not(.hero, footer section) {
 }
 
 .text {
-  font-size: 1.5rem;
+  font-size: var(--font-size-s);
   margin-bottom: 2rem;
   line-height: var(--line-height-relaxed);
 }
@@ -32,14 +32,14 @@ section:not(.hero, footer section) {
 }
 
 .current-weather.temp {
-  font-size: 5rem;
+  font-size: var(--font-size-xxxl);
   grid-column: 2;
   grid-row: 1;
 }
 
 .current-weather.condition {
   text-align: left;
-  font-size: 2.5rem;
+  font-size: var(--font-size-l);
   grid-column: 2;
   grid-row: 2;
 }
@@ -62,7 +62,7 @@ section:not(.hero, footer section) {
 
 .time,
 .day {
-  font-size: 2.5rem;
+  font-size: var(--font-size-l);
 }
 
 .condition {
@@ -76,7 +76,7 @@ section:not(.hero, footer section) {
 }
 
 .temp {
-  font-size: 2.5rem;
+  font-size: var(--font-size-l);
 }
 
 /* MEDIA QUERIES BELOW */
@@ -96,7 +96,7 @@ section:not(.hero, footer section) {
     transform: scaleX(1);
   }
   .text {
-    font-size: 1rem;
+    font-size: var(--font-size-xs);
   }
   .current-weather.content {
     grid-template-columns: fit-content 1fr;
@@ -108,11 +108,11 @@ section:not(.hero, footer section) {
     grid-row: 1;
   }
   .current-weather.temp {
-    font-size: 3rem;
+    font-size: var(--font-size-xl);
     align-self: center;
   }
   .current-weather.condition {
-    font-size: 1.5rem;
+    font-size: var(--font-size-s);
     grid-column: 1 / -1;
   }
 }

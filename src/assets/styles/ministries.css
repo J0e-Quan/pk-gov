@@ -168,24 +168,24 @@ section:not(.hero, footer section) {
 
 
 .minister.name {
-  font-size: 3rem;
+  font-size: var(--font-size-xl);
   scroll-margin-top: 45rem;
 }
 
 .minister.job-title {
-  font-size: 2rem;
+  font-size: var(--font-size-m);
   font-weight: var(--font-weight-normal);
   margin-bottom: 0.5rem;
 }
 
 .text {
-  font-size: 1.5rem;
+  font-size: var(--font-size-s);
   margin-bottom: 2rem;
   line-height: var(--line-height-relaxed);
 }
 
 .small-text {
-  font-size: 0.75rem;
+  font-size: var(--font-size-xxs);
 }
 
 /* MEDIA QUERIES BELOW */
@@ -195,7 +195,7 @@ section:not(.hero, footer section) {
     aspect-ratio: 3 / 1;
   }
   .heading {
-    font-size: 2rem;
+    font-size: var(--font-size-m);
   }
   .minister {
     width: 100%;
@@ -209,17 +209,14 @@ section:not(.hero, footer section) {
     padding: 0 1rem;
   }
   .minister.name {
-    font-size: 1.5rem;
+    font-size: var(--font-size-s);
   }
   .minister.job-title {
-    font-size: 1rem;
+    font-size: var(--font-size-xs);
     margin-bottom: 1rem;
   }
   .text {
-    font-size: 1rem;
-  }
-  .small-text {
-    font-size: 0.75rem;
+    font-size: var(--font-size-xs);
   }
 }
 /* MEDIA QUERIES ABOVE */
