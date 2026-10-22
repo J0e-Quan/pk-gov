@@ -24,6 +24,6 @@ async function signIn(emailAddress, pw) {
     console.error(error)
     alert('Incorrect login details!')
   } else {
-    window.location.href = '/pibss/manage/'
+    window.location.href = '/services/pibss/manage/'
   }
 }
