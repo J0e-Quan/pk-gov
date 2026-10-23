@@ -49,7 +49,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 99999;
-  padding-inline: max(5rem, calc((100vw - 2000px) / 2 + 5rem));
+  padding-inline: var(--content-width-limit);
 }
 
 .logo-text {
@@ -79,7 +79,7 @@ main > * {
   background-color: var(--theme, var(--central-ministry-colour));
   color: var(--theme-accent, white);
   padding: 2rem 0;
-  padding-inline: max(5rem, calc((100vw - 2000px) / 2 + 5rem));
+  padding-inline: var(--content-width-limit);
 }
 
 .hero-title {
@@ -326,8 +326,7 @@ footer {
   justify-content: space-around;
   flex-wrap: wrap;
   gap: 2rem;
-  margin-bottom: -5px;
-  padding-inline: max(5rem, calc((100vw - 2000px) / 2 + 5rem));
+  padding-inline: var(--content-width-limit);
   margin-top: auto;
 }
 

@@ -24,13 +24,16 @@
 }
 
 :root {
-  /* TYPOGRAPHY */
+  /* TYPOGRAPHY (font family) */
   --plex-sans: 'IBM Plex Sans', sans-serif;
   --mona-sans: 'Mona Sans', serif;
+  /* TYPOGRAPHY (font weight) */
   --font-weight-bold: 700;
   --font-weight-normal: 400;
+  /* TYPOGRAPHY (line height) */
   --line-height-condensed: 1.2;
   --line-height-relaxed: 1.5;
+  /* TYPOGRAPHY (font size) */
   --font-size-xxs: 0.75rem;
   --font-size-xs: 1rem;
   --font-size-s: 1.5rem;
@@ -40,9 +43,12 @@
   --font-size-xxl: 4rem;
   --font-size-xxxl: 5rem;
   --font-size-pibss-value: 10rem;
-  /* SPACING */
+  /* SPACING (primitive values) */
+  --content-max-width: 2000px;
+  /* SPACING (semantic values) */
+  --content-width-limit: max(5rem, calc((100vw - var(--content-max-width)) / 2 + 5rem));
   --pagefind-search-buffer: 10rem;
-  /* MINISTRY COLOURS */
+  /* COLOURS */
   --central-ministry-colour: rgb(104, 160, 255);
   --ministry-of-food-colour: rgb(255, 220, 0);
   --ministry-of-foreign-affairs-colour: rgb(54, 83, 255);
