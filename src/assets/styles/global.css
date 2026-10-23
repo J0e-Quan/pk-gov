@@ -327,7 +327,6 @@ footer {
   flex-wrap: wrap;
   gap: 2rem;
   padding-inline: var(--content-width-limit);
-  margin-top: auto;
 }
 
 .footer-title {
@@ -563,10 +562,6 @@ pagefind-searchbox::part(input) {
   }
   .toc-item-h3 {
     font-size: var(--font-size-xxs);
-  }
-  .toc-list,
-  .toc-list ul {
-    margin-bottom: 0.25rem;
   }
   .title,
   h3 {
