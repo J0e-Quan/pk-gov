@@ -47,7 +47,7 @@
   --content-max-width: 2000px;
   /* SPACING (semantic values) */
   --content-width-limit: max(5rem, calc((100vw - var(--content-max-width)) / 2 + 5rem));
-  --pagefind-search-buffer: 10rem;
+  --header-search-buffer: 10rem;
   /* COLOURS */
   --central-ministry-colour: rgb(104, 160, 255);
   --ministry-of-food-colour: rgb(255, 220, 0);

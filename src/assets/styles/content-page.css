@@ -70,7 +70,7 @@ section:not(.hero, footer section) {
   font-size: var(--font-size-m);
   font-weight: var(--font-weight-normal);
   font-family: var(--mona-sans);
-  scroll-margin-top: var(--pagefind-search-buffer);
+  scroll-margin-top: var(--header-search-buffer);
 }
 
 .hero-thumbnail {
