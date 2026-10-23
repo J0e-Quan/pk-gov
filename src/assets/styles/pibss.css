@@ -9,7 +9,7 @@ section.filters {
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: var(--spacing-m);
 }
 
 .filters-inputs div {
@@ -26,7 +26,7 @@ label {
 .update-location-new-location-select {
   margin: 0;
   font-size: var(--font-size-s);
-  padding: 0.5rem 1rem;
+  padding: var(--spacing-input-compact);
 }
 
 select option {
@@ -117,7 +117,7 @@ select option {
 }
 
 .search-input {
-  padding: 0.5rem 1rem;
+  padding: var(--spacing-input-compact);
   border: 16px solid var(--central-ministry-colour);
   font-size: var(--font-size-s);
   min-width: 0;
@@ -134,7 +134,7 @@ button.filters-submit {
 /* PIBSS STATISTICS STYLES BELOW */
 .value {
   font-size: var(--font-size-pibss-value);
-  margin-bottom: -1rem;
+  margin-bottom: var(--spacing-negative-xs);
   line-height: var(--line-height-condensed);
   display: inline-block;
   overflow: hidden;
@@ -145,7 +145,7 @@ button.filters-submit {
 }
 .statistics .text {
   font-size: var(--font-size-xxl);
-  margin-bottom: 4rem;
+  margin-bottom: var(--spacing-xxl);
 }
 .charts {
   display: grid;
@@ -184,14 +184,14 @@ section.login-form {
   font-size: var(--font-size-xl);
 }
 .login-item input {
-  padding: 0.5rem 1rem;
+  padding: var(--spacing-input-compact);
   border: 16px solid var(--central-ministry-colour);
   font-size: var(--font-size-m);
   min-width: 0;
 }
 .login-form button {
   margin: 0;
-  padding: 0.5rem 2rem;
+  padding: var(--spacing-input-compact);
   height: fit-content;
   align-self: flex-end;
 }
@@ -216,10 +216,10 @@ main section.form {
   padding-top: 0;
 }
 main:has(.form) + .end-buttons {
-  padding-bottom: 25vh;
+  padding-bottom: var(--form-bottom-buffer);
 }
 .form-step-button-wrapper {
-  margin: -1rem 0 1rem;
+  margin: var(--spacing-negative-xs) 0 var(--spacing-xs);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -242,7 +242,7 @@ main:has(.form) + .end-buttons {
 }
 .progress-title {
   line-height: var(--line-height-condensed);
-  margin-bottom: 1rem;
+  margin-bottom: var(--spacing-xs);
 }
 .progress-bar-wrapper {
   width: 100%;
@@ -260,10 +260,10 @@ main:has(.form) + .end-buttons {
 .instruction {
   font-size: var(--font-size-xl);
   line-height: var(--line-height-condensed);
-  margin-bottom: 1rem;
+  margin-bottom: var(--spacing-xs);
 }
 .note {
-  margin-top: 1rem;
+  margin-top: var(--spacing-xs);
   font-size: var(--font-size-s);
 }
 .splash-screen-title::before {
@@ -271,7 +271,7 @@ main:has(.form) + .end-buttons {
 }
 .splash-screen-text {
   font-size: var(--font-size-m);
-  margin-bottom: 2rem;
+  margin-bottom: var(--spacing-m);
 }
 button.splash-screen-start-button {
   margin: 0 auto;
@@ -279,7 +279,7 @@ button.splash-screen-start-button {
 button.register-submit-button {
   font-size: var(--font-size-xl);
   margin: 0;
-  padding: 0rem 1.5rem;
+  padding: 0rem var(--spacing-input-compact);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -325,10 +325,10 @@ button.register-camera-button {
 .register-pibss-card {
   transition: none;
   width: fit-content;
-  margin: 0 auto 1rem;
+  margin: 0 auto var(--spacing-xs);
 }
 .register-confirm-note {
-  margin: -1rem 0 2rem;
+  margin: var(--spacing-negative-xs) 0 var(--spacing-m);
 }
 button.register-confirm-button {
   margin: 0 auto;
@@ -345,12 +345,12 @@ button.register-confirm-button {
 .form-select,
 .register-country-select,
 .register-location-select {
-  padding: 1rem 2rem;
+  padding: var(--spacing-input-normal);
   border: 16px solid var(--central-ministry-colour);
   font-size: var(--font-size-m);
   min-width: 0;
   height: 100%;
-  margin-right: -16px;
+  margin-right: var(--spacing-negative-xs);
   margin-top: 0;
   flex-grow: 1;
 }
@@ -387,7 +387,7 @@ button.update-location-search-button {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: var(--spacing-xs);
   align-items: center;
 }
 .update-location-label {
@@ -399,12 +399,12 @@ button.update-location-search-button {
 button.update-location-submit-button {
   margin: 0;
   font-size: var(--font-size-s);
-  padding: 0.5rem 1rem;
+  padding: var(--spacing-input-compact);
 }
 .loading-circle {
   width: 30vw;
   height: auto;
-  margin: 2rem auto;
+  margin: var(--spacing-m) auto;
   display: block;
 }
 .status-text {
@@ -441,15 +441,15 @@ button.update-location-submit-button {
     font-size: var(--font-size-xs);
   }
   button.filters-submit {
-    margin: 1rem 0 0 0;
+    margin: var(--spacing-xs) 0 0 0;
   }
   .value {
     font-size: var(--font-size-xxl);
-    margin-bottom: -0.5rem;
+    margin-bottom: var(--spacing-negative-xxs);
   }
   .statistics .text {
     font-size: var(--font-size-s);
-    margin-bottom: 3rem;
+    margin-bottom: var(--spacing-xl);
   }
   .charts {
     display: flex;
@@ -459,7 +459,7 @@ button.update-location-submit-button {
   }
   .notice .heading {
     line-height: var(--line-height-condensed);
-    margin-bottom: 0.5rem;
+    margin-bottom: var(--spacing-xxs);
   }
   .notice-text,
   .disclaimer-text {
@@ -497,7 +497,7 @@ button.update-location-submit-button {
   .register-country-select,
   .register-location-select {
     font-size: var(--font-size-xs);
-    padding: 0.5rem 1rem;
+    padding: var(--spacing-input-compact);
   }
   .register-photo-wrapper {
     height: auto;
@@ -528,13 +528,13 @@ button.update-location-submit-button {
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 1rem;
+    padding: var(--spacing-m);
   }
   .instruction {
     font-size: var(--font-size-m);
   }
   .form-step-button-wrapper {
-    margin-bottom: 0.5rem;
+    margin-bottom: var(--spacing-xxs);
   }
   .form-step-button {
     font-size: var(--font-size-xs);
@@ -549,7 +549,7 @@ button.update-location-submit-button {
     font-size: var(--font-size-s);
   }
   .update-location-wrapper select {
-    margin-bottom: 1rem;
+    margin-bottom: var(--spacing-xs);
   }
   .loading-circle {
     width: 100%;

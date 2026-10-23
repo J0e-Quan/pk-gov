@@ -45,9 +45,32 @@
   --font-size-pibss-value: 10rem;
   /* SPACING (primitive values) */
   --content-max-width: 2000px;
+  --spacing-xxs: 0.5rem;
+  --spacing-xs: 1rem;
+  --spacing-s: 1.5rem;
+  --spacing-m: 2rem;
+  --spacing-l: 2.5rem;
+  --spacing-xl: 3rem;
+  --spacing-xxl: 4rem;
+  --spacing-xxxl: 5rem;
+  --spacing-negative-xxs: -0.5rem;
+  --spacing-negative-xs: -1rem  /  -16px;
+  --spacing-negative-m: -2rem;
   /* SPACING (semantic values) */
   --content-width-limit: max(5rem, calc((100vw - var(--content-max-width)) / 2 + 5rem));
   --header-search-buffer: 10rem;
+  --print-margin: 18mm;
+  --spacing-negative-logo: -0.2rem; 
+  --form-bottom-buffer: 25vh; 
+  --spacing-header: var(--spacing-xs) var(--spacing-xxxl);
+  --spacing-input-normal: var(--spacing-xs) var(--spacing-m);
+  --spacing-input-compact: var(--spacing-xxs) var(--spacing-xs);
+  --spacing-section-normal: var(--spacing-m) var(--spacing-xxxl);
+  --spacing-section-compact: var(--spacing-xs) var(--spacing-m);
+  --spacing-card-normal: var(--spacing-s) var(--spacing-m) var(--spacing-l);
+  --spacing-card-compact: var(--spacing-xs) var(--spacing-s);
+  --spacing-footer-normal: var(--spacing-m) var(--spacing-xxxl) var(--spacing-xl);
+  --spacing-footer-compact: var(--spacing-m) var(--spacing-xl) var(--spacing-xl);
   /* COLOURS */
   --central-ministry-colour: rgb(104, 160, 255);
   --ministry-of-food-colour: rgb(255, 220, 0);

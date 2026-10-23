@@ -1,10 +1,10 @@
 section:not(.hero, footer section) {
-  padding: 2rem 5rem;
+  padding: var(--spacing-section-normal);
 }
 
 .text {
   font-size: var(--font-size-s);
-  margin-bottom: 2rem;
+  margin-bottom: var(--spacing-m);
   line-height: var(--line-height-relaxed);
 }
 
@@ -72,7 +72,7 @@ section:not(.hero, footer section) {
 
 .icon {
   height: 10rem;
-  margin: -1rem 0;
+  margin: var(--spacing-negative-xs) 0;
 }
 
 .temp {
@@ -83,7 +83,7 @@ section:not(.hero, footer section) {
 @media (max-width: 600px) {
   .header,
   section:not(footer section) {
-    padding: 1rem 2rem;
+    padding: var(--spacing-section-compact);
   }
   .forecast-today hr,
   .forecast-today .heading::before {

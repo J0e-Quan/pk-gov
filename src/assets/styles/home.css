@@ -4,9 +4,9 @@
 }
 
 .hero-text {
-  margin-top: 2rem;
+  margin-top: var(--spacing-m);
   font-size: var(--font-size-m);
-  margin-bottom: 2rem;
+  margin-bottom: var(--spacing-m);
 }
 
 h2.title::before {
@@ -52,14 +52,14 @@ h2.title::before {
 }
 
 section:not(footer section) {
-  padding: 48px 64px;
+  padding: var(--spacing-section-normal);
 }
 
 /* MEDIA QUERIES BELOW */
 @media (max-width: 600px) {
   .header,
   .hero {
-    padding: 1rem 2rem;
+    padding: var(--spacing-section-compact);
   }
   .homepage.hero-title {
     font-size: var(--font-size-l);

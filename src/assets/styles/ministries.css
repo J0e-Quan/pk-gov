@@ -49,7 +49,7 @@
 /* MINISTRY THEMES ABOVE */
 
 .logo-frame {
-  padding: 0 5rem;
+  padding: 0 var(--spacing-xxxl);
   aspect-ratio: 3.6 / 1;
 }
 
@@ -60,7 +60,7 @@
 }
 
 section:not(.hero, footer section) {
-  padding: 2rem 5rem;
+  padding: var(--spacing-section-normal);
 }
 
 .ministers.list {
@@ -143,7 +143,7 @@ section:not(.hero, footer section) {
 /* MINISTER PHOTOS END */
 
 .minister.info-box {
-  padding: 0rem 1rem 0.5rem 1rem;
+  padding: 0rem var(--spacing-xs) var(--spacing-xxs);
   background-color: transparent;
   position: relative;
 }
@@ -175,12 +175,12 @@ section:not(.hero, footer section) {
 .minister.job-title {
   font-size: var(--font-size-m);
   font-weight: var(--font-weight-normal);
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--spacing-xxs);
 }
 
 .text {
   font-size: var(--font-size-s);
-  margin-bottom: 2rem;
+  margin-bottom: var(--spacing-m);
   line-height: var(--line-height-relaxed);
 }
 
@@ -206,14 +206,14 @@ section:not(.hero, footer section) {
     aspect-ratio: 3 / 4;
   }
   .minister.info-box {
-    padding: 0 1rem;
+    padding: 0 var(--spacing-xs);
   }
   .minister.name {
     font-size: var(--font-size-s);
   }
   .minister.job-title {
     font-size: var(--font-size-xs);
-    margin-bottom: 1rem;
+    margin-bottom: var(--spacing-xs);
   }
   .text {
     font-size: var(--font-size-xs);

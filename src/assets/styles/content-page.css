@@ -1,23 +1,19 @@
 section:not(.hero, footer section) {
-  padding: 2rem 5rem;
-}
-
-.page section {
-  padding: 2rem 0;
+  padding: var(--spacing-section-normal);
 }
 
 .page p {
   font-size: var(--font-size-s);
-  margin-bottom: 2rem;
+  margin-bottom: var(--spacing-m);
   line-height: var(--line-height-relaxed);
 }
 
 .page ul,
 .page ol {
   font-size: var(--font-size-s);
-  margin: -1rem 0 2rem 0;
+  margin: var(--spacing-negative-xs) 0 var(--spacing-m);
   line-height: var(--line-height-relaxed);
-  padding: 0 2rem;
+  padding: 0 var(--spacing-m);
 }
 
 .page ul ul,
@@ -32,7 +28,7 @@ section:not(.hero, footer section) {
 .page img {
   width: 100%;
   height: auto;
-  margin: 0rem 0;
+  margin: 0;
   animation-name: scale-out;
   animation-duration: 0.5s;
   animation-timing-function: ease-out;
@@ -48,7 +44,7 @@ section:not(.hero, footer section) {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: var(--spacing-m);
 }
 
 .side-by-side p {
@@ -74,13 +70,13 @@ section:not(.hero, footer section) {
 }
 
 .hero-thumbnail {
-  margin-top: 1rem;
+  margin-top: var(--spacing-xs);
   max-width: 100%;
   height: auto;
 }
 
 .start-buttons {
-  margin: -2rem 0 5rem 0;
+  margin: var(--spacing-negative-m) 0 var(--spacing-xxxl) 0;
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
@@ -94,8 +90,7 @@ section:not(.hero, footer section) {
 a.return,
 button.share,
 .button {
-  margin-left: 2rem;
-  margin-right: 2rem;
+  margin-inline: var(--spacing-m);
 }
 
 .bad-guy {
@@ -144,7 +139,7 @@ button.share,
   display: flex;
   justify-content: stretch;
   flex-wrap: wrap;
-  margin-bottom: 2rem;
+  margin-bottom: var(--spacing-m);
 }
 
 .colours-list-row {
@@ -159,7 +154,7 @@ button.share,
   height: 10rem;
   font-size: 2rem;
   color: white;
-  padding: 1rem 1rem;
+  padding: var(--spacing-card-compact);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -202,7 +197,7 @@ button.share,
 }
 
 .download {
-  padding: 1rem 2rem;
+  padding: var(--spacing-input-normal);
   font-size: var(--font-size-m);
   font-family: var(--mona-sans);
   color: black;
@@ -233,14 +228,14 @@ button.share,
 @media (max-width: 600px) {
   .header,
   main section:not(footer section) {
-    padding: 1rem 2rem;
+    padding: var(--spacing-section-compact);
   }
   .hero-date {
     font-size: var(--font-size-xs);
   }
   .hero-excerpt {
     font-size: var(--font-size-s);
-    margin-bottom: 2rem;
+    margin-bottom: var(--spacing-m);
   }
   .page p,
   .page ul,
@@ -253,7 +248,7 @@ button.share,
   }
   .start-buttons {
     gap: 1rem;
-    margin: 0 0 2rem
+    margin: 0 0 var(--spacing-m)
   }
 }
 /* MEDIA QUERIES ABOVE */

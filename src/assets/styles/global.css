@@ -42,7 +42,7 @@ body {
 header {
   grid-column: 1 / -1;
   background-color: var(--theme, var(--central-ministry-colour));
-  padding: 1rem 5rem;
+  padding: var(--spacing-header);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -59,7 +59,7 @@ header {
 }
 
 .logo-text.bottom {
-  margin-top: -0.2rem;
+  margin-top: var(--spacing-negative-logo);
   font-weight: var(--font-weight-normal);
 }
 
@@ -78,13 +78,13 @@ main > * {
   grid-template-columns: subgrid;
   background-color: var(--theme, var(--central-ministry-colour));
   color: var(--theme-accent, white);
-  padding: 2rem 0;
+  padding: var(--spacing-section-normal);
   padding-inline: var(--content-width-limit);
 }
 
 .hero-title {
   font-size: var(--font-size-xxl);
-  margin-bottom: 1rem;
+  margin-bottom: var(--spacing-xs);
   scroll-margin-top: var(--header-search-buffer);
   line-height: var(--line-height-condensed);
 }
@@ -104,7 +104,7 @@ main > * {
 }
 
 .table-of-contents-container hr {
-  margin-bottom: 1rem;
+  margin-bottom: var(--spacing-xs);
   animation: none;
   transform: scaleX(1);
 }
@@ -119,11 +119,11 @@ main > * {
 
 .toc-list,
 .toc-list ul {
-  margin-left: 2rem;
+  margin-left: var(--spacing-m);
 }
 
 .toc-list li {
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--spacing-xxs);
 }
 
 .toc-list li a {
@@ -174,7 +174,7 @@ hr {
   width: 100%;
   height: 10px;
   background-color: var(--theme, var(--central-ministry-colour));
-  margin-bottom: 2rem;
+  margin-bottom: var(--spacing-m);
   transform-origin: left;
   border: none;
   animation-name: wipe-right;
@@ -208,12 +208,12 @@ hr.show {
   box-shadow: inset 0 0 0 0px var(--central-ministry-colour);
   transition: box-shadow 0.3s;
   will-change: box-shadow;
-  padding: 24px 32px 40px;
+  padding: var(--spacing-card-normal);
 }
 
 .card-title {
   line-height: var(--line-height-condensed);
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--spacing-xxs);
   position: inherit;
 }
 
@@ -286,8 +286,8 @@ hr.show {
   align-items: baseline;
   flex-wrap: wrap;
   gap: 2rem;
-  padding-bottom: 4rem;
-  margin-top: 3rem;
+  padding-bottom: var(--spacing-xxl);
+  margin-top: var(--spacing-xl);
 }
 
 .return,
@@ -295,7 +295,7 @@ hr.show {
 .print,
 .button,
 select {
-  padding: 1rem 2rem;
+  padding: var(--spacing-input-normal);
   font-size: var(--font-size-m);
   font-family: var(--mona-sans);
   color: black;
@@ -319,7 +319,7 @@ select {
 }
 
 footer {
-  padding: 2rem 5rem 3rem 5rem;
+  padding: var(--spacing-footer-normal);
   background-color: var(--theme, var(--central-ministry-colour));
   color: var(--theme-accent, white);
   display: flex;
@@ -358,7 +358,7 @@ footer hr {
   width: 100%;
   height: 10px;
   background-color: var(--theme-accent, white);
-  margin-bottom: 1rem;
+  margin-bottom: var(--spacing-xs);
   transform-origin: left;
   animation-name: wipe-right;
   animation-duration: 0.3s;
@@ -542,14 +542,14 @@ pagefind-searchbox::part(input) {
 @media (max-width: 600px) {
   header,
   .header-scrollable-area section:not(footer section) {
-    padding: 1rem 2rem;
+    padding: var(--spacing-section-compact);
   }
   .hero-title {
     font-size: var(--font-size-l);
   }
   .hero-text {
     font-size: var(--font-size-s);
-    margin-bottom: 2rem;
+    margin-bottom: var(--spacing-m);
   }
   .heading,
   h2,
@@ -568,14 +568,14 @@ pagefind-searchbox::part(input) {
     font-size: var(--font-size-s);
   }
   hr {
-    margin-bottom: 1rem;
+    margin-bottom: var(--spacing-xs);
   } 
   .all-cards {
     display: flex;
     flex-direction: column;
   }
   .card {
-    padding: 16px 24px;
+    padding: var(--spacing-card-compact);
     max-width: 100%;
   }
   .card-text {
@@ -598,7 +598,7 @@ pagefind-searchbox::part(input) {
   footer {
     flex-direction: column;
     flex-wrap: nowrap;
-    padding: 2rem 3rem 3rem 3rem;
+    padding: var(--spacing-footer-compact);
   }
   footer .link {
     font-size: var(--font-size-xs);
@@ -607,7 +607,7 @@ pagefind-searchbox::part(input) {
     margin-top: 0;
   }
   .return, .share, .print, .button {
-    padding: 1rem;
+    padding: var(--spacing-input-compact);
     font-size: var(--font-size-s);
     text-align: center;
   }
@@ -619,7 +619,7 @@ pagefind-searchbox::part(input) {
 
 @media print {
   @page {
-    margin: 18mm;
+    margin: var(--print-margin);
   }
   * {
     /* forces background images and other elements to show */
@@ -634,11 +634,11 @@ pagefind-searchbox::part(input) {
     width: 100%;
   }
   header {
-    padding: 1rem;
+    padding: var(--spacing-xs);
     position: static;
   }
   .hero {
-    padding: 0.5rem;
+    padding: var(--spacing-xxs);
     color: black;
     width: 100%;
     background-color: transparent;

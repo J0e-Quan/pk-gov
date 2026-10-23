@@ -1,10 +1,10 @@
 section:not(.hero, footer section) {
-  padding: 2rem 5rem;
+  padding: var(--spacing-section-normal);
 }
 
 .text {
   font-size: var(--font-size-s);
-  margin-bottom: 2rem;
+  margin-bottom: var(--spacing-m);
 }
 
 .notifications {
@@ -32,12 +32,12 @@ section:not(.hero, footer section) {
 .notifications-modal {
   background-color: white;
   margin: auto;
-  padding: 1rem 2rem;
+  padding: var(--spacing-input-normal);
 }
 
 .notifications-modal-title {
   font-size: var(--font-size-xxl);
-  margin-bottom: 2rem;
+  margin-bottom: var(--spacing-m);
 }
 
 .notifications-modal-title::before {
@@ -73,7 +73,7 @@ button.rss {
 }
 
 button.close {
-  margin-top: 2rem;
+  margin-top: var(--spacing-m);
   margin-inline: auto;
 }
 
@@ -128,7 +128,7 @@ h2.article-title::before {
 @media (max-width: 600px) {
   .header,
   section:not(footer section) {
-    padding: 1rem 2rem;
+    padding: var(--spacing-section-compact);
   }
   .notifications {
     gap: 0;
@@ -157,7 +157,7 @@ h2.article-title::before {
     justify-content: center;
   }
   .articles {
-    margin-bottom: 4rem;
+    margin-bottom: var(--spacing-xxl);
   }
   .article-title {
     font-size: var(--font-size-m);
