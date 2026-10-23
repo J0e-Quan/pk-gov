@@ -61,7 +61,7 @@ section:not(footer section) {
   .hero {
     padding: 1rem 2rem;
   }
-  .hero-title {
+  .homepage.hero-title {
     font-size: var(--font-size-l);
   }
   .hero-text {
