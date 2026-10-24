@@ -45,19 +45,19 @@
   --font-size-pibss-value: 10rem;
   /* SPACING (primitive values) */
   --content-max-width: 2000px;
-  --spacing-xxs: 0.5rem;
-  --spacing-xs: 1rem;
-  --spacing-s: 1.5rem;
-  --spacing-m: 2rem;
-  --spacing-l: 2.5rem;
-  --spacing-xl: 3rem;
-  --spacing-xxl: 4rem;
-  --spacing-xxxl: 5rem;
-  --spacing-negative-xxs: -0.5rem;
-  --spacing-negative-xs: -1rem  /  -16px;
-  --spacing-negative-m: -2rem;
+  --spacing-xxs: 8px;
+  --spacing-xs: 16px;
+  --spacing-s: 24px;
+  --spacing-m: 32px;
+  --spacing-l: 40px;
+  --spacing-xl: 48px;
+  --spacing-xxl: 64px;
+  --spacing-xxxl: 80px;
+  --spacing-negative-xxs: -8px;
+  --spacing-negative-xs: -16px;
+  --spacing-negative-m: -32px;
   /* SPACING (semantic values) */
-  --content-width-limit: max(5rem, calc((100vw - var(--content-max-width)) / 2 + 5rem));
+  --content-width-limit: max(80px, calc((100vw - var(--content-max-width)) / 2 + 80px));
   --header-search-buffer: 10rem;
   --print-margin: 18mm;
   --spacing-negative-logo: -0.2rem; 
