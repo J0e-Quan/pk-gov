@@ -2,7 +2,7 @@ This contains information about the pk-gov codebase, such as what technologies w
 
 ## pk-gov Tech Stack
 
-- Vanilla JS and CSS are used, no frameworks or anything (for now)
+- Vanilla JS and CSS are used, no frameworks or anything
 - 11ty is used to generate all pages on this website (but some pages still use regular html for the actual content), for more information refer to the 'Using 11ty' section below
 - Vite is used to minify and bundle code
 - ESLint and Prettier are in use to ensure code style remains consistent
