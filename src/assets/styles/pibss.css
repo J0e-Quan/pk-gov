@@ -279,7 +279,7 @@ button.splash-screen-start-button {
 button.register-submit-button {
   font-size: var(--font-size-xl);
   margin: 0;
-  padding: 0rem var(--spacing-input-compact);
+  padding: 0 var(--spacing-input-compact);
   display: flex;
   justify-content: center;
   align-items: center;

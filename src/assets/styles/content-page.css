@@ -152,7 +152,7 @@ button.share,
 .colour {
   flex-grow: 1;
   height: 10rem;
-  font-size: 2rem;
+  font-size: var(--font-size-m);
   color: white;
   padding: var(--spacing-card-compact);
   display: flex;
