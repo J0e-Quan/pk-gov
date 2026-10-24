@@ -39,7 +39,7 @@ This is where assets like fonts, pictures and CSS files are located.
 - `ministry-icons/` is where SVGs of the ministry icons are located
 - `news-media/` is where all media such as images used by news articles are stored. They are grouped into folders which have the same name as the page that uses them
 - `pictures/` is where all pictures used by other pages are stored. Currently, only minister pictures are here, but they are kept in a `ministers/` folder in case other types of pictures are added in the future
-- `styles/` is where all .css files are stored, including `global.css`, which loads the custom fonts from `fonts/`, resets some default css styling and contains some styles commonly used throughout pk-gov
+- `styles/` is where all .css files are stored, including `global.css`, which resets some default css styling and contains some styles commonly used throughout pk-gov, and `variables.css`, which loads fonts from `fonts/` and contains css custom properties/design tokens used in pk-gov
 - `weather-icons` is where all icons used by the weather service are located
 
 ### info/
