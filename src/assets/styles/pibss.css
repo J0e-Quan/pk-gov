@@ -176,6 +176,9 @@ section.login-form {
   justify-content: center;
   padding-top: 0 !important;
 }
+.notice .heading::before {
+  display: none;
+}
 .login-item {
   display: flex;
   flex-direction: column;
