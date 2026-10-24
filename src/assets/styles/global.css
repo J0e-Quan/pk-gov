@@ -33,6 +33,10 @@ body {
   flex-direction: column;
 }
 
+.hidden {
+  display: none;
+}
+
 /* IMPLEMENTS MAX-WIDTH FOR BETTER ULTRAWIDE SUPPORT */
 .header-scrollable-area {
   display: grid;
