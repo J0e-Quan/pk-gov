@@ -224,6 +224,15 @@ button.share,
   color: white;
 }
 
+.error-title {
+  font-size: var(--font-size-xxl);
+  margin-bottom: var(--spacing-s);
+}
+
+p.error-text, .error-text + ul {
+  font-size: var(--font-size-m);
+}
+
 /* MEDIA QUERIES BELOW */
 @media (max-width: 600px) {
   .header,
