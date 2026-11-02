@@ -68,7 +68,7 @@ This contains the weather service's njk and js file. These pages are generated w
 
 ### root (src/)
 
-In the root of `src/`, `index.njk` is the file for the homepage The homepage's CSS file is also named `home.css`. Any assets it uses are taken directly from `assets/`. `global.js` is also located here, as it is used by all pages for general tasks such as importing `global.css` and the share button. `feed.njk` is the template used to generate pk-gov's RSS feed.
+In the root of `src/`, `index.njk` is the file for the homepage The homepage's CSS file is also named `home.css`. Any assets it uses are taken directly from `assets/`. `global.js` is also located here, as it is used by all pages for general tasks such as importing `global.css` and the share button. `feed.njk` is the template used to generate pk-gov's RSS feed. `404.njk` is the file for the 404 page that displays if a user enters an invalid URL in their address bar.
 
 ## Using 11ty
 
