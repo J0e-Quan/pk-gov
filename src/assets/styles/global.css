@@ -103,14 +103,8 @@ main > * {
   font-weight: var(--font-weight-bold);
 }
 
-.table-of-contents-title::before {
-  display: none;
-}
-
 .table-of-contents-container hr {
   margin-bottom: var(--spacing-xs);
-  animation: none;
-  transform: scaleX(1);
 }
 
 .toc-item-h2 {
