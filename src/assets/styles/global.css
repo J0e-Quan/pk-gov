@@ -27,6 +27,11 @@ a {
   text-decoration: none;
 }
 
+code {
+  background-color: var(--ministry-of-defence-colour);
+  font-family: monospace;
+}
+
 body {
   min-height: 100vh;
   display: flex;

@@ -4,9 +4,17 @@ layout: content-page.njk
 title: Variables (Design tokens)
 excerpt: Access the list of variables used to standardise pk-gov's look and feel across typography, colours and spacing.
 ---
-<h2 class='heading'>What are CSS variables?</h2>
+<h2>What are CSS variables?</h2>
 <hr>
-<p class='text'>CSS variables (more formerly known as custom properties) are standardised values such as specific colours and numbers which can be reused throughout a project. We use CSS variables
-  all over the website in several areas, ensuring that pk-gov's design is as consistent as possible.
+<p>CSS variables (more formerly known as custom properties) are standardised values such as specific colours and numbers which can be reused throughout a project. We use CSS variables
+  all over the website in several areas, ensuring that pk-gov's design is as consistent as possible. The CSS variables used in pk-gov can be found in the 'variables.css' file (located in styles/
+  with the other .css files).
 </p>
-
+<h2>List of all pk-gov typography variables</h2>
+<hr>
+<h3>font-family</h3>
+<p>There are two font-family variables available, which should be chosen according to the <a class="link" href="/dev/design/gov-identity/">Government identity guidelines</a>.</p>
+<ul>
+  <li><code>--plex-sans: 'IBM Plex Sans', sans-serif;</code> sets the font-family of the styled element to IBM Plex Sans, with the default sans-serif font as a fallback.</li>
+  <li><code>--mona-sans: 'Mona Sans', serif;</code> sets the font-family of the styled element to Mona Sans, with the default serif font as a fallback.</li>
+</ul>
