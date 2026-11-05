@@ -192,7 +192,7 @@ hr.show {
   justify-content: center;
 }
 
-.all-cards:has(.ministry) {
+.all-cards.wide-cards {
   grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
 }
 
