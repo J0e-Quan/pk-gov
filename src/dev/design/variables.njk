@@ -10,11 +10,46 @@ excerpt: Access the list of variables used to standardise pk-gov's look and feel
   all over the website in several areas, ensuring that pk-gov's design is as consistent as possible. The CSS variables used in pk-gov can be found in the 'variables.css' file (located in styles/
   with the other .css files).
 </p>
-<h2>List of all pk-gov typography variables</h2>
+
+<h2>Typography variables</h2>
 <hr>
 <h3>font-family</h3>
-<p>There are two font-family variables available, which should be chosen according to the <a class="link" href="/dev/design/gov-identity/">Government identity guidelines</a>.</p>
+<p>There are two font-family variables available, which should be chosen according to the <a class="link" href="/dev/design/gov-identity/">Government identity guidelines</a>. Note that code 
+  blocks such as the ones shown below use the user's default monospace font, no specific font is chosen!
+</p>
 <ul>
-  <li><code>--plex-sans: 'IBM Plex Sans', sans-serif;</code> sets the font-family of the styled element to IBM Plex Sans, with the default sans-serif font as a fallback.</li>
-  <li><code>--mona-sans: 'Mona Sans', serif;</code> sets the font-family of the styled element to Mona Sans, with the default serif font as a fallback.</li>
+  <li style='font-family: var(--plex-sans)'><code>--plex-sans:</code> sets the font-family of the styled element to IBM Plex Sans, with the default sans-serif font as a fallback.</li>
+  <li><code>--mona-sans:</code> sets the font-family of the styled element to Mona Sans, with the default serif font as a fallback.</li>
 </ul>
+<h3>font-weight</h3>
+<p>There are two font-weight variables available, which should be chosen according to the <a class="link" href="/dev/design/gov-identity/">Government identity guidelines</a>. The fonts used on pk-gov
+  are variable fonts, so they can theoretically be set to a wide range of font-weights beyond the standard ones here if needed.
+</p>
+<ul>
+  <li style='font-weight: var(--font-weight-bold)'><code>--font-weight-bold</code> sets the font-weight of the styled element to 700. This is applied to all heading elements (h1-6) by default.</li>
+  <li><code>--font-weight-normal</code> sets the font-weight of the styled element to 400. This is applied to all elements by default.</li>
+</ul>
+<h3>line-height</h3>
+<p>There are two line-height variables available. Always choose the higher line-height option available for a better reading experience, unless it makes content look less appealing.
+</p>
+<ul>
+  <li style='line-height: var(--line-height-relaxed)'><code>-line-height-relaxed</code> sets the line-height of the styled element to 1.5. This should always be the first choice, as larger line-heights generally
+  make it easier for users to read content than lower line-heights.</li>
+  <li style='line-height: var(--line-height-condensed)'><code>--line-height-condensed</code> sets the line-height of the styled element to 1.2. This should only be used if the relaxed line-height makes content
+  look "awkward" or waste too much space, such as for larger headings.</li>
+</ul>
+<h3>font-size</h3>
+<p>There are eight common font-size variables available. Font sizes are usually automatically set by CSS, but can be changed if needed. There is also one "outlier" variable <code>--font-size-pibss-value</code>
+  which should NOT be used in normal situations, as it sets the font-size to an excessive 10rem, only used for the key statistics values in PIBSS.
+</p>
+<ul>
+  <li style='font-size: var(--font-size-xxs)'><code>--font-size-xxs</code> sets the font-size of the styled element to 0.75rem.</li>
+  <li style='font-size: var(--font-size-xs)'><code>--font-size-xs</code> sets the font-size of the styled element to 1rem.</li>
+  <li style='font-size: var(--font-size-s)'><code>--font-size-s</code> sets the font-size of the styled element to 1.5rem.</li>
+  <li style='font-size: var(--font-size-m)'><code>--font-size-m</code> sets the font-size of the styled element to 2rem.</li>
+  <li style='font-size: var(--font-size-l)'><code>--font-size-l</code> sets the font-size of the styled element to 2.5rem.</li>
+  <li style='font-size: var(--font-size-xl)'><code>--font-size-xl</code> sets the font-size of the styled element to 3rem.</li>
+  <li style='font-size: var(--font-size-xxl)'><code>--font-size-xxl</code> sets the font-size of the styled element to 4rem.</li>
+  <li style='font-size: var(--font-size-xxxl)'><code>--font-size-xxxl</code> sets the font-size of the styled element to 5rem.</li>
+</ul>
+
