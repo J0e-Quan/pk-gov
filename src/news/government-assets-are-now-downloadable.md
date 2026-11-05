@@ -14,7 +14,7 @@ As promised last week by Kodee, we have made some Government assets available to
 
 ---
 
-The assets we have made available today, as well as any future additions, will be available at the end of our <a class="link" href="/about/gov-identity/">Government identity guidelines</a> page. The assets are grouped into categories, with each category being a button. Clicking any of the buttons will download a .zip file containing all relevant assets.
+The assets we have made available today, as well as any future additions, will be available in <a class="link" href="/dev/">pk-dev</a>'s 'Download assets' page. The assets are grouped into categories, with each category being a button. Clicking any of the buttons will download a .zip file containing all relevant assets.
 
 ## What assets are available?
 
@@ -28,4 +28,4 @@ As of 23 May 2026, these are the assets available for download:
 - Ministry animations (available in both mp4 and lottie formats)
 - Ministry themes (the short jingles played during ministry animations)
 
-We hope that all Plushie Kingdom citizens will be able to make good use of these assets, and that these assets will not be misused in a way that harms or disrupts our <a class="link" href="/about/gov-identity/">Government identity</a>. We're excited to be opening up more aspects of our Government to enable greater transparency and accountability across the Kingdom, so stay tuned to the <a class="link" href="/news/">Government news</a> page for the latest updates and information. Until next time, enjoy the rest of your weekend!
+We hope that all Plushie Kingdom citizens will be able to make good use of these assets, and that these assets will not be misused in a way that harms or disrupts our <a class="link" href="/dev/design/gov-identity/">Government identity</a>. We're excited to be opening up more aspects of our Government to enable greater transparency and accountability across the Kingdom, so stay tuned to the <a class="link" href="/news/">Government news</a> page for the latest updates and information. Until next time, enjoy the rest of your weekend!

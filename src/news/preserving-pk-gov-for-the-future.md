@@ -8,7 +8,7 @@ excerpt: In an effort to preserve Plushie Kingdom history, the pk-gov website wi
 thumbnail: /assets/news-media/preserving-pk-gov-for-the-future/thumbnail.webp
 ---
 
-Since pk-gov was first launched in May 2026, there have been countless new updates to the website, enhancing the website with various new features, bug fixes and services. Throughout all this change, we've regularly recorded the history of pk-gov in our <a class="link" href="/about/pk-gov/">About the pk-gov website</a> page, and the history of the Plushie Kingdom in the <a class="link" href="/info/who-we-are/">Who we are</a> page. This ensured that Plushie Kingdom history would be permanently stored for future viewing.
+Since pk-gov was first launched in May 2026, there have been countless new updates to the website, enhancing the website with various new features, bug fixes and services. Throughout all this change, we've regularly recorded the history of pk-gov in our <a class="link" href="/about/">About the pk-gov website</a> page, and the history of the Plushie Kingdom in the <a class="link" href="/info/who-we-are/">Who we are</a> page. This ensured that Plushie Kingdom history would be permanently stored for future viewing.
 
 ## Show, don't tell
 

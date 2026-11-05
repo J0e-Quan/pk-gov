@@ -38,7 +38,7 @@ To get started, you can take a look at our <a class="link" href="https://github.
 
 ---
 
-We will make more Government content freely accessible to the public in the future. For example, we have plans for making our staff photos and ministry icons downloadable. All Government assets which are downloadable will be available in the <a class="link" href="/about/gov-identity/">Government identity guidelines</a> page.
+We will make more Government content freely accessible to the public in the future. For example, we have plans for making our staff photos and ministry icons downloadable. All Government assets which are downloadable will be available in <a class="link" href="/dev/">pk-dev</a>.
 
 ## What's next
 
