@@ -69,3 +69,21 @@ excerpt: Access the list of variables used to standardise pk-gov's look and feel
   <li style='padding-left: var(--spacing-xxl); box-shadow: inset var(--spacing-xxl) 0 0 0 orange'><code>--spacing-xxl</code> gives 64px of spacing.</li>
   <li style='padding-left: var(--spacing-xxxl); box-shadow: inset var(--spacing-xxxl) 0 0 0 orange'><code>--spacing-xxxl</code> gives 80px of spacing.</li>
 </ul>
+<h3>Semantic values</h3>
+<p>There are 13 semantic spacing variables available, each used for specific contexts. Some are used for "normal" elements appearing on desktop-sized viewports, while others are for "compact" elements appearing on mobile-sized viewports.
+</p>
+<ul>
+  <li><code>--content-width-limit</code> is used to center content on ultrawide displays. This is automatically applied where it is needed.</li>
+  <li style='padding-top: var(--header-search-buffer); background-image: linear-gradient(orange, orange); background-size: 100% 10rem; background-repeat: no-repeat;'><code>--header-search-buffer</code> is equivalent to 10rem and ensures the heading is visible when users search for it. This is automatically applied for searchable headings.</li>
+  <li style='border: var(--print-margin) solid orange'><code>--print-margin</code> is equivalent to 18mm, used only for the margin in printed web pages.</li>
+  <li><code>--spacing-negative-logo</code> is used to adjust the spacing between 'Plushie Kingdom' and 'Government' in the header, and should NOT be used in normal situations.</li>
+  <li style='border: solid orange; border-width: var(--spacing-header)'><code>--spacing-header</code> is used to provide the spacing for the header.</li>
+  <li style='border: solid orange; border-width: var(--spacing-input-normal)'><code>--spacing-input-normal</code> is used to provide the spacing for normal input elements.</li>
+  <li style='border: solid orange; border-width: var(--spacing-input-compact)'><code>--spacing-input-compact</code> is used to provide the spacing for compact input elements.</li>
+  <li style='border: solid orange; border-width: var(--spacing-section-normal)'><code>--spacing-section-normal</code> is used to provide the spacing for normal content sections.</li>
+  <li style='border: solid orange; border-width: var(--spacing-section-compact)'><code>--spacing-section-compact</code> is used to provide the spacing for compact content sections.</li>
+  <li style='border: solid orange; border-width: var(--spacing-card-normal)'><code>--spacing-card-normal</code> is used to provide the spacing for normal cards.</li>
+  <li style='border: solid orange; border-width: var(--spacing-card-compact)'><code>--spacing-card-compact</code> is used to provide the spacing for compact cards.</li>
+  <li style='border: solid orange; border-width: var(--spacing-footer-normal)'><code>--spacing-footer-normal</code> is used to provide the spacing for the normal footer.</li>
+  <li style='border: solid orange; border-width: var(--spacing-footer-compact)'><code>--spacing-footer-compact</code> is used to provide the spacing for the compact footer.</li>
+</ul>
