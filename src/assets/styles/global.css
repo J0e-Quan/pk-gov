@@ -33,6 +33,10 @@ code, pre, kbd {
   padding-inline: var(--spacing-xxs);
 }
 
+pre {
+  overflow: auto;
+}
+
 body {
   min-height: 100vh;
   display: flex;
