@@ -30,6 +30,7 @@ a {
 code {
   background-color: var(--ministry-of-defence-colour);
   font-family: monospace;
+  padding-inline: var(--spacing-xxs);
 }
 
 body {
