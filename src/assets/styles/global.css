@@ -27,7 +27,7 @@ a {
   text-decoration: none;
 }
 
-code {
+code, pre, kbd {
   background-color: var(--ministry-of-defence-colour);
   font-family: monospace;
   padding-inline: var(--spacing-xxs);

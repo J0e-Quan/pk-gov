@@ -4,3 +4,106 @@ layout: content-page.njk
 title: Components
 excerpt: Check out the various UI components that are used throughout pk-gov.
 ---
+<h2>Buttons</h2>
+<hr>
+<p>Buttons are some of the most common UI components used in pk-gov, providing a wide range of functions
+  from navigating through forms to returning users to the previous page. As a result, there are several
+  different types of buttons available.
+</p>
+<h3>"True" buttons</h3>
+<button class='button' type='button'>This is a "True" button</button>
+<p>These are created with the HTML button element, with styles and hover animations applied when the
+  <code>'button'</code> class is added. "True" buttons do nothing by default, so functionality must be 
+  added with JavaScript. If a button is meant to redirect users to different pages or otherwise behave 
+  like links, the "Link" button should be used instead.
+</p>
+<h3>"Link buttons</h3>
+<a class='button' href=''>This "Link" button refreshes the page</a>
+<p>These are created with HTML anchor elements, with styles and hover animations applied when the <code>'return'</code>,
+  <code>'download'</code> or <code>'button'</code> class is added. "Link" buttons have the same functionality as
+  regular anchor elements, and should be used for linking to different pages or downloadable content. Buttons that
+  do not provide either of these functions should be "True" buttons.
+</p>
+
+<h2>Button rows</h2>
+<hr>
+<div class='end-buttons'>
+  <button class='button' type='button'>This is a "True" button</button>
+  <a class='button' href=''>This "Link" button refreshes the page</a>
+</div>
+<p>By default, buttons are treated as block elements. If multiple buttons need to be placed in a single row,
+  the buttons should be placed in a container with the <code>'start-buttons'</code> or <code>'end-buttons'</code> classes:
+</p>
+<ul>
+  <li><code>'start-buttons'</code> aligns buttons from left to right, such as the buttons in the PIBSS Start Page.</li>
+  <li><code>'end-buttons'</code> aligns buttons in the centre as shown in the example above.</li>
+</ul>
+
+<h2>Cards</h2>
+<hr>
+<p>Cards are mainly used on 'homepages' to link to other content pages. Cards contain a title and description
+  as their content. The basic structure of a card is as shown below, with styles and hover animations applied
+  when all classes shown below are added:
+</p>
+<pre>
+  &lt;div class="card"&gt;
+    &lt;div class='card-text'&gt;
+      &lt;h2 class="card-title"&gt;&lt;a class='card-link' href=''&gt;Card title&lt;/a&gt;&lt;/h2&gt;
+      &lt;p class="card-description"&gt;Describe the content of this card.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class='card-arrow'&gt;>&lt;/div&gt;
+  &lt;/div&gt;
+</pre>
+<p>Cards MUST be contained within a container with the <code>'all-cards'</code> class. Therefore, cards should
+  only be used when there There are two width
+  options for cards, the regular width (applied by default) and a wider width when the <code>wide-cards</code>
+  class is added:
+</p>
+<h3>Regular width cards</h3>
+<div class='all-cards'>
+  <div class="card">
+    <div class='card-text'>
+      <h2 class="card-title"><a class='card-link' href="/">Card title</a></h2>
+      <p class="card-description">Describe the content of this card.</p>
+    </div>
+    <div class='card-arrow'>></div>
+  </div>
+  <div class="card">
+    <div class='card-text'>
+      <h2 class="card-title"><a class='card-link' href="">Card 2</a></h2>
+      <p class="card-description">Here's another card to show the different widths.</p>
+    </div>
+    <div class='card-arrow'>></div>
+  </div>
+  <div class="card">
+    <div class='card-text'>
+      <h2 class="card-title"><a class='card-link' href="">Third Card</a></h2>
+      <p class="card-description">More cards. Why not?</p>
+    </div>
+    <div class='card-arrow'>></div>
+  </div>
+</div>
+<h3>Wide cards</h3>
+<div class='all-cards wide-cards'>
+  <div class="card">
+    <div class='card-text'>
+      <h2 class="card-title"><a class='card-link' href="">Card title</a></h2>
+      <p class="card-description">Describe the content of this card.</p>
+    </div>
+    <div class='card-arrow'>></div>
+  </div>
+  <div class="card">
+    <div class='card-text'>
+      <h2 class="card-title"><a class='card-link' href="">Card 2</a></h2>
+      <p class="card-description">Here's another card to show the different widths.</p>
+    </div>
+    <div class='card-arrow'>></div>
+  </div>
+  <div class="card">
+    <div class='card-text'>
+      <h2 class="card-title"><a class='card-link' href="">Third Card</a></h2>
+      <p class="card-description">More cards. Why not?</p>
+    </div>
+    <div class='card-arrow'>></div>
+  </div>
+</div>

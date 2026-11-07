@@ -2,7 +2,7 @@ section:not(.hero, footer section) {
   padding: var(--spacing-section-normal);
 }
 
-.page p {
+.page p, .page pre {
   font-size: var(--font-size-s);
   margin-bottom: var(--spacing-m);
   line-height: var(--line-height-relaxed);
@@ -248,7 +248,8 @@ p.error-text, .error-text + ul {
   }
   .page p,
   .page ul,
-  .page ol {
+  .page ol,
+  .page pre {
     font-size: var(--font-size-xs);
   }
   .colour,
