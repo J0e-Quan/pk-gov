@@ -260,5 +260,8 @@ p.error-text, .error-text + ul {
     gap: 1rem;
     margin: 0 0 var(--spacing-m)
   }
+  .error-title {
+    font-size: var(--font-size-l);
+  }
 }
 /* MEDIA QUERIES ABOVE */
