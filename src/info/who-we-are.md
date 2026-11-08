@@ -48,7 +48,7 @@ Within 3 years, the house with the red walls and yellow windows would come to in
 
 ### 2015-2016: Expedition to Taiwan
 
-<div class='side-by-side one'>
+<div class='side-by-side'>
   <p>In June 2015, two prominent residents of the Plushie Kingdom, the then-Village Chief Ah Bob and Pink Bear Bear would be heading on a 1-year expedition to Taiwan. Due to Ah Bob's 1 year absence, another plushie living in the Plushie Village, Stitch would be chosen to replace Ah Bob as the Plushie Village's second Village Chief. He would go on to retain this role until The Great Reunification in November 2022. The two adventurers would bring home an additional resident to the Plushie Village upon their return in June 2016.</p>
   <img src='/assets/info-media/who-we-are/plushie-village.webp' alt='Picture of Stitch in the Plushie Village'>
 </div>
@@ -60,7 +60,7 @@ In early 2017, Pink Bear Bear along with 8 other residents of the Plushie Villag
 
 ### 2020-2022: Pandemic and Penang
 
-<div class='side-by-side two'>
+<div class='side-by-side'>
   <p>Expansion of the Plushie Kingdom would be paused during the COVID-19 pandemic, as the settlements entered a lockdown. During a brief period of relaxed lockdown regulations in late 2020, the Plushie Kingdom would be relocated to Penang. Gone was their vast but unsheltered land, now replaced with a shiny new castle, where they would spend the rest of the pandemic in. Their new location in Penang shortened the distance for travel between the two settlements, allowing for even closer ties and more frequent visits than ever before. However, there was still a need to travel between the two settlements, leading the Plushie Kingdom and Plushie Village to wonder if they could ever truly be together as one cohesive entity. Fortunately, there would soon be an opportunity to do just that...</p>
   <img src='/assets/info-media/who-we-are/plushie-kingdom-pg1.webp' alt='Picture of the Plushie Kingdom castle in Penang'>
 </div>

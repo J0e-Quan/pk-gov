@@ -27,7 +27,7 @@ If you are unfortunately involved in a dangerous or risky scenario, don't try to
 
 ### Sightings of the Bad Guy
 
-<div class='side-by-side three'>
+<div class='side-by-side'>
   <p>If you are sure you've seen the Bad Guy near the Plushie Kingdom, and believe he's up to no good, inform your nearest Ministry of Defence staff member as soon as possible. (For new citizens, here's a sketch of his appearance. His outfit may change from time to time but his overall physique and weight probably won't) </p>
   <div class='bad-guy'></div>
 </div>
