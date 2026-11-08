@@ -37,7 +37,6 @@ function changeReturnButton() {
   window.addEventListener('beforeunload', (event) => {
     if (isFormDone === false) {
       event.preventDefault()
-      event.returnValue = ''
     }
   })
 }
