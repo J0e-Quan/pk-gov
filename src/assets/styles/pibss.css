@@ -247,6 +247,9 @@ main:has(.form) + .end-buttons {
   line-height: var(--line-height-condensed);
   margin-bottom: var(--spacing-xs);
 }
+.progress-title::before {
+  display: none;
+}
 .progress-bar-wrapper {
   width: 100%;
   height: 10px;
