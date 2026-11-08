@@ -33,7 +33,7 @@ updateLocationButton.addEventListener('click', beginUpdateLocation)
 function changeReturnButton() {
   const returnButton = document.querySelector('.return')
   returnButton.textContent = 'Return to dashboard'
-  returnButton.href = '/pibss/manage/'
+  returnButton.href = '/services/pibss/manage/'
   window.addEventListener('beforeunload', (event) => {
     if (isFormDone === false) {
       event.preventDefault()
