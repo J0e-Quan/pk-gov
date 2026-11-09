@@ -39,6 +39,7 @@ document.querySelectorAll(elementsToAnimate).forEach(el => {
   observer.observe(el)
 })
 
+// Code for removing #ids from table of contents or links to specific headings
 document.addEventListener('click', (e) => {
   // Check if the clicked element (or its parent) is a link
   const anchor = e.target.closest('a')
@@ -74,7 +75,6 @@ const shareButton = document.querySelector('.share')
 if (shareButton !== null) {
   shareButton.addEventListener('click', share)
 }
-
 async function share() {
   const url = new URL(window.location.href)
   // remove any id tags used by table of contents before sharing
@@ -133,7 +133,6 @@ const rssButton = document.querySelector('.button.rss')
 if (rssButton !== null) {
   rssButton.addEventListener('click', getRSS)
 }
-
 function getRSS() {
   const feedURL = window.location.origin + '/feed.xml'
   const rssButton = document.querySelector('.button.rss')
