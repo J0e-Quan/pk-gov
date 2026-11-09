@@ -351,11 +351,6 @@ button.register-confirm-button {
 .form-select,
 .register-country-select,
 .register-location-select {
-  padding: var(--spacing-input-normal);
-  border: 16px solid var(--central-ministry-colour);
-  font-size: var(--font-size-m);
-  min-width: 0;
-  height: 100%;
   margin-right: var(--spacing-negative-xs);
   margin-top: 0;
   flex-grow: 1;
