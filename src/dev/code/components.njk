@@ -121,8 +121,26 @@ excerpt: Check out the various UI components that are used throughout pk-gov.
   Elements that are NOT listed here, such as radio groups have not been used in pk-gov yet, and as such may not
   be styled properly compared to other options.
 </p>
-<h3>STANDARDISE/GLOBALISE INPUT CLASSES FIRST BEFORE DOING THIS PART!</h3>
-
+<h3>Dropdowns</h3>
+<select name="example-select" id="example-select" style='margin-block: var(--spacing-xxs)'>
+  <option value="1">This is an option</option>
+  <option value="2">This is another option</option>
+  <option value="3">Option 3</option>
+</select>
+<p>Dropdowns are used when users need to choose from several options, created with regular HTML select and
+  option elements. Styles are automatically applied with no classes needed. Dropdowns appear "roomier" like
+  the example above by default, though certain uses of dropdowns, such as the filter options in the 'Access
+  PIBSS data' page have custom styles to make them more compact.
+</p>
+<h3>Inputs (text, date, email, password)</h3>
+<div style='display: flex; flex-wrap: wrap; justify-content: center'>
+  <input type="text" placeholder="This is a 'text' input">
+</div>
+<p>These are created with regular HTML input elements whose type are set to 'text', 'date', 'email' or
+  'password'. Styles are automatically applied with no classes needed. For search inputs such as the 1st
+  step of the form for updating a plushie's location in PIBSS, use a 'text' input instead of the built-in
+  'search' input, as the default 'X' icon created for 'search' inputs cannot be styled.
+</p>
 <h2>PIBSS card</h2>
 <hr>
 <div class='pibss-card' style='flex: calc(50% - .5rem); gap: 1rem; min-width: 540px; max-width: calc(50% - .5rem); margin-right: auto; display: flex; margin-bottom: var(--spacing-s)'>
