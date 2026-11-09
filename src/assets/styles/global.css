@@ -37,6 +37,14 @@ pre {
   overflow: auto;
 }
 
+input {
+  padding: var(--spacing-input-normal);
+  border: 16px solid var(--central-ministry-colour);
+  font-size: var(--font-size-m);
+  min-width: 0;
+  height: 100%;
+}
+
 body {
   min-height: 100vh;
   display: flex;
