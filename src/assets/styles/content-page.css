@@ -89,7 +89,8 @@ section:not(.hero, footer section) {
 
 a.return,
 button.share,
-.button {
+.button,
+button.print {
   margin-inline: var(--spacing-m);
 }
 
