@@ -55,6 +55,32 @@ section:not(footer section) {
   padding: var(--spacing-section-normal);
 }
 
+.beta-faq {
+  background-color: orange;
+  padding: var(--spacing-section-normal);
+  font-size: var(--font-size-xl);
+}
+
+.beta-faq summary {
+  font-family: var(--plex-sans);
+  font-weight: var(--font-weight-bold);
+}
+
+.beta-faq details {
+  margin-left: var(--spacing-m);
+  margin-top: var(--spacing-m);
+  background-color: white;
+  padding: var(--spacing-input-normal);
+}
+
+.beta-faq details summary {
+  font-size: var(--font-size-m);
+}
+
+.beta-faq p {
+  font-size: var(--font-size-s);
+}
+
 /* MEDIA QUERIES BELOW */
 @media (max-width: 600px) {
   .header,
