@@ -81,10 +81,22 @@ header {
   padding-inline: var(--content-width-limit);
 }
 
-.logo-text {
+.logo-text, .logo-text-beta {
   color: var(--theme-accent, white);
-  font-size: var(--font-size-s);
   text-decoration: none;
+}
+
+.logo-text {
+  font-size: var(--font-size-s);
+}
+
+.logo-text-beta.left, .logo-text-beta.right {
+  font-size: var(--font-size-l);
+}
+
+.logo-text-beta.right {
+  font-family: var(--plex-sans);
+  font-weight: var(--font-weight-normal);
 }
 
 .logo-text.bottom {

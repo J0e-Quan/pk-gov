@@ -27,10 +27,16 @@
   <body>
     <div class='header-scrollable-area'>
       <header class='header'>
-        <a class='logo-text' href='/'>
-          <h3 class='logo-text top'>Plushie Kingdom</h3>
-          <h3 class='logo-text bottom'>Government</h3>
-        </a>
+        {% if isBeta %}
+          <a class='logo-text-beta' href='/'>
+              <h3 class='logo-text-beta left'>pk-gov<span class='logo-text-beta right'>-beta</span></h3>
+          </a>
+        {% else %}
+          <a class='logo-text' href='/'>
+              <h3 class='logo-text top'>Plushie Kingdom</h3>
+              <h3 class='logo-text bottom'>Government</h3>
+          </a>
+        {% endif %}
         <pagefind-searchbox
           class='search-desktop'
           shortcut='none'
