@@ -229,6 +229,10 @@ hr.show {
   padding: var(--spacing-card-normal);
 }
 
+.card-text:has(.card-link:focus-visible) {
+  outline: 4px solid black;
+}
+
 .card-title {
   line-height: var(--line-height-condensed);
   margin-bottom: var(--spacing-xxs);
