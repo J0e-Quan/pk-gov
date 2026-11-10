@@ -166,7 +166,6 @@ section:not(.hero, footer section) {
   animation-play-state: running;
 }
 
-
 .minister.name {
   font-size: var(--font-size-xl);
   scroll-margin-top: var(--header-search-buffer);

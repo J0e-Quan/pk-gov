@@ -121,7 +121,7 @@ h2.article-title::before {
   font-weight: var(--font-weight-normal);
   font-family: var(--mona-sans);
   scroll-margin-top: var(--header-search-buffer);
-  line-height: var(--line-height-relaxed)
+  line-height: var(--line-height-relaxed);
 }
 
 /* MEDIA QUERIES BELOW */

@@ -38,9 +38,9 @@ The Plushie Kingdom is home to plushies of various types, so it is important tha
 
 ![all bad guy outfits](/assets/news-media/step-forward-with-the-new-revamp-of-pk-gov/bad-guys.webp)
 
-Now that major initiatives like PIBSS have been launched, it is time to address the biggest complaint about the website since it's initial launch, being that the sketch of the Bad Guy did not accurately reflect his attire at all times. To address this, the Ministry of Defence went on a large-scale spying operation, gathering valuable data on the Bad Guy's favourite outfits. 
+Now that major initiatives like PIBSS have been launched, it is time to address the biggest complaint about the website since it's initial launch, being that the sketch of the Bad Guy did not accurately reflect his attire at all times. To address this, the Ministry of Defence went on a large-scale spying operation, gathering valuable data on the Bad Guy's favourite outfits.
 
-Today, that data will finally be utilised to dynamically change the outfit of the Bad Guy's sketch in the 'Safety and Residency' page! We pieced together various outfits that were more likely to be worn by the Bad Guy, so that plushies can be more aware of the Bad Guy's presence. 
+Today, that data will finally be utilised to dynamically change the outfit of the Bad Guy's sketch in the 'Safety and Residency' page! We pieced together various outfits that were more likely to be worn by the Bad Guy, so that plushies can be more aware of the Bad Guy's presence.
 
 ## Taking the next step forward
 

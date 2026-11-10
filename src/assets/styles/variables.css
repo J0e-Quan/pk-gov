@@ -60,8 +60,8 @@
   --content-width-limit: max(80px, calc((100vw - var(--content-max-width)) / 2 + 80px));
   --header-search-buffer: 10rem;
   --print-margin: 18mm;
-  --spacing-negative-logo: -0.2rem; 
-  --form-bottom-buffer: 25vh; 
+  --spacing-negative-logo: -0.2rem;
+  --form-bottom-buffer: 25vh;
   --spacing-header: var(--spacing-xs) var(--spacing-xxxl);
   --spacing-input-normal: var(--spacing-xs) var(--spacing-m);
   --spacing-input-compact: var(--spacing-xxs) var(--spacing-xs);

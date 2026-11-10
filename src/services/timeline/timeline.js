@@ -75,9 +75,11 @@ function showNextHoliday() {
   if (dateDetails.isToday === true) {
     holidayDate.textContent = dateDetails.holidayDayName + ', ' + date + " (It's today!)"
   } else if (dateDetails.daysLeft !== 1) {
-    holidayDate.textContent = dateDetails.holidayDayName + ', ' + date + ' (' + dateDetails.daysLeft + ' days from today)'
+    holidayDate.textContent =
+      dateDetails.holidayDayName + ', ' + date + ' (' + dateDetails.daysLeft + ' days from today)'
   } else {
-    holidayDate.textContent = dateDetails.holidayDayName + ', ' + date + ' (' + dateDetails.daysLeft + ' day from today)'
+    holidayDate.textContent =
+      dateDetails.holidayDayName + ', ' + date + ' (' + dateDetails.daysLeft + ' day from today)'
   }
   container.appendChild(holidayDate)
 }
@@ -97,8 +99,16 @@ function getDateDetails(inputDate) {
   const holidayDate = new Date(inputDate)
   const currentDate = new Date()
   // standardise both to local time midnight to prevent time zones causing incorrect day counts
-  const holidayMidnight = new Date(holidayDate.getFullYear(), holidayDate.getMonth(), holidayDate.getDate())
-  const currentMidnight = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate())
+  const holidayMidnight = new Date(
+    holidayDate.getFullYear(),
+    holidayDate.getMonth(),
+    holidayDate.getDate()
+  )
+  const currentMidnight = new Date(
+    currentDate.getFullYear(),
+    currentDate.getMonth(),
+    currentDate.getDate()
+  )
   const MS_PER_DAY = 1000 * 60 * 60 * 24
   // Math.abs() gives absolute value to avoid negative numbers
   const msDiff = Math.abs(holidayMidnight - currentMidnight)

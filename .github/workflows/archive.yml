@@ -23,17 +23,17 @@ jobs:
         run: npm ci
 
       - name: Build static site
-        run: npm run build 
+        run: npm run build
 
       - name: Wait for Render deploy to finish
         run: sleep 60 # Wait 1 minute (60s) before archiving
 
       - name: Archive pages to Internet Archive
         env:
-          SITE_URL: "https://pk-gov.onrender.com" 
+          SITE_URL: 'https://pk-gov.onrender.com'
           IA_ACCESS_KEY: ${{ secrets.IA_ACCESS_KEY }}
           IA_SECRET_KEY: ${{ secrets.IA_SECRET_KEY }}
-          DIST_DIR: "dist"
+          DIST_DIR: 'dist'
         run: |
           cd "$DIST_DIR"
 

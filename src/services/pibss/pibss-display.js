@@ -41,7 +41,7 @@ function updateResultsText() {
 }
 
 const observerCallback = (entries, observer) => {
-  entries.forEach(entry => {
+  entries.forEach((entry) => {
     if (entry.isIntersecting) {
       entry.target.classList.add('show')
       // this causes the animation to only play once
@@ -50,9 +50,9 @@ const observerCallback = (entries, observer) => {
   })
 }
 const observer = new IntersectionObserver(observerCallback, {
-  root: null,        // Uses the browser viewport
+  root: null, // Uses the browser viewport
   rootMargin: '0px', // Margin around the root
-  threshold: 0.3     // Trigger when 30% of the element is visible
+  threshold: 0.3 // Trigger when 30% of the element is visible
 })
 
 function renderEntries(data) {
@@ -82,7 +82,7 @@ function renderEntries(data) {
     picture.addEventListener('error', () => {
       setTimeout(() => {
         picture.src = entry.photo_url
-      }, TWO_SECONDS);
+      }, TWO_SECONDS)
     })
     card.appendChild(picture)
     const cardText = document.createElement('div')
@@ -116,9 +116,13 @@ function renderEntries(data) {
     card.appendChild(cardText)
     container.appendChild(card)
   }
-  document.querySelectorAll('.pibss-picture, .pibss-name, .pibss-type, .pibss-date, .pibss-country, .pibss-location').forEach(el => {
-    observer.observe(el)
-  })
+  document
+    .querySelectorAll(
+      '.pibss-picture, .pibss-name, .pibss-type, .pibss-date, .pibss-country, .pibss-location'
+    )
+    .forEach((el) => {
+      observer.observe(el)
+    })
 }
 
 async function getPlushieTypes() {

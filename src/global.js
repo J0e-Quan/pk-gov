@@ -20,9 +20,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // code for scroll-triggered animations
 // pibss elements are not included here because they are created dynamically, not on page load!
-const elementsToAnimate = '.heading, h2, hr, img, .minister.picture, .minister.info-box, .bad-guy, .footer-title, footer hr'
+const elementsToAnimate =
+  '.heading, h2, hr, img, .minister.picture, .minister.info-box, .bad-guy, .footer-title, footer hr'
 const observerCallback = (entries, observer) => {
-  entries.forEach(entry => {
+  entries.forEach((entry) => {
     if (entry.isIntersecting) {
       entry.target.classList.add('show')
       // this causes the animation to only play once
@@ -31,11 +32,11 @@ const observerCallback = (entries, observer) => {
   })
 }
 const observer = new IntersectionObserver(observerCallback, {
-  root: null,        // Uses the browser viewport
+  root: null, // Uses the browser viewport
   rootMargin: '0px', // Margin around the root
-  threshold: 0.3     // Trigger when 30% of the element is visible
+  threshold: 0.3 // Trigger when 30% of the element is visible
 })
-document.querySelectorAll(elementsToAnimate).forEach(el => {
+document.querySelectorAll(elementsToAnimate).forEach((el) => {
   observer.observe(el)
 })
 
@@ -108,7 +109,7 @@ if (printButton !== null) {
 // code for randomising bad guy outfit
 const photoElement = document.querySelector('.bad-guy')
 if (photoElement !== null) {
-  photoElement.id = 'bad-guy-' + Math.floor(Math.random() * 6 )
+  photoElement.id = 'bad-guy-' + Math.floor(Math.random() * 6)
 }
 
 // code for opening/closing notification-modal
@@ -171,14 +172,17 @@ OneSignalDeferred.push(async function (OneSignal) {
       pushButton.textContent = 'Opting out...'
       await OneSignal.User.PushSubscription.optOut()
       pushButton.textContent = 'Successfully opted out!'
-      notificationTitle.textContent = "Get notified whenever a new article is posted here. Click the 'Manage preferences' button to enable push notifications."
+      notificationTitle.textContent =
+        "Get notified whenever a new article is posted here. Click the 'Manage preferences' button to enable push notifications."
       setTimeout(() => {
         pushButton.textContent = 'Enable notifications'
         pushButton.addEventListener('click', optIn, { once: true })
       }, THREE_SECONDS)
     } catch (error) {
       console.error(error)
-      alert("Opt out unsuccessful! Please try again, or contact the Ministry of Technology for help if this error persists.")
+      alert(
+        'Opt out unsuccessful! Please try again, or contact the Ministry of Technology for help if this error persists.'
+      )
       pushButton.textContent = 'Opt out of notifications'
       pushButton.addEventListener('click', optOut, { once: true })
     }
@@ -191,19 +195,24 @@ OneSignalDeferred.push(async function (OneSignal) {
         pushButton.textContent = 'Opting in...'
         await OneSignal.User.PushSubscription.optIn()
         pushButton.textContent = 'Notifications enabled!'
-        notificationTitle.textContent = "You've opted in to receiving push notifications for new articles."
+        notificationTitle.textContent =
+          "You've opted in to receiving push notifications for new articles."
         setTimeout(() => {
           pushButton.textContent = 'Opt out of notifications'
           pushButton.addEventListener('click', optOut, { once: true })
         }, THREE_SECONDS)
       } catch (error) {
         console.error(error)
-        alert("Opt in unsuccessful! Please try again, or contact the Ministry of Technology for help if this error persists.")
+        alert(
+          'Opt in unsuccessful! Please try again, or contact the Ministry of Technology for help if this error persists.'
+        )
         pushButton.textContent = 'Enable notifications'
         pushButton.addEventListener('click', optIn, { once: true })
       }
     } else {
-      alert('Notification permission blocked! Please enable notification permissions for this website.')
+      alert(
+        'Notification permission blocked! Please enable notification permissions for this website.'
+      )
       pushButton.textContent = 'Enable notifications'
       pushButton.addEventListener('click', optIn, { once: true })
     }

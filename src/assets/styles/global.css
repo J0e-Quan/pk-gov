@@ -27,7 +27,9 @@ a {
   text-decoration: none;
 }
 
-code, pre, kbd {
+code,
+pre,
+kbd {
   background-color: var(--ministry-of-defence-colour);
   font-family: monospace;
   padding-inline: var(--spacing-xxs);
@@ -295,7 +297,7 @@ hr.show {
   transform: scaleY(3) scaleX(1.5);
 }
 
-.end-buttons {  
+.end-buttons {
   grid-column: 2;
   display: flex;
   justify-content: center;
@@ -524,7 +526,9 @@ pagefind-searchbox::part(input) {
 
 /* DISABLES ALL ANIMATIONS AND MOTION FOR PEOPLE WHO PREFER REDUCED MOTION */
 @media (prefers-reduced-motion) {
-  *, ::before, ::after {
+  *,
+  ::before,
+  ::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
@@ -539,10 +543,13 @@ pagefind-searchbox::part(input) {
   .logo-frame {
     display: none;
   }
-  .heading::before, h2::before {
+  .heading::before,
+  h2::before {
     display: none;
   }
-  img, .minister.picture, .bad-guy {
+  img,
+  .minister.picture,
+  .bad-guy {
     transform: scale(1) !important;
   }
 }
@@ -587,7 +594,7 @@ pagefind-searchbox::part(input) {
   }
   hr {
     margin-bottom: var(--spacing-xs);
-  } 
+  }
   .all-cards {
     display: flex;
     flex-direction: column;
@@ -603,7 +610,8 @@ pagefind-searchbox::part(input) {
   .ministry .card-link {
     font-size: var(--font-size-s);
   }
-  .card-description, .ministry .card-description {
+  .card-description,
+  .ministry .card-description {
     font-size: var(--font-size-xs);
   }
   .card-arrow {
@@ -624,7 +632,10 @@ pagefind-searchbox::part(input) {
   .end-buttons {
     margin-top: 0;
   }
-  .return, .share, .print, .button {
+  .return,
+  .share,
+  .print,
+  .button {
     padding: var(--spacing-input-compact);
     font-size: var(--font-size-s);
     text-align: center;
@@ -689,7 +700,7 @@ pagefind-searchbox::part(input) {
     transform: none !important;
   }
   * {
-    overflow-x: visible !important; 
+    overflow-x: visible !important;
   }
   pre {
     white-space: pre-wrap !important;

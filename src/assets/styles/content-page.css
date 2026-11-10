@@ -2,7 +2,8 @@ section:not(.hero, footer section) {
   padding: var(--spacing-section-normal);
 }
 
-.page p, .page pre {
+.page p,
+.page pre {
   font-size: var(--font-size-s);
   margin-bottom: var(--spacing-m);
   line-height: var(--line-height-relaxed);
@@ -52,7 +53,8 @@ section:not(.hero, footer section) {
   flex-basis: 600px;
 }
 
-.side-by-side img, .side-by-side .bad-guy {
+.side-by-side img,
+.side-by-side .bad-guy {
   flex-grow: 1;
   flex-basis: 300px;
   min-width: 0;
@@ -215,7 +217,8 @@ button.print {
   margin-bottom: var(--spacing-s);
 }
 
-p.error-text, .error-text + ul {
+p.error-text,
+.error-text + ul {
   font-size: var(--font-size-m);
 }
 
@@ -244,7 +247,7 @@ p.error-text, .error-text + ul {
   }
   .start-buttons {
     gap: 1rem;
-    margin: 0 0 var(--spacing-m)
+    margin: 0 0 var(--spacing-m);
   }
   .error-title {
     font-size: var(--font-size-l);
