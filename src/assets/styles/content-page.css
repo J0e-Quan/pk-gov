@@ -197,7 +197,7 @@ button.print {
   color: black;
 }
 
-.download {
+/* .download {
   padding: var(--spacing-input-normal);
   font-size: var(--font-size-m);
   font-family: var(--mona-sans);
@@ -210,7 +210,7 @@ button.print {
     box-shadow 0.4s ease-in-out,
     color 0.4s ease-in-out;
   will-change: box-shadow, color;
-}
+} */
 
 .download-buttons {
   display: flex;

@@ -39,7 +39,7 @@ pre {
 
 input {
   padding: var(--spacing-input-normal);
-  border: 16px solid var(--central-ministry-colour);
+  border: 16px solid var(--theme, var(--central-ministry-colour));
   font-size: var(--font-size-m);
   min-width: 0;
   height: 100%;
@@ -221,7 +221,7 @@ hr.show {
   justify-content: center;
   gap: 1rem;
   position: relative;
-  box-shadow: inset 0 0 0 0px var(--central-ministry-colour);
+  box-shadow: inset 0 0 0 0px var(--theme, var(--central-ministry-colour));
   transition: box-shadow 0.3s;
   will-change: box-shadow;
   padding: var(--spacing-card-normal);
@@ -242,7 +242,7 @@ hr.show {
 }
 
 .card:hover {
-  box-shadow: inset 0 0 0 16px var(--central-ministry-colour);
+  box-shadow: inset 0 0 0 16px var(--theme, var(--central-ministry-colour));
 }
 
 .card-text {
@@ -310,6 +310,7 @@ hr.show {
 .share,
 .print,
 .button,
+.download,
 select {
   padding: var(--spacing-input-normal);
   font-size: var(--font-size-m);
@@ -329,7 +330,8 @@ select {
 .return:hover,
 .share:hover,
 .print:hover,
-.button:hover {
+.button:hover,
+.download:hover {
   box-shadow: inset 0 0 0 400px var(--theme, var(--central-ministry-colour));
   color: var(--theme-accent, white);
 }

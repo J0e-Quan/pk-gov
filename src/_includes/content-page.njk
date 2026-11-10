@@ -3,6 +3,15 @@ layout: base.njk
 layoutCss:
   - "/assets/styles/content-page.css"
 ---
+{% if tags == 'dev' %}
+  <style>
+    html {
+      --theme: var(--ministry-of-technology-colour);
+      --theme-accent: rgb(0, 0, 0);
+      --theme-accent-alt: rgb(255, 255, 255);
+    }
+  </style>
+{% endif %}
 <main data-pagefind-body>
   <section class="hero">
     {% if date %}
