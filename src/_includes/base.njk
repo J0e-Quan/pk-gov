@@ -12,7 +12,11 @@
     {% endfor %}
     <link rel="stylesheet" href="/assets/styles/variables.css">
     <link rel="stylesheet" href="/assets/styles/global.css">
-    <link rel="icon" href="/assets/favicons/generic.svg"/>
+    {% if favicon and favicon != '' %}
+      <link rel="icon" href="{{ favicon | url }}"/>
+    {% else %}
+      <link rel="icon" href="/assets/favicons/generic.svg"/>
+    {% endif %}
     <link href="/pagefind/pagefind-component-ui.css" rel="stylesheet" vite-ignore>
     <script src="/pagefind/pagefind-component-ui.js" type="module"></script>
     {# Slot for custom page-level head elements #}

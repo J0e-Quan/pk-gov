@@ -197,21 +197,6 @@ button.print {
   color: black;
 }
 
-/* .download {
-  padding: var(--spacing-input-normal);
-  font-size: var(--font-size-m);
-  font-family: var(--mona-sans);
-  color: black;
-  display: flex;
-  max-width: fit-content;
-  box-shadow: inset 0 0 0 0px var(--central-ministry-colour);
-  border: 16px solid var(--central-ministry-colour);
-  transition:
-    box-shadow 0.4s ease-in-out,
-    color 0.4s ease-in-out;
-  will-change: box-shadow, color;
-} */
-
 .download-buttons {
   display: flex;
   flex-wrap: wrap;
