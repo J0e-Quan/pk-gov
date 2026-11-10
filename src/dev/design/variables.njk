@@ -6,114 +6,263 @@ excerpt: Access the list of variables used to standardise pk-gov's look and feel
 favicon: /assets/favicons/pk-dev.svg
 ---
 <h2>What are CSS variables?</h2>
-<hr>
-<p>CSS variables (more formerly known as custom properties) are standardised values such as specific colours and numbers which can be reused throughout a project. We use CSS variables
-  all over the website in several areas, ensuring that pk-gov's design is as consistent as possible. The CSS variables used in pk-gov can be found in the 'variables.css' file (located in styles/
-  with the other .css files).
+<hr />
+<p>
+  CSS variables (more formerly known as custom properties) are standardised values such as specific
+  colours and numbers which can be reused throughout a project. We use CSS variables all over the
+  website in several areas, ensuring that pk-gov's design is as consistent as possible. The CSS
+  variables used in pk-gov can be found in the 'variables.css' file (located in styles/ with the
+  other .css files).
 </p>
 
 <h2>Typography variables</h2>
-<hr>
+<hr />
 <h3>font-family</h3>
-<p>There are two font-family variables available, which should be chosen according to the <a class="link" href="/dev/design/gov-identity/">Government identity guidelines</a>. Note that code 
-  blocks such as the ones shown below use the user's default monospace font, no specific font is chosen!
+<p>
+  There are two font-family variables available, which should be chosen according to the
+  <a class='link' href='/dev/design/gov-identity/'>Government identity guidelines</a>
+  . Note that code blocks such as the ones shown below use the user's default monospace font, no
+  specific font is chosen!
 </p>
 <ul>
-  <li style='font-family: var(--plex-sans)'><code>--plex-sans:</code> sets the font-family of the styled element to IBM Plex Sans, with the default sans-serif font as a fallback.</li>
-  <li><code>--mona-sans:</code> sets the font-family of the styled element to Mona Sans, with the default serif font as a fallback.</li>
+  <li style='font-family: var(--plex-sans)'>
+    <code>--plex-sans:</code>
+    sets the font-family of the styled element to IBM Plex Sans, with the default sans-serif font as
+    a fallback.
+  </li>
+  <li>
+    <code>--mona-sans:</code>
+    sets the font-family of the styled element to Mona Sans, with the default serif font as a
+    fallback.
+  </li>
 </ul>
 <h3>font-weight</h3>
-<p>There are two font-weight variables available, which should be chosen according to the <a class="link" href="/dev/design/gov-identity/">Government identity guidelines</a>. The fonts used on pk-gov
-  are variable fonts, so they can theoretically be set to a wide range of font-weights beyond the standard ones here if needed.
+<p>
+  There are two font-weight variables available, which should be chosen according to the
+  <a class='link' href='/dev/design/gov-identity/'>Government identity guidelines</a>
+  . The fonts used on pk-gov are variable fonts, so they can theoretically be set to a wide range of
+  font-weights beyond the standard ones here if needed.
 </p>
 <ul>
-  <li style='font-weight: var(--font-weight-bold)'><code>--font-weight-bold</code> sets the font-weight of the styled element to 700. This is applied to all heading elements (h1-6) by default.</li>
-  <li><code>--font-weight-normal</code> sets the font-weight of the styled element to 400. This is applied to all elements by default.</li>
+  <li style='font-weight: var(--font-weight-bold)'>
+    <code>--font-weight-bold</code>
+    sets the font-weight of the styled element to 700. This is applied to all heading elements
+    (h1-6) by default.
+  </li>
+  <li>
+    <code>--font-weight-normal</code>
+    sets the font-weight of the styled element to 400. This is applied to all elements by default.
+  </li>
 </ul>
 <h3>line-height</h3>
-<p>There are two line-height variables available. Always choose the higher line-height option available for a better reading experience, unless it makes content look less appealing.
+<p>
+  There are two line-height variables available. Always choose the higher line-height option
+  available for a better reading experience, unless it makes content look less appealing.
 </p>
 <ul>
-  <li style='line-height: var(--line-height-relaxed)'><code>-line-height-relaxed</code> sets the line-height of the styled element to 1.5. This should always be the first choice, as larger line-heights generally
-  make it easier for users to read content than lower line-heights.</li>
-  <li style='line-height: var(--line-height-condensed)'><code>--line-height-condensed</code> sets the line-height of the styled element to 1.2. This should only be used if the relaxed line-height makes content
-  look "awkward" or waste too much space, such as for larger headings.</li>
+  <li style='line-height: var(--line-height-relaxed)'>
+    <code>-line-height-relaxed</code>
+    sets the line-height of the styled element to 1.5. This should always be the first choice, as
+    larger line-heights generally make it easier for users to read content than lower line-heights.
+  </li>
+  <li style='line-height: var(--line-height-condensed)'>
+    <code>--line-height-condensed</code>
+    sets the line-height of the styled element to 1.2. This should only be used if the relaxed
+    line-height makes content look "awkward" or waste too much space, such as for larger headings.
+  </li>
 </ul>
 <h3>font-size</h3>
-<p>There are eight common font-size variables available. Font sizes are usually automatically set by CSS, but can be changed if needed. There is also one "outlier" variable <code>--font-size-pibss-value</code>
-  which should NOT be used in normal situations, as it sets the font-size to an excessive 10rem, only used for the key statistics values in PIBSS.
+<p>
+  There are eight common font-size variables available. Font sizes are usually automatically set by
+  CSS, but can be changed if needed. There is also one "outlier" variable
+  <code>--font-size-pibss-value</code>
+  which should NOT be used in normal situations, as it sets the font-size to an excessive 10rem,
+  only used for the key statistics values in PIBSS.
 </p>
 <ul>
-  <li style='font-size: var(--font-size-xxs)'><code>--font-size-xxs</code> sets the font-size of the styled element to 0.75rem.</li>
-  <li style='font-size: var(--font-size-xs)'><code>--font-size-xs</code> sets the font-size of the styled element to 1rem.</li>
-  <li style='font-size: var(--font-size-s)'><code>--font-size-s</code> sets the font-size of the styled element to 1.5rem.</li>
-  <li style='font-size: var(--font-size-m)'><code>--font-size-m</code> sets the font-size of the styled element to 2rem.</li>
-  <li style='font-size: var(--font-size-l)'><code>--font-size-l</code> sets the font-size of the styled element to 2.5rem.</li>
-  <li style='font-size: var(--font-size-xl)'><code>--font-size-xl</code> sets the font-size of the styled element to 3rem.</li>
-  <li style='font-size: var(--font-size-xxl)'><code>--font-size-xxl</code> sets the font-size of the styled element to 4rem.</li>
-  <li style='font-size: var(--font-size-xxxl)'><code>--font-size-xxxl</code> sets the font-size of the styled element to 5rem.</li>
+  <li style='font-size: var(--font-size-xxs)'>
+    <code>--font-size-xxs</code>
+    sets the font-size of the styled element to 0.75rem.
+  </li>
+  <li style='font-size: var(--font-size-xs)'>
+    <code>--font-size-xs</code>
+    sets the font-size of the styled element to 1rem.
+  </li>
+  <li style='font-size: var(--font-size-s)'>
+    <code>--font-size-s</code>
+    sets the font-size of the styled element to 1.5rem.
+  </li>
+  <li style='font-size: var(--font-size-m)'>
+    <code>--font-size-m</code>
+    sets the font-size of the styled element to 2rem.
+  </li>
+  <li style='font-size: var(--font-size-l)'>
+    <code>--font-size-l</code>
+    sets the font-size of the styled element to 2.5rem.
+  </li>
+  <li style='font-size: var(--font-size-xl)'>
+    <code>--font-size-xl</code>
+    sets the font-size of the styled element to 3rem.
+  </li>
+  <li style='font-size: var(--font-size-xxl)'>
+    <code>--font-size-xxl</code>
+    sets the font-size of the styled element to 4rem.
+  </li>
+  <li style='font-size: var(--font-size-xxxl)'>
+    <code>--font-size-xxxl</code>
+    sets the font-size of the styled element to 5rem.
+  </li>
 </ul>
 
 <h2>Spacing (padding and margin) variables</h2>
-<hr>
+<hr />
 <h3>Primitive values</h3>
-<p>There are 11 common primitive spacing variables available (8 positive, 3 negative), used to adjust padding/margin of elements that are not targeted by the semantic values. There is one "outlier" variable <code>--content-max-width</code>
-  which should NOT be used in normal situations, as it is only used to ensure content remains at a reasonable width for ultrawide displays. Note that negative spacing variables ONLY work with margin.
+<p>
+  There are 11 common primitive spacing variables available (8 positive, 3 negative), used to adjust
+  padding/margin of elements that are not targeted by the semantic values. There is one "outlier"
+  variable
+  <code>--content-max-width</code>
+  which should NOT be used in normal situations, as it is only used to ensure content remains at a
+  reasonable width for ultrawide displays. Note that negative spacing variables ONLY work with
+  margin.
 </p>
 <ul>
-  <li style='padding-left: var(--spacing-xxs); box-shadow: inset var(--spacing-xxs) 0 0 0 orange'><code>--spacing-xxs</code> gives 8px of spacing. (<code>--spacing-negative-xxs</code> provides the same amount of negative spacing)</li>
-  <li style='padding-left: var(--spacing-xs); box-shadow: inset var(--spacing-xs) 0 0 0 orange'><code>--spacing-xs</code> gives 16px of spacing. (<code>--spacing-negative-xs</code> provides the same amount of negative spacing)</li>
-  <li style='padding-left: var(--spacing-s); box-shadow: inset var(--spacing-s) 0 0 0 orange'><code>--spacing-xxs</code> gives 24px of spacing.</li>
-  <li style='padding-left: var(--spacing-m); box-shadow: inset var(--spacing-m) 0 0 0 orange'><code>--spacing-m</code> gives 32px of spacing. (<code>--spacing-negative-m</code> provides the same amount of negative spacing)</li>
-  <li style='padding-left: var(--spacing-l); box-shadow: inset var(--spacing-l) 0 0 0 orange'><code>--spacing-l</code> gives 40px of spacing.</li>
-  <li style='padding-left: var(--spacing-xl); box-shadow: inset var(--spacing-xl) 0 0 0 orange'><code>--spacing-xl</code> gives 48px of spacing.</li>
-  <li style='padding-left: var(--spacing-xxl); box-shadow: inset var(--spacing-xxl) 0 0 0 orange'><code>--spacing-xxl</code> gives 64px of spacing.</li>
-  <li style='padding-left: var(--spacing-xxxl); box-shadow: inset var(--spacing-xxxl) 0 0 0 orange'><code>--spacing-xxxl</code> gives 80px of spacing.</li>
+  <li style='padding-left: var(--spacing-xxs); box-shadow: inset var(--spacing-xxs) 0 0 0 orange'>
+    <code>--spacing-xxs</code>
+    gives 8px of spacing. (
+    <code>--spacing-negative-xxs</code>
+    provides the same amount of negative spacing)
+  </li>
+  <li style='padding-left: var(--spacing-xs); box-shadow: inset var(--spacing-xs) 0 0 0 orange'>
+    <code>--spacing-xs</code>
+    gives 16px of spacing. (
+    <code>--spacing-negative-xs</code>
+    provides the same amount of negative spacing)
+  </li>
+  <li style='padding-left: var(--spacing-s); box-shadow: inset var(--spacing-s) 0 0 0 orange'>
+    <code>--spacing-xxs</code>
+    gives 24px of spacing.
+  </li>
+  <li style='padding-left: var(--spacing-m); box-shadow: inset var(--spacing-m) 0 0 0 orange'>
+    <code>--spacing-m</code>
+    gives 32px of spacing. (
+    <code>--spacing-negative-m</code>
+    provides the same amount of negative spacing)
+  </li>
+  <li style='padding-left: var(--spacing-l); box-shadow: inset var(--spacing-l) 0 0 0 orange'>
+    <code>--spacing-l</code>
+    gives 40px of spacing.
+  </li>
+  <li style='padding-left: var(--spacing-xl); box-shadow: inset var(--spacing-xl) 0 0 0 orange'>
+    <code>--spacing-xl</code>
+    gives 48px of spacing.
+  </li>
+  <li style='padding-left: var(--spacing-xxl); box-shadow: inset var(--spacing-xxl) 0 0 0 orange'>
+    <code>--spacing-xxl</code>
+    gives 64px of spacing.
+  </li>
+  <li style='padding-left: var(--spacing-xxxl); box-shadow: inset var(--spacing-xxxl) 0 0 0 orange'>
+    <code>--spacing-xxxl</code>
+    gives 80px of spacing.
+  </li>
 </ul>
 <h3>Semantic values</h3>
-<p>There are 13 semantic spacing variables available, each used for specific contexts. Some are used for "normal" elements appearing on desktop-sized viewports, while others are for "compact" elements appearing on mobile-sized viewports.
+<p>
+  There are 13 semantic spacing variables available, each used for specific contexts. Some are used
+  for "normal" elements appearing on desktop-sized viewports, while others are for "compact"
+  elements appearing on mobile-sized viewports.
 </p>
 <ul>
-  <li><code>--content-width-limit</code> is used to center content on ultrawide displays. This is automatically applied where it is needed.</li>
-  <li style='padding-top: var(--header-search-buffer); background-image: linear-gradient(orange, orange); background-size: 100% 10rem; background-repeat: no-repeat;'><code>--header-search-buffer</code> is equivalent to 10rem and ensures the heading is visible when users search for it. This is automatically applied for searchable headings.</li>
-  <li style='border: var(--print-margin) solid orange'><code>--print-margin</code> is equivalent to 18mm, used only for the margin in printed web pages.</li>
-  <li><code>--spacing-negative-logo</code> is used to adjust the spacing between 'Plushie Kingdom' and 'Government' in the header, and should NOT be used in normal situations.</li>
-  <li style='border: solid orange; border-width: var(--spacing-header)'><code>--spacing-header</code> is used to provide the spacing for the header.</li>
-  <li style='border: solid orange; border-width: var(--spacing-input-normal)'><code>--spacing-input-normal</code> is used to provide the spacing for normal input elements.</li>
-  <li style='border: solid orange; border-width: var(--spacing-input-compact)'><code>--spacing-input-compact</code> is used to provide the spacing for compact input elements.</li>
-  <li style='border: solid orange; border-width: var(--spacing-section-normal)'><code>--spacing-section-normal</code> is used to provide the spacing for normal content sections.</li>
-  <li style='border: solid orange; border-width: var(--spacing-section-compact)'><code>--spacing-section-compact</code> is used to provide the spacing for compact content sections.</li>
-  <li style='border: solid orange; border-width: var(--spacing-card-normal)'><code>--spacing-card-normal</code> is used to provide the spacing for normal cards.</li>
-  <li style='border: solid orange; border-width: var(--spacing-card-compact)'><code>--spacing-card-compact</code> is used to provide the spacing for compact cards.</li>
-  <li style='border: solid orange; border-width: var(--spacing-footer-normal)'><code>--spacing-footer-normal</code> is used to provide the spacing for the normal footer.</li>
-  <li style='border: solid orange; border-width: var(--spacing-footer-compact)'><code>--spacing-footer-compact</code> is used to provide the spacing for the compact footer.</li>
+  <li>
+    <code>--content-width-limit</code>
+    is used to center content on ultrawide displays. This is automatically applied where it is
+    needed.
+  </li>
+  <li
+    style='padding-top: var(--header-search-buffer); background-image: linear-gradient(orange, orange); background-size: 100% 10rem; background-repeat: no-repeat;'
+  >
+    <code>--header-search-buffer</code>
+    is equivalent to 10rem and ensures the heading is visible when users search for it. This is
+    automatically applied for searchable headings.
+  </li>
+  <li style='border: var(--print-margin) solid orange'>
+    <code>--print-margin</code>
+    is equivalent to 18mm, used only for the margin in printed web pages.
+  </li>
+  <li>
+    <code>--spacing-negative-logo</code>
+    is used to adjust the spacing between 'Plushie Kingdom' and 'Government' in the header, and
+    should NOT be used in normal situations.
+  </li>
+  <li style='border: solid orange; border-width: var(--spacing-header)'>
+    <code>--spacing-header</code>
+    is used to provide the spacing for the header.
+  </li>
+  <li style='border: solid orange; border-width: var(--spacing-input-normal)'>
+    <code>--spacing-input-normal</code>
+    is used to provide the spacing for normal input elements.
+  </li>
+  <li style='border: solid orange; border-width: var(--spacing-input-compact)'>
+    <code>--spacing-input-compact</code>
+    is used to provide the spacing for compact input elements.
+  </li>
+  <li style='border: solid orange; border-width: var(--spacing-section-normal)'>
+    <code>--spacing-section-normal</code>
+    is used to provide the spacing for normal content sections.
+  </li>
+  <li style='border: solid orange; border-width: var(--spacing-section-compact)'>
+    <code>--spacing-section-compact</code>
+    is used to provide the spacing for compact content sections.
+  </li>
+  <li style='border: solid orange; border-width: var(--spacing-card-normal)'>
+    <code>--spacing-card-normal</code>
+    is used to provide the spacing for normal cards.
+  </li>
+  <li style='border: solid orange; border-width: var(--spacing-card-compact)'>
+    <code>--spacing-card-compact</code>
+    is used to provide the spacing for compact cards.
+  </li>
+  <li style='border: solid orange; border-width: var(--spacing-footer-normal)'>
+    <code>--spacing-footer-normal</code>
+    is used to provide the spacing for the normal footer.
+  </li>
+  <li style='border: solid orange; border-width: var(--spacing-footer-compact)'>
+    <code>--spacing-footer-compact</code>
+    is used to provide the spacing for the compact footer.
+  </li>
 </ul>
 
 <h2>Colour variables</h2>
-<hr>
-<p>There are 8 colour variables available, which should be chosen according to the <a class="link" href="/dev/design/gov-identity/">Government identity guidelines</a>. Besides these accent colours, the website also uses pure white (#FFFFFF) and pure black (#000000).</p>
-<div class="colours-list">
-  <div class="colours-list-row">
-    <div class="colour central-ministry">--central-ministry-colour (#68A0FF)</div>
-    <div class="colour ministry-of-foreign-affairs">
+<hr />
+<p>
+  There are 8 colour variables available, which should be chosen according to the
+  <a class='link' href='/dev/design/gov-identity/'>Government identity guidelines</a>
+  . Besides these accent colours, the website also uses pure white (#FFFFFF) and pure black
+  (#000000).
+</p>
+<div class='colours-list'>
+  <div class='colours-list-row'>
+    <div class='colour central-ministry'>--central-ministry-colour (#68A0FF)</div>
+    <div class='colour ministry-of-foreign-affairs'>
       --ministry-of-foreign-affairs-colour (#3653FF)
     </div>
-    <div class="colour ministry-of-finance">--ministry-of-finance-colour (#00B000)</div>
-    <div class="colour ministry-of-technology">--ministry-of-technology-colour (#4AFFD1)</div>
+    <div class='colour ministry-of-finance'>--ministry-of-finance-colour (#00B000)</div>
+    <div class='colour ministry-of-technology'>--ministry-of-technology-colour (#4AFFD1)</div>
   </div>
-  <div class="colours-list-row">
-    <div class="colour ministry-of-food">--ministry-of-food-colour (#FFDC00)</div>
-    <div class="colour ministry-of-health">--ministry-of-health-colour (#FF0000)</div>
-    <div class="colour ministry-of-immigration">
-      --ministry-of-immigration-colour (#C38C00)
-    </div>
-    <div class="colour ministry-of-defence">--ministry-of-defence-colour (#A5A5A5)</div>
+  <div class='colours-list-row'>
+    <div class='colour ministry-of-food'>--ministry-of-food-colour (#FFDC00)</div>
+    <div class='colour ministry-of-health'>--ministry-of-health-colour (#FF0000)</div>
+    <div class='colour ministry-of-immigration'>--ministry-of-immigration-colour (#C38C00)</div>
+    <div class='colour ministry-of-defence'>--ministry-of-defence-colour (#A5A5A5)</div>
   </div>
 </div>
 <h3>Custom themes</h3>
-<p>By default, pk-gov pages use <code>--central-ministry-colour</code> as the accent colour. However,
-some pages may require different colours, such as certain ministry pages and pk-dev pages. In these
-situations, pages can have custom themes with the following snippet:
+<p>
+  By default, pk-gov pages use
+  <code>--central-ministry-colour</code>
+  as the accent colour. However, some pages may require different colours, such as certain ministry
+  pages and pk-dev pages. In these situations, pages can have custom themes with the following
+  snippet:
 </p>
 <pre>
 &lt;style&gt;
@@ -126,9 +275,19 @@ situations, pages can have custom themes with the following snippet:
 </pre>
 <p>Custom themes can be applied with the following steps:</p>
 <ol>
-  <li>The desired accent colour should be assigned to <code>--theme</code>.</li>
-  <li><code>--theme-accent</code> and <code>--theme-accent-alt</code> should be set based on the
-  text contrast examples in the list of colour variables above. If black text is used, 
-  <code>--theme-accent</code> should be set to pure black (#000000) and <code>--theme-accent-alt</code>
-  should be set to pure white (#FFFFFF), and vice versa for white text.</li>
+  <li>
+    The desired accent colour should be assigned to
+    <code>--theme</code>.
+  </li>
+  <li>
+    <code>--theme-accent</code>
+    and
+    <code>--theme-accent-alt</code>
+    should be set based on the text contrast examples in the list of colour variables above. If
+    black text is used,
+    <code>--theme-accent</code>
+    should be set to pure black (#000000) and
+    <code>--theme-accent-alt</code>
+    should be set to pure white (#FFFFFF), and vice versa for white text.
+  </li>
 </ol>

@@ -6,70 +6,99 @@ excerpt: Check out the various UI components that are used throughout pk-gov.
 favicon: /assets/favicons/pk-dev.svg
 ---
 <h2>Buttons</h2>
-<hr>
-<p>Buttons are some of the most common UI components used in pk-gov, providing a wide range of functions
-  from navigating through forms to returning users to the previous page. As a result, there are several
-  different types of buttons available.
+<hr />
+<p>
+  Buttons are some of the most common UI components used in pk-gov, providing a wide range of
+  functions from navigating through forms to returning users to the previous page. As a result,
+  there are several different types of buttons available.
 </p>
 <h3>"True" buttons</h3>
 <button class='button' type='button'>This is a "True" button</button>
-<p>These are created with the HTML button element, with styles and hover animations applied when the
-  <code>'button'</code> class is added. "True" buttons do nothing by default, so functionality must be 
-  added with JavaScript. If a button is meant to redirect users to different pages or otherwise behave 
-  like links, the "Link" button should be used instead.
+<p>
+  These are created with the HTML button element, with styles and hover animations applied when the
+  <code>'button'</code>
+  class is added. "True" buttons do nothing by default, so functionality must be added with
+  JavaScript. If a button is meant to redirect users to different pages or otherwise behave like
+  links, the "Link" button should be used instead.
 </p>
 <h3>"Link buttons</h3>
 <a class='button' href=''>This "Link" button refreshes the page</a>
-<p>These are created with HTML anchor elements, with styles and hover animations applied when the <code>'return'</code>,
-  <code>'download'</code> or <code>'button'</code> class is added. "Link" buttons have the same functionality as
-  regular anchor elements, and should be used for linking to different pages or downloadable content. Buttons that
-  do not provide either of these functions should be "True" buttons.
+<p>
+  These are created with HTML anchor elements, with styles and hover animations applied when the
+  <code>'return'</code>,<code>'download'</code>
+  or
+  <code>'button'</code>
+  class is added. "Link" buttons have the same functionality as regular anchor elements, and should
+  be used for linking to different pages or downloadable content. Buttons that do not provide either
+  of these functions should be "True" buttons.
 </p>
 
 <h2>Button rows</h2>
-<hr>
+<hr />
 <div class='end-buttons'>
   <button class='button' type='button'>This is a "True" button</button>
   <a class='button' href=''>This "Link" button refreshes the page</a>
 </div>
-<p>By default, buttons are treated as block elements. If multiple buttons need to be placed in a single row,
-  the buttons should be placed in a container with the <code>'start-buttons'</code> or <code>'end-buttons'</code> classes:
+<p>
+  By default, buttons are treated as block elements. If multiple buttons need to be placed in a
+  single row, the buttons should be placed in a container with the
+  <code>'start-buttons'</code>
+  or
+  <code>'end-buttons'</code>
+  classes:
 </p>
 <ul>
-  <li><code>'start-buttons'</code> aligns buttons from left to right, such as the buttons in the PIBSS Start Page.</li>
-  <li><code>'end-buttons'</code> aligns buttons in the centre as shown in the example above.</li>
+  <li>
+    <code>'start-buttons'</code>
+    aligns buttons from left to right, such as the buttons in the PIBSS Start Page.
+  </li>
+  <li>
+    <code>'end-buttons'</code>
+    aligns buttons in the centre as shown in the example above.
+  </li>
 </ul>
 
 <h2>'Utility' buttons</h2>
-<hr>
-<p>These buttons appear on a wide range of pages, with their styles and behaviour automatically applied when
-  the specified class is added onto the element. These buttons do not need to be manually added into pages in
-  normal situations, as these buttons are contained in relevant page templates.
+<hr />
+<p>
+  These buttons appear on a wide range of pages, with their styles and behaviour automatically
+  applied when the specified class is added onto the element. These buttons do not need to be
+  manually added into pages in normal situations, as these buttons are contained in relevant page
+  templates.
 </p>
 <h3>Print button</h3>
-<button type="button" class="print">Print page</button>
-<p>This button enables users to print the chosen page in a print format. Styles are altered to better suit
-  physical paper, with elements that are interactive or irrelevant in a printed medium being removed. It is
-  a "true" button with the <code>'print'</code> class added onto it.
+<button class='print' type='button'>Print page</button>
+<p>
+  This button enables users to print the chosen page in a print format. Styles are altered to better
+  suit physical paper, with elements that are interactive or irrelevant in a printed medium being
+  removed. It is a "true" button with the
+  <code>'print'</code>
+  class added onto it.
 </p>
 <h3>Share button</h3>
-<button type="button" class="share">Share page</button>
-<p>This button opens the user's share menu to allow them to share the current page with others. It is a "true"
-  button with the <code>'share'</code> class added onto it.
+<button class='share' type='button'>Share page</button>
+<p>
+  This button opens the user's share menu to allow them to share the current page with others. It is
+  a "true" button with the
+  <code>'share'</code>
+  class added onto it.
 </p>
 
 <h2>Table of Contents</h2>
-<hr>
-<p>The table of contents or 'In this page:' section is automatically created for content pages such as news articles,
-  and information pages, including this page. It is created by detecting all headings (h1-6) present on the page when
-  running pk-gov's build script, and jumps to the heading a user clicks on.
+<hr />
+<p>
+  The table of contents or 'In this page:' section is automatically created for content pages such
+  as news articles, and information pages, including this page. It is created by detecting all
+  headings (h1-6) present on the page when running pk-gov's build script, and jumps to the heading a
+  user clicks on.
 </p>
 
 <h2>Cards</h2>
-<hr>
-<p>Cards are mainly used on 'homepages' to link to other content pages. Cards contain a title and description
-  as their content. The basic structure of a card is as shown below, with styles and hover animations applied
-  when all classes shown below are added:
+<hr />
+<p>
+  Cards are mainly used on 'homepages' to link to other content pages. Cards contain a title and
+  description as their content. The basic structure of a card is as shown below, with styles and
+  hover animations applied when all classes shown below are added:
 </p>
 <pre>
 &lt;div class="card"&gt;
@@ -80,106 +109,182 @@ favicon: /assets/favicons/pk-dev.svg
   &lt;div class='card-arrow'&gt;>&lt;/div&gt;
 &lt;/div&gt;
 </pre>
-<p>Cards MUST be contained within a container with the <code>'all-cards'</code> class. Therefore, cards should
-  only be used when there There are two width
-  options for cards, the regular width (applied by default) and a wider width when the <code>wide-cards</code>
+<p>
+  Cards MUST be contained within a container with the
+  <code>'all-cards'</code>
+  class. Therefore, cards should only be used when there There are two width options for cards, the
+  regular width (applied by default) and a wider width when the
+  <code>wide-cards</code>
   class is added, as shown below (NOTE: All cards refresh the page when clicked):
 </p>
 <h3>Regular cards</h3>
 <div class='all-cards'>
-  <div class="card">
+  <div class='card'>
     <div class='card-text'>
-      <p class="card-title" style='font-weight: var(--font-weight-bold); line-height: var(--line-height-condensed); margin-block: var(--spacing-xxs)'><a class='card-link' href="" style='text-decoration: none'>Card title</a></p>
-      <p class="card-description" style='margin-bottom: 0'>Describe the content of this card.</p>
+      <p
+        class='card-title'
+        style='font-weight: var(--font-weight-bold); line-height: var(--line-height-condensed); margin-block: var(--spacing-xxs)'
+      >
+        <a class='card-link' href='' style='text-decoration: none'>Card title</a>
+      </p>
+      <p class='card-description' style='margin-bottom: 0'>Describe the content of this card.</p>
     </div>
     <div class='card-arrow'>></div>
   </div>
-  <div class="card">
+  <div class='card'>
     <div class='card-text'>
-      <p class="card-title" style='font-weight: var(--font-weight-bold); line-height: var(--line-height-condensed); margin-block: var(--spacing-xxs)'><a class='card-link' href="" style='text-decoration: none'>Card 2</a></p>
-      <p class="card-description" style='margin-bottom: 0'>Here's another card to show the different widths.</p>
+      <p
+        class='card-title'
+        style='font-weight: var(--font-weight-bold); line-height: var(--line-height-condensed); margin-block: var(--spacing-xxs)'
+      >
+        <a class='card-link' href='' style='text-decoration: none'>Card 2</a>
+      </p>
+      <p class='card-description' style='margin-bottom: 0'>
+        Here's another card to show the different widths.
+      </p>
     </div>
     <div class='card-arrow'>></div>
   </div>
-  <div class="card">
+  <div class='card'>
     <div class='card-text'>
-      <p class="card-title" style='font-weight: var(--font-weight-bold); line-height: var(--line-height-condensed); margin-block: var(--spacing-xxs)'><a class='card-link' href="" style='text-decoration: none'>Third Card</a></p>
-      <p class="card-description" style='margin-bottom: 0'>More cards. Why not?</p>
+      <p
+        class='card-title'
+        style='font-weight: var(--font-weight-bold); line-height: var(--line-height-condensed); margin-block: var(--spacing-xxs)'
+      >
+        <a class='card-link' href='' style='text-decoration: none'>Third Card</a>
+      </p>
+      <p class='card-description' style='margin-bottom: 0'>More cards. Why not?</p>
     </div>
     <div class='card-arrow'>></div>
   </div>
 </div>
 <h3>Wide cards</h3>
 <div class='all-cards wide-cards'>
-  <div class="card">
+  <div class='card'>
     <div class='card-text'>
-      <p class="card-title" style='font-weight: var(--font-weight-bold); line-height: var(--line-height-condensed); margin-block: var(--spacing-xxs)'><a class='card-link' href="" style='text-decoration: none'>Card title</a></p>
-      <p class="card-description" style='margin-bottom: 0'>Describe the content of this card.</p>
+      <p
+        class='card-title'
+        style='font-weight: var(--font-weight-bold); line-height: var(--line-height-condensed); margin-block: var(--spacing-xxs)'
+      >
+        <a class='card-link' href='' style='text-decoration: none'>Card title</a>
+      </p>
+      <p class='card-description' style='margin-bottom: 0'>Describe the content of this card.</p>
     </div>
     <div class='card-arrow'>></div>
   </div>
-  <div class="card">
+  <div class='card'>
     <div class='card-text'>
-      <p class="card-title" style='font-weight: var(--font-weight-bold); line-height: var(--line-height-condensed); margin-block: var(--spacing-xxs)'><a class='card-link' href="" style='text-decoration: none'>Card 2</a></p>
-      <p class="card-description" style='margin-bottom: 0'>Here's another card to show the different widths.</p>
+      <p
+        class='card-title'
+        style='font-weight: var(--font-weight-bold); line-height: var(--line-height-condensed); margin-block: var(--spacing-xxs)'
+      >
+        <a class='card-link' href='' style='text-decoration: none'>Card 2</a>
+      </p>
+      <p class='card-description' style='margin-bottom: 0'>
+        Here's another card to show the different widths.
+      </p>
     </div>
     <div class='card-arrow'>></div>
   </div>
-  <div class="card">
+  <div class='card'>
     <div class='card-text'>
-      <p class="card-title" style='font-weight: var(--font-weight-bold); line-height: var(--line-height-condensed); margin-block: var(--spacing-xxs)'><a class='card-link' href="" style='text-decoration: none'>Third Card</a></p>
-      <p class="card-description" style='margin-bottom: 0'>More cards. Why not?</p>
+      <p
+        class='card-title'
+        style='font-weight: var(--font-weight-bold); line-height: var(--line-height-condensed); margin-block: var(--spacing-xxs)'
+      >
+        <a class='card-link' href='' style='text-decoration: none'>Third Card</a>
+      </p>
+      <p class='card-description' style='margin-bottom: 0'>More cards. Why not?</p>
     </div>
     <div class='card-arrow'>></div>
   </div>
 </div>
 
 <h2>Inputs and Dropdowns</h2>
-<hr>
-<p>These elements are commonly used for forms and menus that allow users to fine-tune the data being displayed.
-  Elements that are NOT listed here, such as radio groups have not been used in pk-gov yet, and as such may not
-  be styled properly compared to other options.
+<hr />
+<p>
+  These elements are commonly used for forms and menus that allow users to fine-tune the data being
+  displayed. Elements that are NOT listed here, such as radio groups have not been used in pk-gov
+  yet, and as such may not be styled properly compared to other options.
 </p>
 <h3>Dropdowns</h3>
-<select name="example-select" id="example-select" style='margin-block: var(--spacing-xxs)'>
-  <option value="1">This is an option</option>
-  <option value="2">This is another option</option>
-  <option value="3">Option 3</option>
+<select id='example-select' name='example-select' style='margin-block: var(--spacing-xxs)'>
+  <option value='1'>This is an option</option>
+  <option value='2'>This is another option</option>
+  <option value='3'>Option 3</option>
 </select>
-<p>Dropdowns are used when users need to choose from several options, created with regular HTML select and
-  option elements. Styles are automatically applied with no classes needed. Dropdowns appear "roomier" like
-  the example above by default, though certain uses of dropdowns, such as the filter options in the 'Access
-  PIBSS data' page have custom styles to make them more compact.
+<p>
+  Dropdowns are used when users need to choose from several options, created with regular HTML
+  select and option elements. Styles are automatically applied with no classes needed. Dropdowns
+  appear "roomier" like the example above by default, though certain uses of dropdowns, such as the
+  filter options in the 'Access PIBSS data' page have custom styles to make them more compact.
 </p>
 <h3>Inputs (text, date, email, password)</h3>
-<div style='display: flex; flex-wrap: wrap; gap: var(--spacing-s); margin-block: var(--spacing-xxs)'>
-  <input type="text" placeholder="This is a 'text' input">
-  <input type="date">
-  <input type="email" placeholder="This is an 'email' input">
-  <input type="password" placeholder="This is a 'password' input">
+<div
+  style='display: flex; flex-wrap: wrap; gap: var(--spacing-s); margin-block: var(--spacing-xxs)'
+>
+  <input type='text' placeholder="This is a 'text' input" />
+  <input type='date' />
+  <input type='email' placeholder="This is an 'email' input" />
+  <input type='password' placeholder="This is a 'password' input" />
 </div>
-<p>These are created with regular HTML input elements whose type are set to 'text', 'date', 'email' or
-  'password'. Styles are automatically applied with no classes needed. For search inputs such as the 1st
-  step of the form for updating a plushie's location in PIBSS, use a 'text' input instead of the built-in
-  'search' input, as the default 'X' icon created for 'search' inputs cannot be styled.
+<p>
+  These are created with regular HTML input elements whose type are set to 'text', 'date', 'email'
+  or 'password'. Styles are automatically applied with no classes needed. For search inputs such as
+  the 1st step of the form for updating a plushie's location in PIBSS, use a 'text' input instead of
+  the built-in 'search' input, as the default 'X' icon created for 'search' inputs cannot be styled.
 </p>
 <h2>PIBSS card</h2>
-<hr>
-<div class='pibss-card' style='flex: calc(50% - .5rem); gap: 1rem; min-width: 540px; max-width: calc(50% - .5rem); margin-right: auto; display: flex; margin-bottom: var(--spacing-s)'>
-  <img src="/assets/pictures/ministers/pbb.webp" alt="pink bear bear" class='pibss-picture' style='aspect-ratio: 3/4; flex-shrink: 0; flex-basis: 180px; min-width: 0; height: auto;'>
-  <div class='pibss-card-text' style='flex-direction: column; width: 100%; min-width: 0; display: flex;'>
-    <p class='pibss-name' style='line-height: var(--line-height-condensed); font-size: var(--font-size-xl); display: inline-block; position: relative; overflow: clip; font-family: var(--plex-sans); font-weight: var(--font-weight-bold); margin-bottom: 0'>Pink Bear Bear</h2>
-    <p class='pibss-type' style='font-size: var(--font-size-s); display: inline-block; position: relative; overflow: clip; margin-bottom: 0'>Type: Bear Bear</p>
-    <p class='pibss-country' style='font-size: var(--font-size-s); display: inline-block; position: relative; overflow: clip; margin-bottom: 0'>Origin Country: Malaysia</p>
-    <p class='pibss-date' style='font-size: var(--font-size-s); display: inline-block; position: relative; overflow: clip; margin-bottom: 0'>Date Joined: 22 Oct 2008</p>
-    <p class='pibss-location' style='font-size: var(--font-size-s); display: inline-block; position: relative; overflow: clip; margin-bottom: 0'>Residence: Big Tent Plains</p>
+<hr />
+<div
+  class='pibss-card'
+  style='flex: calc(50% - .5rem); gap: 1rem; min-width: 540px; max-width: calc(50% - .5rem); margin-right: auto; display: flex; margin-bottom: var(--spacing-s)'
+>
+  <img
+    class='pibss-picture'
+    src='/assets/pictures/ministers/pbb.webp'
+    alt='pink bear bear'
+    style='aspect-ratio: 3/4; flex-shrink: 0; flex-basis: 180px; min-width: 0; height: auto;'
+  />
+  <div
+    class='pibss-card-text'
+    style='flex-direction: column; width: 100%; min-width: 0; display: flex;'
+  >
+    <p class='pibss-name' style='line-height: var(--line-height-condensed); font-size: var(--font-size-xl); display: inline-block; position: relative; overflow: clip; font-family: var(--plex-sans); font-weight: var(--font-weight-bold); margin-bottom: 0'>
+    Pink Bear Bear
+    </h2>
+    <p
+      class='pibss-type'
+      style='font-size: var(--font-size-s); display: inline-block; position: relative; overflow: clip; margin-bottom: 0'
+    >
+      Type: Bear Bear
+    </p>
+    <p
+      class='pibss-country'
+      style='font-size: var(--font-size-s); display: inline-block; position: relative; overflow: clip; margin-bottom: 0'
+    >
+      Origin Country: Malaysia
+    </p>
+    <p
+      class='pibss-date'
+      style='font-size: var(--font-size-s); display: inline-block; position: relative; overflow: clip; margin-bottom: 0'
+    >
+      Date Joined: 22 Oct 2008
+    </p>
+    <p
+      class='pibss-location'
+      style='font-size: var(--font-size-s); display: inline-block; position: relative; overflow: clip; margin-bottom: 0'
+    >
+      Residence: Big Tent Plains
+    </p>
   </div>
 </div>
-<p>Not to be confused with 'regular' cards, these elements are used to display a plushie's data in PIBSS, and
-  should NOT be used for any other purpose. A PIBSS card is usually created dynamically with JavaScript as
-  data has to be fetched from the PIBSS database, resulting in a structure similar to the example shown below
-  (note that PIBSS cards are automatically animated when the relevant classes are added, except for the example
-  above):
+<p>
+  Not to be confused with 'regular' cards, these elements are used to display a plushie's data in
+  PIBSS, and should NOT be used for any other purpose. A PIBSS card is usually created dynamically
+  with JavaScript as data has to be fetched from the PIBSS database, resulting in a structure
+  similar to the example shown below (note that PIBSS cards are automatically animated when the
+  relevant classes are added, except for the example above):
 </p>
 <pre>
 &lt;div class='pibss-card'&gt;
@@ -195,11 +300,14 @@ favicon: /assets/favicons/pk-dev.svg
 </pre>
 
 <h2>Side-by-side text and image</h2>
-<hr>
-<p>Sometimes, having an image besides text can improve the content, rather than having the image before or
-  after the text block. Examples can be found in the 'Who we are' and 'Safety and Residency' pages, where
-  text and an image appear side by side on larger viewports, but appear in sequence on smaller viewports. 
-  This can be done by using the <code>'.side-by-side'</code> class as shown below:
+<hr />
+<p>
+  Sometimes, having an image besides text can improve the content, rather than having the image
+  before or after the text block. Examples can be found in the 'Who we are' and 'Safety and
+  Residency' pages, where text and an image appear side by side on larger viewports, but appear in
+  sequence on smaller viewports. This can be done by using the
+  <code>'.side-by-side'</code>
+  class as shown below:
 </p>
 <pre>
 &lt;div class='side-by-side'&gt;

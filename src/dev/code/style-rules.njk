@@ -6,56 +6,121 @@ excerpt: Learn the standardised way for writing pk-gov code and content.
 favicon: /assets/favicons/pk-dev.svg
 ---
 <h2>JavaScript Standard Style rules</h2>
-<hr>
-<p>These are a collection of the more "prevalent" style rules. For more detailed information and examples, please refer to
-  <a href="https://standardjs.com/rules.html" target='_blank' rel='noreferrer'>JavaScript Standard Style's documentation</a>.
-  <ul>
+<hr />
+<p>
+  These are a collection of the more "prevalent" style rules. For more detailed information and
+  examples, please refer to
+  <a href='https://standardjs.com/rules.html' target='_blank' rel='noreferrer'>
+    JavaScript Standard Style's documentation
+  </a>.<ul>
     <li>Use 2 spaces for indentation.</li>
-    <li>Use 'single quotes' for strings except to avoid escaping e.g. <code>"It's"</code> instead of <code>'It\'s'</code>.</li>
+    <li>
+      Use 'single quotes' for strings except to avoid escaping e.g.
+      <code>"It's"</code>
+      instead of
+      <code>'It\'s'</code>.
+    </li>
     <li>Do not leave unused variables in code.</li>
-    <li>Add a space after keywords e.g. <code>if (condition) { ... }</code> instead of <code>if(condition){ ... }</code>.</li>
-    <li>Always use <code>===</code> instead of <code>==</code>.</li>
-    <li>Infix operators must be spaced e.g. <code>1 + 1</code> instead of <code>1+1</code>.</li>
+    <li>
+      Add a space after keywords e.g.
+      <code>if (condition) { ... }</code>
+      instead of
+      <code>if(condition){ ... }</code>.
+    </li>
+    <li>
+      Always use
+      <code>===</code>
+      instead of
+      <code>==</code>.
+    </li>
+    <li>
+      Infix operators must be spaced e.g.
+      <code>1 + 1</code>
+      instead of
+      <code>1+1</code>.
+    </li>
     <li>Commas should have a space after them.</li>
   </ul>
 </p>
 <h2>Markdown elements</h2>
-<hr>
-<p>For content written in Markdown, many elements are automatically targeted and styled with CSS.</p>
+<hr />
+<p>
+  For content written in Markdown, many elements are automatically targeted and styled with CSS.
+</p>
 <h3>## (h2)</h3>
-<p>h2 elements are used for main titles of different topics. All h2 elements must be immediately followed by a horizontal rule (hr), and automatically
-  have a "slide in" animation unless explicitly disabled.
+<p>
+  h2 elements are used for main titles of different topics. All h2 elements must be immediately
+  followed by a horizontal rule (hr), and automatically have a "slide in" animation unless
+  explicitly disabled.
 </p>
-<p class='heading' style='font-family: var(--plex-sans); font-size: var(--font-size-xxl); font-weight: var(--font-weight-bold);'>Example of a h2</p>
+<p
+  class='heading'
+  style='font-family: var(--plex-sans); font-size: var(--font-size-xxl); font-weight: var(--font-weight-bold);'
+>
+  Example of a h2
+</p>
 <h3>--- (hr)</h3>
-<p>hr elements are used to give emphasis to h2 elements, and should only be used immediately after h2 elements. These elements automatically have a
-  "slide in" animation unless explicitly disabled. Example of a hr below:
+<p>
+  hr elements are used to give emphasis to h2 elements, and should only be used immediately after h2
+  elements. These elements automatically have a "slide in" animation unless explicitly disabled.
+  Example of a hr below:
 </p>
-<hr>
+<hr />
 <h3>### (h3)</h3>
-<p>h3 elements are used for smaller/sub-titles, such as different categories/points within a certain topic. h3 elements DO NOT require a hr after them.</p>
-<p style='font-family: var(--plex-sans); font-size: var(--font-size-l); font-weight: var(--font-weight-bold)'>Example of a h3</p>
+<p>
+  h3 elements are used for smaller/sub-titles, such as different categories/points within a certain
+  topic. h3 elements DO NOT require a hr after them.
+</p>
+<p
+  style='font-family: var(--plex-sans); font-size: var(--font-size-l); font-weight: var(--font-weight-bold)'
+>
+  Example of a h3
+</p>
 <h3>Regular text (p)</h3>
-<p>Regular text or text without any special elements are used for the content of the article and any attributions, such as this paragraph.</p>
+<p>
+  Regular text or text without any special elements are used for the content of the article and any
+  attributions, such as this paragraph.
+</p>
 <p>They automatically have margin-bottom applied to them to separate paragraphs as shown here.</p>
 <h3>- (ul item)</h3>
 <ul style='margin-top: 0'>
-  <li>Unordered lists are used when multiple things have to be listed and the order is not important, such as requirements to use a service.</li>
+  <li>
+    Unordered lists are used when multiple things have to be listed and the order is not important,
+    such as requirements to use a service.
+  </li>
   <li>Styles such as margins are automatically handled.</li>
 </ul>
 <h3>1. 2. 3. ... (ol)</h3>
 <ol style='margin-top: 0'>
-  <li>Ordered lists are used when multiple things have to be listed in a specific order, such as steps to use a service.</li>
+  <li>
+    Ordered lists are used when multiple things have to be listed in a specific order, such as steps
+    to use a service.
+  </li>
   <li>Styles such as margins are automatically handled.</li>
 </ol>
 <h3>![alt text](path) (img)</h3>
-<p>Image elements are used for placing images in content. Use an absolute path (beginning with /assets/) to link to images, such as the one below. All
-  images automatically have a "pop out" animation unless explicity disabled.
+<p>
+  Image elements are used for placing images in content. Use an absolute path (beginning with
+  /assets/) to link to images, such as the one below. All images automatically have a "pop out"
+  animation unless explicity disabled.
 </p>
-<img alt='plushie kingdom government ministers' src='/assets/news-media/introducing-the-plushie-kingdom-government/group-photo.webp'>
+<img
+  alt='plushie kingdom government ministers'
+  src='/assets/news-media/introducing-the-plushie-kingdom-government/group-photo.webp'
+/>
 <h3>Links (a)</h3>
-<p>For links, use the actual HTML syntax: <code>&lt;a href='link to stuff' class='link'&gt;LINK TEXT HERE&lt;/a&gt;</code>, as CSS classes cannot be added
-  on to .md elements. Links without <code>class='link'</code> have their text-decoration (underline) removed, making them indistinguishable from regular text. For
-  links to external content such as other websites, add <code>target='_blank' rel='noreferrer'</code> inside the link tag.
+<p>
+  For links, use the actual HTML syntax:
+  <code>&lt;a href='link to stuff' class='link'&gt;LINK TEXT HERE&lt;/a&gt;</code>
+  , as CSS classes cannot be added on to .md elements. Links without
+  <code>class='link'</code>
+  have their text-decoration (underline) removed, making them indistinguishable from regular text.
+  For links to external content such as other websites, add
+  <code>target='_blank' rel='noreferrer'</code>
+  inside the link tag.
 </p>
-<p><a class='link' href='https://github.com/J0e-Quan/pk-gov' target='_blank' rel='noreferrer'>Example of a link (opens pk-gov's GitHub repo)</a></p>
+<p>
+  <a class='link' href='https://github.com/J0e-Quan/pk-gov' target='_blank' rel='noreferrer'>
+    Example of a link (opens pk-gov's GitHub repo)
+  </a>
+</p>

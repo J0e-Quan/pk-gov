@@ -13,34 +13,32 @@ layoutCss:
   </style>
 {% endif %}
 <main data-pagefind-body>
-  <section class="hero">
+  <section class='hero'>
     {% if date %}
-      <p class="hero-date">{{ date | postDate }}, by {{ author }}</p>
+      <p class='hero-date'>{{ date | postDate }}, by {{ author }}</p>
     {% endif %}
-    <h1 data-pagefind-ignore class="hero-title">{{ title }}</h1>
-    <p class="hero-excerpt">{{ excerpt | safe }}</p>
+    <h1 class='hero-title' data-pagefind-ignore>{{ title }}</h1>
+    <p class='hero-excerpt'>{{ excerpt | safe }}</p>
     {% if thumbnail and thumbnail | trim %}
-      <img class="hero-thumbnail" src="{{ thumbnail }}" alt="{{ thumbnail-alt }}">
+      <img class='hero-thumbnail' src='{{ thumbnail }}' alt='{{ thumbnail-alt }}' />
     {% endif %}
   </section>
-  <section data-pagefind-ignore='all' class='table-of-contents-container'>
+  <section class='table-of-contents-container' data-pagefind-ignore='all'>
     <h2 class='table-of-contents-title'>In this page:</h2>
-    <hr>
+    <hr />
     <div class='table-of-contents'></div>
   </section>
-  <section class="page">
-    {{ content | safe }}
-  </section>
+  <section class='page'>{{ content | safe }}</section>
 </main>
-<div class="end-buttons">
+<div class='end-buttons'>
   {% if tags != 'about' %}
-    <button type="button" class="share">Share page</button>
+    <button class='share' type='button'>Share page</button>
   {% endif %}
-  <button type="button" class="print">Print page</button>
+  <button class='print' type='button'>Print page</button>
   {% if tags == 'news' %}
-    <a class="return" href="/news/">Return to news list</a>
+    <a class='return' href='/news/'>Return to news list</a>
   {% elif tags == 'info' or tags == 'about' %}
-    <a class="return" href="/">Return to homepage</a>
+    <a class='return' href='/'>Return to homepage</a>
   {% elif tags == 'dev' %}
     <a class='return' href='/dev/'>Return to pk-dev</a>
   {% endif %}

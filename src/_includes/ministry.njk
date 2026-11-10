@@ -5,7 +5,7 @@ layoutCss:
 layoutJs: 
   - /ministries/ministries.js
 ---
-<main data-pagefind-body data-lottie="{{ page.fileSlug }}">
-  {{ content | safe }}
-</main>
-<div class='end-buttons'><a class="return" href="/">Return to homepage</a></div>
+<main data-pagefind-body data-lottie='{{ page.fileSlug }}'>{{ content | safe }}</main>
+<div class='end-buttons'>
+  <a class='return' href='/'>Return to homepage</a>
+</div>
