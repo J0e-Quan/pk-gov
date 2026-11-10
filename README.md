@@ -2,7 +2,7 @@
 
 Fictional government website project for the Plushie Kingdom.
 
-Read [CONTRIBUTING.md](CONTRIBUTING.md) to know how to contribute to pk-gov, and [CODEBASE.md](CODEBASE.md) for learning more about the codebase of pk-gov.
+Read [CONTRIBUTING.md](CONTRIBUTING.md) to know how to contribute to pk-gov, and [CODEBASE.md](CODEBASE.md) for learning more about the codebase of pk-gov. More detailed developer information can be found in [pk-dev](https://pk-gov.onrender.com/dev)
 
 Live link: https://pk-gov.onrender.com/
 
@@ -14,7 +14,7 @@ Live link: https://pk-gov.onrender.com/
 - 11ty for static page generation from templates
 - npm and Vite for managing and bundling code modules
 - Git for version control
-- Other packages and tools used can be found in [CODEBASE.md](CODEBASE.md)
+- Other packages and tools used can be found in [pk-dev](https://pk-gov.onrender.com/dev)
 
 ## Key features:
 
