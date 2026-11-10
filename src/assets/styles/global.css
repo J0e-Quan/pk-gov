@@ -660,7 +660,7 @@ pagefind-searchbox::part(input) {
     color: black;
     width: 100%;
     background-color: transparent;
-    border: 10px solid var(--central-ministry-colour);
+    border: 10px solid var(--theme, var(--central-ministry-colour));
     border-top: none;
   }
   h1,
@@ -687,6 +687,14 @@ pagefind-searchbox::part(input) {
     animation: none;
     opacity: 1 !important;
     transform: none !important;
+  }
+  * {
+    overflow-x: visible !important; 
+  }
+  pre {
+    white-space: pre-wrap !important;
+    word-wrap: break-word !important;
+    word-break: break-word !important;
   }
   .search-desktop,
   .search-icon,
