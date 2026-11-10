@@ -37,13 +37,23 @@
               <h3 class='logo-text bottom'>Government</h3>
           </a>
         {% endif %}
-        <pagefind-searchbox
-          class='search-desktop'
-          shortcut='none'
-          hide-shortcut
-          placeholder='Search pk-gov...'
-          show-sub-results='true'
-        ></pagefind-searchbox>
+        {% if isBeta %}
+          <pagefind-searchbox
+            class='search-desktop'
+            shortcut='none'
+            hide-shortcut
+            placeholder='Search pk-gov-beta...'
+            show-sub-results='true'
+          ></pagefind-searchbox>
+        {% else %}
+          <pagefind-searchbox
+            class='search-desktop'
+            shortcut='none'
+            hide-shortcut
+            placeholder='Search pk-gov...'
+            show-sub-results='true'
+          ></pagefind-searchbox>
+        {% endif %}
         <div class='search-mobile'>
           <img class='search-icon' src='/assets/icons/search.svg' alt='search icon' />
           <pagefind-modal class='mobile-modal'>
