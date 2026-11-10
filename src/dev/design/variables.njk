@@ -110,3 +110,25 @@ favicon: /assets/favicons/pk-dev.svg
     <div class="colour ministry-of-defence">--ministry-of-defence-colour (#A5A5A5)</div>
   </div>
 </div>
+<h3>Custom themes</h3>
+<p>By default, pk-gov pages use <code>--central-ministry-colour</code> as the accent colour. However,
+some pages may require different colours, such as certain ministry pages and pk-dev pages. In these
+situations, pages can have custom themes with the following snippet:
+</p>
+<pre>
+&lt;style&gt;
+  html {
+    --theme: var(--colour-variable-here);
+    --theme-accent: rgb(0, 0, 0);
+    --theme-accent-alt: rgb(255, 255, 255);
+  }
+&lt;/style&gt;
+</pre>
+<p>Custom themes can be applied with the following steps:</p>
+<ol>
+  <li>The desired accent colour should be assigned to <code>--theme</code>.</li>
+  <li><code>--theme-accent</code> and <code>--theme-accent-alt</code> should be set based on the
+  text contrast examples in the list of colour variables above. If black text is used, 
+  <code>--theme-accent</code> should be set to pure black (#000000) and <code>--theme-accent-alt</code>
+  should be set to pure white (#FFFFFF), and vice versa for white text.</li>
+</ol>
