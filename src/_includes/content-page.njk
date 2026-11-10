@@ -31,9 +31,7 @@ layoutCss:
   <section class='page'>{{ content | safe }}</section>
 </main>
 <div class='end-buttons'>
-  {% if tags != 'about' %}
-    <button class='share' type='button'>Share page</button>
-  {% endif %}
+  <button class='share' type='button'>Share page</button>
   <button class='print' type='button'>Print page</button>
   {% if tags == 'news' %}
     <a class='return' href='/news/'>Return to news list</a>
