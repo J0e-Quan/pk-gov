@@ -71,9 +71,11 @@ window.addEventListener(
 )
 
 // code for handling share button
-const shareButton = document.querySelector('.share')
+const shareButton = document.querySelectorAll('.share')
 if (shareButton !== null) {
-  shareButton.addEventListener('click', share)
+  shareButton.forEach((btn) => {
+    btn.addEventListener('click', share)
+  })
 }
 async function share() {
   const url = new URL(window.location.href)
@@ -94,10 +96,12 @@ async function share() {
 }
 
 // code for handling print button
-const printButton = document.querySelector('.print')
+const printButton = document.querySelectorAll('.print')
 if (printButton !== null) {
-  printButton.addEventListener('click', () => {
-    window.print()
+  printButton.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      window.print()
+    })
   })
 }
 
