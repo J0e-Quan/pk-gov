@@ -23,6 +23,11 @@ button {
   outline: none;
 }
 
+input:focus-visible,
+button:focus-visible {
+  outline: auto Highlight;
+}
+
 a {
   text-decoration: none;
 }
