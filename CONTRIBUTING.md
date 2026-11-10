@@ -1,4 +1,4 @@
-This is where to find information on contributing to pk-gov. For information about the pk-gov codebase itself, refer to [CODEBASE.md](CODEBASE.md).
+This is where to find information on contributing to pk-gov. For information about the pk-gov codebase itself, refer to [CODEBASE.md](CODEBASE.md). For other developer information, such as examples of UI components and detailed style guides, refer to [pk-dev](https://pk-gov.onrender.com/dev).
 
 ## npm scripts
 
