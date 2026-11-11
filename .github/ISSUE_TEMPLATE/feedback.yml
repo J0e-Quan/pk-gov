@@ -1,0 +1,8 @@
+name: Feedback
+description: Send feedback
+title: "(FEEDBACK): "
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
