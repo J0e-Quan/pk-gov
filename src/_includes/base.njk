@@ -91,20 +91,28 @@
       </header>
       {{ content | safe }}
     </div>
+    {% if isBeta %}
     <section class='report-feedback'>
-      <a
-        class='button report'
+      <h2 class='report-feedback-title'>Want to point us in the right direction?</h2>
+      <p>If you have faced a problem with the page which is NOT the page's intended behaviour, please
+        <a
+        class='link'
         href='https://github.com/J0e-Quan/pk-gov/issues/new?template=bug.yaml'
         target='_blank'
         rel='noreferrer'
-      >Report a bug</a>
-      <a
-        class='button feedback'
-        href='https://github.com/J0e-Quan/pk-gov/issues/new?template=feedback.yml'
+        >Report a bug</a>.
+      </p>
+      <p>If you want to suggest changes to a page which is currently behaving as intended, please
+        <a
+        class='link'
+        href='https://github.com/J0e-Quan/pk-gov/issues/new?template=feedback.yaml'
         target='_blank'
         rel='noreferrer'
-      >Give feedback</a>
+        >Give feedback</a>.
+      </p>
+      <p class='report-feedback-note'>(NOTE: These options require a GitHub account)</p>
     </section>
+    {% endif %}
     <footer class='footer'>
       <section>
         <h3 class='footer-title'>Ministries</h3>

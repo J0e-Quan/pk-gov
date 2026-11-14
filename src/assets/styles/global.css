@@ -363,27 +363,22 @@ select {
 }
 
 .report-feedback {
-  padding: 0;
+  background-color: orange;
+  padding: var(--spacing-section-normal);
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 2rem;
-  grid-column: 2;
-  padding-bottom: var(--spacing-xxl);
+  flex-direction: column;
+  gap: 0.5rem;
+  grid-column: 1/-1;
+  padding-inline: var(--content-width-limit);
 }
 
-.report,
-.feedback {
-  border: 16px solid orange;
-  box-shadow: inset 0 0 0 0 orange;
-  margin-inline: var(--spacing-m);
+.report-feedback-title {
+  font-size: var(--font-size-xxl);
+  line-height: var(--line-height-condensed);
 }
 
-.report:hover,
-.feedback:hover {
-  box-shadow: inset 0 0 0 400px orange;
-  color: black;
+.report-feedback p:not(.report-feedback-note) {
+  font-size: var(--font-size-s);
 }
 
 footer {
