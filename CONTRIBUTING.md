@@ -12,6 +12,12 @@ These are the main scripts that are used in development (though other scripts do
 
 ## General workflow for contributing
 
+Here are a few things to check before you get started:
+
+- If you are contributing to an existing Issue, ensure you are not working on it at the same time as other contributors. This prevents others from wasting time working on the same Issue!
+- If you are working on something you started, please open an Issue for it. This helps to preserve a history of changes made to pk-gov, and allows you to mark that Issue as complete in a commit or PR later.
+- If this is your first time contributing, we recommend going over the information in [pk-dev](https://pk-gov.onrender.com/dev), our collection of develper resources for pk-gov.
+
 This is the workflow for contributing to this repo:
 
 1. Clone/fork the repo to your local machine
