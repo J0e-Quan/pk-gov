@@ -315,3 +315,12 @@ favicon: /assets/favicons/pk-dev.svg
   &lt;img src="image/here" alt="who's there?"&gt;
 &lt;/div&gt;
 </pre>
+
+
+<h2>pk-gov-beta components</h2>
+<hr />
+<p>Besides the 'pk-gov-beta' text in the header, there are two main components used to indicate to users that they are viewing the 'beta' version of pk-gov instead of the stable version. The components can be seen by visiting <a class='link' href="https://pk-gov-beta.onrender.com/" target='_blank' rel='noreferrer'>pk-gov-beta</a>.</p>
+<h3>Beta FAQ</h3>
+<p>This is an 'accordion' component containing multiple 'accordion' components inside, clarifying to users what pk-gov-beta is. This component is automatically added below the homepage's hero section when the <code>SITE_ENV</code> environment variable has a value of <code>'beta'</code>.</p>
+<h3>Report a bug and Give feedback</h3>
+<p>This component contains links to open 'Bug' or 'Feedback' Issues on the pk-gov repo. It is automatically added above the header when the <code>SITE_ENV</code> environment variable has a value of <code>'beta'</code>.</p>
