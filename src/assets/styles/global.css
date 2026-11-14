@@ -377,8 +377,17 @@ select {
   line-height: var(--line-height-condensed);
 }
 
-.report-feedback p:not(.report-feedback-note) {
+.report-feedback-title::before {
+  background-color: orange;
+}
+
+.report-feedback p {
   font-size: var(--font-size-s);
+  line-height: var(--line-height-relaxed);
+}
+
+.report-feedback .report-feedback-note {
+  font-size: var(--font-size-xs);
 }
 
 footer {
@@ -609,7 +618,8 @@ pagefind-searchbox::part(input) {
 
 @media (max-width: 600px) {
   header,
-  .header-scrollable-area section:not(footer section) {
+  .header-scrollable-area section:not(footer section),
+  .report-feedback {
     padding: var(--spacing-section-compact);
   }
   .hero-title {
@@ -622,7 +632,8 @@ pagefind-searchbox::part(input) {
   .heading,
   h2,
   .table-of-contents-title,
-  .card-link {
+  .card-link,
+  .report-feedback-title {
     font-size: var(--font-size-m);
   }
   .toc-item-h2 {
@@ -663,6 +674,9 @@ pagefind-searchbox::part(input) {
   }
   .link:hover:not(.footer.link) {
     text-underline-offset: 0.15em;
+  }
+  .report-feedback p {
+    font-size: var(--font-size-xs);
   }
   footer {
     flex-direction: column;
