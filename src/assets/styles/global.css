@@ -498,11 +498,11 @@ pagefind-searchbox::part(input) {
   height: 3rem;
   width: auto;
   cursor: pointer;
-  filter: invert();
+  stroke: var(--theme-accent, white);
 }
 
 .search-icon:hover {
-  border: 4px solid black;
+  border: 4px solid var(--theme-accent, white);
 }
 
 .header-scrollable-area {
