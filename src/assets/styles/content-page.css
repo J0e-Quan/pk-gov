@@ -1,4 +1,4 @@
-section:not(.hero, footer section) {
+section:not(.hero, footer section, .report-feedback) {
   padding: var(--spacing-section-normal);
 }
 
