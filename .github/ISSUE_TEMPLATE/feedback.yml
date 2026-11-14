@@ -1,6 +1,6 @@
 name: Feedback
 description: Send feedback
-title: "(FEEDBACK): "
+title: '(FEEDBACK): '
 body:
   - type: textarea
     id: description

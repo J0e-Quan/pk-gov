@@ -29,12 +29,15 @@
       <header class='header'>
         {% if isBeta %}
           <a class='logo-text-beta' href='/'>
-              <h3 class='logo-text-beta left'>pk-gov<span class='logo-text-beta right'>-beta</span></h3>
+            <h3 class='logo-text-beta left'>
+              pk-gov
+              <span class='logo-text-beta right'>-beta</span>
+            </h3>
           </a>
         {% else %}
           <a class='logo-text' href='/'>
-              <h3 class='logo-text top'>Plushie Kingdom</h3>
-              <h3 class='logo-text bottom'>Government</h3>
+            <h3 class='logo-text top'>Plushie Kingdom</h3>
+            <h3 class='logo-text bottom'>Government</h3>
           </a>
         {% endif %}
         {% if isBeta %}
@@ -55,13 +58,24 @@
           ></pagefind-searchbox>
         {% endif %}
         <div class='search-mobile'>
-          <svg class='search-icon' width="100%" height="100%" viewBox="0 0 128 128" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
-              <g transform="matrix(1.070959,-0.862364,0.795493,0.987912,-47.055735,63.106654)">
-                  <path d="M64,100L64,64" style="fill:none;stroke-width:4.54px;"/>
-              </g>
-              <g transform="matrix(1.070959,-0.862364,0.88335,1.09702,-48.207118,50.714901)">
-                  <circle cx="59" cy="45" r="20" style="fill:none;stroke-width:4.31px;"/>
-              </g>
+          <svg
+            class='search-icon'
+            width='100%'
+            height='100%'
+            viewBox='0 0 128 128'
+            version='1.1'
+            xmlns='http://www.w3.org/2000/svg'
+            xmlns:xlink='http://www.w3.org/1999/xlink'
+            xml:space='preserve'
+            xmlns:serif='http://www.serif.com/'
+            style='fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;'
+          >
+            <g transform='matrix(1.070959,-0.862364,0.795493,0.987912,-47.055735,63.106654)'>
+              <path d='M64,100L64,64' style='fill:none;stroke-width:4.54px;' />
+            </g>
+            <g transform='matrix(1.070959,-0.862364,0.88335,1.09702,-48.207118,50.714901)'>
+              <circle cx='59' cy='45' r='20' style='fill:none;stroke-width:4.31px;' />
+            </g>
           </svg>
           <pagefind-modal class='mobile-modal'>
             <pagefind-modal-header>
@@ -78,8 +92,18 @@
       {{ content | safe }}
     </div>
     <section class='report-feedback'>
-      <a href="https://github.com/J0e-Quan/pk-gov/issues/new?template=bug.yaml" target='_blank' rel='noreferrer' class='button report'>Report a bug</a>
-      <a href="https://github.com/J0e-Quan/pk-gov/issues/new?template=feedback.yml" target='_blank' rel='noreferrer' class='button feedback'>Give feedback</a>
+      <a
+        class='button report'
+        href='https://github.com/J0e-Quan/pk-gov/issues/new?template=bug.yaml'
+        target='_blank'
+        rel='noreferrer'
+      >Report a bug</a>
+      <a
+        class='button feedback'
+        href='https://github.com/J0e-Quan/pk-gov/issues/new?template=feedback.yml'
+        target='_blank'
+        rel='noreferrer'
+      >Give feedback</a>
     </section>
     <footer class='footer'>
       <section>

@@ -96,7 +96,8 @@ section:not(footer section) {
   .hero-text {
     font-size: var(--font-size-s);
   }
-  .beta-faq summary, .beta-faq details summary {
+  .beta-faq summary,
+  .beta-faq details summary {
     font-size: var(--font-size-s);
     line-height: var(--line-height-condensed);
   }

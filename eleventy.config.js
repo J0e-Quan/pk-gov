@@ -7,7 +7,7 @@ import EleventyRSS from '@11ty/eleventy-plugin-rss'
 
 export default async function (eleventyConfig) {
   // exponse SITE_ENV for detection by page templates
-  eleventyConfig.addGlobalData("isBeta", process.env.SITE_ENV === "beta");
+  eleventyConfig.addGlobalData('isBeta', process.env.SITE_ENV === 'beta')
 
   eleventyConfig.setServerOptions({
     port: 3000,
