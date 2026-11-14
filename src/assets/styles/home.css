@@ -86,7 +86,8 @@ section:not(footer section) {
 /* MEDIA QUERIES BELOW */
 @media (max-width: 600px) {
   .header,
-  .hero {
+  .hero,
+  .beta-faq {
     padding: var(--spacing-section-compact);
   }
   .homepage.hero-title {
@@ -94,6 +95,19 @@ section:not(footer section) {
   }
   .hero-text {
     font-size: var(--font-size-s);
+  }
+  .beta-faq summary, .beta-faq details summary {
+    font-size: var(--font-size-s);
+    line-height: var(--line-height-condensed);
+  }
+  .beta-faq details {
+    padding: var(--spacing-input-compact);
+    margin-top: var(--spacing-s);
+    margin-left: 0;
+  }
+  .beta-faq details p {
+    font-size: var(--font-size-xs);
+    line-height: var(--line-height-relaxed);
   }
 }
 /* MEDIA QUERIES ABOVE */
