@@ -5,6 +5,7 @@ This is where to find information on contributing to pk-gov. For information abo
 These are the main scripts that are used in development (though other scripts do exist):
 
 - `npm run dev` starts the dev server (opens on port 3000 by default)
+- `SITE_ENV='beta' npm run dev` starts the dev server as pk-gov-beta
 - `npm run cleanup` runs ESLint and Prettier
 - `npm run test` runs jest tests (currently there are no tests)
 - `npm run build` builds the website to dist/ (this is the script used for deploying to Render)
