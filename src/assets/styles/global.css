@@ -366,6 +366,8 @@ select {
   align-items: center;
   flex-wrap: wrap;
   gap: 2rem;
+  grid-column: 1 / -1;
+  padding-inline: var(--content-width-limit);
 }
 
 .report, .feedback {

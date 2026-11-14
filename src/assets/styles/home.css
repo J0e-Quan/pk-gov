@@ -59,6 +59,8 @@ section:not(footer section) {
   background-color: orange;
   padding: var(--spacing-section-normal);
   font-size: var(--font-size-xl);
+  grid-column: 1 / -1;
+  padding-inline: var(--content-width-limit);
 }
 
 .beta-faq summary {
