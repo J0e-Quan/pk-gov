@@ -97,6 +97,7 @@ header {
 }
 
 .logo-text-beta.right {
+  margin-left: var(--spacing-negative-xxs);
   font-family: var(--plex-sans);
   font-weight: var(--font-weight-normal);
 }
