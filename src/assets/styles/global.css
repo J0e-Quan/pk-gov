@@ -378,7 +378,7 @@ select {
 }
 
 .report-feedback-title::before {
-  background-color: orange;
+  display: none;
 }
 
 .report-feedback p {
