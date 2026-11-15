@@ -222,6 +222,58 @@ p.error-text,
   font-size: var(--font-size-m);
 }
 
+.pibss-card {
+  flex: 1 1 calc(50% - 0.5rem);
+  display: flex;
+  gap: 1rem;
+  min-width: 540px;
+  max-width: calc(50% - 0.5rem);
+  margin-right: auto;
+}
+
+.pibss-picture {
+  aspect-ratio: 3 / 4;
+  min-width: 0;
+  flex-basis: 180px;
+  flex-shrink: 0;
+  height: auto;
+}
+
+.pibss-picture.show {
+  animation-play-state: running;
+}
+
+.pibss-card-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  width: 100%;
+}
+
+p.pibss-name {
+  font-family: var(--plex-sans);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-condensed);
+  font-size: var(--font-size-xl);
+  position: relative;
+  overflow: clip;
+  display: inline-block;
+  margin-bottom: 0;
+  line-height: inherit;
+}
+
+p.pibss-type,
+p.pibss-country,
+p.pibss-date,
+p.pibss-location {
+  font-size: var(--font-size-s);
+  position: relative;
+  overflow: clip;
+  display: inline-block;
+  margin-bottom: 0;
+  line-height: inherit;
+}
+
 /* MEDIA QUERIES BELOW */
 @media (max-width: 600px) {
   .header,
@@ -251,6 +303,24 @@ p.error-text,
   }
   .error-title {
     font-size: var(--font-size-l);
+  }
+  .pibss-card,
+  .register-pibss-card {
+    gap: 0.5rem;
+    min-width: 0;
+    max-width: none;
+  }
+  .pibss-picture {
+    flex-shrink: 1;
+  }
+  p.pibss-name {
+    font-size: var(--font-size-s);
+  }
+  p.pibss-type,
+  p.pibss-country,
+  p.pibss-date,
+  p.pibss-location {
+    font-size: var(--font-size-xs);
   }
 }
 /* MEDIA QUERIES ABOVE */

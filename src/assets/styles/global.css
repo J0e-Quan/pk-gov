@@ -693,10 +693,15 @@ pagefind-searchbox::part(input) {
   .share,
   .print,
   .button,
-  .download {
+  .download,
+  select {
     padding: var(--spacing-input-compact);
     font-size: var(--font-size-s);
     text-align: center;
+  }
+  input {
+    padding: var(--spacing-input-compact);
+    font-size: var(--font-size-s); 
   }
   .select {
     font-size: var(--font-size-xs);
