@@ -222,6 +222,7 @@ p.error-text,
   font-size: var(--font-size-m);
 }
 
+/* STYLES FOR DEMO PIBSS CARD BELOW */
 .pibss-card {
   flex: 1 1 calc(50% - 0.5rem);
   display: flex;
