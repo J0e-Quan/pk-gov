@@ -61,4 +61,10 @@ One of our main priorities with pk-gov is to make it a reliable resource for acc
 - The FAQ section in the homepage
 - A section above the footer where users can report a bug or give feedback
 
-This will enable us to announce upcoming features for pk-gov at an earlier date, as well as allowing users to try them out early. 
+This will enable us to announce upcoming features for pk-gov at an earlier date, as well as allowing users to try them out early. Our current process of preserving pk-gov in the Internet Archive will also cover pk-gov-beta starting today, ensuring that more of our digital history remains accessible in the future.
+
+## See you next year!
+
+---
+
+That's all for our big year end update to pk-gov! The website has come a long way since its launch in May 2026, delivering on its promise to bring intuitive, informative and effective information and services to Plushie Kingdom residents. We hope that this update will improve your pk-gov experience even more, and we expect to keep the momentum going with more pk-gov updates in 2027!
