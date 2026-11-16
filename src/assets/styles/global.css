@@ -26,7 +26,8 @@ button {
 input:focus-visible,
 button:focus-visible,
 .return:focus-visible,
-.download:focus-visible {
+.download:focus-visible,
+.button:focus-visible {
   outline: 4px solid black;
 }
 

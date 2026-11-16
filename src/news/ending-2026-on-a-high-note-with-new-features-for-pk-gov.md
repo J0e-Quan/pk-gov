@@ -48,6 +48,16 @@ This section dives into the technical details of pk-gov, such as what technologi
 
 Whether its experimenting with URLs in the address bar or encountering invalid links on pk-gov, it is always possible for users to encounter what is known as a '404 error' when a page cannot be found. Previously, users would only be shown a "generic" error page with no advice on what to do next. So, we have added a new 404 error page that shows in these situations, aiming to give users clear guidance to help them find the content they were looking for!
 
+## Staying focused on accessibility
+
+---
+
+One key aspect of website accessibility is being able to navigate a website with only a keyboard. However, some elements on pk-gov such as buttons made it difficult to tell which element was currently being focused on for keyboard users. So, we have adjusted these elements to have a clearer outline when focused on by a keyboard, as shown in the examples below!
+
+![first comparison of old and new focus styles](/assets/news-media/ending-2026-on-a-high-note-with-new-features-for-pk-gov/before-and-after-1.webp)
+
+![second comparison of old and new focus styles](/assets/news-media/ending-2026-on-a-high-note-with-new-features-for-pk-gov/before-and-after-2.webp)
+
 ## Peek behind the curtain with pk-gov-beta
 
 ---
