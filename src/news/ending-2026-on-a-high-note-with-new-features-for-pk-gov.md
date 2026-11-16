@@ -28,6 +28,8 @@ To make the design of pk-gov truly consistent, we have introduced new design tok
 
 ---
 
+![pk-dev homepage](/assets/news-media/ending-2026-on-a-high-note-with-new-features-for-pk-gov/pk-dev.webp)
+
 In support of open access to information, we have added a new 'pk-dev' page which can be accessed from the footer. This is the home of developer information on pk-gov, giving you a closer look at how pk-gov is designed, structured and built! There are two sections in pk-dev which cater to different aspects of pk-gov:
 
 ### Design
@@ -42,11 +44,16 @@ This section dives into the technical details of pk-gov, such as what technologi
 
 ---
 
+![404 page](/assets/news-media/ending-2026-on-a-high-note-with-new-features-for-pk-gov/404-page.webp)
+
 Whether its experimenting with URLs in the address bar or encountering invalid links on pk-gov, it is always possible for users to encounter what is known as a '404 error' when a page cannot be found. Previously, users would only be shown a "generic" error page with no advice on what to do next. So, we have added a new 404 error page that shows in these situations, aiming to give users clear guidance to help them find the content they were looking for!
 
 ## Peek behind the curtain with pk-gov-beta
 
 ---
+
+![design of the pk-gov-beta homepage](/assets/news-media/ending-2026-on-a-high-note-with-new-features-for-pk-gov/beta.webp)
+
 
 One of our main priorities with pk-gov is to make it a reliable resource for accessing Government information and services. As a result, we only announce and release updates when they are 100% completed. However, curious users who want to try out new changes to pk-gov before they are released can now do so by visiting pk-gov-beta, the new 'beta' version of our website! As pk-gov-beta is always under development, it can be less stable than the existing pk-gov, so there are several visual cues indicating to users that they are on a different version of pk-gov:
 
@@ -54,4 +61,4 @@ One of our main priorities with pk-gov is to make it a reliable resource for acc
 - The FAQ section in the homepage
 - A section above the footer where users can report a bug or give feedback
 
-This will enable us to announce upcoming features to pk-gov at an earlier date, as well as allowing users to try them out early. 
+This will enable us to announce upcoming features for pk-gov at an earlier date, as well as allowing users to try them out early. 
