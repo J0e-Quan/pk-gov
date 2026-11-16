@@ -255,6 +255,10 @@ hr.show {
   outline: 4px solid black;
 }
 
+.card-link:focus-visible {
+  outline: none;
+}
+
 .card-title {
   line-height: var(--line-height-condensed);
   margin-bottom: var(--spacing-xxs);
