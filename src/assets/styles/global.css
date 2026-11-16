@@ -24,8 +24,10 @@ button {
 }
 
 input:focus-visible,
-button:focus-visible {
-  outline: auto Highlight;
+button:focus-visible,
+.return:focus-visible,
+.download:focus-visible {
+  outline: 4px solid black;
 }
 
 a {
